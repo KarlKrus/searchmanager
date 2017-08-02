@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="images/smiconlogo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Search Manager -  Search Rules</title>
+    <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
+    <link href="custom-css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/new/custom.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/style.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/media-reset.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/theme/theme.css" rel="stylesheet" type="text/css">
+    <link href="themer/color.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="js/custom-js/cookie.js"></script>
+    <script src="js/custom-js/jquery.slimscroll.min.js"></script>
+    <script src="js/custom-js/input-validate.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+    <script src="js/custom-js/drag-animation.js"></script>
+    <script src="js/custom-js/jquery.validate.min.js"></script>
+    <script src="js/custom-js/jquery-validate.bootstrap-tooltip.js"></script>
+    <script src="js/custom-js/notification.js"></script>
+    <script src="js/custom-js/input-validate.js"></script>
+    <script src="js/custom-js/review-pagination.js"></script>
+    <script src="themer/custom.js"></script>
+    <style>
+        .iconics .fa-hover a {
+            cursor: pointer;
+            display: block;
+            color: #222222;
+            line-height: 32px;
+            height: 32px;
+            padding-left: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+            .iconics .fa-hover a:hover {
+                font-size: 20px;
+                color: #31708f;
+                background-color: #d9edf7;
+                border-color: #bce8f1;
+            }
+
+            .iconics .fa-hover a:active {
+                color: #3c763d;
+                background-color: #dff0d8;
+                border-color: #d6e9c6;
+            }
+    </style>
+    <!--[if lte IE 8]>
+                    <script src="js/html5shiv.min.js"></script>
+                    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style class="theme-changer">
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <ul class="nav navbar-top-links navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
+                        <img src="images/pcm.png" class="current-mall" />
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-default logo-menu">
+                        <li>
+                        <li>
+                            <a href="#MACMALL">
+                                <img src="images/macmall.png" class="current-mall" />
+                            </a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCM">
+                                <img src="images/pcm.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#MACMALLBD">
+                                <img src="images/macmallbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMBD">
+                                <img src="images/pcmbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMG">
+                                <img src="images/pcmg.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#ECOST">
+                                <img src="images/ecost.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        Server
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Search Manager</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
+                        <span style="float:left">
+                            Modules
+                        </span>
+                        <span style="float:right"><span class="caret"></span></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Simulator</a>
+                        <li><a href="searchrules.html">Search Rules</a>
+                        <li><a href="#">Workflow</a>
+                        <li><a href="#">Linguistics</a>
+                    </ul>
+                </li>
+                <li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/no-pic.png" class="img-circle nav-user-photo" />
+                        <span class="nav-user-info">
+                            <span>Carlson Cruz</span>
+                            <small><strong>carl.cruz@pcm.com</strong></small>
+                        </span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#columns" data-toggle="tooltip" data-placement="right" title="Columns/Grids">
+                                <i class="fa fa-columns fa-fw"></i>
+                                <span class="collapse-menu">Columns/Grids</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tables" data-toggle="tooltip" data-placement="right" title="Tables">
+                                <i class="fa fa-table fa-fw"></i>
+                                <span class="collapse-menu">Tables</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#panels" data-toggle="tooltip" data-placement="right" title="Panels">
+                                <i class="fa fa-list-alt fa-fw"></i>
+                                <span class="collapse-menu">Panels/Wells</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#buttons" data-toggle="tooltip" data-placement="right" title="Buttons">
+                                <i class="fa fa-external-link-square fa-fw"></i>
+                                <span class="collapse-menu">Buttons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#forms" data-toggle="tooltip" data-placement="right" title="Forms">
+                                <i class="fa fa-check-square-o fa-fw"></i>
+                                <span class="collapse-menu">Forms</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#notifications" data-toggle="tooltip" data-placement="right" title="Notifications">
+                                <i class="fa fa-comments-o fa-fw"></i>
+                                <span class="collapse-menu">Notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dropdown" data-toggle="tooltip" data-placement="right" title="Drop down">
+                                <i class="fa fa-arrow-down fa-fw"></i>
+                                <span class="collapse-menu">Drop down</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#images" data-toggle="tooltip" data-placement="right" title="Images">
+                                <i class="fa fa-file-image-o fa-fw"></i>
+                                <span class="collapse-menu">Images</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#breadcrumb" data-toggle="tooltip" data-placement="right" title="Breadcrumb">
+                                <i class="fa fa-cutlery fa-fw"></i>
+                                <span class="collapse-menu">Breadcrumb</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#list-group" data-toggle="tooltip" data-placement="right" title="List Group">
+                                <i class="fa fa-list-ul fa-fw"></i>
+                                <span class="collapse-menu">List Group</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#icons" data-toggle="tooltip" data-placement="right" title="Icons">
+                                <i class="fa fa-android fa-fw"></i>
+                                <span class="collapse-menu">Icons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#themer" data-toggle="tooltip" data-placement="right" title="Theme color">
+                                <i class="fa fa-rocket fa-fw"></i>
+                                <span class="collapse-menu">Theme color</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-muted collapse-activator"><i class="fa fa-dedent fa-fw text"></i> <span class="collapse-menu">Collapse</span></a>
+                        </li>
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

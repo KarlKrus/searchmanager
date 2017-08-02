@@ -1,0 +1,764 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="images/smiconlogo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Search Manager -  Search Rules</title>
+    <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
+    <link href="custom-css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/new/custom.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/style.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/media-reset.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/theme/theme.css" rel="stylesheet" type="text/css">
+    <link href="themer/color.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="js/custom-js/cookie.js"></script>
+    <script src="js/custom-js/jquery.slimscroll.min.js"></script>
+    <script src="js/custom-js/input-validate.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+    <script src="js/custom-js/drag-animation.js"></script>
+    <script src="js/custom-js/jquery.validate.min.js"></script>
+    <script src="js/custom-js/jquery-validate.bootstrap-tooltip.js"></script>
+    <script src="js/custom-js/notification.js"></script>
+    <script src="js/custom-js/input-validate.js"></script>
+    <script src="js/custom-js/review-pagination.js"></script>
+    <script src="themer/custom.js"></script>
+    <style>
+        .iconics .fa-hover a {
+            cursor: pointer;
+            display: block;
+            color: #222222;
+            line-height: 32px;
+            height: 32px;
+            padding-left: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+            .iconics .fa-hover a:hover {
+                font-size: 20px;
+                color: #31708f;
+                background-color: #d9edf7;
+                border-color: #bce8f1;
+            }
+
+            .iconics .fa-hover a:active {
+                color: #3c763d;
+                background-color: #dff0d8;
+                border-color: #d6e9c6;
+            }
+    </style>
+    <!--[if lte IE 8]>
+                    <script src="js/html5shiv.min.js"></script>
+                    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style class="theme-changer">
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <!--navigation-->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <!--navbar-->
+            <ul class="nav navbar-top-links navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
+                        <img src="images/pcm.png" class="current-mall" />
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-default logo-menu">
+                        <li>
+                        <li>
+                            <a href="#MACMALL">
+                                <img src="images/macmall.png" class="current-mall" />
+                            </a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCM">
+                                <img src="images/pcm.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#MACMALLBD">
+                                <img src="images/macmallbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMBD">
+                                <img src="images/pcmbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMG">
+                                <img src="images/pcmg.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#ECOST">
+                                <img src="images/ecost.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        afs-pl-schpd07
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Search Manager</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
+                        <span style="float:left">
+                            Search Rules
+                        </span>
+                        <span style="float:right"><span class="caret"></span></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Simulator</a>
+                        <li><a href="searchrules.html">Search Rules</a>
+                        <li><a href="#">Workflow</a>
+                        <li><a href="#">Linguistics</a>
+                    </ul>
+                </li>
+                <li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/no-pic.png" class="img-circle nav-user-photo" />
+                        <span class="nav-user-info">
+                            <span>Carlson Cruz</span>
+                            <small><strong>carl.cruz@pcm.com</strong></small>
+                        </span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--navbar end-->
+            <!--sidebar-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Elevate" onclick="elevate()">
+                                <i class="fa fa-chevron-up fa-fw"></i>
+                                <span class="collapse-menu">Elevate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Demote" onclick="demote()">
+                                <i class="fa fa-chevron-down fa-fw"></i>
+                                <span class="collapse-menu">Demote</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Exclude" onclick="exclude()">
+                                <i class="fa fa-ban fa-fw"></i>
+                                <span class="collapse-menu">Exclude</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Redirect" onclick="redirect()">
+                                <i class="fa fa-exchange fa-fw"></i>
+                                <span class="collapse-menu">Redirect</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Relevancy" onclick="relevancy()">
+                                <i class="fa fa-angle-double-up fa-fw"></i>
+                                <span class="collapse-menu">Relevancy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-muted collapse-activator"><i class="fa fa-dedent fa-fw text"></i> <span class="collapse-menu">Collapse</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--sidebar end-->
+        </nav>
+        <!--navigation end-->
+        <!--page content-->
+        <div id="page-wrapper">
+            <br />
+            <!--search rule landing page-->
+            <div id="searchruleLanding">
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1>
+                            <i class="fa fa-search fa-lg" aria-hidden="true" style="color: deepskyblue"></i> Search Rules
+                        </h1>
+                        <p>This module allows the user to create and update rules that control the natural search results on mall sites</p>
+                        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>
+                            <i class="fa fa-chevron-up fa-fw"></i>
+                            <span class="collapse-menu">Elevate</span>
+                        </h2>
+                        <p>The Elevate search rule is used for pushing a SKU(s) using a specific keyword to the top of the natural search result.  </p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="elevate()">Manage Rules &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>
+                            <i class="fa fa-chevron-down fa-fw"></i>
+                            <span class="collapse-menu">Demote</span>
+                        </h2>
+                        <p>The Demote search rule is the opposite of Elevate search rule. By creating a Demote search rule, SKU(s) can be pushed at the bottom of search results. </p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="demote()">Manage Rules &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>
+                            <i class="fa fa-ban fa-fw"></i>
+                            <span class="collapse-menu">Exclude</span>
+                        </h2>
+                        <p>The Exclude search rule is used in removing SKU(s) from the natural search result of a specific keyword.</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="exclude()">Manage Rules &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-4">
+                        <h2>
+                            <i class="fa fa-exchange fa-fw"></i>
+                            <span class="collapse-menu">Redirect</span>
+                        </h2>
+                        <p>Query Cleaning is another way of overriding the natural search result. If a keyword is set to have a redirection rule, the keyword will be replaced or have a redirection.</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="redirect()">Manage Rules &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>
+                            <i class="fa fa-angle-double-up fa-fw"></i>
+                            <span class="collapse-menu">Relevancy</span>
+                        </h2>
+                        <p>Creating a ranking rule is another way of manipulating natural search results. Ranking rules allow users to control how search results are displayed to a certain degree. In addition, ranking rules allow the users to control which fields are matched to a search term, and how the search results’ scores are computed.</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="relevancy()">Manage Rules &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+            <!--search rule landing page end-->
+            <!--elevate module-->
+            <div class="row" id="elevateModule" style="display:block">
+                <script>
+                    function elevateCRUDSHOW() {
+                        var eleCRUD = document.getElementById('elevateCRUD');
+                        var eleKWL = document.getElementById('elevateKWList');
+                        if (eleCRUD.style.display === 'none') {
+                            eleCRUD.style.display = 'block';
+                            eleKWL.style.display = 'none';
+                        } else {
+                            eleCRUD.style.display = 'none';
+                        }
+                    }
+                    function elevateKWLSHOW() {
+                        var eleCRUD = document.getElementById('elevateCRUD');
+                        var eleKWL = document.getElementById('elevateKWList');
+                        if (eleKWL.style.display === 'none') {
+                            eleCRUD.style.display = 'none';
+                            eleKWL.style.display = 'block';
+                        } else {
+                            eleCRUD.style.display = 'none';
+                        }
+                    }
+                </script>
+                <div id="elevateKWList">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="pull-left">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <h4>Keyword:</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pull-right">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Search Keyword">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn btn-info" title="Search">
+                                                            <i class="fa fa-search fa-lg" style="color:white"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-success" title="Add">
+                                                            <i class="fa fa-plus-square fa-lg" style="color:white"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Keyword</th>
+                                        <th>Status</th>
+                                        <th>Content Count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mouse</td>
+                                        <td>Ready for Production</td>
+                                        <td><a href="#" class="btn btn-link" onclick="elevateCRUDSHOW()">12</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td> GXT4</td>
+                                        <td>Setup a Rule</td>
+                                        <td><a href="#" class="btn btn-link" onclick="elevateCRUDSHOW()">3</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Keyboard</td>
+                                        <td>Action Required</td>
+                                        <td><a href="#" class="btn btn-link" onclick="elevateCRUDSHOW()">8</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row row-height">
+                                <div class="col-sm-12">
+                                    <div class="page-cover">
+                                        <div class="pager-number">1 to 2 of 2</div>
+                                        <div class="pull-right reset-margin row-height">
+                                            <ul class="pagination reset-margin">
+                                                <li>
+                                                    <span class="page-number">
+                                                        <input placeholder="Page" class="form-control input-small page-number">
+                                                    </span>
+                                                </li>
+                                                <li><a href="#">&laquo;</a></li>
+                                                <li><a href="#">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="elevateCRUD" style="display:block">
+                    <!--Title and Options-->
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4>
+                                    <i class="fa fa-arrow-left btn-link" title="Got back to list" onclick="elevateKWLSHOW()"></i>
+                                    Elevate for
+                                    <span class="text-primary">GXT4</span>
+                                </h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <select id="drpdownElevate" class="form-control" title="Elevate Options">
+                                                <option>Product Items</option>
+                                                <option>IMS Categories </option>
+                                                <option>Product Site Taxonomy</option>
+                                                <option>Facets </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-success" title="Add Content">
+                                                <i class="fa fa-plus-square fa-lg"></i> <!--Add Item-->
+                                            </button>
+                                            <button type="button" class="btn btn-success" title="Submit for Approval">
+                                                <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
+                                            </button>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
+                                                    <i class="fa fa-navicon fa-lg"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" style="right: 0; left: auto;">
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-download fa-lg"></i> Download Content</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--#Title and Option-->
+                    <!--Navigation-->
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <h5 style="font-weight:700">
+                                            Status:
+                                            <span class="text-danger"> Setup a Rule </span>
+                                        </h5>
+                                    </div>
+                                    <div class="form-group">
+                                        <h5 style="font-weight:700">
+                                            Last Published:
+                                            <span class="text-warning">
+                                                10/15/2014 07:11 PM
+                                            </span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <select id="Select1" class="form-control input-sm">
+                                                <option>All</option>
+                                                <option>Active</option>
+                                                <option>Expired</option>
+                                            </select>
+                                            <button type="button" class="btn btn-link btn-xs" title="List View">
+                                                <i class="fa fa-list fa-lg"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-link btn-xs" title="Grid View">
+                                                <i class="fa fa-th-large fa-lg"></i>
+                                            </button>
+                                        </div>
+                                        <div class="form-group">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row row-height">
+                                                <div class="col-sm-12">
+                                                    <div class="page-cover">
+                                                        <div class="pager-number">1 to 2 of 2</div>
+                                                        <div class="pull-right reset-margin row-height">
+                                                            <ul class="pagination reset-margin">
+                                                                <li>
+                                                                    <span class="page-number">
+                                                                        <input placeholder="Page" class="form-control input-small page-number">
+                                                                    </span>
+                                                                </li>
+                                                                <li><a href="#">&laquo;</a></li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--#Navigation-->
+                    <!--Content Panels-->
+                    <!--<div class="well well-sm">-->
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                    <i class="fa fa-times fa-lg"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label>Position: </label>
+                                            <input type="text" class="form-control" placeholder="Position" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <label>Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Choose Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Details:</label>
+                                            <p>
+                                                <b> Liebert </b>
+                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                            </p>
+                                            <p>
+                                                <span class="text-success">SKU#: </span>13374814
+                                            </p>
+                                            <p>
+                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div id="radio-switch">
+                                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-default btn-xs">
+                                                            <input name="options" value="option2" type="radio"> Normal
+                                                        </label>
+                                                        <label class="btn btn-default btn-primary btn-xs">
+                                                            <input name="options" checked="checked" type="radio"> Force Add
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                    <i class="fa fa-times fa-lg"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label>Position: </label>
+                                            <input type="text" class="form-control" placeholder="Position" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <label>Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Choose Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Details:</label>
+                                            <p>
+                                                <b> Liebert </b>
+                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                            </p>
+                                            <p>
+                                                <span class="text-success">SKU#: </span>13374814
+                                            </p>
+                                            <p>
+                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div id="radio-switch">
+                                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-default  btn-primary btn-xs">
+                                                            <input name="options" checked="checked" type="radio"> Normal
+                                                        </label>
+                                                        <label class="btn btn-default btn-xs">
+                                                            <input name="options" value="option2" type="radio"> Force Add
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                    <i class="fa fa-times fa-lg"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <img src="images/no-pic.png" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label>Position: </label>
+                                            <input type="text" class="form-control" placeholder="Position" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <label>Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Choose Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Details:</label>
+                                            <p>
+                                                <b> Liebert </b>
+                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                            </p>
+                                            <p>
+                                                <span class="text-success">SKU#: </span>13374814
+                                            </p>
+                                            <p>
+                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--</div>-->
+                    <!--#Content Panels-->
+                </div>
+            </div>
+            <!--elevate module end-->
+        </div>
+        <!--page content end-->
+    </div>
+</body>
+</html>
