@@ -156,7 +156,7 @@
                         <li><a href="#">Linguistics</a>
                     </ul>
                 </li>
-                <li>
+                <li><input id="" type="button" value="Settings" class="btn btn-default" /></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
                         <img src="images/no-pic.png" class="img-circle nav-user-photo" />
@@ -305,7 +305,6 @@
         </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
-            <br />
             <!--search rule landing page-->
             <div id="searchruleLanding" style="display:none">
                 <div class="jumbotron">
@@ -404,6 +403,10 @@
                 </script>
                 <!--elevate keywordlist-->
                 <div id="elevateKWList" style="display:none">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Keyword List</li>
+                    </ol>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="row">
@@ -472,12 +475,13 @@
                                         <div class="pager-number">1 to 2 of 2</div>
                                         <div class="pull-right reset-margin row-height">
                                             <ul class="pagination reset-margin">
+                                                <li><a href="#">&laquo;</a></li>
+
                                                 <li>
                                                     <span class="page-number">
-                                                        <input placeholder="Page" class="form-control input-small page-number">
+                                                        <input placeholder="Page" class="form-control input-small page-number" type="text">
                                                     </span>
                                                 </li>
-                                                <li><a href="#">&laquo;</a></li>
                                                 <li><a href="#">&raquo;</a></li>
                                             </ul>
                                         </div>
@@ -489,12 +493,17 @@
                 </div>
                 <!--elevate crud form-->
                 <div id="elevateCRUD" style="display:block" class="container-fluid">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#" onclick="elevateKWLSHOW()">Keyword List</a></li>
+                        <li class="active">Elevate</li>
+                    </ol>
                     <!-- elevate title and options-->
                     <div class="well well-sm">
                         <div class="row">
                             <div class="col-sm-6">
                                 <h4>
-                                    <i class="fa fa-arrow-left btn-link" title="Got back to list" onclick="elevateKWLSHOW()"></i>
+                                    <!--<i class="fa fa-arrow-left btn-link" title="Got back to list" onclick="elevateKWLSHOW()"></i>-->
                                     Elevate for
                                     <span class="text-primary">GXT4</span>
                                 </h4>
@@ -599,12 +608,12 @@
                                                         <div class="pager-number">1 to 2 of 2</div>
                                                         <div class="pull-right reset-margin row-height">
                                                             <ul class="pagination reset-margin">
+                                                                <li><a href="#">&laquo;</a></li>
                                                                 <li>
                                                                     <span class="page-number">
-                                                                        <input placeholder="Page" class="form-control input-small page-number">
+                                                                        <input placeholder="Page" class="form-control input-small page-number" type="text">
                                                                     </span>
                                                                 </li>
-                                                                <li><a href="#">&laquo;</a></li>
                                                                 <li><a href="#">&raquo;</a></li>
                                                             </ul>
                                                         </div>
@@ -849,25 +858,74 @@
                                         <table class="table table-condensed table-hover table-bordered">
                                             <thead>
                                                 <tr class="active">
-                                                    <th colspan="2" style="text-align:"><button class="btn btn-success btn-xs">Compare</button></th>
-                                                    <th>Name</th>
-                                                    <th>Date</th>
-                                                    <th></th>
+                                                    <th colspan="2" style="text-align:center"><button class="btn btn-success btn-xs">Compare</button></th>
+                                                    <th style="text-align:center">Name</th>
+                                                    <th style="text-align:center">Date</th>
+                                                    <th style="text-align:center">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td width="5%" style="text-align:center"><input id="" type="radio" /></td>
-                                                    <td width="5%" style="text-align:center">1</td>
+                                                    <td width="5%" style="text-align:center;vertical-align:middle"><input  name="versionSelect" type="radio" /></td>
+                                                    <td width="5%" style="text-align:center;vertical-align:middle">1</td>
                                                     <td width="40%" style="text-align:center">
                                                         <strong>_macbook pro 13 1st back up</strong><br />
                                                         3 contents
                                                     </td>
-                                                    <td width="20%">Thu, 03 Aug 2017<br/> 07:19:23 GMT</td>
-                                                    <td width="20%"></td>
+                                                    <td width="20%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                    <td width="20%" style="text-align:center;vertical-align:middle">
+                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                            <i class="fa fa-undo fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                    <td width="5%" style="text-align:center;vertical-align:middle">2</td>
+                                                    <td width="40%" style="text-align:center">
+                                                        <strong>_macbook pro 13 2nd back up</strong><br />
+                                                        3 contents
+                                                    </td>
+                                                    <td width="20%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                    <td width="20%" style="text-align:center;vertical-align:middle">
+                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                            <i class="fa fa-undo fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                    <td width="5%" style="text-align:center;vertical-align:middle">3</td>
+                                                    <td width="40%" style="text-align:center">
+                                                        <strong>_macbook pro 13 3rd back up</strong><br />
+                                                        6 contents
+                                                    </td>
+                                                    <td width="20%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                    <td width="20%" style="text-align:center;vertical-align:middle">
+                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                            <i class="fa fa-undo fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <br />
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Create New Rule Back Up Version</div>
+                                            <div class="panel-body">
+                                                <i class="text-danger">*</i> Name:<input id="" type="text" class="form-control" />
+                                                <i class="text-danger">*</i> Notes:<textarea id="" rows="2" cols="20" class="form-control"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6"></div>
                                 </div>
@@ -947,12 +1005,12 @@
                                             <div class="pager-number">1 to 2 of 2</div>
                                             <div class="pull-right reset-margin row-height">
                                                 <ul class="pagination reset-margin">
+                                                    <li><a href="#">&laquo;</a></li>
                                                     <li>
                                                         <span class="page-number">
                                                             <input placeholder="Page" class="form-control input-small page-number">
                                                         </span>
                                                     </li>
-                                                    <li><a href="#">&laquo;</a></li>
                                                     <li><a href="#">&raquo;</a></li>
                                                 </ul>
                                             </div>
