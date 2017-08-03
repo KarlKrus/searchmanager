@@ -175,7 +175,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul><!--navbar end-->
+            </ul>
             <!--sidebar-->
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -301,8 +301,8 @@
                         rel.style.display = 'block';
                     }
                 }
-            </script><!--sidebar end-->
-        </nav><!--navigation end-->
+            </script>
+        </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
             <br />
@@ -377,7 +377,7 @@
                     <div class="col-lg-2">
                     </div>
                 </div>
-            </div><!--search rule landing page end-->
+            </div>
             <!--elevate module-->
             <div class="row" id="elevateModule" style="display:none">
                 <script>
@@ -486,9 +486,9 @@
                             </div>
                         </div>
                     </div>
-                </div> <!--elevate keywordlist end-->
+                </div> 
                 <!--elevate crud form-->
-                <div id="elevateCRUD" style="display:block">
+                <div id="elevateCRUD" style="display:block" class="container-fluid">
                     <!-- elevate title and options-->
                     <div class="well well-sm">
                         <div class="row">
@@ -531,11 +531,11 @@
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
-                                                        <a href="#"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                                        <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
-                                                        <a href="#"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
+                                                        <a href="#" data-toggle="modal" data-target="#copyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
@@ -552,7 +552,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- elevate title and options end-->
+                    </div>
                     <!-- elevate navigation-->
                     <div class="well well-sm">
                         <div class="row">
@@ -616,7 +616,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!--elevate navigation end-->
+                    </div>
                     <!--elevate content panels-->
                     <div class="row">
                         <div class="col-lg-4">
@@ -832,8 +832,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!--elevate content panels end-->
-                </div><!--elevate crud form end-->
+                    </div>
+                </div>
                 <!--elevate modals-->
                 <div id="submitApprovalModal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
@@ -868,24 +868,62 @@
                                 <h4 class="modal-title">Download Rule Version</h4>
                             </div>
                             <div class="modal-body">
-                                <p>This rule will be locked for approval. Continue?</p>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Filename:<input id="" type="text" class="form-control" /><br />
+                                        Type:<select id="" class="form-control">
+                                            <option>Excel</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                                    <i class="fa  fa-ban"></i>
-                                    NO
+                                <button type="button" class="btn btn-success">
+                                    <i class="fa  fa-download"></i>
+                                    Download
                                 </button>
-                                <a href="searchrules.html" class="btn btn-primary">
-                                    <i class="fa fa-check"></i>
-                                    YES
+                                <a href="#" class="btn btn-warning">
+                                    <i class="fa fa-times-circle"></i>
+                                    Clear
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--elevate modals end-->
-            </div><!--elevate module end-->
-        </div><!--page content/wrapper end-->
+                <div id="copyToSiteModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Copy</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Store:
+                                        <select id="" size="5" class="form-control">
+                                            <option>MacMall BD</option>
+                                            <option>PCM</option>
+                                            <option>eCOST</option>
+                                            <option>MacMall</option>
+                                            <option>PCMall BD</option>
+                                            <option>PCMGBD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fa  fa-copy"></i>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--logout modal-->
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -910,7 +948,7 @@
                 </div>
                 <!-- /.modal-content -->
             </div>
-        </div><!--logout modal end-->
+        </div>
     </div>
 </body>
 </html>
