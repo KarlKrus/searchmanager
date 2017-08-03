@@ -122,7 +122,7 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                        <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
@@ -151,7 +151,7 @@
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Simulator</a>
-                        <li><a href="searchrules.html">Search Rules</a>
+                        <li class="active"><a href="searchrules.html">Search Rules</a>
                         <li><a href="#">Workflow</a>
                         <li><a href="#">Linguistics</a>
                     </ul>
@@ -379,7 +379,7 @@
                 </div>
             </div>
             <!--elevate module-->
-            <div class="row" id="elevateModule" style="display:none">
+            <div class="row" id="elevateModule" style="display:block">
                 <script>
                     function elevateCRUDSHOW() {
                         var eleCRUD = document.getElementById('elevateCRUD');
@@ -486,7 +486,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <!--elevate crud form-->
                 <div id="elevateCRUD" style="display:block" class="container-fluid">
                     <!-- elevate title and options-->
@@ -527,7 +527,7 @@
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
-                                                        <a href="#"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                                        <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
@@ -539,11 +539,11 @@
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
-                                                        <a href="#"><i class="fa fa-download fa-lg"></i> Download Content</a>
+                                                        <a href="#" data-toggle="modal" data-target="#downloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
                                                     </li>
                                                     <li role="separator" class="divider"></li>
                                                     <li>
-                                                        <a href="#"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
+                                                        <a href="#" data-toggle="modal" data-target="#removeContentModal"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -859,6 +859,70 @@
                         </div>
                     </div>
                 </div>
+                <div id="ruleCommentModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Rule Comment</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Username</th>
+                                            <th>Status</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>05/03/2016 05:56 PM</td>
+                                            <td>pcmall_admin</td>
+                                            <td>EXPORTED</td>
+                                            <td>exported ni carl</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/03/2016 05:56 PM</td>
+                                            <td>pcmall_admin</td>
+                                            <td> PUBLISHED	</td>
+                                            <td>published ni carl</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/03/2016 05:56 PM</td>
+                                            <td> JBauca	</td>
+                                            <td> PUBLISHED	</td>
+                                            <td>published ni carl</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row row-height">
+                                    <div class="col-lg-12">
+                                        <div class="page-cover">
+                                            <div class="pager-number">1 to 2 of 2</div>
+                                            <div class="pull-right reset-margin row-height">
+                                                <ul class="pagination reset-margin">
+                                                    <li>
+                                                        <span class="page-number">
+                                                            <input placeholder="Page" class="form-control input-small page-number">
+                                                        </span>
+                                                    </li>
+                                                    <li><a href="#">&laquo;</a></li>
+                                                    <li><a href="#">&raquo;</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="ruleVersionDownloadModal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
                         <!-- Modal content-->
@@ -917,6 +981,65 @@
                                 <button type="button" class="btn btn-primary">
                                     <i class="fa  fa-copy"></i>
                                     Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="downloadContentModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Download Elevate</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Filename:<input id="" type="text" class="form-control" /><br />
+                                        Pages:<select id="" class="form-control">
+                                            <option>Current Page</option>
+                                            <option>All Pages</option>
+                                        </select><br />
+                                        Type:<select id="" class="form-control">
+                                            <option>Excel</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success">
+                                    <i class="fa  fa-download"></i>
+                                    Download
+                                </button>
+                                <a href="#" class="btn btn-warning">
+                                    <i class="fa fa-times-circle"></i>
+                                    Clear
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="removeContentModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Delete Item</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>All items associated to this rule will be removed. Continue?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="searchrules.html" class="btn btn-primary">
+                                    <i class="fa fa-check"></i>
+                                    Ok
+                                </a>
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                    <i class="fa  fa-ban"></i>
+                                    Cancel
                                 </button>
                             </div>
                         </div>
