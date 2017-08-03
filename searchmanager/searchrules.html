@@ -162,7 +162,7 @@
                         <img src="images/no-pic.png" class="img-circle nav-user-photo" />
                         <span class="nav-user-info">
                             <span>Carlson Cruz</span>
-                            <small><strong>carl.cruz@pcm.com</strong></small>
+                            <small><strong>carlson.cruz@pcm.com</strong></small>
                         </span>
                         <b class="caret"></b>
                     </a>
@@ -171,12 +171,11 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         <li class="divider"></li>
                         <li>
-                            <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </li>
-            </ul>
-            <!--navbar end-->
+            </ul><!--navbar end-->
             <!--sidebar-->
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -217,14 +216,98 @@
                     </ul>
                 </div>
             </div>
-            <!--sidebar end-->
-        </nav>
-        <!--navigation end-->
-        <!--page content-->
+            <script type="text/javascript">
+                function elevate() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (ele.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'block';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+
+                function demote() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (dem.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'block';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+
+                function exclude() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (exc.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'block';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+
+                function redirect() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (red.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'block';
+                        rel.style.display = 'none';
+                    }
+                }
+
+                function relevancy() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (rel.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'block';
+                    }
+                }
+            </script><!--sidebar end-->
+        </nav><!--navigation end-->
+        <!--page content/wrapper-->
         <div id="page-wrapper">
             <br />
             <!--search rule landing page-->
-            <div id="searchruleLanding">
+            <div id="searchruleLanding" style="display:none">
                 <div class="jumbotron">
                     <div class="container">
                         <h1>
@@ -236,7 +319,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <h2>
                             <i class="fa fa-chevron-up fa-fw"></i>
                             <span class="collapse-menu">Elevate</span>
@@ -246,7 +329,7 @@
                             <a class="btn btn-primary" href="#" role="button" onclick="elevate()">Manage Rules &raquo;</a>
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <h2>
                             <i class="fa fa-chevron-down fa-fw"></i>
                             <span class="collapse-menu">Demote</span>
@@ -256,7 +339,7 @@
                             <a class="btn btn-primary" href="#" role="button" onclick="demote()">Manage Rules &raquo;</a>
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <h2>
                             <i class="fa fa-ban fa-fw"></i>
                             <span class="collapse-menu">Exclude</span>
@@ -269,9 +352,9 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <h2>
                             <i class="fa fa-exchange fa-fw"></i>
                             <span class="collapse-menu">Redirect</span>
@@ -281,7 +364,7 @@
                             <a class="btn btn-primary" href="#" role="button" onclick="redirect()">Manage Rules &raquo;</a>
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <h2>
                             <i class="fa fa-angle-double-up fa-fw"></i>
                             <span class="collapse-menu">Relevancy</span>
@@ -291,13 +374,12 @@
                             <a class="btn btn-primary" href="#" role="button" onclick="relevancy()">Manage Rules &raquo;</a>
                         </p>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
                     </div>
                 </div>
-            </div>
-            <!--search rule landing page end-->
+            </div><!--search rule landing page end-->
             <!--elevate module-->
-            <div class="row" id="elevateModule" style="display:block">
+            <div class="row" id="elevateModule" style="display:none">
                 <script>
                     function elevateCRUDSHOW() {
                         var eleCRUD = document.getElementById('elevateCRUD');
@@ -320,11 +402,12 @@
                         }
                     }
                 </script>
-                <div id="elevateKWList">
+                <!--elevate keywordlist-->
+                <div id="elevateKWList" style="display:none">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
                                     <div class="pull-left">
                                         <div class="form-inline">
                                             <div class="form-group">
@@ -333,7 +416,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
                                     <div class="pull-right">
                                         <div class="form-inline">
                                             <div class="form-group">
@@ -384,7 +467,7 @@
                         </div>
                         <div class="panel-footer">
                             <div class="row row-height">
-                                <div class="col-sm-12">
+                                <div class="col-lg-12">
                                     <div class="page-cover">
                                         <div class="pager-number">1 to 2 of 2</div>
                                         <div class="pull-right reset-margin row-height">
@@ -403,19 +486,20 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> <!--elevate keywordlist end-->
+                <!--elevate crud form-->
                 <div id="elevateCRUD" style="display:block">
-                    <!--Title and Options-->
+                    <!-- elevate title and options-->
                     <div class="well well-sm">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
                                 <h4>
                                     <i class="fa fa-arrow-left btn-link" title="Got back to list" onclick="elevateKWLSHOW()"></i>
                                     Elevate for
                                     <span class="text-primary">GXT4</span>
                                 </h4>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
                                 <div class="pull-right">
                                     <div class="form-inline">
                                         <div class="form-group">
@@ -430,7 +514,7 @@
                                             <button type="button" class="btn btn-success" title="Add Content">
                                                 <i class="fa fa-plus-square fa-lg"></i> <!--Add Item-->
                                             </button>
-                                            <button type="button" class="btn btn-success" title="Submit for Approval">
+                                            <button type="button" class="btn btn-success" title="Submit for Approval" data-toggle="modal" data-target="#submitApprovalModal">
                                                 <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
                                             </button>
                                             <div class="btn-group">
@@ -468,12 +552,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--#Title and Option-->
-                    <!--Navigation-->
+                    </div><!-- elevate title and options end-->
+                    <!-- elevate navigation-->
                     <div class="well well-sm">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
                                 <div class="form-inline">
                                     <div class="form-group">
                                         <h5 style="font-weight:700">
@@ -491,7 +574,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
                                 <div class="pull-right">
                                     <div class="form-inline">
                                         <div class="form-group">
@@ -511,7 +594,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="row row-height">
-                                                <div class="col-sm-12">
+                                                <div class="col-lg-12">
                                                     <div class="page-cover">
                                                         <div class="pager-number">1 to 2 of 2</div>
                                                         <div class="pull-right reset-margin row-height">
@@ -533,18 +616,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--#Navigation-->
-                    <!--Content Panels-->
-                    <!--<div class="well well-sm">-->
+                    </div><!--elevate navigation end-->
+                    <!--elevate content panels-->
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-lg-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-lg-6">
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-lg-6">
                                             <div class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -556,7 +637,7 @@
                                                     <i class="fa fa-smile-o fa-lg"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                    <i class="fa fa-times fa-lg"></i>
+                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -568,11 +649,11 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-lg-4">
                                             <label>Position: </label>
                                             <input type="text" class="form-control" placeholder="Position" />
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-lg-8">
                                             <label>Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Choose Date">
@@ -584,8 +665,8 @@
                                     </div>
                                     <br />
                                     <div class="row">
-                                        <div class="col-sm-12">
-                                            <label>Details:</label>
+                                        <div class="col-lg-12">
+                                            <!--<label>Details:</label>-->
                                             <p>
                                                 <b> Liebert </b>
                                                 <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
@@ -601,11 +682,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-lg-4">
                             <div class="panel panel-warning">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-lg-6">
                                             <div class="pull-left">
                                                 <div id="radio-switch">
                                                     <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -619,7 +700,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-lg-6">
                                             <div class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -631,7 +712,7 @@
                                                     <i class="fa fa-smile-o fa-lg"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                    <i class="fa fa-times fa-lg"></i>
+                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -643,11 +724,11 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-lg-4">
                                             <label>Position: </label>
                                             <input type="text" class="form-control" placeholder="Position" />
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-lg-8">
                                             <label>Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Choose Date">
@@ -659,8 +740,8 @@
                                     </div>
                                     <br />
                                     <div class="row">
-                                        <div class="col-sm-12">
-                                            <label>Details:</label>
+                                        <div class="col-lg-12">
+                                            <!--<label>Details:</label>-->
                                             <p>
                                                 <b> Liebert </b>
                                                 <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
@@ -676,11 +757,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-lg-4">
                             <div class="panel panel-danger">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-lg-6">
                                             <div class="pull-left">
                                                 <div id="radio-switch">
                                                     <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -694,7 +775,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-lg-6">
                                             <div class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -706,7 +787,7 @@
                                                     <i class="fa fa-smile-o fa-lg"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                    <i class="fa fa-times fa-lg"></i>
+                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -718,11 +799,11 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-lg-4">
                                             <label>Position: </label>
                                             <input type="text" class="form-control" placeholder="Position" />
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-lg-8">
                                             <label>Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Choose Date">
@@ -734,8 +815,8 @@
                                     </div>
                                     <br />
                                     <div class="row">
-                                        <div class="col-sm-12">
-                                            <label>Details:</label>
+                                        <div class="col-lg-12">
+                                            <!--<label>Details:</label>-->
                                             <p>
                                                 <b> Liebert </b>
                                                 <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
@@ -751,14 +832,85 @@
                                 </div>
                             </div>
                         </div>
+                    </div><!--elevate content panels end-->
+                </div><!--elevate crud form end-->
+                <!--elevate modals-->
+                <div id="submitApprovalModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Submit for Approval</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>This rule will be locked for approval. Continue?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                    <i class="fa  fa-ban"></i>
+                                    NO
+                                </button>
+                                <a href="searchrules.html" class="btn btn-primary">
+                                    <i class="fa fa-check"></i>
+                                    YES
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!--</div>-->
-                    <!--#Content Panels-->
                 </div>
+                <div id="ruleVersionDownloadModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Download Rule Version</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>This rule will be locked for approval. Continue?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                    <i class="fa  fa-ban"></i>
+                                    NO
+                                </button>
+                                <a href="searchrules.html" class="btn btn-primary">
+                                    <i class="fa fa-check"></i>
+                                    YES
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--elevate modals end-->
+            </div><!--elevate module end-->
+        </div><!--page content/wrapper end-->
+        <!--logout modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to logout?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">
+                            <i class="fa  fa-ban"></i>
+                            NO
+                        </button>
+                        <a href="login.html" class="btn btn-primary">
+                            <i class="fa fa-check"></i>
+                            YES
+                        </a>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
             </div>
-            <!--elevate module end-->
-        </div>
-        <!--page content end-->
+        </div><!--logout modal end-->
     </div>
 </body>
 </html>
