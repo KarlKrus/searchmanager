@@ -492,13 +492,13 @@
                     </div>
                 </div>
                 <!--elevate crud form-->
-                <div id="elevateCRUD" style="display:block" class="container-fluid">
+                <div id="elevateCRUD" style="display:block" class="container">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="#">Home</a></li>
                         <li><a href="#" onclick="elevateKWLSHOW()">Keyword List</a></li>
                         <li class="active">Elevate</li>
                     </ol>
-                    <!-- elevate title and options-->
+                    <!-- elevate title and add item-->
                     <div class="well well-sm">
                         <div class="row">
                             <div class="col-sm-6">
@@ -526,41 +526,15 @@
                                             <button type="button" class="btn btn-success" title="Submit for Approval" data-toggle="modal" data-target="#submitApprovalModal">
                                                 <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
                                             </button>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
-                                                    <i class="fa fa-navicon fa-lg"></i>
-                                                </button>
-                                                <ul class="dropdown-menu" style="right: 0; left: auto;">
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#backupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#copyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#downloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#removeContentModal"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!--elevate publish options-->
+                    <div class="well well-sm">
+
                     </div>
                     <!-- elevate navigation-->
                     <div class="well well-sm">
@@ -600,8 +574,6 @@
                                             </button>
                                         </div>
                                         <div class="form-group">
-                                        </div>
-                                        <div class="form-group">
                                             <div class="row row-height">
                                                 <div class="col-sm-12">
                                                     <div class="page-cover">
@@ -619,6 +591,38 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
+                                                    <i class="fa fa-navicon fa-lg"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" style="right: 0; left: auto;">
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#backupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#copyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#downloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
+                                                    </li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#removeContentModal"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
