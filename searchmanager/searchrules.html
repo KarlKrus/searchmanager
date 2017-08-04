@@ -492,51 +492,29 @@
                     </div>
                 </div>
                 <!--elevate crud form-->
-                <div id="elevateCRUD" style="display:block" class="container">
+                <div id="elevateCRUD" style="display:block">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="#">Home</a></li>
                         <li><a href="#" onclick="elevateKWLSHOW()">Keyword List</a></li>
                         <li class="active">Elevate</li>
                     </ol>
                     <!-- elevate title and add item-->
-                    <div class="well well-sm">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h4>
-                                    <!--<i class="fa fa-arrow-left btn-link" title="Got back to list" onclick="elevateKWLSHOW()"></i>-->
-                                    Elevate for
-                                    <span class="text-primary">GXT4</span>
-                                </h4>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right">
-                                    <div class="form-inline">
-                                        <div class="form-group">
-                                            <select id="drpdownElevate" class="form-control" title="Elevate Options">
-                                                <option>Product Items</option>
-                                                <option>IMS Categories </option>
-                                                <option>Product Site Taxonomy</option>
-                                                <option>Facets </option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="button" class="btn btn-success" title="Add Content">
-                                                <i class="fa fa-plus-square fa-lg"></i> <!--Add Item-->
-                                            </button>
-                                            <button type="button" class="btn btn-success" title="Submit for Approval" data-toggle="modal" data-target="#submitApprovalModal">
-                                                <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
-                                            </button>
-                                        </div>
-                                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>
+                                <!--<i class="fa fa-arrow-left btn-link" title="Got back to list" onclick="elevateKWLSHOW()"></i>-->
+                                Elevate for
+                                <span class="text-primary">GXT4</span>
+                            </h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pull-right">
+                                <div class="form-inline">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--elevate publish options-->
-                    <div class="well well-sm">
-
-                    </div>
-                    <!-- elevate navigation-->
                     <div class="well well-sm">
                         <div class="row">
                             <div class="col-sm-6">
@@ -559,9 +537,38 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="pull-right">
+                                    <button type="button" class="btn btn-success" title="Submit for Approval" data-toggle="modal" data-target="#submitApprovalModal">
+                                        <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- elevate navigation and options-->
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <select id="drpdownElevate" class="form-control" title="Elevate Options">
+                                            <option>Product Items</option>
+                                            <option>IMS Categories </option>
+                                            <option>Product Site Taxonomy</option>
+                                            <option>Facets </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-success" title="Add Content">
+                                            <i class="fa fa-plus-square fa-lg"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
                                     <div class="form-inline">
                                         <div class="form-group">
-                                            <select id="Select1" class="form-control input-sm">
+                                            <select id="" class="form-control input-sm">
                                                 <option>All</option>
                                                 <option>Active</option>
                                                 <option>Expired</option>
@@ -594,35 +601,38 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
-                                                    <i class="fa fa-navicon fa-lg"></i>
-                                                </button>
-                                                <ul class="dropdown-menu" style="right: 0; left: auto;">
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#backupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#copyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#downloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#removeContentModal"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
-                                                    </li>
-                                                </ul>
+                                            <div class="form-group">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
+                                                        Rule Options
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" style="right: 0; left: auto;">
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#backupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#copyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#downloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#removeContentModal"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -631,612 +641,655 @@
                         </div>
                     </div>
                     <!--elevate content panels-->
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="pull-right">
-                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                    <i class="fa fa-comment-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                    <i class="fa fa-file-text-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                    <i class="fa fa-smile-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <label>Position: </label>
-                                            <input type="text" class="form-control" placeholder="Position" />
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <label>Valid Until: </label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Choose Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <!--<label>Details:</label>-->
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="panel panel-warning">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="pull-left">
-                                                <div id="radio-switch">
-                                                    <div class="btn-group btn-toggle" data-toggle="buttons">
-                                                        <label class="btn btn-default btn-xs">
-                                                            <input name="options" value="option2" type="radio"> Normal
-                                                        </label>
-                                                        <label class="btn btn-default btn-primary btn-xs">
-                                                            <input name="options" checked="checked" type="radio"> Force Add
-                                                        </label>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="pull-left">
+                                                    <div class="form-inline">
+                                                        <div class="form-group">
+                                                            <label class="control-label">Position:</label>  <button class="btn btn-info btn-xs" disabled><span class="badge">1</span></button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="pull-right">
-                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                    <i class="fa fa-comment-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                    <i class="fa fa-file-text-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                    <i class="fa fa-smile-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <label>Position: </label>
-                                            <input type="text" class="form-control" placeholder="Position" />
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <label>Valid Until: </label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Choose Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <!--<label>Details:</label>-->
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="panel panel-danger">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="pull-left">
-                                                <div id="radio-switch">
-                                                    <div class="btn-group btn-toggle" data-toggle="buttons">
-                                                        <label class="btn btn-default  btn-primary btn-xs">
-                                                            <input name="options" checked="checked" type="radio"> Normal
-                                                        </label>
-                                                        <label class="btn btn-default btn-xs">
-                                                            <input name="options" value="option2" type="radio"> Force Add
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="pull-right">
-                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                    <i class="fa fa-comment-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                    <i class="fa fa-file-text-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                    <i class="fa fa-smile-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <img src="images/no-pic.png" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <label>Position: </label>
-                                            <input type="text" class="form-control" placeholder="Position" />
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <label>Valid Until: </label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Choose Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <!--<label>Details:</label>-->
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--elevate modals-->
-                <div id="backupRuleModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog  modal-s6">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Back Up Rule</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <table class="table table-condensed table-hover table-bordered">
-                                            <thead>
-                                                <tr class="active">
-                                                    <th colspan="2" style="text-align:center"><button class="btn btn-success btn-xs">Compare</button></th>
-                                                    <th style="text-align:center">Name</th>
-                                                    <th style="text-align:center">Date</th>
-                                                    <th style="text-align:center">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td width="5%" style="text-align:center;vertical-align:middle"><input  name="versionSelect" type="radio" /></td>
-                                                    <td width="5%" style="text-align:center;vertical-align:middle">1</td>
-                                                    <td width="40%" style="text-align:center">
-                                                        <strong>_macbook pro 13 1st back up</strong><br />
-                                                        3 contents
-                                                    </td>
-                                                    <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
-                                                    <td width="10%" style="text-align:center;vertical-align:middle">
-                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
-                                                            <i class="fa fa-undo fa-lg"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete ">
-                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
-                                                    <td width="5%" style="text-align:center;vertical-align:middle">2</td>
-                                                    <td width="40%" style="text-align:center">
-                                                        <strong>_macbook pro 13 2nd back up</strong><br />
-                                                        3 contents
-                                                    </td>
-                                                    <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
-                                                    <td width="10%" style="text-align:center;vertical-align:middle">
-                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
-                                                            <i class="fa fa-undo fa-lg"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete ">
-                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
-                                                    <td width="5%" style="text-align:center;vertical-align:middle">3</td>
-                                                    <td width="40%" style="text-align:center">
-                                                        <strong>_macbook pro 13 3rd back up</strong><br />
-                                                        6 contents
-                                                    </td>
-                                                    <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
-                                                    <td width="10%" style="text-align:center;vertical-align:middle">
-                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
-                                                            <i class="fa fa-undo fa-lg"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete ">
-                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <br />
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">Create New Rule Back Up Version</div>
-                                            <div class="panel-body">
-                                                <i class="text-danger">*</i> Name:<input id="" type="text" class="form-control" />
-                                                <i class="text-danger">*</i> Notes:<textarea id="" rows="2" cols="20" class="form-control"></textarea>
-                                            </div>
-                                            <div class="panel-footer">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="pull-right">
-                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Create Version</button>
-                                                            <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                                            <div class="col-sm-6">
+                                                <div class="pull-right">
+                                                    <div class="form-inline">
+                                                        <div class="form-group">
+                                                            <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                                                <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                            </button>-->
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+
+                                            </div>
+                                            <div class="col-sm-6">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4"></div>
+                            <!--<div class="row">
+                                <div class="col-sm-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                            <i class="fa fa-comment-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                            <i class="fa fa-smile-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label>Position: </label>
+                                                    <input type="text" class="form-control" placeholder="Position" />
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <label>Valid Until: </label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Choose Date">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>
+                                                        <b> Liebert </b>
+                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                    </p>
+                                                    <p>
+                                                        <span class="text-success">SKU#: </span>13374814
+                                                    </p>
+                                                    <p>
+                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="panel panel-warning">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="pull-left">
+                                                        <div id="radio-switch">
+                                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                                <label class="btn btn-default btn-xs">
+                                                                    <input name="options" value="option2" type="radio"> Normal
+                                                                </label>
+                                                                <label class="btn btn-default btn-primary btn-xs">
+                                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                            <i class="fa fa-comment-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                            <i class="fa fa-smile-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label>Position: </label>
+                                                    <input type="text" class="form-control" placeholder="Position" />
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <label>Valid Until: </label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Choose Date">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>
+                                                        <b> Liebert </b>
+                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                    </p>
+                                                    <p>
+                                                        <span class="text-success">SKU#: </span>13374814
+                                                    </p>
+                                                    <p>
+                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="panel panel-danger">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="pull-left">
+                                                        <div id="radio-switch">
+                                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                                <label class="btn btn-default  btn-primary btn-xs">
+                                                                    <input name="options" checked="checked" type="radio"> Normal
+                                                                </label>
+                                                                <label class="btn btn-default btn-xs">
+                                                                    <input name="options" value="option2" type="radio"> Force Add
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                            <i class="fa fa-comment-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                            <i class="fa fa-smile-o fa-lg"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <img src="images/no-pic.png" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="100">
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label>Position: </label>
+                                                    <input type="text" class="form-control" placeholder="Position" />
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <label>Valid Until: </label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Choose Date">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>
+                                                        <b> Liebert </b>
+                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                    </p>
+                                                    <p>
+                                                        <span class="text-success">SKU#: </span>13374814
+                                                    </p>
+                                                    <p>
+                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                        <!--elevate modals-->
+                        <div id="backupRuleModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-s6">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Back Up Rule</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <table class="table table-condensed table-hover table-bordered">
+                                                    <thead>
+                                                        <tr class="active">
+                                                            <th colspan="2" style="text-align:center"><button class="btn btn-success btn-xs">Compare</button></th>
+                                                            <th style="text-align:center">Name</th>
+                                                            <th style="text-align:center">Date</th>
+                                                            <th style="text-align:center">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                            <td width="5%" style="text-align:center;vertical-align:middle">1</td>
+                                                            <td width="40%" style="text-align:center">
+                                                                <strong>_macbook pro 13 1st back up</strong><br />
+                                                                3 contents
+                                                            </td>
+                                                            <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                            <td width="10%" style="text-align:center;vertical-align:middle">
+                                                                <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                    <i class="fa fa-undo fa-lg"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                            <td width="5%" style="text-align:center;vertical-align:middle">2</td>
+                                                            <td width="40%" style="text-align:center">
+                                                                <strong>_macbook pro 13 2nd back up</strong><br />
+                                                                3 contents
+                                                            </td>
+                                                            <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                            <td width="10%" style="text-align:center;vertical-align:middle">
+                                                                <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                    <i class="fa fa-undo fa-lg"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                            <td width="5%" style="text-align:center;vertical-align:middle">3</td>
+                                                            <td width="40%" style="text-align:center">
+                                                                <strong>_macbook pro 13 3rd back up</strong><br />
+                                                                6 contents
+                                                            </td>
+                                                            <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                            <td width="10%" style="text-align:center;vertical-align:middle">
+                                                                <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                    <i class="fa fa-undo fa-lg"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                    <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <br />
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">Create New Rule Back Up Version</div>
+                                                    <div class="panel-body">
+                                                        <i class="text-danger">*</i> Name:<input id="" type="text" class="form-control" />
+                                                        <i class="text-danger">*</i> Notes:<textarea id="" rows="2" cols="20" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="panel-footer">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="pull-right">
+                                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Create Version</button>
+                                                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <table class="table table-condensed">
+                                                    <thead>
+                                                        <tr class="active">
+                                                            <th style="text-align:center"></th>
+                                                            <th style="text-align:center">Current Rule Details</th>
+                                                            <th style="text-align:center">Version (no.) Details</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="text-align:center"></th>
+                                                            <th style="text-align:center"></th>
+                                                            <th style="text-align:center">
+                                                                <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                    <i class="fa fa-undo fa-lg"></i> Restore this version
+                                                                </button>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="active">Created By</td>
+                                                            <td>Not Available</td>
+                                                            <td>pcmall_admin</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Date</td>
+                                                            <td>Not Available</td>
+                                                            <td>08/03/2017 00:19 AM</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Name</td>
+                                                            <td>Not Available</td>
+                                                            <td>_macbook pro 13 1st back up</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Notes</td>
+                                                            <td>Not Available</td>
+                                                            <td>3 contents</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Rule ID</td>
+                                                            <td>_macbook pro 13</td>
+                                                            <td>_macbook pro 13</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Rule Name</td>
+                                                            <td>_macbook pro 13</td>
+                                                            <td>_macbook pro 13</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="submitApprovalModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Submit for Approval</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>This rule will be locked for approval. Continue?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                            <i class="fa  fa-ban"></i>
+                                            NO
+                                        </button>
+                                        <a href="searchrules.html" class="btn btn-primary">
+                                            <i class="fa fa-check"></i>
+                                            YES
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ruleCommentModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Rule Comment</h4>
+                                    </div>
+                                    <div class="modal-body">
                                         <table class="table table-condensed">
                                             <thead>
-                                                <tr class="active">
-                                                    <th style="text-align:center"></th>
-                                                    <th style="text-align:center">Current Rule Details</th>
-                                                    <th style="text-align:center">Version (no.) Details</th>
-                                                </tr>
                                                 <tr>
-                                                    <th style="text-align:center"></th>
-                                                    <th style="text-align:center"></th>
-                                                    <th style="text-align:center">
-                                                        <button type="button" class="btn btn-link btn-xs" title="Restore ">
-                                                            <i class="fa fa-undo fa-lg"></i> Restore this version
-                                                        </button></th>
+                                                    <th>Date</th>
+                                                    <th>Username</th>
+                                                    <th>Status</th>
+                                                    <th>Comment</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="active">Created By</td>
-                                                    <td>Not Available</td>
+                                                    <td>05/03/2016 05:56 PM</td>
                                                     <td>pcmall_admin</td>
+                                                    <td>EXPORTED</td>
+                                                    <td>exported ni carl</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="active">Date</td>
-                                                    <td>Not Available</td>
-                                                    <td>08/03/2017 00:19 AM</td>
+                                                    <td>05/03/2016 05:56 PM</td>
+                                                    <td>pcmall_admin</td>
+                                                    <td> PUBLISHED	</td>
+                                                    <td>published ni carl</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="active">Name</td>
-                                                    <td>Not Available</td>
-                                                    <td>_macbook pro 13 1st back up</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="active">Notes</td>
-                                                    <td>Not Available</td>
-                                                    <td>3 contents</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="active">Rule ID</td>
-                                                    <td>_macbook pro 13</td>
-                                                    <td>_macbook pro 13</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="active">Rule Name</td>
-                                                    <td>_macbook pro 13</td>
-                                                    <td>_macbook pro 13</td>
+                                                    <td>05/03/2016 05:56 PM</td>
+                                                    <td> JBauca	</td>
+                                                    <td> PUBLISHED	</td>
+                                                    <td>published ni carl</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div class="row row-height">
+                                            <div class="col-sm-12">
+                                                <div class="page-cover">
+                                                    <div class="pager-number">1 to 2 of 2</div>
+                                                    <div class="pull-right reset-margin row-height">
+                                                        <ul class="pagination reset-margin">
+                                                            <li><a href="#">&laquo;</a></li>
+                                                            <li>
+                                                                <span class="page-number">
+                                                                    <input placeholder="Page" class="form-control input-small page-number">
+                                                                </span>
+                                                            </li>
+                                                            <li><a href="#">&raquo;</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                        <div id="ruleVersionDownloadModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Download Rule Version</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                Filename:<input id="" type="text" class="form-control" /><br />
+                                                Type:<select id="" class="form-control">
+                                                    <option>Excel</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success">
+                                            <i class="fa  fa-download"></i>
+                                            Download
+                                        </button>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fa fa-times-circle"></i>
+                                            Clear
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="copyToSiteModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Copy</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                Store:
+                                                <select id="" size="5" class="form-control">
+                                                    <option>MacMall BD</option>
+                                                    <option>PCM</option>
+                                                    <option>eCOST</option>
+                                                    <option>MacMall</option>
+                                                    <option>PCMall BD</option>
+                                                    <option>PCMGBD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="fa  fa-copy"></i>
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="downloadContentModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Download Elevate</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                Filename:<input id="" type="text" class="form-control" /><br />
+                                                Pages:<select id="" class="form-control">
+                                                    <option>Current Page</option>
+                                                    <option>All Pages</option>
+                                                </select><br />
+                                                Type:<select id="" class="form-control">
+                                                    <option>Excel</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success">
+                                            <i class="fa  fa-download"></i>
+                                            Download
+                                        </button>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fa fa-times-circle"></i>
+                                            Clear
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="removeContentModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Delete Item</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>All items associated to this rule will be removed. Continue?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="searchrules.html" class="btn btn-primary">
+                                            <i class="fa fa-check"></i>
+                                            Ok
+                                        </a>
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                            <i class="fa  fa-ban"></i>
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="submitApprovalModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <!-- Modal content-->
+                <!--logout modal-->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Submit for Approval</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
                             </div>
                             <div class="modal-body">
-                                <p>This rule will be locked for approval. Continue?</p>
+                                Are you sure you want to logout?
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-warning" data-dismiss="modal">
                                     <i class="fa  fa-ban"></i>
                                     NO
                                 </button>
-                                <a href="searchrules.html" class="btn btn-primary">
+                                <a href="login.html" class="btn btn-primary">
                                     <i class="fa fa-check"></i>
                                     YES
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div id="ruleCommentModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Rule Comment</h4>
-                            </div>
-                            <div class="modal-body">
-                                <table class="table table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Username</th>
-                                            <th>Status</th>
-                                            <th>Comment</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>05/03/2016 05:56 PM</td>
-                                            <td>pcmall_admin</td>
-                                            <td>EXPORTED</td>
-                                            <td>exported ni carl</td>
-                                        </tr>
-                                        <tr>
-                                            <td>05/03/2016 05:56 PM</td>
-                                            <td>pcmall_admin</td>
-                                            <td> PUBLISHED	</td>
-                                            <td>published ni carl</td>
-                                        </tr>
-                                        <tr>
-                                            <td>05/03/2016 05:56 PM</td>
-                                            <td> JBauca	</td>
-                                            <td> PUBLISHED	</td>
-                                            <td>published ni carl</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="row row-height">
-                                    <div class="col-sm-12">
-                                        <div class="page-cover">
-                                            <div class="pager-number">1 to 2 of 2</div>
-                                            <div class="pull-right reset-margin row-height">
-                                                <ul class="pagination reset-margin">
-                                                    <li><a href="#">&laquo;</a></li>
-                                                    <li>
-                                                        <span class="page-number">
-                                                            <input placeholder="Page" class="form-control input-small page-number">
-                                                        </span>
-                                                    </li>
-                                                    <li><a href="#">&raquo;</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="ruleVersionDownloadModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Download Rule Version</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        Filename:<input id="" type="text" class="form-control" /><br />
-                                        Type:<select id="" class="form-control">
-                                            <option>Excel</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-success">
-                                    <i class="fa  fa-download"></i>
-                                    Download
-                                </button>
-                                <a href="#" class="btn btn-warning">
-                                    <i class="fa fa-times-circle"></i>
-                                    Clear
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="copyToSiteModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Copy</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        Store:
-                                        <select id="" size="5" class="form-control">
-                                            <option>MacMall BD</option>
-                                            <option>PCM</option>
-                                            <option>eCOST</option>
-                                            <option>MacMall</option>
-                                            <option>PCMall BD</option>
-                                            <option>PCMGBD</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">
-                                    <i class="fa  fa-copy"></i>
-                                    Copy
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="downloadContentModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Download Elevate</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        Filename:<input id="" type="text" class="form-control" /><br />
-                                        Pages:<select id="" class="form-control">
-                                            <option>Current Page</option>
-                                            <option>All Pages</option>
-                                        </select><br />
-                                        Type:<select id="" class="form-control">
-                                            <option>Excel</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-success">
-                                    <i class="fa  fa-download"></i>
-                                    Download
-                                </button>
-                                <a href="#" class="btn btn-warning">
-                                    <i class="fa fa-times-circle"></i>
-                                    Clear
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="removeContentModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Delete Item</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>All items associated to this rule will be removed. Continue?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="searchrules.html" class="btn btn-primary">
-                                    <i class="fa fa-check"></i>
-                                    Ok
-                                </a>
-                                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                                    <i class="fa  fa-ban"></i>
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
+                        <!-- /.modal-content -->
                     </div>
                 </div>
             </div>
-        </div>
-        <!--logout modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
-                    </div>
-                    <div class="modal-body">
-                        Are you sure you want to logout?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">
-                            <i class="fa  fa-ban"></i>
-                            NO
-                        </button>
-                        <a href="login.html" class="btn btn-primary">
-                            <i class="fa fa-check"></i>
-                            YES
-                        </a>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-        </div>
-    </div>
 </body>
 </html>
