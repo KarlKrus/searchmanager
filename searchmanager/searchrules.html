@@ -432,7 +432,7 @@
                                     <div class="pull-left">
                                         <div class="form-inline">
                                             <div class="form-group">
-                                                <h4>Keyword:</h4>
+                                                <h4>Elevate Keyword List:</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -1357,7 +1357,7 @@
                                     <div class="pull-left">
                                         <div class="form-inline">
                                             <div class="form-group">
-                                                <h4>Keyword:</h4>
+                                                <h4>Demote Keyword List:</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -2267,7 +2267,7 @@
                                     <div class="pull-left">
                                         <div class="form-inline">
                                             <div class="form-group">
-                                                <h4>Keyword:</h4>
+                                                <h4>Exclude Keyword List:</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -4485,192 +4485,163 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--<br>
-                                    <div class="container">
+                                    <div class="row">
                                         <script>
                                             $(document).ready(function () {
                                                 $('[data-toggle="popover"]').popover();
                                             });
                                         </script>
-                                        <div class="well well-sm">
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div class="pull-right" style="padding-top:5px">
-                                                        <label data-toggle="popover" data-placement="left" title="Query Fields" data-content="List of fields and the boosts to associate with each of them">Query Fields: </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <div class="pull-left"></div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" size="100">
-                                                        <div class="input-group-btn">
-                                                            <button type="button" class="btn btn-success" title="Save">
-                                                                <i class="fa fa-floppy-o fa-lg"></i>
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-8">
+                                            <table class="table table-condensed">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="text-align:right">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Query Fields"
+                                                                    data-content="List of fields and the &ldquo;boosts&rdquo; to associate with each of them">
+                                                                Query Fields:
                                                             </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="well well-sm">
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div class="pull-right" style="padding-top:5px">
-                                                        <label>Boost Function: </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <div class="pull-left"></div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" size="100">
-                                                        <div class="input-group-btn">
-                                                            <button type="button" class="btn btn-success" title="Save">
-                                                                <i class="fa fa-floppy-o fa-lg"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="well well-sm">
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div class="pull-right" style="padding-top:5px">
-                                                        <label>Phrase  Fields: </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <div class="pull-left"></div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" size="100">
-                                                        <div class="input-group-btn">
-                                                            <button type="button" class="btn btn-success" title="Save">
-                                                                <i class="fa fa-floppy-o fa-lg"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="well well-sm">
-                                            <div class="row">
-                                                <div class="col-sm-2">
-                                                    <div class="pull-right" style="padding-top:5px">
-                                                        <label>Boost Query: </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <div class="pull-left"></div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" size="100">
-                                                        <div class="input-group-btn">
-                                                            <button type="button" class="btn btn-success" title="Save">
-                                                                <i class="fa fa-floppy-o fa-lg"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="well well-sm">
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <div class="pull-right" style="padding-top:5px">
-                                                                <label>Tie Breaker: </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-9">
-                                                            <div class="pull-left"></div>
+                                                        </td>
+                                                        <td>
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control" size="100">
+                                                                <input type="text" class="form-control input-sm" size="100">
                                                                 <div class="input-group-btn">
-                                                                    <button type="button" class="btn btn-success" title="Save">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
                                                                         <i class="fa fa-floppy-o fa-lg"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="well well-sm">
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <div class="pull-right" style="padding-top:5px">
-                                                                <label>Phrase Slop: </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-9">
-                                                            <div class="pull-left"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:right">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Boost Functions"
+                                                                    data-content="Functions that will be included in the user's query to influence the score">
+                                                                Boost Functions:
+                                                            </button>
+                                                        </td>
+                                                        <td>
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control" size="100">
+                                                                <input type="text" class="form-control input-sm" size="100">
                                                                 <div class="input-group-btn">
-                                                                    <button type="button" class="btn btn-success" title="Save">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
                                                                         <i class="fa fa-floppy-o fa-lg"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:right">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Phrase Fields"
+                                                                    data-content="Used as a boost in cases where the score of documents matched appear in close proximity">
+                                                                Phrase Fields:
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control input-sm" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:right">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Boost Query"
+                                                                    data-content="A raw query string that will be included with the user's query to influence the score">
+                                                                Boost Query:
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control input-sm" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                            </table>
+                                            <table class="table table-condensed">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="text-align:right;width:10%">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Min To Match"
+                                                                    data-content="The minimum number of words specified in the keyword phrase that should match">
+                                                                Min To Match:
+                                                            </button>
+                                                        </td>
+                                                        <td style="text-align:right;width:40%">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control input-sm" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="text-align:right;width:10%">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Query Slop"
+                                                                    data-content="Amount of slop on phrase queries explicitly included in the user's query string (affects matching)">
+                                                                Query Slop:
+                                                            </button>
+                                                        </td>
+                                                        <td style="text-align:right;width:40%">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control input-sm" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:right;width:10%">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Tie Breaker"
+                                                                    data-content="In case documents have the same score, this is used to determine which document is prioritized. Computation is done via (score of matching clause with the highest score) + ( (tie paramenter) * (scores of any other matching clauses) ) ">
+                                                                Tie Breaker:
+                                                            </button>
+                                                        </td>
+                                                        <td style="text-align:right;width:40%">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control input-sm" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="text-align:right;width:10%">
+                                                            <button class="btn btn-link" data-toggle="popover" title="Phrase Slop"
+                                                                    data-content="Amount of slop (distance between words) on phrase queries built for &ldquo;pf&rdquo; fields (affects boosting)">
+                                                                Phrase Slop:
+                                                            </button>
+                                                        </td>
+                                                        <td style="text-align:right;width:40%">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control input-sm" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success btn-sm" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="well well-sm">
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <div class="pull-right" style="padding-top:5px">
-                                                                <label>Min to Match: </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-9">
-                                                            <div class="pull-left"></div>
-                                                            <div class="input-group">
-                                                                <input type="text" class="form-control" size="100">
-                                                                <div class="input-group-btn">
-                                                                    <button type="button" class="btn btn-success" title="Save">
-                                                                        <i class="fa fa-floppy-o fa-lg"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="well well-sm">
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <div class="pull-right" style="padding-top:5px">
-                                                                <label>Query Slop: </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-9">
-                                                            <div class="pull-left"></div>
-                                                            <div class="input-group">
-                                                                <input type="text" class="form-control" size="100">
-                                                                <div class="input-group-btn">
-                                                                    <button type="button" class="btn btn-success" title="Save">
-                                                                        <i class="fa fa-floppy-o fa-lg"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                    <br />
-                                    <div class="row">
+                                        <div class="col-sm-2"></div>
                                     </div>
                                 </div>
                             </div>
