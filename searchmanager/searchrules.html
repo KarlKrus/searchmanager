@@ -3582,7 +3582,7 @@
                                                                                     <option>Facets </option>
                                                                                 </select>
                                                                                 <button type="button" class="btn btn-success" title="Add">
-                                                                                    <i class="fa fa-plus-square fa-lg" style="color:white"></i>
+                                                                                    <i class="fa fa-plus-square fa-lg" style="color:white"></i> Add
                                                                                 </button>
                                                                             </div>
                                                                         </div>
@@ -4055,6 +4055,992 @@
                         </div>
                     </div>
                     <div id="redirectSaveRuleModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <div class="alert alert-success alert-dismissable">
+                                <a href="#" class="close" data-dismiss="modal" aria-label="close">&times;</a>
+                                <strong>Success!</strong> Rule Saved!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--relevancy module-->
+            <div class="row" id="relevancyModule" style="display:none">
+                <script>
+                    function relevancyCRUDSHOW() {
+                        var relCRUD = document.getElementById('relevancyCRUD');
+                        var relKWL = document.getElementById('relevancyKWList');
+                        if (relCRUD.style.display === 'none') {
+                            relCRUD.style.display = 'block';
+                            relKWL.style.display = 'none';
+                        } else {
+                            relCRUD.style.display = 'none';
+                        }
+                    }
+                    function relevancyKWLSHOW() {
+                        var relCRUD = document.getElementById('relevancyCRUD');
+                        var relKWL = document.getElementById('relevancyKWList');
+                        if (relKWL.style.display === 'none') {
+                            relCRUD.style.display = 'none';
+                            relKWL.style.display = 'block';
+                        } else {
+                            relCRUD.style.display = 'none';
+                        }
+                    }
+                </script>
+                <!--relevancy keywordlist-->
+                <div id="relevancyKWList">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="#" onclick="searchRulelandingPage()">Home</a></li>
+                        <li class="active">Keyword List</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div id="redRuleList" class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <h4>Relevancy Rule:</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Search Keyword">
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn-info" title="Search">
+                                                                    <i class="fa fa-search fa-lg" style="color:white"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-success" title="Add">
+                                                                    <i class="fa fa-plus-square fa-lg" style="color:white"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>Keyword</th>
+                                                <th>Status</th>
+                                                <th>Content Count</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ELO! can you hear me</td>
+                                                <td>Ready for Production</td>
+                                                <td><a href="#" class="btn btn-link" onclick="relevancyCRUDSHOW()">12</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td> elo touch solution</td>
+                                                <td>Setup a Rule</td>
+                                                <td><a href="#" class="btn btn-link" onclick="relevancyCRUDSHOW()">3</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td> ELO WORLD!</td>
+                                                <td>Action Required</td>
+                                                <td><a href="#" class="btn btn-link" onclick="relevancyCRUDSHOW()">8</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row row-height">
+                                        <div class="col-sm-12">
+                                            <div class="page-cover">
+                                                <div class="pager-number">1 to 2 of 2</div>
+                                                <div class="pull-right reset-margin row-height">
+                                                    <ul class="pagination reset-margin">
+                                                        <li><a href="#">&laquo;</a></li>
+
+                                                        <li>
+                                                            <span class="page-number">
+                                                                <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                            </span>
+                                                        </li>
+                                                        <li><a href="#">&raquo;</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div id="redKWList" class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <h4>Keyword:</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Search Keyword">
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn-info" title="Search">
+                                                                    <i class="fa fa-search fa-lg" style="color:white"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>Keyword</th>
+                                                <th>Rule Count</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mouse</td>
+                                                <td><a href="#" class="btn btn-link">3</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td> GXT4</td>
+                                                <td><a href="#" class="btn btn-link">3</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Keyboard</td>
+                                                <td><a href="#" class="btn btn-link">1</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row row-height">
+                                        <div class="col-sm-12">
+                                            <div class="page-cover">
+                                                <div class="pager-number">1 to 2 of 2</div>
+                                                <div class="pull-right reset-margin row-height">
+                                                    <ul class="pagination reset-margin">
+                                                        <li><a href="#">&laquo;</a></li>
+                                                        <li>
+                                                            <span class="page-number">
+                                                                <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                            </span>
+                                                        </li>
+                                                        <li><a href="#">&raquo;</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--relevancy crud form-->
+                <div id="relevancyCRUD" style="display:none">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="#" onclick="searchRulelandingPage()">Home</a></li>
+                        <li><a href="#" onclick="relevancyKWLSHOW()">Keyword List</a></li>
+                        <li class="active">Relevancy</li>
+                    </ol>
+                    <!-- relevancy title-->
+                    <h4>
+                        Relevancy for
+                        <span class="text-primary">elo touch solutions</span>
+                    </h4>
+                    <!--relevancy publish options-->
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="pull-left">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <h5 style="font-weight:700">
+                                                Status:
+                                                <span class="text-danger"> Setup a Rule </span>
+                                            </h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5 style="font-weight:700">
+                                                Last Published:
+                                                <span class="text-warning">
+                                                    10/15/2014 07:11 PM
+                                                </span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-success" title="Submit for Approval" data-toggle="modal" data-target="#relevancySubmitApprovalModal">
+                                                <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--relevancy rule details and options-->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <h5 style="font-weight:700">Rule Details</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <button type="button" class="btn btn-success" title="Save Rule" data-toggle="modal" data-target="#relevancySaveRuleModal">
+                                                            <i class="fa fa-save fa-lg"></i> Save
+                                                        </button>
+                                                        <button type="button" class="btn btn-danger" title="Delete Rule" data-toggle="modal" data-target="#relevancyDeleteRuleModal">
+                                                            <i class="fa fa-trash-o fa-lg"></i> Delete
+                                                        </button>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
+                                                                Rule Options
+                                                                <span class="caret"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu" style="right: 0; left: auto;">
+                                                                <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#relevancyBackupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
+                                                                </li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#relevancyRuleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                                                </li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#relevancyRuleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                                                </li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#relevancyCopyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
+                                                                </li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#relevancyDownloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" style="font-weight:700">Rule Name:</div>
+                                                <div class="panel-body" style="max-height:500px; overflow-y:auto;">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" class="form-control" placeholder="Rule Name" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label>Schedule: </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" placeholder="Choose Start Date">
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" placeholder="Choose End Date">
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label>Description: </label>
+                                                            <textarea rows="5" cols="20" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" style="font-weight:700">Using this Rule:</div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" size="1" placeholder="Search Keyword">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-info" title="Search">
+                                                                        <i class="fa fa-search fa-lg" style="color:white"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-success" title="Add">
+                                                                        <i class="fa fa-plus-square fa-lg" style="color:white"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table class="table table-hover table-condensed">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="padding:1px">Keyword</th>
+                                                                        <th style="padding:1px;text-align:center"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:1px">elo,  from the other side</td>
+                                                                        <td style="padding:1px;text-align:center"><buton class="btn-link"><i class="fa fa-times" style="color:red"></i></buton></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:1px">i must have called a thousand times</td>
+                                                                        <td style="padding:1px;text-align:center"><buton class="btn-link"><i class="fa fa-times" style="color:red"></i></buton></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:1px">to tell you I'm sorry for everything that I've done</td>
+                                                                        <td style="padding:1px;text-align:center"><buton class="btn-link"><i class="fa fa-times" style="color:red"></i></buton></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:1px">but when I call you never seem to be home</td>
+                                                                        <td style="padding:1px;text-align:center"><buton class="btn-link"><i class="fa fa-times" style="color:red"></i></buton></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="padding:1px">elo from the outside</td>
+                                                                        <td style="padding:1px;text-align:center"><buton class="btn-link"><i class="fa fa-times" style="color:red"></i></buton></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-footer" style="padding-bottom:2px;padding-top:2px">
+                                                    <div class="row row-height">
+                                                        <div class="col-sm-12">
+                                                            <div class="page-cover">
+                                                                <div class="pager-number">1 to 2 of 2</div>
+                                                                <div class="pull-right reset-margin row-height">
+                                                                    <ul class="pagination reset-margin">
+                                                                        <li><a href="#">&laquo;</a></li>
+                                                                        <li>
+                                                                            <span class="page-number">
+                                                                                <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                                            </span>
+                                                                        </li>
+                                                                        <li><a href="#">&raquo;</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="container">
+                                        <script>
+                                            $(document).ready(function () {
+                                                $('[data-toggle="popover"]').popover();
+                                            });
+                                        </script>
+                                        <div class="well well-sm">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="pull-right" style="padding-top:5px">
+                                                        <label>Query Fields: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <div class="pull-left"></div>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" size="100">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" title="Save">
+                                                                <i class="fa fa-floppy-o fa-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="well well-sm">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="pull-right" style="padding-top:5px">
+                                                        <label>Boost Function: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <div class="pull-left"></div>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" size="100">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" title="Save">
+                                                                <i class="fa fa-floppy-o fa-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="well well-sm">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="pull-right" style="padding-top:5px">
+                                                        <label>Phrase  Fields: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <div class="pull-left"></div>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" size="100">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" title="Save">
+                                                                <i class="fa fa-floppy-o fa-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="well well-sm">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="pull-right" style="padding-top:5px">
+                                                        <label>Boost Query: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <div class="pull-left"></div>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" size="100">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" title="Save">
+                                                                <i class="fa fa-floppy-o fa-lg"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="well well-sm">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="pull-right" style="padding-top:5px">
+                                                                <label>Tie Breaker: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <div class="pull-left"></div>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="well well-sm">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="pull-right" style="padding-top:5px">
+                                                                <label>Phrase Slop: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <div class="pull-left"></div>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="well well-sm">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="pull-right" style="padding-top:5px">
+                                                                <label>Min to Match: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <div class="pull-left"></div>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="well well-sm">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="pull-right" style="padding-top:5px">
+                                                                <label>Query Slop: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <div class="pull-left"></div>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" size="100">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success" title="Save">
+                                                                        <i class="fa fa-floppy-o fa-lg"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--relevancy modals-->
+                    <div id="relevancyBackupRuleModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog  modal-s6">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Back Up Rule</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <table class="table table-condensed table-hover table-bordered">
+                                                <thead>
+                                                    <tr class="active">
+                                                        <th colspan="2" style="text-align:center"><button class="btn btn-success btn-xs">Compare</button></th>
+                                                        <th style="text-align:center">Name</th>
+                                                        <th style="text-align:center">Date</th>
+                                                        <th style="text-align:center">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                        <td width="5%" style="text-align:center;vertical-align:middle">1</td>
+                                                        <td width="40%" style="text-align:center">
+                                                            <strong>_macbook pro 13 1st back up</strong><br />
+                                                            3 contents
+                                                        </td>
+                                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                        <td width="10%" style="text-align:center;vertical-align:middle">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                        <td width="5%" style="text-align:center;vertical-align:middle">2</td>
+                                                        <td width="40%" style="text-align:center">
+                                                            <strong>_macbook pro 13 2nd back up</strong><br />
+                                                            3 contents
+                                                        </td>
+                                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                        <td width="10%" style="text-align:center;vertical-align:middle">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                                        <td width="5%" style="text-align:center;vertical-align:middle">3</td>
+                                                        <td width="40%" style="text-align:center">
+                                                            <strong>_macbook pro 13 3rd back up</strong><br />
+                                                            6 contents
+                                                        </td>
+                                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                        <td width="10%" style="text-align:center;vertical-align:middle">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">Create New Rule Back Up Version</div>
+                                                <div class="panel-body">
+                                                    <i class="text-danger">*</i> Name:<input id="" type="text" class="form-control" />
+                                                    <i class="text-danger">*</i> Notes:<textarea id="" rows="2" cols="20" class="form-control"></textarea>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="pull-right">
+                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Create Version</button>
+                                                                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <table class="table table-condensed">
+                                                <thead>
+                                                    <tr class="active">
+                                                        <th style="text-align:center"></th>
+                                                        <th style="text-align:center">Current Rule Details</th>
+                                                        <th style="text-align:center">Version (no.) Details</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align:center"></th>
+                                                        <th style="text-align:center"></th>
+                                                        <th style="text-align:center">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i> Restore this version
+                                                            </button>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active">Created By</td>
+                                                        <td>Not Available</td>
+                                                        <td>pcmall_admin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Date</td>
+                                                        <td>Not Available</td>
+                                                        <td>08/03/2017 00:19 AM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Name</td>
+                                                        <td>Not Available</td>
+                                                        <td>_macbook pro 13 1st back up</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Notes</td>
+                                                        <td>Not Available</td>
+                                                        <td>3 contents</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Rule ID</td>
+                                                        <td>_macbook pro 13</td>
+                                                        <td>_macbook pro 13</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Rule Name</td>
+                                                        <td>_macbook pro 13</td>
+                                                        <td>_macbook pro 13</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancySubmitApprovalModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Submit for Approval</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This rule will be locked for approval. Continue?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                        <i class="fa  fa-ban"></i>
+                                        NO
+                                    </button>
+                                    <a href="searchrules.html" class="btn btn-primary">
+                                        <i class="fa fa-check"></i>
+                                        YES
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancyRuleCommentModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Rule Comment</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Username</th>
+                                                <th>Status</th>
+                                                <th>Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>05/03/2016 05:56 PM</td>
+                                                <td>pcmall_admin</td>
+                                                <td>EXPORTED</td>
+                                                <td>exported ni carl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>05/03/2016 05:56 PM</td>
+                                                <td>pcmall_admin</td>
+                                                <td> PUBLISHED	</td>
+                                                <td>published ni carl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>05/03/2016 05:56 PM</td>
+                                                <td> JBauca	</td>
+                                                <td> PUBLISHED	</td>
+                                                <td>published ni carl</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="row row-height">
+                                        <div class="col-sm-12">
+                                            <div class="page-cover">
+                                                <div class="pager-number">1 to 2 of 2</div>
+                                                <div class="pull-right reset-margin row-height">
+                                                    <ul class="pagination reset-margin">
+                                                        <li><a href="#">&laquo;</a></li>
+                                                        <li>
+                                                            <span class="page-number">
+                                                                <input placeholder="Page" class="form-control input-small page-number">
+                                                            </span>
+                                                        </li>
+                                                        <li><a href="#">&raquo;</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancyRuleVersionDownloadModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Download Rule Version</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Filename:<input id="" type="text" class="form-control" /><br />
+                                            Type:<select id="" class="form-control">
+                                                <option>Excel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="fa  fa-download"></i>
+                                        Download
+                                    </button>
+                                    <a href="#" class="btn btn-warning">
+                                        <i class="fa fa-times-circle"></i>
+                                        Clear
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancyCopyToSiteModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Copy</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Store:
+                                            <select id="" size="5" class="form-control">
+                                                <option>MacMall BD</option>
+                                                <option>PCM</option>
+                                                <option>eCOST</option>
+                                                <option>MacMall</option>
+                                                <option>PCMall BD</option>
+                                                <option>PCMGBD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fa  fa-copy"></i>
+                                        Copy
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancyDownloadContentModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Download relevancy</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Filename:<input id="" type="text" class="form-control" /><br />
+                                            Pages:<select id="" class="form-control">
+                                                <option>Current Page</option>
+                                                <option>All Pages</option>
+                                            </select><br />
+                                            Type:<select id="" class="form-control">
+                                                <option>Excel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="fa  fa-download"></i>
+                                        Download
+                                    </button>
+                                    <a href="#" class="btn btn-warning">
+                                        <i class="fa fa-times-circle"></i>
+                                        Clear
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancyDeleteRuleModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Delete Rule</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Delete this rule. Continue?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary">
+                                        <i class="fa fa-check"></i>
+                                        Ok
+                                    </a>
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                        <i class="fa  fa-ban"></i>
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="relevancySaveRuleModal" class="modal fade" role="dialog">
                         <div class="modal-dialog modal-sm">
                             <div class="alert alert-success alert-dismissable">
                                 <a href="#" class="close" data-dismiss="modal" aria-label="close">&times;</a>
