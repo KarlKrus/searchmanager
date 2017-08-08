@@ -151,7 +151,7 @@
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Simulator</a>
-                        <li class="active"><a href="#">Search Rules</a>
+                        <li class="active" onclick="searchRulelandingPage()"><a href="#">Search Rules</a>
                         <li><a href="#">Workflow</a>
                         <li><a href="#">Linguistics</a>
                     </ul>
@@ -216,8 +216,11 @@
                     </ul>
                 </div>
             </div>
+        </nav>
+        <!--page content/wrapper-->
+        <div id="page-wrapper">
+            
             <script type="text/javascript">
-
                 function searchRulelandingPage() {
                     var srl = document.getElementById('searchruleLanding');
                     var ele = document.getElementById('elevateModule');
@@ -319,9 +322,6 @@
                     }
                 }
             </script>
-        </nav>
-        <!--page content/wrapper-->
-        <div id="page-wrapper">
 
             <!--search rule landing page-->
             <div id="searchruleLanding" style="display:block">
@@ -4336,6 +4336,10 @@
                                                             </button>
                                                             <ul class="dropdown-menu" style="right: 0; left: auto;">
                                                                 <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#relevancyCloneModal"><i class="fa fa-file fa-lg"></i> Clone</a>
+                                                                </li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li>
                                                                     <a href="#" data-toggle="modal" data-target="#relevancyBackupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
                                                                 </li>
                                                                 <li role="separator" class="divider"></li>
@@ -5019,34 +5023,57 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!--logout modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to logout?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-warning" data-dismiss="modal">
-                                <i class="fa  fa-ban"></i>
-                                NO
-                            </button>
-                            <a href="login.html" class="btn btn-primary">
-                                <i class="fa fa-check"></i>
-                                YES
-                            </a>
+                    <div id="relevancyCloneModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Clone Relevancy</h4>
+                                </div>
+                                <div class="modal-body">
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary">
+                                        <i class="fa fa-floppy-o"></i>
+                                        Save
+                                    </a>
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                        <i class="fa  fa-ban"></i>
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.modal-content -->
                 </div>
             </div>
+        </div>
+    </div>    
+    
+    <!--logout modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">
+                        <i class="fa  fa-ban"></i>
+                        NO
+                    </button>
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fa fa-check"></i>
+                        YES
+                    </a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
         </div>
     </div>
 </body>
