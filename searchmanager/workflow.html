@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Search Manager - Settings</title>
+    <title>Search Manager - Workflow</title>
     <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
     <link href="custom-css/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -145,18 +145,23 @@
                     <button class="btn btn-default dropdown-toggle" type="button"
                             id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
                         <span style="float:left">
-                            Search Rules
+                            Workflow
                         </span>
                         <span style="float:right"><span class="caret"></span></span>
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Simulator</a>
                         <li><a href="searchrules.html">Search Rules</a>
-                        <li><a href="workflow.html">Workflow</a>
+                        <li class="active"><a href="#">Workflow</a>
                         <li><a href="#">Linguistics</a>
                     </ul>
                 </li>
-                <li><input id="" type="button" value="Settings" class="btn btn-info active" disabled/></li>
+                <li>
+                    <button type="button"
+                            class="btn btn-default "
+                            onclick="window.location.href='/settings.html'">
+                        Settings
+                    </button></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
                         <img src="images/no-pic.png" class="img-circle nav-user-photo" />
