@@ -161,7 +161,8 @@
                             class="btn btn-default "
                             onclick="window.location.href='/settings.html'">
                         Settings
-                    </button></li>
+                    </button>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
                         <img src="images/no-pic.png" class="img-circle nav-user-photo" />
@@ -186,15 +187,27 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Audit Trail">
-                                <i class="fa fa-file-text-o fa-fw"></i>
-                                <span class="collapse-menu">Audit Trail</span>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Pending Approval" onclick="pendingApprov()">
+                                <i class="fa fa-thumbs-o-up fa-fw"></i>
+                                <span class="collapse-menu">Pending Approval</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="User Accounts">
-                                <i class="fa fa-users fa-fw"></i>
-                                <span class="collapse-menu">User Accounts</span>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Push to Production" onclick="pushtoProd()">
+                                <i class="fa fa-desktop fa-fw"></i>
+                                <span class="collapse-menu">Push to Production</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Export Rule" onclick="exportRule()">
+                                <i class="fa fa-upload  fa-fw"></i>
+                                <span class="collapse-menu">Export Rule</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Auto Import" onclick="autoImport()">
+                                <i class="fa fa-download  fa-fw"></i>
+                                <span class="collapse-menu">Auto Import</span>
                             </a>
                         </li>
                         <li>
@@ -207,109 +220,507 @@
         <!--page content/wrapper-->
         <div id="page-wrapper">
 
-            <script type="text/javascript">
-                function searchRulelandingPage() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (srl.style.display === 'none') {
-                        srl.style.display = 'block';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-                function elevate() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (ele.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'block';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
+            <script>
+                function workflowLandingPage() {
+                    var wfl = document.getElementById('workflowLanding');
+                    var pen = document.getElementById('pendingApprovalModule');
+                    var pus = document.getElementById('pushToProdModule');
+                    var exp = document.getElementById('exportModule');
+                    var imp = document.getElementById('importModule');
+                    if (wfl.style.display === 'none') {
+                        wfl.style.display = 'block';
+                        pen.style.display = 'none';
+                        pus.style.display = 'none';
+                        exp.style.display = 'none';
+                        imp.style.display = 'none';
                     }
                 }
 
-                function demote() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (dem.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'block';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
+                function pendingApprov() {
+                    var wfl = document.getElementById('workflowLanding');
+                    var pen = document.getElementById('pendingApprovalModule');
+                    var pus = document.getElementById('pushToProdModule');
+                    var exp = document.getElementById('exportModule');
+                    var imp = document.getElementById('importModule');
+                    if (pen.style.display === 'none') {
+                        wfl.style.display = 'none';
+                        pen.style.display = 'block';
+                        pus.style.display = 'none';
+                        exp.style.display = 'none';
+                        imp.style.display = 'none';
                     }
                 }
 
-                function exclude() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (exc.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'block';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
+                function pushtoProd() {
+                    var wfl = document.getElementById('workflowLanding');
+                    var pen = document.getElementById('pendingApprovalModule');
+                    var pus = document.getElementById('pushToProdModule');
+                    var exp = document.getElementById('exportModule');
+                    var imp = document.getElementById('importModule');
+                    if (pus.style.display === 'none') {
+                        wfl.style.display = 'none';
+                        pen.style.display = 'none';
+                        pus.style.display = 'block';
+                        exp.style.display = 'none';
+                        imp.style.display = 'none';
                     }
                 }
 
-                function redirect() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (red.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'block';
-                        rel.style.display = 'none';
+                function exportRule() {
+                    var wfl = document.getElementById('workflowLanding');
+                    var pen = document.getElementById('pendingApprovalModule');
+                    var pus = document.getElementById('pushToProdModule');
+                    var exp = document.getElementById('exportModule');
+                    var imp = document.getElementById('importModule');
+                    if (exp.style.display === 'none') {
+                        wfl.style.display = 'none';
+                        pen.style.display = 'none';
+                        pus.style.display = 'none';
+                        exp.style.display = 'block';
+                        imp.style.display = 'none';
                     }
                 }
 
-                function relevancy() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (rel.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'block';
+                function autoImport() {
+                    var wfl = document.getElementById('workflowLanding');
+                    var pen = document.getElementById('pendingApprovalModule');
+                    var pus = document.getElementById('pushToProdModule');
+                    var exp = document.getElementById('exportModule');
+                    var imp = document.getElementById('importModule');
+                    if (imp.style.display === 'none') {
+                        wfl.style.display = 'none';
+                        pen.style.display = 'none';
+                        pus.style.display = 'none';
+                        exp.style.display = 'none';
+                        imp.style.display = 'block';
                     }
                 }
+
             </script>
 
+            <!--workflow landing page-->
+            <div id="workflowLanding">
+                <br />
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1>
+                            <i class="fa fa-check-square-o fa-lg" aria-hidden="true" style="color: indianred"></i> Workflow
+                        </h1>
+                        <p>This module allows the user to review, publish and un-publish the submitted search rule and string management features created from the search manager. <strong style="color:red">*</strong> All submitted rule will be temporarily locked. </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2>
+                            <i class="fa  fa-thumbs-o-up fa-fw"></i>
+                            <span class="collapse-menu">Pending Approval</span>
+                        </h2>
+                        <p>The <strong> Pending for Approval</strong> module includes all the created/deleted rule that’s Pending for Approval or reviewing</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="pendingApprov()">Review Rules &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>
+                            <i class="fa  fa-desktop fa-fw"></i>
+                            <span class="collapse-menu">Push to Production</span>
+                        </h2>
+                        <p>The <strong>Push to Production</strong> module includes all the rules that are already published and rules yet to publish. All created rules will not take effect unless approved and pushed to production. On the other hand, all published rules can still be pulled down from production.</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="pushtoProd()">Publish/Un-publish Rules &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>
+                            <i class="fa fa-upload fa-fw"></i>
+                            <span class="collapse-menu">Export Rule</span>
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="demote()">Manage Export &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>
+                            <i class="fa fa-download fa-fw"></i>
+                            <span class="collapse-menu">Auto Import</span>
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button" onclick="exclude()">Manage Import &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--pending approval module-->
+            <div id="pendingApprovalModule" style="display:none" class="row">
+
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
+                    <li class="active">Pending Approval</li>
+                </ol>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Pending for Approval</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#ele">
+                                            <label>Elevate</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#dem">
+                                            <label>Demote</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#exc">
+                                            <label>Exlude</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#red">
+                                            <label>Redirect</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#rel">
+                                            <label>Relevancy</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#did">
+                                            <label>Did You Mean</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#typ">
+                                            <label>Typeahead</label>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="ele" class="tab-pane fade in active">
+                                        <br />
+                                        <table class="table table-condensed table-hover">
+                                            <thead>
+                                                <tr style="text-align:center" class="active">
+                                                    <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
+                                                    <th width="50%" style="text-align:center">Rule Info</th>
+                                                    <th>Request Type</th>
+                                                    <th>Request Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td><button class="btn btn-link">Apple Iphone</button></td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        JamesR
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td><button class="btn btn-link">Keyboard</button></td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        JamesR
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td><button class="btn btn-link">Mouse</button></td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        JamesR
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="dem" class="tab-pane">
+                                </div>
+                                <div id="exc" class="tab-pane">
+                                </div>
+                                <div id="red" class="tab-pane">
+                                </div>
+                                <div id="rel" class="tab-pane">
+                                </div>
+                                <div id="did" class="tab-pane">
+                                </div>
+                                <div id="typ" class="tab-pane">
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="well well-sm">
+                            <h4>Approval Guidelines</h4>
+                            <p>
+                                Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br><br>
+                                If the rule is ready to be pushed to production, click on <strong>Approve</strong>. If the rule needs to be modified before it can be pushed to production, click on <strong>Reject</strong>. Provide notes in the <strong>Comment</strong> box.
+                            </p>
+                            <hr />
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="pull-right">
+                                        <span style="color:red;font-weight:700">*</span><label>Comment:</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="2" cols="75"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                            <button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--push to prod module-->
+            <div id="pushToProdModule" style="display:none" class="row">
+                <script>
+                                            $(document).ready(function () {
+                                                $('[data-toggle="popover"]').popover();
+                                            });
+                </script>
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
+                    <li class="active">Push to Production</li>
+                </ol>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Push to Production</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="well well-sm">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <p>
+                                                <i class="fa fa-exclamation-triangle" style="color:red"></i>  Auto-export setting is currently set to <strong>ON</strong><br />
+                                                <i>  To modify this setting, go to <strong>Workflow > Export Rule</strong> </i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pull-right">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <label>Targert Auto-Import:</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div id="radio-switch">
+                                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-default btn-xs">
+                                                            <input name="options" value="option2" type="radio" checked="checked">On
+                                                        </label>
+                                                        <label class="btn btn-default  btn-xs">
+                                                            <input name="options" type="radio">Off
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-link" data-toggle="popover" data-placement="left"
+                                                        data-content="ON: all rules that you publish will be automatically imported to the target store(s).
+OFF: all rules that you publish needs to be manually imported in the target stores">
+                                                    <i class="fa fa-exclamation-circle fa-lg" style="color:orange"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#ele">
+                                            <label>Elevate</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#dem">
+                                            <label>Demote</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#exc">
+                                            <label>Exlude</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#red">
+                                            <label>Redirect</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#rel">
+                                            <label>Relevancy</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#did">
+                                            <label>Did You Mean</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#typ">
+                                            <label>Typeahead</label>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="ele" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <br />
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label>Show: </label>
+                                                        <select id="Select1" class="form-control">
+                                                            <option>All Rules</option>
+                                                            <option>Approved Rules for Deletion</option>
+                                                            <option>Approved Rules for Publishing</option>
+                                                            <option>Published Rules</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <table class="table table-condensed table-hover">
+                                            <thead>
+                                                <tr style="text-align:center">
+                                                    <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
+                                                    <th width="50%" style="text-align:center">Rule Info</th>
+                                                    <th>Approval Status</th>
+                                                    <th>Request Type</th>
+                                                    <th>Production Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td><button class="btn btn-link">Apple Iphone</button></td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td><button class="btn btn-link">Apple Mouse</button></td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td><button class="btn btn-link">Apple Iphone Keyboard</button></td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="dem" class="tab-pane">
+                                    </div>
+                                    <div id="exc" class="tab-pane">
+                                    </div>
+                                    <div id="red" class="tab-pane">
+                                    </div>
+                                    <div id="rel" class="tab-pane">
+                                    </div>
+                                    <div id="did" class="tab-pane">
+                                    </div>
+                                    <div id="typ" class="tab-pane">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="well well-sm">
+                            <h4>Publishing Guidelines</h4>
+                            <p>
+                                To push previously approved rules to production:
+                                <ul>
+                                    <li>
+                                        In the <strong>Show</strong> dropdown box, select<i>  Approved Rules for Publishing.</i>
+                                    </li>
+                                    <li>
+                                        When the list has refreshed, tick all applicable rules.
+                                    </li>
+                                    <li>
+                                        Provide notes in the <strong>Comment</strong> box and click the <strong>Publish</strong> button.
+                                    </li>
+                                </ul>
+                            </p>
+                            <hr />
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="pull-right">
+                                        <span style="color:red;font-weight:700">*</span><label>Comment:</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="2" cols="75"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                            <!--<button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+
+            <!--export rule module-->
+            <div id="exportModule" style="display:none" class="row">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
+                    <li class="active">Export Rule</li>
+                </ol>
+            </div>
+
+            <!--auto import module-->
+            <div id="importModule" style="display:none" class="row">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
+                    <li class="active">Auto Import</li>
+                </ol>
+            </div>
         </div>
     </div>
 
