@@ -96,6 +96,7 @@
     <Content Include="js\sb-admin-2.js" />
     <Content Include="navigation.html" />
     <Content Include="searchrules.html" />
+    <Content Include="settings.html" />
     <Content Include="themer\color.css" />
     <Content Include="themer\custom.js" />
     <Content Include="Web.config" />

@@ -156,7 +156,13 @@
                         <li><a href="#">Linguistics</a>
                     </ul>
                 </li>
-                <li><input id="" type="button" value="Settings" class="btn btn-default" /></li>
+                <li>
+                    <button type="button"
+                            class="btn btn-default "
+                            onclick="window.location.href='/settings.html'">
+                        Settings
+                    </button>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
                         <img src="images/no-pic.png" class="img-circle nav-user-photo" />
@@ -219,7 +225,7 @@
         </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
-            
+
             <script type="text/javascript">
                 function searchRulelandingPage() {
                     var srl = document.getElementById('searchruleLanding');
@@ -5032,6 +5038,41 @@
                                     <h4 class="modal-title">Clone Relevancy</h4>
                                 </div>
                                 <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Name: <input id="" type="text" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Schedule:
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Choose Start Date">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Choose End Date">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Description:
+                                            <textarea rows="5" cols="20" class="form-control"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a href="searchrules.html" class="btn btn-primary">
@@ -5049,8 +5090,8 @@
                 </div>
             </div>
         </div>
-    </div>    
-    
+    </div>
+
     <!--logout modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
