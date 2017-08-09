@@ -332,7 +332,7 @@
             <!--search rule landing page-->
             <div id="searchruleLanding" style="display:block">
                 <br />
-                <div class="jumbotron">
+                <div class="well">
                     <div class="container">
                         <h1>
                             <i class="fa fa-search fa-lg" aria-hidden="true" style="color: deepskyblue"></i> Search Rules
@@ -341,56 +341,56 @@
                         <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="font-size:13px">
                     <div class="col-sm-4">
-                        <h2>
+                        <h3>
                             <i class="fa fa-chevron-up fa-fw"></i>
                             <span class="collapse-menu">Elevate</span>
-                        </h2>
+                        </h3>
                         <p>The Elevate search rule is used for pushing a SKU(s) using a specific keyword to the top of the natural search result.  </p>
                         <p>
                             <a class="btn btn-primary btn-sm" href="#" role="button" onclick="elevate()">Manage Rules &raquo;</a>
                         </p>
                     </div>
                     <div class="col-sm-4">
-                        <h2>
+                        <h3>
                             <i class="fa fa-chevron-down fa-fw"></i>
                             <span class="collapse-menu">Demote</span>
-                        </h2>
+                        </h3>
                         <p>The Demote search rule is the opposite of Elevate search rule. By creating a Demote search rule, SKU(s) can be pushed at the bottom of search results. </p>
                         <p>
                             <a class="btn btn-primary btn-sm" href="#" role="button" onclick="demote()">Manage Rules &raquo;</a>
                         </p>
                     </div>
                     <div class="col-sm-4">
-                        <h2>
+                        <h3>
                             <i class="fa fa-ban fa-fw"></i>
                             <span class="collapse-menu">Exclude</span>
-                        </h2>
+                        </h3>
                         <p>The Exclude search rule is used in removing SKU(s) from the natural search result of a specific keyword.</p>
                         <p>
                             <a class="btn btn-primary btn-sm" href="#" role="button" onclick="exclude()">Manage Rules &raquo;</a>
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="font-size:13px">
                     <div class="col-sm-2">
                     </div>
                     <div class="col-sm-4">
-                        <h2>
+                        <h3>
                             <i class="fa fa-exchange fa-fw"></i>
                             <span class="collapse-menu">Redirect</span>
-                        </h2>
+                        </h3>
                         <p>Query Cleaning is another way of overriding the natural search result. If a keyword is set to have a redirection rule, the keyword will be replaced or have a redirection.</p>
                         <p>
                             <a class="btn btn-primary btn-sm" href="#" role="button" onclick="redirect()">Manage Rules &raquo;</a>
                         </p>
                     </div>
                     <div class="col-sm-4">
-                        <h2>
+                        <h3>
                             <i class="fa fa-angle-double-up fa-fw"></i>
                             <span class="collapse-menu">Relevancy</span>
-                        </h2>
+                        </h3>
                         <p>Creating a ranking rule is another way of manipulating natural search results. Ranking rules allow users to control how search results are displayed to a certain degree. In addition, ranking rules allow the users to control which fields are matched to a search term, and how the search results’ scores are computed.</p>
                         <p>
                             <a class="btn btn-primary btn-sm" href="#" role="button" onclick="relevancy()">Manage Rules &raquo;</a>
@@ -1362,7 +1362,7 @@
                                     <div class="pull-left">
                                         <div class="form-inline">
                                             <div class="form-group">
-                                                <h4>Demote Keyword List:</h4>
+                                                <strong>Demote Keyword List:</strong>
                                             </div>
                                         </div>
                                     </div>
@@ -1372,12 +1372,12 @@
                                         <div class="form-inline">
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Search Keyword">
+                                                    <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                                     <div class="input-group-btn">
-                                                        <button type="button" class="btn btn-info" title="Search">
+                                                        <button type="button" class="btn btn-info btn-sm" title="Search">
                                                             <i class="fa fa-search fa-lg" style="color:white"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-success" title="Add">
+                                                        <button type="button" class="btn btn-success btn-sm" title="Add">
                                                             <i class="fa fa-plus-square fa-lg" style="color:white"></i>
                                                         </button>
                                                     </div>
@@ -1389,7 +1389,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <table class="table table-hover table-condensed">
+                            <table class="table table-hover table-condensed" style="font-size:13px">
                                 <thead>
                                     <tr>
                                         <th>Keyword</th>
@@ -1401,22 +1401,22 @@
                                     <tr>
                                         <td style="padding-bottom:2px">Apple</td>
                                         <td style="padding-bottom:2px">Ready for Production</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="demoteCRUDSHOW()">12</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="demoteCRUDSHOW()">12</a></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-bottom:2px"> GXT4</td>
                                         <td style="padding-bottom:2px">Setup a Rule</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="demoteCRUDSHOW()">3</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="demoteCRUDSHOW()">3</a></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-bottom:2px">Laptop</td>
                                         <td style="padding-bottom:2px">Action Required</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="demoteCRUDSHOW()">8</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="demoteCRUDSHOW()">8</a></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-bottom:2px">Desktop</td>
                                         <td style="padding-bottom:2px">Action Required</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="demoteCRUDSHOW()">8</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="demoteCRUDSHOW()">8</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -2272,7 +2272,7 @@
                                     <div class="pull-left">
                                         <div class="form-inline">
                                             <div class="form-group">
-                                                <h4>Exclude Keyword List:</h4>
+                                                <strong>Exclude Keyword List:</strong>
                                             </div>
                                         </div>
                                     </div>
@@ -2282,12 +2282,12 @@
                                         <div class="form-inline">
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Search Keyword">
+                                                    <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                                     <div class="input-group-btn">
-                                                        <button type="button" class="btn btn-info" title="Search">
+                                                        <button type="button" class="btn btn-info btn-sm" title="Search">
                                                             <i class="fa fa-search fa-lg" style="color:white"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-success" title="Add">
+                                                        <button type="button" class="btn btn-success btn-sm" title="Add">
                                                             <i class="fa fa-plus-square fa-lg" style="color:white"></i>
                                                         </button>
                                                     </div>
@@ -2299,7 +2299,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <table class="table table-hover table-condensed">
+                            <table class="table table-hover table-condensed" style="font-size:13px">
                                 <thead>
                                     <tr>
                                         <th>Keyword</th>
@@ -2311,22 +2311,22 @@
                                     <tr>
                                         <td style="padding-bottom:2px">HP</td>
                                         <td style="padding-bottom:2px">Ready for Production</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="excludeCRUDSHOW()">12</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="excludeCRUDSHOW()">12</a></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-bottom:2px"> GXT4</td>
                                         <td style="padding-bottom:2px">Setup a Rule</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="excludeCRUDSHOW()">3</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="excludeCRUDSHOW()">3</a></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-bottom:2px">Earphones</td>
                                         <td style="padding-bottom:2px">Action Required</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="excludeCRUDSHOW()">8</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="excludeCRUDSHOW()">8</a></td>
                                     </tr>
                                     <tr>
                                         <td style="padding-bottom:2px">Office Software</td>
                                         <td style="padding-bottom:2px">Action Required</td>
-                                        <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="excludeCRUDSHOW()">8</a></td>
+                                        <td style="padding-bottom:2px"><a href="#" onclick="excludeCRUDSHOW()">8</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -3184,7 +3184,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <h4>Redirect Rule:</h4>
+                                                        <Strong>Redirect Rule:</Strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3194,12 +3194,12 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="Search Keyword">
+                                                            <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                                             <div class="input-group-btn">
-                                                                <button type="button" class="btn btn-info" title="Search">
+                                                                <button type="button" class="btn btn-info btn-sm" title="Search">
                                                                     <i class="fa fa-search fa-lg" style="color:white"></i>
                                                                 </button>
-                                                                <button type="button" class="btn btn-success" title="Add">
+                                                                <button type="button" class="btn btn-success btn-sm" title="Add">
                                                                     <i class="fa fa-plus-square fa-lg" style="color:white"></i>
                                                                 </button>
                                                             </div>
@@ -3211,7 +3211,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table table-hover table-condensed">
+                                    <table class="table table-hover table-condensed" style="font-size:13px">
                                         <thead>
                                             <tr>
                                                 <th>Keyword</th>
@@ -3223,17 +3223,17 @@
                                             <tr>
                                                 <td style="padding-bottom:2px">Apple Product Misspelling</td>
                                                 <td style="padding-bottom:2px">Ready for Production</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="redirectCRUDSHOW()">12</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" onclick="redirectCRUDSHOW()">12</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px"> GXT4</td>
                                                 <td style="padding-bottom:2px">Setup a Rule</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="redirectCRUDSHOW()">3</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" onclick="redirectCRUDSHOW()">3</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px">Keyboard Products</td>
                                                 <td style="padding-bottom:2px">Action Required</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="redirectCRUDSHOW()">8</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" onclick="redirectCRUDSHOW()">8</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -3269,7 +3269,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <h4>Keyword:</h4>
+                                                        <strong>Keyword:</strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3279,9 +3279,9 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="Search Keyword">
+                                                            <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                                             <div class="input-group-btn">
-                                                                <button type="button" class="btn btn-info" title="Search">
+                                                                <button type="button" class="btn btn-info btn-sm" title="Search">
                                                                     <i class="fa fa-search fa-lg" style="color:white"></i>
                                                                 </button>
                                                             </div>
@@ -3293,7 +3293,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table table-hover table-condensed">
+                                    <table class="table table-hover table-condensed" style="font-size:13px">
                                         <thead>
                                             <tr>
                                                 <th>Keyword</th>
@@ -3303,15 +3303,15 @@
                                         <tbody>
                                             <tr>
                                                 <td style="padding-bottom:2px">Mouse</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link">3</a></td>
+                                                <td style="padding-bottom:2px"><a href="#">3</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px"> GXT4</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link">3</a></td>
+                                                <td style="padding-bottom:2px"><a href="#">3</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px">Keyboard</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link">1</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" >1</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -4109,7 +4109,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <h4>Relevancy Rule:</h4>
+                                                        <strong>Relevancy Rule:</strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4119,12 +4119,12 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="Search Keyword">
+                                                            <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                                             <div class="input-group-btn">
-                                                                <button type="button" class="btn btn-info" title="Search">
+                                                                <button type="button" class="btn btn-info btn-sm" title="Search">
                                                                     <i class="fa fa-search fa-lg" style="color:white"></i>
                                                                 </button>
-                                                                <button type="button" class="btn btn-success" title="Add">
+                                                                <button type="button" class="btn btn-success btn-sm" title="Add">
                                                                     <i class="fa fa-plus-square fa-lg" style="color:white"></i>
                                                                 </button>
                                                             </div>
@@ -4136,7 +4136,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table table-hover table-condensed">
+                                    <table class="table table-hover table-condensed" style="font-size:13px">
                                         <thead>
                                             <tr>
                                                 <th>Keyword</th>
@@ -4148,17 +4148,17 @@
                                             <tr>
                                                 <td style="padding-bottom:2px">ELO! can you hear me</td>
                                                 <td style="padding-bottom:2px">Ready for Production</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="relevancyCRUDSHOW()">12</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" onclick="relevancyCRUDSHOW()">12</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px"> elo touch solution</td>
                                                 <td style="padding-bottom:2px">Setup a Rule</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="relevancyCRUDSHOW()">3</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" onclick="relevancyCRUDSHOW()">3</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px"> ELO WORLD!</td>
                                                 <td style="padding-bottom:2px">Action Required</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link" onclick="relevancyCRUDSHOW()">8</a></td>
+                                                <td style="padding-bottom:2px"><a href="#" onclick="relevancyCRUDSHOW()">8</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -4194,7 +4194,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <h4>Keyword:</h4>
+                                                        <strong>Keyword:</strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4204,9 +4204,9 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="Search Keyword">
+                                                            <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                                             <div class="input-group-btn">
-                                                                <button type="button" class="btn btn-info" title="Search">
+                                                                <button type="button" class="btn btn-info btn-sm" title="Search">
                                                                     <i class="fa fa-search fa-lg" style="color:white"></i>
                                                                 </button>
                                                             </div>
@@ -4218,7 +4218,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table table-hover table-condensed">
+                                    <table class="table table-hover table-condensed" style="font-size:13px">
                                         <thead>
                                             <tr>
                                                 <th>Keyword</th>
@@ -4228,15 +4228,15 @@
                                         <tbody>
                                             <tr>
                                                 <td style="padding-bottom:2px">Mouse</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link">3</a></td>
+                                                <td style="padding-bottom:2px"><a href="#">3</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px"> GXT4</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link">3</a></td>
+                                                <td style="padding-bottom:2px"><a href="#">3</a></td>
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px">Keyboard</td>
-                                                <td style="padding-bottom:2px"><a href="#" class="btn btn-link">1</a></td>
+                                                <td style="padding-bottom:2px"><a href="#">1</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
