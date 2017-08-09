@@ -357,11 +357,11 @@
 
             <!--pending approval module-->
             <div id="pendingApprovalModule" style="display:none" class="row">
-
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
                     <li class="active">Pending Approval</li>
                 </ol>
+                <!--pending approval content-->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4> Pending for Approval</h4>
@@ -465,23 +465,18 @@
                             </div>
                         </div>
                         <hr />
-                        <div class="well well-sm">
-                            <h4>Approval Guidelines</h4>
-                            <p>
-                                Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br><br>
+                        <div class="well well-sm" style="padding-bottom:5px">
+                            <h5><strong>Approval Guidelines</strong></h5>
+                            <p style="font-size:12px">
+                                Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br/>
                                 If the rule is ready to be pushed to production, click on <strong>Approve</strong>. If the rule needs to be modified before it can be pushed to production, click on <strong>Reject</strong>. Provide notes in the <strong>Comment</strong> box.
                             </p>
-                            <hr />
                             <div class="row">
-                                <div class="col-sm-2">
-                                    <div class="pull-right">
-                                        <span style="color:red;font-weight:700">*</span><label>Comment:</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-9">
+                                <div class="col-sm-12">
                                     <div class="form-inline">
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="2" cols="75"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                            <span style="color:red;font-weight:700">*</span><label style="font-size:12px">Comment:</label>
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
                                             <button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>
                                         </div>
                                     </div>
@@ -490,6 +485,7 @@
                         </div>
                     </div>
                 </div>
+                <!--pending approval rule preview modal-->
                 <div id="ruleContentModal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
                         <!-- Modal content-->
@@ -499,6 +495,56 @@
                                 <h4 class="modal-title">Rule Preview</h4>
                             </div>
                             <div class="modal-body">
+                                <div class="well well-sm" style="padding-bottom:1px">
+                                    <p style="font-size:12px"><i class="fa fa-exclamation-triangle" style="color:red"></i>  The following rule is pending for your review. This rule will be temporarily locked unless approved or rejected</p>
+                                </div>
+                                <div><p style="font-size:12px"><strong>Rule Name:</strong> "Mouse" &nbsp; <strong>Rule Type:</strong> ADD<p></div>
+                                <div>
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr class="active">
+                                                <th>Dynamic Header</th>
+                                                <th>Dynamic Header</th>
+                                                <th>Dynamic Header</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Dynamic Content</td>
+                                                <td>Dynamic Content</td>
+                                                <td>Dynamic Content</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dynamic Content</td>
+                                                <td>Dynamic Content</td>
+                                                <td>Dynamic Content</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dynamic Content</td>
+                                                <td>Dynamic Content</td>
+                                                <td>Dynamic Content</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="well well-sm" style="padding-bottom:3px">
+                                    <h5><strong>Approval Guidelines</strong></h5>
+                                    <p style="font-size:12px">
+                                        Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br/>
+                                        If the rule is ready to be pushed to production, click on <strong>Approve</strong>. If the rule needs to be modified before it can be pushed to production, click on <strong>Reject</strong>. Provide notes in the <strong>Comment</strong> box.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-inline">
+                                                <div class="form-group">
+                                                    <span style="color:red;font-weight:700">*</span><label style="font-size:12px">Comment:</label>
+                                                    <textarea style="resize:vertical" class="form-control" cols="50"></textarea> <button class="btn btn-success btn-sm"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                                    <button class="btn btn-danger btn-sm"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -511,9 +557,9 @@
             <!--push to prod module-->
             <div id="pushToProdModule" style="display:none" class="row">
                 <script>
-                                            $(document).ready(function () {
-                                                $('[data-toggle="popover"]').popover();
-                                            });
+                    $(document).ready(function () {
+                        $('[data-toggle="popover"]').popover();
+                    });
                 </script>
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
@@ -685,10 +731,10 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                         </div>
                         <hr />
                         <div class="well well-sm">
-                            <h4>Publishing Guidelines</h4>
-                            <p>
+                            <h5><strong>Publishing Guidelines</strong></h5>
+                            <p style="font-size:12px">
                                 To push previously approved rules to production:
-                                <ul>
+                                <ul style="font-size:12px">
                                     <li>
                                         In the <strong>Show</strong> dropdown box, select<i>  Approved Rules for Publishing.</i>
                                     </li>
@@ -700,17 +746,12 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                     </li>
                                 </ul>
                             </p>
-                            <hr />
                             <div class="row">
-                                <div class="col-sm-2">
-                                    <div class="pull-right">
-                                        <span style="color:red;font-weight:700">*</span><label>Comment:</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-9">
+                                <div class="col-sm-12">
                                     <div class="form-inline">
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="2" cols="75"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                            <span style="color:red;font-weight:700">*</span><label style="font-size:12px">Comment:</label>
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
                                             <!--<button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>-->
                                         </div>
                                     </div>
