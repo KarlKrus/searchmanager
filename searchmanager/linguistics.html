@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link href="images/smiconlogo.png" rel="icon" type="image/gif">
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Search Manager - Settings</title>
+    <title>Search Manager - linguistics</title>
     <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
     <link href="custom-css/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -145,7 +145,7 @@
                     <button class="btn btn-default dropdown-toggle" type="button"
                             id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
                         <span style="float:left">
-                            Search Rules
+                            Linguistics
                         </span>
                         <span style="float:right"><span class="caret"></span></span>
                     </button>
@@ -153,10 +153,16 @@
                         <li><a href="#">Simulator</a>
                         <li><a href="searchrules.html">Search Rules</a>
                         <li><a href="workflow.html">Workflow</a>
-                        <li><a href="linguistics.html">Linguistics</a>
+                        <li class="active"><a href="#">Linguistics</a>
                     </ul>
                 </li>
-                <li><input id="" type="button" value="Settings" class="btn btn-info active" disabled/></li>
+                <li>
+                    <button type="button"
+                            class="btn btn-default "
+                            onclick="window.location.href='/settings.html'">
+                        Settings
+                    </button>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
                         <img src="images/no-pic.png" class="img-circle nav-user-photo" />
@@ -181,15 +187,21 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Audit Trail">
-                                <i class="fa fa-file-text-o fa-fw"></i>
-                                <span class="collapse-menu">Audit Trail</span>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Stored Strings" onclick="workflow()">
+                                <i class="fa  fa-language fa-fw"></i>
+                                <span class="collapse-menu">Stored Strings</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="User Accounts">
-                                <i class="fa fa-users fa-fw"></i>
-                                <span class="collapse-menu">User Accounts</span>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title=" Did You Mean" onclick="autoImport()">
+                                <i class="fa fa-text-width fa-fw"></i>
+                                <span class="collapse-menu">Did You Mean</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title=" Typeahead" onclick="autoImport()">
+                                <i class="fa fa-keyboard-o fa-fw"></i>
+                                <span class="collapse-menu">Typeahead</span>
                             </a>
                         </li>
                         <li>
@@ -201,110 +213,6 @@
         </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
-
-            <script type="text/javascript">
-                function searchRulelandingPage() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (srl.style.display === 'none') {
-                        srl.style.display = 'block';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-                function elevate() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (ele.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'block';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function demote() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (dem.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'block';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function exclude() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (exc.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'block';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function redirect() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (red.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'block';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function relevancy() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (rel.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'block';
-                    }
-                }
-            </script>
-
         </div>
     </div>
 

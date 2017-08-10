@@ -153,7 +153,7 @@
                         <li><a href="#">Simulator</a>
                         <li><a href="searchrules.html">Search Rules</a>
                         <li class="active"><a href="#">Workflow</a>
-                        <li><a href="#">Linguistics</a>
+                        <li><a href="linguistics.html">Linguistics</a>
                     </ul>
                 </li>
                 <li>
@@ -299,56 +299,60 @@
             </script>
 
             <!--workflow landing page-->
-            <div id="workflowLanding">
-                <br />
-                <div class="jumbotron">
+            <div id="workflowLanding" class="row">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="active">Workflow</li>
+                </ol>
+                <div class="well">
                     <div class="container">
                         <h1>
                             <i class="fa fa-check-square-o fa-lg" aria-hidden="true" style="color: indianred"></i> Workflow
                         </h1>
-                        <p>This module allows the user to review, publish and un-publish the submitted search rule and string management features created from the search manager. <strong style="color:red">*</strong> All submitted rule will be temporarily locked. </p>
+                        <p>This module allows the user to review, publish and un-publish the submitted search rule and string management features created from the search manager.
+                        <br /> <strong style="color:red">*</strong> All submitted rule will be temporarily locked. </p>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" style="font-size:12px">
                     <div class="col-sm-3">
-                        <h2>
+                        <h3>
                             <i class="fa  fa-thumbs-o-up fa-fw"></i>
                             <span class="collapse-menu">Pending Approval</span>
-                        </h2>
+                        </h3>
                         <p>The <strong> Pending for Approval</strong> module includes all the created/deleted rule that’s Pending for Approval or reviewing</p>
                         <p>
-                            <a class="btn btn-primary" href="#" role="button" onclick="pendingApprov()">Review Rules &raquo;</a>
+                            <a class="btn btn-primary btn-sm" href="#" role="button" onclick="pendingApprov()">Review Rules &raquo;</a>
                         </p>
                     </div>
                     <div class="col-sm-3">
-                        <h2>
+                        <h3>
                             <i class="fa  fa-desktop fa-fw"></i>
                             <span class="collapse-menu">Push to Production</span>
-                        </h2>
+                        </h3>
                         <p>The <strong>Push to Production</strong> module includes all the rules that are already published and rules yet to publish. All created rules will not take effect unless approved and pushed to production. On the other hand, all published rules can still be pulled down from production.</p>
                         <p>
-                            <a class="btn btn-primary" href="#" role="button" onclick="pushtoProd()">Publish/Un-publish Rules &raquo;</a>
+                            <a class="btn btn-primary btn-sm" href="#" role="button" onclick="pushtoProd()">Publish/Un-publish Rules &raquo;</a>
                         </p>
                     </div>
                     <div class="col-sm-3">
-                        <h2>
+                        <h3>
                             <i class="fa fa-upload fa-fw"></i>
                             <span class="collapse-menu">Export Rule</span>
-                        </h2>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         <p>
-                            <a class="btn btn-primary" href="#" role="button" onclick="demote()">Manage Export &raquo;</a>
+                            <a class="btn btn-primary btn-sm" href="#" role="button" onclick="demote()">Manage Export &raquo;</a>
                         </p>
                     </div>
                     <div class="col-sm-3">
-                        <h2>
+                        <h3>
                             <i class="fa fa-download fa-fw"></i>
                             <span class="collapse-menu">Auto Import</span>
-                        </h2>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                         <p>
-                            <a class="btn btn-primary" href="#" role="button" onclick="exclude()">Manage Import &raquo;</a>
+                            <a class="btn btn-primary btn-sm" href="#" role="button" onclick="exclude()">Manage Import &raquo;</a>
                         </p>
                     </div>
                 </div>
@@ -358,18 +362,19 @@
             <!--pending approval module-->
             <div id="pendingApprovalModule" style="display:none" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
-                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="workflowLandingPage()">Workflow</a></li>
                     <li class="active">Pending Approval</li>
                 </ol>
                 <!--pending approval content-->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4> Pending for Approval</h4>
+                    <div class="panel-heading" style="padding-bottom:8px;padding-top:11px">
+                        <label> Pending for Approval</label>
                     </div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <ul class="nav nav-tabs">
+                                <ul class="nav nav-tabs" style="font-size:13px">
                                     <li class="active">
                                         <a data-toggle="tab" href="#ele">
                                             <label>Elevate</label>
@@ -409,7 +414,7 @@
                                 <div class="tab-content">
                                     <div id="ele" class="tab-pane fade in active">
                                         <br />
-                                        <table class="table table-condensed table-hover">
+                                        <table class="table table-condensed table-hover" style="font-size:13px">
                                             <thead>
                                                 <tr style="text-align:center" class="active">
                                                     <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
@@ -421,7 +426,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
-                                                    <td><button class="btn btn-link">Apple Iphone</button></td>
+                                                    <td><a href="#" data-toggle="modal" data-target="#ruleContentModal">parallel to usb cable 10 feet</a></td>
                                                     <td>Update</td>
                                                     <td>
                                                         JamesR
@@ -430,7 +435,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
-                                                    <td><button class="btn btn-link">Keyboard</button></td>
+                                                    <td><a href="#" data-toggle="modal" data-target="#ruleContentModal">macbook 13 pro</a></td>
                                                     <td>Update</td>
                                                     <td>
                                                         JamesR
@@ -439,7 +444,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
-                                                    <td><button class="btn btn-link" data-toggle="modal" data-target="#ruleContentModal">Mouse</button></td>
+                                                    <td><a href="#" data-toggle="modal" data-target="#ruleContentModal">Mouse</a></td>
                                                     <td>Update</td>
                                                     <td>
                                                         JamesR
@@ -476,8 +481,8 @@
                                     <div class="form-inline">
                                         <div class="form-group">
                                             <span style="color:red;font-weight:700">*</span><label style="font-size:12px">Comment:</label>
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
-                                            <button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea> <button class="btn btn-success btn-sm"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                            <button class="btn btn-danger btn-sm"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>
                                         </div>
                                     </div>
                                 </div>
@@ -500,7 +505,7 @@
                                 </div>
                                 <div><p style="font-size:12px"><strong>Rule Name:</strong> "Mouse" &nbsp; <strong>Rule Type:</strong> ADD<p></div>
                                 <div>
-                                    <table class="table table-condensed">
+                                    <table class="table table-condensed" style="font-size:11px">
                                         <thead>
                                             <tr class="active">
                                                 <th>Dynamic Header</th>
@@ -562,15 +567,16 @@
                     });
                 </script>
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
-                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
-                    <li class="active">Push to Production</li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="workflowLandingPage()">Workflow</a></li>
+                    <li class="active">Pending Approval</li>
                 </ol>
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4> Push to Production</h4>
+                    <div class="panel-heading" style="padding-bottom:8px;padding-top:11px">
+                        <label> Push to Production</label>
                     </div>
                     <div class="panel-body">
-                        <div class="well well-sm">
+                        <div class="well well-sm" style="font-size:13px;padding-bottom:5px">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-inline">
@@ -614,7 +620,7 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <ul class="nav nav-tabs">
+                                <ul class="nav nav-tabs" style="font-size:13px">
                                     <li class="active">
                                         <a data-toggle="tab" href="#ele">
                                             <label>Elevate</label>
@@ -653,13 +659,13 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                 </ul>
                                 <div class="tab-content">
                                     <div id="ele" class="tab-pane fade in active">
+                                        <br />
                                         <div class="row">
-                                            <div class="col-sm-12">
-                                                <br />
+                                            <div class="col-sm-6">
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <label>Show: </label>
-                                                        <select id="Select1" class="form-control">
+                                                        <select id="" class="form-control input-sm">
                                                             <option>All Rules</option>
                                                             <option>Approved Rules for Deletion</option>
                                                             <option>Approved Rules for Publishing</option>
@@ -668,11 +674,16 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-sm-6">
+                                                <div class="pull-right">
+                                                    <label>3 Rule/s</label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <br />
-                                        <table class="table table-condensed table-hover">
+                                        <table class="table table-condensed table-hover" style="font-size:13px">
                                             <thead>
-                                                <tr style="text-align:center">
+                                                <tr style="text-align:center" class="active">
                                                     <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
                                                     <th width="50%" style="text-align:center">Rule Info</th>
                                                     <th>Approval Status</th>
@@ -683,7 +694,7 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                             <tbody>
                                                 <tr>
                                                     <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
-                                                    <td><button class="btn btn-link">Apple Iphone</button></td>
+                                                    <td>Apple Iphone</td>
                                                     <td>Approved</td>
                                                     <td>Update</td>
                                                     <td>
@@ -693,7 +704,7 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
-                                                    <td><button class="btn btn-link">Apple Mouse</button></td>
+                                                    <td>cell phone cases</td>
                                                     <td>Approved</td>
                                                     <td>Update</td>
                                                     <td>
@@ -703,7 +714,7 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
-                                                    <td><button class="btn btn-link">Apple Iphone Keyboard</button></td>
+                                                    <td>hp compaq</td>
                                                     <td>Approved</td>
                                                     <td>Update</td>
                                                     <td>
@@ -751,7 +762,7 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                     <div class="form-inline">
                                         <div class="form-group">
                                             <span style="color:red;font-weight:700">*</span><label style="font-size:12px">Comment:</label>
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea> <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea> <button class="btn btn-success btn-sm"><i class="fa fa-thumbs-o-up fa-fw"></i> Approve</button>
                                             <!--<button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-fw"></i> Reject</button>-->
                                         </div>
                                     </div>
@@ -759,23 +770,25 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                             </div>
                         </div>
                     </div>
-                    <div class="panel-footer"></div>
+                    <!--<div class="panel-footer"></div>-->
                 </div>
             </div>
 
             <!--export rule module-->
             <div id="exportModule" style="display:none" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
-                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
-                    <li class="active">Export Rule</li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="workflowLandingPage()">Workflow</a></li>
+                    <li class="active">Pending Approval</li>
                 </ol>
             </div>
 
             <!--auto import module-->
             <div id="importModule" style="display:none" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
-                    <li><a href="#" onclick="workflowLandingPage()">Home</a></li>
-                    <li class="active">Auto Import</li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="workflowLandingPage()">Workflow</a></li>
+                    <li class="active">Pending Approval</li>
                 </ol>
             </div>
         </div>

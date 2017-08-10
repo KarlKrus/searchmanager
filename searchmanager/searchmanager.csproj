@@ -69,6 +69,7 @@
     <Content Include="font-awesome\css\font-awesome.min.css" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="font-awesome\new\custom.css" />
+    <Content Include="home.html" />
     <Content Include="images\ecost.png" />
     <Content Include="images\gtx4.jpg" />
     <Content Include="images\macmall.png" />
@@ -94,6 +95,7 @@
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\plugins\metisMenu\metisMenu.min.js" />
     <Content Include="js\sb-admin-2.js" />
+    <Content Include="linguistics.html" />
     <Content Include="navigation.html" />
     <Content Include="searchrules.html" />
     <Content Include="settings.html" />
