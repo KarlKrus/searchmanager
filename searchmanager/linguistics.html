@@ -418,7 +418,7 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a href="#">Linguistics</a></li>
                     <li class="active">Did You Mean</li>
-                </ol>                
+                </ol>
                 <!-- did you mean title-->
                 <div class="row">
                     <div class="col-sm-6">
@@ -430,7 +430,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <!--did you mean publish options-->
                 <div class="well well-sm">
                     <div class="row">
@@ -460,7 +460,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <!-- did you mean navigation and options-->
                 <div class="well well-sm">
                     <div class="row">
@@ -468,7 +468,7 @@
                             <div class="form-inline">
                                 <div class="form-group">
                                     <label style="font-size:13px">Max Suggestion Count: </label>
-                                    <input id="" type="text" class="form-control input-sm"/>
+                                    <input id="" type="text" class="form-control input-sm" value="3" size="3" disabled/>
                                 </div>
                                 <div class="form-group">
                                     <button type="button" class="btn btn-success btn-sm" title="Add ">
@@ -533,11 +533,42 @@
                 </div>
                 <!--did you mean content-->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-
+                    <div class="panel-heading" style="font-size:13px">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>Filters:</label> &nbsp;
+                                <select id="" class="form-control input-sm" >
+                                    <option>New</option>
+                                    <option>Updated</option>
+                                    <option>Published</option>
+                                </select>
+                                <input id="" type="text" class="form-control input-sm" placeholder="Search Term" />
+                                <input id="" type="text" class="form-control input-sm" placeholder="Suggestion" />
+                                <button type="button" class="btn btn-default btn-sm" title="Filter ">
+                                    <i class="fa fa-filter fa-lg"></i> Filter
+                                </button>
+                                <button type="button" class="btn btn-default btn-sm" title="Reset ">
+                                    <i class="fa  fa-undo fa-lg"></i> Reset
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="panel-body">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr class="active">
+                                    <th style="text-align:center">
+                                        Search Terms
+                                    </th>
+                                    <th style="text-align:center">
+                                        Suggestions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
