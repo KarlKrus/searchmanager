@@ -484,26 +484,6 @@
                             <div class="pull-right">
                                 <div class="form-inline">
                                     <div class="form-group">
-                                        <div class="row row-height">
-                                            <div class="col-sm-12">
-                                                <div class="page-cover">
-                                                    <div class="pager-number">1 to 2 of 2</div>
-                                                    <div class="pull-right reset-margin row-height">
-                                                        <ul class="pagination reset-margin">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li>
-                                                                <span class="page-number">
-                                                                    <input placeholder="Page" class="form-control input-small page-number" type="text">
-                                                                </span>
-                                                            </li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
                                         <div class="form-group">
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
@@ -542,8 +522,8 @@
                                     <option>Updated</option>
                                     <option>Published</option>
                                 </select>
-                                <input id="" type="text" class="form-control input-sm" placeholder="Search Term" />
-                                <input id="" type="text" class="form-control input-sm" placeholder="Suggestion" />
+                                <input id="" type="text" class="form-control input-sm" placeholder="Search Term"  size="30"/>
+                                <input id="" type="text" class="form-control input-sm" placeholder="Suggestion"   size="30"/>
                                 <button type="button" class="btn btn-default btn-sm" title="Filter ">
                                     <i class="fa fa-filter fa-lg"></i> Filter
                                 </button>
@@ -551,22 +531,60 @@
                                     <i class="fa  fa-undo fa-lg"></i> Reset
                                 </button>
                             </div>
+                            <div class="form-group pull-right">
+                                <div class="row row-height">
+                                    <div class="col-sm-12">
+                                        <div class="page-cover">
+                                            <div class="pager-number">1 to 2 of 2</div>
+                                            <div class="pull-right reset-margin row-height">
+                                                <ul class="pagination reset-margin">
+                                                    <li><a href="#">&laquo;</a></li>
+                                                    <li>
+                                                        <span class="page-number">
+                                                            <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                        </span>
+                                                    </li>
+                                                    <li><a href="#">&raquo;</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <table class="table table-condensed table-bordered">
                             <thead>
                                 <tr class="active">
-                                    <th style="text-align:center">
+                                    <th style="text-align:center;width:50%">
                                         Search Terms
                                     </th>
-                                    <th style="text-align:center">
+                                    <th style="text-align:center;width:50%">
                                         Suggestions
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-
+                                <tr>
+                                    <td>
+                                        <label class="badge">macbook eyr</label>
+                                        <label class="badge">macbook hangin</label>
+                                        <label class="badge">macbook utot</label>
+                                        <label class="badge">macbook utot na mabaho</label>
+                                        <label class="badge">apple na may puso </label>
+                                        <label class="badge">banana lng ang may puso </label>
+                                        <label class="badge">apple hair</label>
+                                    </td>
+                                    <td>
+                                        <label class="badge">macbook air</label>
+                                        <label class="badge">apple macbook air</label>
+                                        <label class="badge">apple mac</label>
+                                        <label class="badge">apple macbook pro</label>
+                                        <label class="badge">apple mac</label>
+                                        <!--<input id="" type="text" class="form-control" style="height:20px;width:auto;border-radius:50px;font-size:11px;padding-bottom:3px" />-->
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
