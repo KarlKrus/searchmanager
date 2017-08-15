@@ -715,13 +715,75 @@
                     </div>
                 </div>
             </div>
+
             <!--typeahead module-->
             <div id="typeaheadModule" class="row">
-                <ol class="breadcrumb" style="margin-bottom: 5px;">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Linguistics</a></li>
-                    <li class="active">Typeahead</li>
-                </ol>
+                <div id="typeaheadKWList">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">Linguistics</a></li>
+                        <li class="active">Rule List</li>
+                    </ol>
+                    <h4>Typeahead Rule List</h4>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-size:13px">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label>Filters:</label> &nbsp;
+                                    <select id="" class="form-control input-sm">
+                                        <option>New</option>
+                                        <option>Updated</option>
+                                        <option>Published</option>
+                                    </select>
+                                    <input id="" type="text" class="form-control input-sm" placeholder="Search Term" size="30" />
+                                    <input id="" type="text" class="form-control input-sm" placeholder="Suggestion" size="30" />
+                                    <button type="button" class="btn btn-default btn-sm" title="Filter ">
+                                        <i class="fa fa-filter fa-lg"></i> Filter
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm" title="Reset ">
+                                        <i class="fa  fa-undo fa-lg"></i> Reset
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row row-height">
+                                        <div class="col-sm-12">
+                                            <div class="page-cover">
+                                                <div class="pager-number">1 to 2 of 2</div>
+                                                <div class="pull-right reset-margin row-height">
+                                                    <ul class="pagination reset-margin">
+                                                        <li><a href="#">&laquo;</a></li>
+                                                        <li>
+                                                            <span class="page-number">
+                                                                <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                            </span>
+                                                        </li>
+                                                        <li><a href="#">&raquo;</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-condensed table-bordered" style="font-size:13px">
+                                <thead>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="typeaheadCRUD">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">Linguistics</a></li>
+                        <li><a href="#">Rule List</a></li>
+                        <li class="active">Typeahead</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
