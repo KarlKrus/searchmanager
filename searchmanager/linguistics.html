@@ -153,7 +153,7 @@
                         <li><a href="#">Simulator</a>
                         <li><a href="searchrules.html">Search Rules</a>
                         <li><a href="workflow.html">Workflow</a>
-                        <li class="active"><a href="#">Linguistics</a>
+                        <li class="active"><a href="#" onclick="lingLandingPage()">Linguistics</a>
                     </ul>
                 </li>
                 <li>
@@ -187,19 +187,19 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Stored Strings" onclick="workflow()">
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Stored Strings" onclick="storedString()">
                                 <i class="fa  fa-language fa-fw"></i>
                                 <span class="collapse-menu">Stored Strings</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Did You Mean" onclick="autoImport()">
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Did You Mean" onclick="didyoumean()">
                                 <i class="fa fa-text-width fa-fw"></i>
                                 <span class="collapse-menu">Did You Mean</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Typeahead" onclick="autoImport()">
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Typeahead" onclick="typeahead()">
                                 <i class="fa fa-keyboard-o fa-fw"></i>
                                 <span class="collapse-menu">Typeahead</span>
                             </a>
@@ -213,6 +213,56 @@
         </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
+            <script type="text/javascript">
+                function lingLandingPage() {
+                    var lin = document.getElementById('linguistLanding');
+                    var str = document.getElementById('stringModule');
+                    var did = document.getElementById('didyoumeanModule');
+                    var typ = document.getElementById('typeaheadModule');
+                    if (lin.style.display === 'none') {
+                        lin.style.display = 'block';
+                        str.style.display = 'none';
+                        did.style.display = 'none';
+                        typ.style.display = 'none';
+                    }
+                }
+                function storedString() {
+                    var lin = document.getElementById('linguistLanding');
+                    var str = document.getElementById('stringModule');
+                    var did = document.getElementById('didyoumeanModule');
+                    var typ = document.getElementById('typeaheadModule');
+                    if (str.style.display === 'none') {
+                        lin.style.display = 'none';
+                        str.style.display = 'block';
+                        did.style.display = 'none';
+                        typ.style.display = 'none';
+                    }
+                }
+                function didyoumean() {
+                    var lin = document.getElementById('linguistLanding');
+                    var str = document.getElementById('stringModule');
+                    var did = document.getElementById('didyoumeanModule');
+                    var typ = document.getElementById('typeaheadModule');
+                    if (did.style.display === 'none') {
+                        lin.style.display = 'none';
+                        str.style.display = 'none';
+                        did.style.display = 'block';
+                        typ.style.display = 'none';
+                    }
+                }
+                function typeahead() {
+                    var lin = document.getElementById('linguistLanding');
+                    var str = document.getElementById('stringModule');
+                    var did = document.getElementById('didyoumeanModule');
+                    var typ = document.getElementById('typeaheadModule');
+                    if (typ.style.display === 'none') {
+                        lin.style.display = 'none';
+                        str.style.display = 'none';
+                        did.style.display = 'none';
+                        typ.style.display = 'block';
+                    }
+                }
+            </script>
 
             <!--linguistics landing page-->
             <div id="linguistLanding" class="row">
@@ -232,10 +282,10 @@
             </div>
 
             <!--string management module-->
-            <div id="stringModule" class="row">
+            <div id="stringModule" class="row" style="display:none">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Linguistics</a></li>
+                    <li><a href="#" onclick="lingLandingPage()">Linguistics</a></li>
                     <li class="active">Stored Strings</li>
                 </ol>
                 <div class="row">
@@ -413,10 +463,10 @@
             </div>
 
             <!--did you mean module-->
-            <div id="didyoumeanModule" class="row">
+            <div id="didyoumeanModule" class="row" style="display:none">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Linguistics</a></li>
+                    <li><a href="#" onclick="lingLandingPage()">Linguistics</a></li>
                     <li class="active">Did You Mean</li>
                 </ol>
                 <!-- did you mean title-->
@@ -717,12 +767,12 @@
             </div>
 
             <!--typeahead module-->
-            <div id="typeaheadModule" class="row">
+            <div id="typeaheadModule" class="row" style="display:none">
                 <!--typeahead rule list-->
                 <div id="typeaheadKWList">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#">Linguistics</a></li>
+                        <li><a href="#" onclick="lingLandingPage()">Linguistics</a></li>
                         <li class="active">Rule List</li>
                     </ol>
                     <h4>Typeahead Rule List</h4>
@@ -821,7 +871,7 @@
                 <div id="typeaheadCRUD">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#">Linguistics</a></li>
+                        <li><a href="#" onclick="lingLandingPage()">Linguistics</a></li>
                         <li><a href="#">Rule List</a></li>
                         <li class="active">Typeahead</li>
                     </ol>
@@ -937,7 +987,7 @@
                         </div>
                     </div>
                     <!--typeahead content-->
-                    <table class="table table-condensed table-bordered">
+                    <table class="table table-condensed table-bordered" style="font-size:13px">
                         <thead>
                             <tr class="active">
                                 <th style="text-align:center">Related Keywords</th>
