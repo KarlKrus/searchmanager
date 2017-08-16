@@ -472,7 +472,7 @@
                                 </div>
                                 <div class="form-group">
                                     <button type="button" class="btn btn-success btn-sm" title="Add ">
-                                        <i class="fa fa-plus-square fa-lg"></i> Add
+                                        <i class="fa fa-plus fa-lg"></i> Add
                                     </button>
                                     <button type="button" class="btn btn-primary btn-sm" title="Edit ">
                                         <i class="fa  fa-pencil-square-o fa-lg"></i> Edit
@@ -718,6 +718,7 @@
 
             <!--typeahead module-->
             <div id="typeaheadModule" class="row">
+                <!--typeahead rule list-->
                 <div id="typeaheadKWList">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
@@ -747,7 +748,7 @@
                                                 <i class="fa fa-search fa-lg" style="color:white"></i>
                                             </button>
                                             <button type="button" class="btn btn-success btn-sm" title="Add">
-                                                <i class="fa fa-plus-square fa-lg" style="color:white"></i>
+                                                <i class="fa fa-plus fa-lg" style="color:white"></i>
                                             </button>
                                         </div>
                                     </div>
@@ -812,9 +813,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!--typeahead crud form-->
                 <div id="typeaheadCRUD">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
@@ -823,7 +826,7 @@
                         <li class="active">Typeahead</li>
                     </ol>
                     <!--typeahead title-->
-                    <h4>Typeahead for <span class="text-primary">AMD RYZEN 7 1800X</span>  </h4>                    
+                    <h4>Typeahead for <span class="text-primary">AMD RYZEN 7 1800X</span>  </h4>
                     <!--typeahead publish options-->
                     <div class="well well-sm">
                         <div class="row">
@@ -856,13 +859,19 @@
                     </div>
                     <!--typeahead rule options-->
                     <div class="well well-sm" style="font-size:13px">
-                        <div class="form-inline">
+                        <script>
+                            $(document).ready(function () {
+                                $('[data-toggle="popover"]').popover();
+                            });
+                        </script>
+                        <div class="form-inline"> 
                             <div class="form-group">
                                 <label>Priority: <strong class="badge">121</strong> </label>&nbsp;
                                 <label>Priority Override: </label>&nbsp;<input id="" type="text" class="form-control input-sm" size="10" /> &nbsp;&nbsp;
-                                <a href="#" title="Sort Sections"><i class="fa fa-list-ol fa-lg"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#" title="Sort Sections" data-toggle="modal" data-target="#sortSectionModal"><i class="fa fa-list-ol fa-lg"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
                                 <label>Enabled: </label>&nbsp;<input id="" type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#"><b>Product Suggestion: </b></a>&nbsp;<input id="" type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="btn-link" data-placement="bottom" data-html="true" data-toggle="popover" title="Product Suggestion"
+                                   data-content="Microsoft Office Tool <br /> Microsoft Antivirus <br /> Windows Paint"><b>Product Suggestion: </b></button>&nbsp;<input id="" type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                             <div class="form-group pull-right">
                                 <button type="button" class="btn btn-success btn-sm" title="Save Rule" data-toggle="modal" data-target="#redirectSaveRuleModal">
@@ -907,7 +916,7 @@
                             <tr class="active">
                                 <th style="text-align:center">Related Keywords</th>
                                 <th style="text-align:center" class="form-inline">
-                                Category 
+                                    Category
                                     <div class="form-group pull-right">
                                         <div id="radio-switch" class="form-group">
                                             <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -919,7 +928,8 @@
                                                 </label>
                                             </div>
                                         </div>
-                                    </div></th>
+                                    </div>
+                                </th>
                                 <th style="text-align:center" class="form-inline">
                                     Brand
                                     <div class="form-group pull-right">
@@ -939,9 +949,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AMD RYZEN 7 1800X <br />
-                                AMD Ryze mid <br />
-                                Guinsoo 
+                                <td>
+                                    AMD RYZEN 7 1800X <br />
+                                    AMD Ryze mid <br />
+                                    Guinsoo
                                 </td>
                                 <td>
                                     <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Electronics <br />
@@ -953,20 +964,205 @@
                                     <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Software <br />
                                 </td>
                                 <td>
-                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Electronics <br />
-                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Monitors <br />
-                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Software License <br />
+                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Microsoft <br />
+                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; MSI <br />
+                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>&nbsp;<a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Lenovo  <br />
                                     <hr />
-                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Computer Accessories <br />
-                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Computers <br />
-                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Software <br />
+                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Samsung  <br />
+                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Panasonic <br />
+                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Fujitsu <br />
                                 </td>
                             </tr>
                         </tbody>
                     </table><br />
-                    <!--tyepahead sections-->
-                    <div class="well well-sm">
-
+                    <!--typeahead sections-->
+                    <div class="well well-sm" style="font-size:13px">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>Add Section:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" placeholder="Section Name">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-success btn-sm" title="Add">
+                                            <i class="fa fa-plus fa-lg"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label> Featured Laptop Section: </label>
+                                        <div id="radio-switch" class="form-group">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default  btn-primary btn-xs">
+                                                    <input name="options" checked="checked" type="radio"> on
+                                                </label>
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="options" value="option2" type="radio"> off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pull-right">
+                                        <label> SKU : </label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-sm" placeholder="Input SKU">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-success btn-sm" title="Add">
+                                                    <i class="fa fa-plus fa-lg" style="color:white"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger btn-sm" title="Delete Section">
+                                            <i class="fa fa-times fa-lg" style="color:white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-sm-2" style="border:medium">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="padding:5px">
+                                            <div>
+                                                <div class="pull-left">
+                                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a>&nbsp;
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div style="text-align:center">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
+                                                <label>40119325</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="border:medium">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="padding:5px">
+                                            <div>
+                                                <div class="pull-left">
+                                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a>&nbsp;
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div style="text-align:center">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
+                                                <label>40119325</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="border:medium">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="padding:5px">
+                                            <div>
+                                                <div class="pull-left">
+                                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a>&nbsp;
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div style="text-align:center">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
+                                                <label>40119325</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="border:medium">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="padding:5px">
+                                            <div>
+                                                <div class="pull-left">
+                                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a>&nbsp;
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div style="text-align:center">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
+                                                <label>40119325</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="border:medium">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="padding:5px">
+                                            <div>
+                                                <div class="pull-left">
+                                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a>&nbsp;
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div style="text-align:center">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
+                                                <label>40119325</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="border:medium">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body" style="padding:5px">
+                                            <div>
+                                                <div class="pull-left">
+                                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a>&nbsp;
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a href="#" title="Remove"><i class="fa fa-times" style="color:red"></i></a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div style="text-align:center">
+                                                <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
+                                                <label>40119325</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--typeahead modals-->
+                    <div id="sortSectionModal" class="modal fade" role="dialog" style="font-size:13px">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Sort Section</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Category <br />
+                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Brand <br />
+                                    <a href="#" title="Sort"><i class="fa fa-align-justify" style="color:forestgreen"></i></a> &emsp; Product Suggestion <br />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">
+                                        <i class="fa  fa-check"></i>
+                                        Ok
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
