@@ -859,25 +859,51 @@
                     </div>
                     <!--typeahead rule options-->
                     <div class="well well-sm" style="font-size:13px">
-                        <script>
-                            $(document).ready(function () {
-                                $('[data-toggle="popover"]').popover();
-                            });
-                        </script>
                         <div class="form-inline"> 
                             <div class="form-group">
                                 <label>Priority: <strong class="badge">121</strong> </label>&nbsp;
                                 <label>Priority Override: </label>&nbsp;<input id="" type="text" class="form-control input-sm" size="10" /> &nbsp;&nbsp;
                                 <a href="#" title="Sort Sections" data-toggle="modal" data-target="#sortSectionModal"><i class="fa fa-list-ol fa-lg"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
                                 <label>Enabled: </label>&nbsp;<input id="" type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button class="btn-link" data-placement="bottom" data-html="true" data-toggle="popover" title="Product Suggestion"
-                                   data-content="Microsoft Office Tool <br /> Microsoft Antivirus <br /> Windows Paint"><b>Product Suggestion: </b></button>&nbsp;<input id="" type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="form-group">
+                                <div class="dropdown">
+                                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <strong> Product Suggestion</strong>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width:250px">
+                                        <table class="table table-responsive">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">
+                                                        Product Sugggestion
+                                                    </th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="40" height="40"></td>
+                                                    <td>Microsoft Office Tools</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="40" height="40"></td>
+                                                    <td>Microsoft Antivirus Software</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="40" height="40"></td>
+                                                    <td>Microsoft Office Tools 2017 and 365</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><input id="" type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
                             </div>
                             <div class="form-group pull-right">
-                                <button type="button" class="btn btn-success btn-sm" title="Save Rule" data-toggle="modal" data-target="#redirectSaveRuleModal">
+                                <button type="button" class="btn btn-success btn-sm" title="Save Rule" data-toggle="modal" data-target="#">
                                     <i class="fa fa-save fa-lg"></i> Save
                                 </button>
-                                <button type="button" class="btn btn-danger btn-sm" title="Delete Rule" data-toggle="modal" data-target="#redirectDeleteRuleModal">
+                                <button type="button" class="btn btn-danger btn-sm" title="Delete Rule" data-toggle="modal" data-target="#">
                                     <i class="fa fa-trash-o fa-lg"></i> Delete
                                 </button>
                                 <div class="btn-group">
