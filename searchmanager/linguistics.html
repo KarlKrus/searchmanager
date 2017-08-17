@@ -768,6 +768,24 @@
 
             <!--typeahead module-->
             <div id="typeaheadModule" class="row" style="display:none">
+                <script type="text/javascript">
+                function typeaheadKWList() {
+                    var typKWL = document.getElementById('typeaheadKWList');
+                    var typCRUD = document.getElementById('typeaheadCRUD');
+                    if (typKWL.style.display === 'none') {
+                        typKWL.style.display = 'block';
+                        typCRUD.style.display = 'none';
+                    }
+                }
+                function typeaheadCRUD() {
+                    var typKWL = document.getElementById('typeaheadKWList');
+                    var typCRUD = document.getElementById('typeaheadCRUD');
+                    if (typCRUD.style.display === 'none') {
+                        typCRUD.style.display = 'block';
+                        typKWL.style.display = 'none';
+                    }
+                }
+                </script>
                 <!--typeahead rule list-->
                 <div id="typeaheadKWList">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
@@ -821,25 +839,25 @@
                                     <tr>
                                         <td style="text-align:center;vertical-align:middle"><input id="" type="checkbox" /></td>
                                         <td>3215</td>
-                                        <td><a href="#">AMD RYZEN 7 1800X</a></td>
+                                        <td><a href="#" onclick="typeaheadCRUD()">AMD RYZEN 7 1800X</a></td>
                                         <td>Setup a Rule</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align:center;vertical-align:middle"><i class="fa fa-lock fa-lg"></i></td>
                                         <td>2133</td>
-                                        <td><a href="#">Apple Products</a></td>
+                                        <td><a href="#" onclick="typeaheadCRUD()">Apple Products</a></td>
                                         <td>Ready For Production</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align:center;vertical-align:middle"><input id="" type="checkbox" /></td>
                                         <td>1223</td>
-                                        <td><a href="#">Nvidia</a></td>
+                                        <td><a href="#" onclick="typeaheadCRUD()">Nvidia</a></td>
                                         <td>Setup a Rule</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align:center;vertical-align:middle"><input id="" type="checkbox" /></td>
                                         <td>0001</td>
-                                        <td><a href="#">League of Legends</a></td>
+                                        <td><a href="#" onclick="typeaheadCRUD()">League of Legends</a></td>
                                         <td>Setup a Rule</td>
                                     </tr>
                                 </tbody>
@@ -868,11 +886,11 @@
                     </div>
                 </div>
                 <!--typeahead crud form-->
-                <div id="typeaheadCRUD">
+                <div id="typeaheadCRUD" style="display:none">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
                         <li><a href="#" onclick="lingLandingPage()">Linguistics</a></li>
-                        <li><a href="#">Rule List</a></li>
+                        <li><a href="#" onclick="typeaheadKWList()">Rule List</a></li>
                         <li class="active">Typeahead</li>
                     </ol>
                     <!--typeahead title-->
@@ -1047,6 +1065,8 @@
                                     <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Samsung  <br />
                                     <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Panasonic <br />
                                     <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Fujitsu <br />
+                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;ACER <br />
+                                    <a href="#" title="Add"> <i class="fa fa-arrow-up"></i></a> &emsp;  &emsp;Sony <br />
                                 </td>
                             </tr>
                         </tbody>

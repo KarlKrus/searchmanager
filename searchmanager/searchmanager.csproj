@@ -96,6 +96,7 @@
     <Content Include="js\plugins\metisMenu\metisMenu.min.js" />
     <Content Include="js\sb-admin-2.js" />
     <Content Include="linguistics.html" />
+    <Content Include="login.html" />
     <Content Include="navigation.html" />
     <Content Include="searchrules.html" />
     <Content Include="settings.html" />
