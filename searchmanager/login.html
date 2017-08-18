@@ -35,28 +35,34 @@
     <br /><br /><br /><br /><br />
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                <img alt="" src="images/smlogo.png" class="img-responsive" />
+            <div class="col-sm-4">
             </div>
             <div class="col-sm-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="panel-title text-center" style="color: #3498db; font-weight: 800;font-family:Verdana">Log in to Search Manager</h2>
-                    </div>
+                    <!--<div class="panel-heading">
+                        <h2 class="panel-title">Log in to Search Manager</h2>
+                    </div>-->
                     <div class="panel-body">
                         <div class="col-sm-12">
+                            <img alt="" src="images/smlogo.png" class="img-responsive" />
                             <input type="text" name="txtUserName" placeholder="Username" class="form-control" />
                             <br />
                             <input type="password" name="txtUserPass" placeholder="Password" class="form-control" />
-                            <hr />
+                            <br />
+                            <a href="searchrules.html" class="btn btn-success center-block">Log in</a>
                         </div>
                         <div class="col-sm-12 text-center">
-                            <a href="searchrules.html" class="btn btn-primary">Log in</a>
-                            <a href="#" class="btn btn-link">Forgot password?</a>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                                </label>
+                                &bull; <a href="#">Forgot Password</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-sm-4"></div>
         </div>
     </div>
 </body>
