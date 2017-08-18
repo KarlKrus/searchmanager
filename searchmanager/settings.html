@@ -201,110 +201,6 @@
         </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
-
-            <script type="text/javascript">
-                function searchRulelandingPage() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (srl.style.display === 'none') {
-                        srl.style.display = 'block';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-                function elevate() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (ele.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'block';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function demote() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (dem.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'block';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function exclude() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (exc.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'block';
-                        red.style.display = 'none';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function redirect() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (red.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'block';
-                        rel.style.display = 'none';
-                    }
-                }
-
-                function relevancy() {
-                    var srl = document.getElementById('searchruleLanding');
-                    var ele = document.getElementById('elevateModule');
-                    var dem = document.getElementById('demoteModule');
-                    var exc = document.getElementById('excludeModule');
-                    var red = document.getElementById('redirectModule');
-                    var rel = document.getElementById('relevancyModule');
-                    if (rel.style.display === 'none') {
-                        srl.style.display = 'none';
-                        ele.style.display = 'none';
-                        dem.style.display = 'none';
-                        exc.style.display = 'none';
-                        red.style.display = 'none';
-                        rel.style.display = 'block';
-                    }
-                }
-            </script>
-
             <!--audit trail module-->
             <!--user accounts module-->
             <div id="userAccModule" class="row">
@@ -313,6 +209,25 @@
                     <li><a href="#" onclick="lingLandingPage()">Settings</a></li>
                     <li class="active">User Accounts</li>
                 </ol>
+                <script type="text/javascript">
+                    function userDetails() {
+                        var usrDtls = document.getElementById('userDetails');
+                        var addEdtUsr = document.getElementById('addEditUser');
+                        if (usrDtls.style.display === 'none') {
+                            usrDtls.style.display = 'block';
+                            addEdtUsr.style.display = 'none';
+                        }
+                    }
+
+                    function addEditUser() {
+                        var usrDtls = document.getElementById('userDetails');
+                        var addEdtUsr = document.getElementById('addEditUser');
+                        if (addEdtUsr.style.display === 'none') {
+                            usrDtls.style.display = 'none';
+                            addEdtUsr.style.display = 'block';
+                        }
+                    }
+                </script>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="panel panel-default" style="font-size:13px">
@@ -326,7 +241,9 @@
                                                     <i class="fa fa-search fa-lg"></i>
                                                 </button>
                                             </div>
+                                            
                                         </div>
+                                        <button class="btn btn-success btn-sm" onclick="addEditUser()"><i class="fa fa-plus"></i> New Entry</button>
                                     </div>
                                     <div class="form-group pull-right">
                                         <div class="row row-height">
@@ -354,10 +271,10 @@
                                 <table class="table table-hover table-bordered" style="padding:1px">
                                     <thead>
                                         <tr class="active">
-                                            <th >User Name</th>
+                                            <th>User Name</th>
                                             <th>Full Name</th>
-                                            <th >Store</th>
-                                            <th >Last Access</th>
+                                            <th>Store</th>
+                                            <th>Last Access</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -382,29 +299,98 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="panel-footer">
-
-                            </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="panel panel-default" style="font-size:13px">
-                            <div class="panel-heading"> Add User
+
+                        <div id="userDetails" class="panel panel-default" style="font-size:13px">
+                            <div class="panel-heading">
+                                <label> User Details</label>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-sm-4">Username: <input id="" type="text" class="form-control input-sm" placeholder="Username"/></div>
-                                    <div class="col-sm-8">Email: <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
+                                    <div class="col-sm-4"><img class="img-thumbnail" alt="Profile Picture" height="150" width="150" src="images/no-pic.png" /></div>
+                                    <div class="col-sm-8">
+                                        <table class="table table-striped">
+                                            <!--<thead>
+                                                <tr>
+                                                    <th style="padding:1px" width="40%">Full Name:</th>
+                                                    <th style="padding:1px" width="60%">Carlson Cruz</th>
+                                                </tr>
+                                            </thead>-->
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding:1px" width="40%">Full Name:</td>
+                                                    <td style="padding:1px" width="60%">Carlson Cruz</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Username:</td>
+                                                    <td style="padding:1px">carl.cruz</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Email:</td>
+                                                    <td style="padding:1px">carlson.cruz@pcm.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Default Store:</td>
+                                                    <td style="padding:1px">PCM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Role:</td>
+                                                    <td style="padding:1px">ADMIN</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Validity:</td>
+                                                    <td style="padding:1px">02/21/2018</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Status:</td>
+                                                    <td style="padding:1px">Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:1px">Last Access:</td>
+                                                    <td style="padding:1px">12/21/2017 03:54 PM 192.168.0.1</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="panel-footer">
+                                <button class="btn btn-primary btn-sm" onclick="addEditUser()"><i class="fa fa-pencil fa-lg"></i> Edit</button>
+                                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                            </div>
+                        </div>
+                        <div id="addEditUser" class="panel panel-default" style="font-size:13px;display:none">
+                            <div class="panel-heading">
+                                <label> Add/Edit User</label>
+                                <div id="radio-switch" class="pull-right">
+                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                        <label class="btn btn-default btn-xs">
+                                            <input type="radio" name="oss" checked="checked"> Enabled
+                                        </label>
+                                        <label class="btn btn-default btn-xs">
+                                            <input type="radio" name="oss" value="option2"> Disabled
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-2"><img class="img-thumbnail" alt="Profile Picture" height="150" width="150" src="images/no-pic.png" /></div>
+                                    <div class="col-sm-5"><label>Username:</label> <input id="" type="text" class="form-control input-sm" placeholder="Username" /></div>
+                                    <div class="col-sm-5"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
                                 </div>
                                 <br />
                                 <div class="row">
-                                    <div class="col-sm-6">First Name: <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
-                                    <div class="col-sm-6">Last Name: <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
+                                    <div class="col-sm-6"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
+                                    <div class="col-sm-6"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
                                 </div>
                                 <br />
                                 <div class="row">
                                     <div class="col-sm-4">
-                                        Default Store:
+                                        <label> Default Store:</label>
                                         <select id="" class="form-control input-sm">
                                             <option>MacMall</option>
                                             <option>PCM</option>
@@ -414,26 +400,43 @@
                                             <option>PCMG BD</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-4">                                        
-                                    Role:
+                                    <div class="col-sm-4">
+                                        <label>Role:</label>
                                         <select id="" class="form-control input-sm">
-                                            <option>MacMall</option>
-                                            <option>PCM</option>
-                                            <option>eCost</option>
-                                            <option>MacMall BD</option>
-                                            <option>PcMall BD</option>
-                                            <option>PCMG BD</option>
+                                            <option>ADMIN</option>
+                                            <option>APPROVER</option>
+                                            <option>ENCODER</option>
+                                            <option>GUEST</option>
+                                            <option>MANAGER</option>
+                                            <option>PUBLISHER</option>
+                                            <option>USER ADMIN</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-4">
-                                    Validity: 
+                                        <label> Validity: </label>
                                         <div class="input-group">
                                             <input type="text" class="form-control input-sm" placeholder="Select Date">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
                                             </span>
-                                        </div></div> 
+                                        </div>
+                                    </div>
                                 </div>
+                                <br />
+                                <label>Password:</label>
+                                <div class="row">
+                                    <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Password" /></div>
+                                    <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Re-Password" /></div>
+                                    <div class="col-sm-4"><label><input id="Checkbox1" type="checkbox" />&nbsp;Auto-generate</label></div>
+                                </div>
+
+                            </div>
+                            <div class="panel-footer">
+                                <div class="pull-right">
+                                    <button class="btn btn-success btn-sm"><i class="fa fa-check fa-lg"></i> Submit</button>
+                                    <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset</button>
+                                </div>
+                                <button class="btn btn-primary btn-sm" onclick="userDetails()"><i class="fa fa-arrow-left fa-lg"></i> Back</button>
                             </div>
                         </div>
                     </div>
