@@ -202,6 +202,108 @@
         <!--page content/wrapper-->
         <div id="page-wrapper">
             <!--audit trail module-->
+            <div id="auditTrailModule" class="row">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="lingLandingPage()">Settings</a></li>
+                    <li class="active">Audit Trail</li>
+                </ol>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>Filters:</label> &nbsp;
+                                        <input id="" type="text" class="form-control input-sm" placeholder="Keyword" size="15" />
+                                        <select id="" class="form-control input-sm">
+                                            <option>demote</option>
+                                            <option>elevate</option>
+                                            <option>exclude</option>
+                                            <option>keyword</option>
+                                            <option>queryCleaning</option>
+                                            <option>relevancy</option>
+                                            <option>ruleStatus</option>
+                                            <option>security</option>
+                                            <option>spell</option>
+                                            <option>storeKeyword</option>
+                                        </select>
+                                        <input id="" type="text" class="form-control input-sm" placeholder="User Name" size="15" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-sm" placeholder="Start Date" size="7">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                            </span>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-sm" placeholder="End Date" size="7">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-default btn-sm" title="Filter ">
+                                            <i class="fa fa-filter fa-lg"></i> Filter
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm" title="Reset ">
+                                            <i class="fa  fa-undo fa-lg"></i> Reset
+                                        </button>
+                                    </div>
+                                    <div class="form-group pull-right">
+                                        <div class="row row-height">
+                                            <div class="col-sm-12">
+                                                <div class="page-cover">
+                                                    <div class="pager-number">1 to 2 of 2</div>
+                                                    <div class="pull-right reset-margin row-height">
+                                                        <ul class="pagination reset-margin">
+                                                            <li><a href="#">&laquo;</a></li>
+                                                            <li>
+                                                                <span class="page-number">
+                                                                    <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                                </span>
+                                                            </li>
+                                                            <li><a href="#">&raquo;</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped table-bordered" style="font-size:13px">
+                                    <thead>
+                                        <tr class="active">
+                                            <th style="text-align:center">Date</th>
+                                            <th style="text-align:center">Ref ID</th>
+                                            <th style="text-align:center">Username</th>
+                                            <th style="text-align:center">Type</th>
+                                            <th style="text-align:center">Action</th>
+                                            <th style="text-align:center">Keyword</th>
+                                            <th style="text-align:center">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <td>08/13/2017 07:50 PM</td>
+                                            <td>spell_rule</td>
+                                            <td>pcmall_admin</td>
+                                            <td>ruleStatus</td>
+                                            <td>exportRule</td>
+                                            <td></td>
+                                            <td>Exported reference id = [spell_rule], rule type = [Did You Mean], export type = [1].</td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--user accounts module-->
             <div id="userAccModule" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
@@ -241,7 +343,7 @@
                                                     <i class="fa fa-search fa-lg"></i>
                                                 </button>
                                             </div>
-                                            
+
                                         </div>
                                         <button class="btn btn-success btn-sm" onclick="addEditUser()" title="Create New Account"><i class="fa fa-plus"></i></button>
                                     </div>
@@ -378,7 +480,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-sm-2"><img class="img-thumbnail" alt="Profile Picture" height="150" width="150" src="images/no-pic.png" /></div>
+                                    <div class="col-sm-2"><img class="img-thumbnail" alt="Profile Picture" src="images/no-pic.png" /></div>
                                     <div class="col-sm-5"><label>Username:</label> <input id="" type="text" class="form-control input-sm" placeholder="Username" /></div>
                                     <div class="col-sm-5"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
                                 </div>
