@@ -181,13 +181,13 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Audit Trail">
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Audit Trail" onclick="auditTrail()">
                                 <i class="fa fa-file-text-o fa-fw"></i>
                                 <span class="collapse-menu">Audit Trail</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="User Accounts">
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="User Accounts" onclick="userAcc()">
                                 <i class="fa fa-users fa-fw"></i>
                                 <span class="collapse-menu">User Accounts</span>
                             </a>
@@ -201,11 +201,85 @@
         </nav>
         <!--page content/wrapper-->
         <div id="page-wrapper">
-            <!--audit trail module-->
-            <div id="auditTrailModule" class="row">
+            <script type="text/javascript">
+                function settingsLanding() {
+                    var set = document.getElementById('settingsLanding');
+                    var aud = document.getElementById('auditTrailModule');
+                    var use = document.getElementById('userAccModule');
+                    if (set.style.display === 'none') {
+                        set.style.display = 'block';
+                        aud.style.display = 'none';
+                        use.style.display = 'none';
+                    }
+                }
+                function auditTrail() {
+                    var set = document.getElementById('settingsLanding');
+                    var aud = document.getElementById('auditTrailModule');
+                    var use = document.getElementById('userAccModule');
+                    if (aud.style.display === 'none') {
+                        set.style.display = 'none';
+                        aud.style.display = 'block';
+                        use.style.display = 'none';
+                    }
+                }
+                function userAcc() {
+                    var set = document.getElementById('settingsLanding');
+                    var aud = document.getElementById('auditTrailModule');
+                    var use = document.getElementById('userAccModule');
+                    if (use.style.display === 'none') {
+                        set.style.display = 'none';
+                        aud.style.display = 'none';
+                        use.style.display = 'block';
+                    }
+                }
+            </script>
+
+            <!--settings landing page-->
+            <div id="settingsLanding" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="#" onclick="lingLandingPage()">Settings</a></li>
+                    <li class="active">Settings</li>
+                </ol>
+                <div class="well">
+                    <div class="container">
+                        <h1>
+                            <i class="fa fa-cog fa-spin fa-lg" aria-hidden="true" style="color:darkslateblue"></i> Settings
+                        </h1>
+                        <p>Settings module contains the configurations that can control the different aspects of the Search Manager.
+                    </div>
+                </div>
+                <div class="row" style="font-size:13px">
+                    <div class="col-sm-6">
+                        <h3>
+                            <i class="fa fa-file-text-o fa-fw"></i>
+                            <span class="collapse-menu">Audit Trail</span>
+                        </h3>
+                        <p>
+                            Audit Trail module displays every transactions performed by the different Search Manager users.  Audit trail is used for auditing purposes. These logs can be filtered and downloaded by the user.
+                        </p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" href="#" role="button" onclick="auditTrail()">View Audit Trail Logs &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>
+                            <i class="fa fa-users fa-fw"></i>
+                            <span class="collapse-menu">User Accounts</span>
+                        </h3>
+                        <p>User Account module allows the administrator to monitor and manage Search Manager Users.</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" href="#" role="button" onclick="userAcc()">Manage Users &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--audit trail module-->
+            <div id="auditTrailModule" class="row" style="display:none">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="settingsLanding()">Settings</a></li>
                     <li class="active">Audit Trail</li>
                 </ol>
                 <div class="row">
@@ -232,13 +306,13 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
-                                            <input type="text" class="form-control input-sm" placeholder="Start Date" size="7">
+                                            <input type="text" class="form-control input-sm" placeholder="From Date" size="7">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
                                             </span>
                                         </div>
                                         <div class="input-group">
-                                            <input type="text" class="form-control input-sm" placeholder="End Date" size="7">
+                                            <input type="text" class="form-control input-sm" placeholder="To Date" size="7">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
                                             </span>
@@ -246,30 +320,37 @@
                                     </div>
                                     <div class="form-group">
                                         <button type="button" class="btn btn-default btn-sm" title="Filter ">
-                                            <i class="fa fa-filter fa-lg"></i> Filter
+                                            <i class="fa fa-filter fa-lg"></i>
                                         </button>
-                                        <button type="button" class="btn btn-default btn-sm" title="Reset ">
-                                            <i class="fa  fa-undo fa-lg"></i> Reset
+                                        <button type="button" class="btn btn-default btn-sm" title="Reset Filter">
+                                            <i class="fa  fa-undo fa-lg"></i>
                                         </button>
                                     </div>
-                                    <div class="form-group pull-right">
-                                        <div class="row row-height">
-                                            <div class="col-sm-12">
-                                                <div class="page-cover">
-                                                    <div class="pager-number">1 to 2 of 2</div>
-                                                    <div class="pull-right reset-margin row-height">
-                                                        <ul class="pagination reset-margin">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li>
-                                                                <span class="page-number">
-                                                                    <input placeholder="Page" class="form-control input-small page-number" type="text">
-                                                                </span>
-                                                            </li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
+                                    <div class="form-inline pull-right">
+                                        <div class="form-group">
+                                            <div class="row row-height">
+                                                <div class="col-sm-12">
+                                                    <div class="page-cover">
+                                                        <div class="pager-number">1 to 2 of 2</div>
+                                                        <div class="pull-right reset-margin row-height">
+                                                            <ul class="pagination reset-margin">
+                                                                <li><a href="#">&laquo;</a></li>
+                                                                <li>
+                                                                    <span class="page-number">
+                                                                        <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                                    </span>
+                                                                </li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary btn-sm" title="Download Audit Trail">
+                                                <i class="fa  fa-download fa-lg"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -278,13 +359,13 @@
                                 <table class="table table-striped table-bordered" style="font-size:13px">
                                     <thead>
                                         <tr class="active">
-                                            <th style="text-align:center">Date</th>
-                                            <th style="text-align:center">Ref ID</th>
-                                            <th style="text-align:center">Username</th>
-                                            <th style="text-align:center">Type</th>
-                                            <th style="text-align:center">Action</th>
-                                            <th style="text-align:center">Keyword</th>
-                                            <th style="text-align:center">Description</th>
+                                            <th style="text-align:center" width="12%">Date</th>
+                                            <th style="text-align:center" width="12%">Ref ID</th>
+                                            <th style="text-align:center" width="12%">Username</th>
+                                            <th style="text-align:center" width="12%">Type</th>
+                                            <th style="text-align:center" width="12%">Action</th>
+                                            <th style="text-align:center" width="12%">Keyword</th>
+                                            <th style="text-align:center" width="28%">Description</th>
                                         </tr>
                                     </thead>
                                     <thead>
@@ -297,6 +378,24 @@
                                             <td></td>
                                             <td>Exported reference id = [spell_rule], rule type = [Did You Mean], export type = [1].</td>
                                         </tr>
+                                        <tr>
+                                            <td>08/13/2017 07:50 PM</td>
+                                            <td>0o2eedt020QR6zAgemdj</td>
+                                            <td>pcmall_admin</td>
+                                            <td>elevate</td>
+                                            <td>update</td>
+                                            <td>_macbook pro</td>
+                                            <td>Elevating ID[0o2eedt020QR6zAgemdj] to position[2]; set to force add Condition[Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>08/07/2017 07:47 PM</td>
+                                            <td>0064dYW0V0Nlfw7zuSug</td>
+                                            <td>pcmall_admin</td>
+                                            <td>queryCleaning</td>
+                                            <td>update</td>
+                                            <td></td>
+                                            <td>Updated Rule ID[0064dYW0V0Nlfw7zuSug] : replace keyword message type = [Custom Text];replace keyword custom message = [Your search query did not yield any results. You might be interested in the following items instead.];</td>
+                                        </tr>
                                     </thead>
                                 </table>
                             </div>
@@ -304,11 +403,12 @@
                     </div>
                 </div>
             </div>
+
             <!--user accounts module-->
-            <div id="userAccModule" class="row">
+            <div id="userAccModule" class="row" style="display:none">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="#" onclick="lingLandingPage()">Settings</a></li>
+                    <li><a href="#" onclick="settingsLanding()">Settings</a></li>
                     <li class="active">User Accounts</li>
                 </ol>
                 <script type="text/javascript">
