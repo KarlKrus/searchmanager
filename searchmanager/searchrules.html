@@ -67,7 +67,7 @@
     </style>
 </head>
 <body>
-   <div class="wrapper" id="wrapper">
+    <div class="wrapper" id="wrapper">
         <!--navigation-->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <!--navbar-->
@@ -224,7 +224,7 @@
             </div>
         </nav>
         <!--page content/wrapper-->
-       <div id="page-wrapper">
+        <div id="page-wrapper">
 
             <script type="text/javascript">
                 function searchRulelandingPage() {
@@ -550,7 +550,7 @@
                                         </label>
                                     </div>
                                     <div class="form-group">
-                                        <label  style="font-size:13px;vertical-align:sub">
+                                        <label style="font-size:13px;vertical-align:sub">
                                             Last Published:
                                             <span class="text-warning">
                                                 10/15/2014 07:11 PM
@@ -665,9 +665,15 @@
                         </div>
                     </div>
                     <!--elevate content panels-->
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="panel panel-default">
+                    <script>
+                        $(function () {
+                            $("#elevatePanels").sortable();
+                            $("#elevatePanels").disableSelection();
+                        });
+                    </script>
+                    <ul id="elevatePanels" class="row" style="list-style:none">
+                        <li class="col-sm-3">
+                            <div id="panel1" class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -733,9 +739,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="panel panel-warning">
+                        </li>
+                        <li class="col-sm-3">
+                            <div id="panel2" class="panel panel-warning">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -811,9 +817,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="panel panel-danger">
+                        </li>
+                        <li class="col-sm-3">
+                            <div id="panel3" class="panel panel-danger">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -889,9 +895,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="panel panel-default">
+                        </li>
+                        <li class="col-sm-3">
+                            <div id="panel4" class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -957,8 +963,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
+
                     <!--elevate modals-->
                     <div id="backupRuleModal" class="modal fade" role="dialog" style="font-size:13px">
                         <div class="modal-dialog  modal-s6">
@@ -1476,7 +1483,7 @@
                             <div class="col-sm-6">
                                 <div class="form-inline">
                                     <div class="form-group">
-                                        <label  style="font-size:13px;vertical-align:sub">
+                                        <label style="font-size:13px;vertical-align:sub">
                                             Status:
                                             <span class="text-danger"> Setup a Rule </span>
                                         </label>
@@ -1597,8 +1604,15 @@
                         </div>
                     </div>
                     <!--demote content panels-->
-                    <div class="row">
-                        <div class="col-sm-3">
+
+                    <script>
+                        $(function () {
+                            $("#demotePanels").sortable();
+                            $("#demotePanels").disableSelection();
+                        });
+                    </script>
+                    <ul id="demotePanels" class="row" style="list-style:none">
+                        <li class="col-sm-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
@@ -1665,8 +1679,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
+                        </li>
+                        <li class="col-sm-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
@@ -1733,8 +1747,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
+                        </li>
+                        <li class="col-sm-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
@@ -1801,8 +1815,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-3">
+                        </li>
+                        <li class="col-sm-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="row">
@@ -1869,8 +1883,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <!--demote modals-->
                     <div id="demoteBackupRuleModal" class="modal fade" role="dialog" style="font-size:13px">
                         <div class="modal-dialog  modal-s6">
@@ -2387,13 +2401,13 @@
                             <div class="col-sm-6">
                                 <div class="form-inline">
                                     <div class="form-group">
-                                        <label  style="font-size:13px;vertical-align:sub">
+                                        <label style="font-size:13px;vertical-align:sub">
                                             Status:
                                             <span class="text-danger"> Setup a Rule </span>
                                         </label>
                                     </div>
                                     <div class="form-group">
-                                        <label  style="font-size:13px;vertical-align:sub">
+                                        <label style="font-size:13px;vertical-align:sub">
                                             Last Published:
                                             <span class="text-warning">
                                                 10/15/2014 07:11 PM
@@ -2508,6 +2522,7 @@
                         </div>
                     </div>
                     <!--exclude content panels-->
+
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="panel panel-default">
@@ -3316,7 +3331,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="padding-bottom:2px">Keyboard</td>
-                                                <td style="padding-bottom:2px"><a href="#" >1</a></td>
+                                                <td style="padding-bottom:2px"><a href="#">1</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -3364,13 +3379,13 @@
                                 <div class="pull-left">
                                     <div class="form-inline">
                                         <div class="form-group">
-                                            <label  style="font-size:13px;vertical-align:sub">
+                                            <label style="font-size:13px;vertical-align:sub">
                                                 Status:
                                                 <span class="text-danger"> Setup a Rule </span>
                                             </label>
                                         </div>
                                         <div class="form-group">
-                                            <label  style="font-size:13px;vertical-align:sub">
+                                            <label style="font-size:13px;vertical-align:sub">
                                                 Last Published:
                                                 <span class="text-warning">
                                                     10/15/2014 07:11 PM
@@ -3568,7 +3583,7 @@
                                             </ul>
 
                                             <div class="tab-content" style="font-size:13px">
-                                                <div id="set" class="tab-pane fade in active" >
+                                                <div id="set" class="tab-pane fade in active">
                                                     <br />
                                                     <div class="well well-sm">
                                                         <input type="checkbox" name="usethisaction"> Use this action (
@@ -5095,8 +5110,8 @@
                     </div>
                 </div>
             </div>
-        </div> 
-    </div >
+        </div>
+    </div>
 
     <!--logout modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
