@@ -65,7 +65,6 @@
     <Content Include="custom-css\jquery-ui.min.css" />
     <Content Include="custom-css\media-reset.css" />
     <Content Include="custom-css\style.css" />
-    <Content Include="custom-css\theme\theme.css" />
     <Content Include="font-awesome\css\font-awesome.min.css" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="font-awesome\new\custom.css" />
@@ -79,29 +78,18 @@
     <Content Include="images\pcmalllogo.png" />
     <Content Include="images\pcmbd.png" />
     <Content Include="images\pcmg.png" />
-    <Content Include="images\server.png" />
     <Content Include="images\smiconlogo.png" />
     <Content Include="images\smlogo.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom-js\cookie.js" />
-    <Content Include="js\custom-js\drag-animation.js" />
-    <Content Include="js\custom-js\input-validate.js" />
-    <Content Include="js\custom-js\jquery-validate.bootstrap-tooltip.js" />
-    <Content Include="js\custom-js\jquery.slimscroll.min.js" />
-    <Content Include="js\custom-js\jquery.validate.min.js" />
-    <Content Include="js\custom-js\notification.js" />
-    <Content Include="js\custom-js\review-pagination.js" />
     <Content Include="js\jquery-1.11.0.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\plugins\metisMenu\metisMenu.min.js" />
     <Content Include="js\sb-admin-2.js" />
     <Content Include="linguistics.html" />
     <Content Include="login.html" />
-    <Content Include="navigation.html" />
     <Content Include="searchrules.html" />
     <Content Include="settings.html" />
-    <Content Include="themer\color.css" />
-    <Content Include="themer\custom.js" />
     <Content Include="Web.config" />
     <Content Include="workflow.html" />
   </ItemGroup>
