@@ -266,8 +266,10 @@
                         <h1>
                             <i class="fa fa-refresh fa-spin fa-lg" aria-hidden="true" style="color: indianred"></i> Workflow
                         </h1>
-                        <p>This module allows the user to review, publish and un-publish the submitted search rule and string management features created from the search manager.
-                        <br /> <strong style="color:red">*</strong> All submitted rule will be temporarily locked. </p>
+                        <p>
+                            This module allows the user to review, publish and un-publish the submitted search rule and string management features created from the search manager.
+                            <br /> <strong style="color:red">*</strong> All submitted rule will be temporarily locked.
+                        </p>
                     </div>
                 </div>
 
@@ -430,7 +432,7 @@
                         <div class="well well-sm" style="padding-bottom:5px">
                             <h5><strong>Approval Guidelines</strong></h5>
                             <p style="font-size:13px">
-                                Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br/>
+                                Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br />
                                 If the rule is ready to be pushed to production, click on <strong>Approve</strong>. If the rule needs to be modified before it can be pushed to production, click on <strong>Reject</strong>. Provide notes in the <strong>Comment</strong> box.
                             </p>
                             <div class="row">
@@ -492,7 +494,7 @@
                                 <div class="well well-sm" style="padding-bottom:3px">
                                     <h5><strong>Approval Guidelines</strong></h5>
                                     <p style="font-size:13px">
-                                        Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br/>
+                                        Before approving any rule, it is advisable to review each one. Click on <strong>Preview Content</strong> to view the rule details.<br />
                                         If the rule is ready to be pushed to production, click on <strong>Approve</strong>. If the rule needs to be modified before it can be pushed to production, click on <strong>Reject</strong>. Provide notes in the <strong>Comment</strong> box.
                                     </p>
                                     <div class="row">
@@ -786,17 +788,106 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                             <option>pcmallcap</option>
                                             <option>pcmallgov</option>
                                         </select>
+                                        <button type="button" class="btn btn-default btn-sm" title="Filter ">
+                                            <i class="fa fa-filter fa-lg"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm" title="Reset Filter">
+                                            <i class="fa  fa-undo fa-lg"></i>
+                                        </button>
+                                    </div> &emsp;
+                                    <div class="form-group">
+                                        <div class="row row-height">
+                                            <div class="col-sm-12">
+                                                <div class="page-cover">
+                                                    <div class="pager-number">1 to 2 of 2</div>
+                                                    <div class="pull-right reset-margin row-height">
+                                                        <ul class="pagination reset-margin">
+                                                            <li><a href="#">&laquo;</a></li>
+                                                            <li>
+                                                                <span class="page-number">
+                                                                    <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                                </span>
+                                                            </li>
+                                                            <li><a href="#">&raquo;</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel-body">
-
-                            </div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center">Rule</th>
+                                            <th style="text-align:center">Source Rule</th>
+                                            <th style="text-align:center">Target Store</th>
+                                            <th style="text-align:center">Target Rule</th>
+                                            <th style="text-align:center">Type</th>
+                                            <th style="text-align:center">Status</th>
+                                            <th style="text-align:center">Duration</th>
+                                            <th style="text-align:center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Elevate</td>
+                                            <td> hp 350 g1 </td>
+                                            <td>pcmallcap</td>
+                                            <td> hp 350 g1 </td>
+                                            <td> For Approval </td>
+                                            <td> Auto Canceled </td>
+                                            <td>Started 2 yr/s. 8 mon/s. 2 day/s. 53 min/s. 17 sec/s.</td>
+                                            <td class="form-inline">
+                                                <div class="form-group">
+                                                    <a href="#" class="btn"><i class="fa fa-font"></i></a>
+                                                    <a href="#" class="btn"><i class="fa fa-globe"></i></a>
+                                                    <a href="#" class="btn"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elevate</td>
+                                            <td> hp 350 g1 </td>
+                                            <td>pcmallcap</td>
+                                            <td> hp 350 g1 </td>
+                                            <td> For Approval </td>
+                                            <td> Auto Canceled </td>
+                                            <td>Started 2 yr/s. 8 mon/s. 2 day/s. 53 min/s. 17 sec/s.</td>
+                                            <td class="form-inline">
+                                                <div class="form-group">
+                                                    <a href="#" class="btn"><i class="fa fa-font"></i></a>
+                                                    <a href="#" class="btn"><i class="fa fa-globe"></i></a>
+                                                    <a href="#" class="btn"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elevate</td>
+                                            <td> hp 350 g1 </td>
+                                            <td>pcmallcap</td>
+                                            <td> hp 350 g1 </td>
+                                            <td> For Approval </td>
+                                            <td> Auto Canceled </td>
+                                            <td>Started 2 yr/s. 8 mon/s. 2 day/s. 53 min/s. 17 sec/s.</td>
+                                            <td class="form-inline">
+                                                <div class="form-group">
+                                                    <a href="#" class="btn"><i class="fa fa-font"></i></a>
+                                                    <a href="#" class="btn"><i class="fa fa-globe"></i></a>
+                                                    <a href="#" class="btn"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!--logout modal-->
