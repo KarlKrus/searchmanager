@@ -742,13 +742,60 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                 </ol>
 
                 <!--export rule content-->
-                <div class="well well-sm">
-                    <h4>Export Rule</h4>
-                </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="panel panel-default">
-                            <div class="panel-heading"></div>
+                            <div class="panel-heading">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <h4>Export Rule</h4>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Target Auto-import:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="options" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="options" type="radio">Off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-link" data-toggle="popover" data-placement="left"
+                                                data-content="ON: all rules that you publish will be automatically imported to the target store(s).
+OFF: all rules that you publish needs to be manually imported in the target stores">
+                                            <i class="fa fa-exclamation-circle fa-lg" style="color:orange"></i>
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Auto-Export:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="options" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="options" type="radio">Off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-link" data-toggle="popover" data-placement="left"
+                                                data-content="ON: all rules that you publish will be automatically exported.
+OFF: all rules that you publish needs to be manually exported">
+                                            <i class="fa fa-exclamation-circle fa-lg" style="color:orange"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -808,7 +855,7 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                             <i class="fa  fa-undo fa-lg"></i>
                                         </button>
                                     </div> &emsp;
-                                    <div class="form-group">
+                                    <div class="form-group pull-right">
                                         <div class="row row-height">
                                             <div class="col-sm-12">
                                                 <div class="page-cover">
@@ -895,12 +942,12 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!--logout modal-->
