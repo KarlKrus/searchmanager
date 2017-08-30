@@ -147,8 +147,11 @@
                 <div id="home" style="display:block" class="row">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8">
-                        <div class="well well-sm"><h5 style="font-weight:bold">Search Product</h5>
-                            <div class="form-inline">
+                        <div class="well well-sm row">
+                            <div class="form-inline pull-left">
+                                <div class="form-group"><h5 style="font-weight:bold">Search Product</h5></div>
+                            </div>
+                            <div class="form-inline pull-right">
                                 <div class="form-group"><h5>Set Current Date: </h5></div>
                                 <div class="form-group">
                                     <div class="input-group">
@@ -159,30 +162,29 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="panel panel-default" style="font-size:13px">
                             <div class="panel-heading">
                                 <div class="form-inline">
                                     <div class="form-group">
-                                        <label>Top Keywords</label> &emsp;
+                                        <label>Relevancy Rule:</label> 
                                         <select id="" class="form-control input-sm">
-                                            <option>pcmall_summary_05-28-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-29-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-30-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-1-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-2-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-2-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-3-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-4-2017-splunk.csv</option>
-                                            <option>pcmall_summary_05-4-2017-splunk.csv</option>
-                                        </select>
+                                            <option>[Auto-match]</option>
+                                            <option>Relevancy Rule 1</option>
+                                            <option>Relevancy Rule 2</option>
+                                            <option>Relevancy Rule 3</option>
+                                        </select>&emsp;
+                                        <input id="" type="checkbox"name="Enable Page Redirection" /> Redirect Rule: Enable Page Redirection
                                     </div>
                                     <div class="form-group pull-right">
-                                        <label>13804 Keywords</label> &emsp;
-                                        <button type="button" class="btn btn-link btn-sm" title="Download Top Keywords">
-                                            <i class="fa  fa-download fa-lg"></i>
-                                        </button>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-sm" placeholder="Enter Keyword">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-info btn-sm" title="Search">
+                                                    <i class="fa fa-search fa-lg" style="color:white"></i>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
