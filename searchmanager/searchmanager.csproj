@@ -90,6 +90,7 @@
     <Content Include="login.html" />
     <Content Include="searchrules.html" />
     <Content Include="settings.html" />
+    <Content Include="simulator.html" />
     <Content Include="Web.config" />
     <Content Include="workflow.html" />
   </ItemGroup>

@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="images/smiconlogo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Search Manager - Simulator</title>
+    <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
+    <link href="custom-css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/new/custom.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/style.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/media-reset.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="js/custom-js/cookie.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+</head>
+<body>
+    <body style="background-color:white">
+        <div class="wrapper" id="wrapper">
+            <!--navigation-->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <!--navbar-->
+                <ul class="nav navbar-top-links navbar-left">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                            <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
+                            <img src="images/pcm.png" class="current-mall" />
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu  dropdown-default logo-menu">
+                            <li>
+                            <li>
+                                <a href="#MACMALL">
+                                    <img src="images/macmall.png" class="current-mall" />
+                                </a>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#PCM">
+                                    <img src="images/pcm.png" class="current-mall" />
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#MACMALLBD">
+                                    <img src="images/macmallbd.png" class="current-mall" style="width:120px;height:30px" />
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#PCMBD">
+                                    <img src="images/pcmbd.png" class="current-mall" style="width:120px;height:30px" />
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#PCMG">
+                                    <img src="images/pcmg.png" class="current-mall" />
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#ECOST">
+                                    <img src="images/ecost.png" class="current-mall" style="width:120px;height:30px" />
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            afs-pl-schpd07
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand " href="#">Search Manager</a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button"
+                                id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
+                            <span style="float:left">
+                                Simulator
+                            </span>
+                            <span style="float:right"><span class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li class="active"><a href="#">Simulator</a>
+                            <li><a href="searchrules.html">Search Rules</a>
+                            <li><a href="workflow.html">Workflow</a>
+                            <li><a href="linguistics.html">Linguistics</a>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button"
+                                class="btn btn-default "
+                                onclick="window.location.href='settings.html'">
+                            Settings
+                        </button>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                            <img src="images/no-pic.png" class="img-circle nav-user-photo" />
+                            <span class="nav-user-info">
+                                <span>Carlson Cruz</span>
+                                <small><strong>carlson.cruz@pcm.com</strong></small>
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-default">
+                            <li>
+                                <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!--page content/wrapper-->
+            <div class="container">
+                <br />
+                <div id="home" style="display:block" class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="well well-sm"><h5 style="font-weight:bold">Search Product</h5>
+                            <div class="form-inline">
+                                <div class="form-group"><h5>Set Current Date: </h5></div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel panel-default" style="font-size:13px">
+                            <div class="panel-heading">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>Top Keywords</label> &emsp;
+                                        <select id="" class="form-control input-sm">
+                                            <option>pcmall_summary_05-28-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-29-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-30-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-1-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-2-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-2-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-3-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-4-2017-splunk.csv</option>
+                                            <option>pcmall_summary_05-4-2017-splunk.csv</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group pull-right">
+                                        <label>13804 Keywords</label> &emsp;
+                                        <button type="button" class="btn btn-link btn-sm" title="Download Top Keywords">
+                                            <i class="fa  fa-download fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped" style="font-size:13px;">
+                                    <thead>
+                                        <tr class="active">
+                                            <th style="text-align:center"></th>
+                                            <th style="text-align:center">Count</th>
+                                            <th style="text-align:center" width="40%">Keyword</th>
+                                            <th style="text-align:center">Results</th>
+                                            <th style="text-align:center">SKU</th>
+                                            <th style="text-align:center"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1113</td>
+                                            <td>sandisk</td>
+                                            <td>863</td>
+                                            <td>13752668</td>
+                                            <td><a href="#">Show Active Rule</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td colspan="3">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="padding:1px">
+                                                                Query Cleaning:
+                                                            </td>
+                                                            <td style="padding:1px">
+                                                                <a href="#" title="View Rule Content"><i class="fa fa-file-text"></i></a> KW Brand | Sandisk
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding:1px">
+                                                                Ranking Rule:
+                                                            </td>
+                                                            <td style="padding:1px">
+                                                                <a href="#" title="View Rule Content"><i class="fa fa-file-text"></i></a> Default - 110216 - 15
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding:1px">
+                                                                Exclude:
+                                                            </td>
+                                                            <td style="padding:1px">
+                                                                <a href="#" title="View Rule Content"><i class="fa fa-file-text"></i></a> sandisk
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding:1px">
+                                                                Demote:
+                                                            </td>
+                                                            <td style="padding:1px">
+                                                                <a href="#" title="View Rule Content"><i class="fa fa-file-text"></i></a> sandisk
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding:1px">
+                                                                Elevate:
+                                                            </td>
+                                                            <td style="padding:1px">
+                                                                <a href="#" title="View Rule Content"><i class="fa fa-file-text"></i></a> sandisk
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>103</td>
+                                            <td>electronics</td>
+                                            <td>50807</td>
+                                            <td>13685399</td>
+                                            <td><a href="#">Show Active Rule</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>80</td>
+                                            <td>accessories</td>
+                                            <td>113565</td>
+                                            <td>9352698</td>
+                                            <td><a href="#">Show Active Rule</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>62</td>
+                                            <td>Storage</td>
+                                            <td>38281</td>
+                                            <td>40202863</td>
+                                            <td><a href="#">Show Active Rule</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--logout modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to logout?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">
+                            <i class="fa  fa-ban"></i>
+                            NO
+                        </button>
+                        <a href="login.html" class="btn btn-primary">
+                            <i class="fa fa-check"></i>
+                            YES
+                        </a>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+    </body>
+</body>
+</html>
