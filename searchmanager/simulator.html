@@ -23,249 +23,316 @@
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
 </head>
-<body>
-    <body style="background-color:white">
-        <div class="wrapper" id="wrapper">
-            <!--navigation-->
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <!--navbar-->
-                <ul class="nav navbar-top-links navbar-left">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
-                            <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
-                            <img src="images/pcm.png" class="current-mall" />
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu  dropdown-default logo-menu">
-                            <li>
-                            <li>
-                                <a href="#MACMALL">
-                                    <img src="images/macmall.png" class="current-mall" />
-                                </a>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#PCM">
-                                    <img src="images/pcm.png" class="current-mall" />
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#MACMALLBD">
-                                    <img src="images/macmallbd.png" class="current-mall" style="width:120px;height:30px" />
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#PCMBD">
-                                    <img src="images/pcmbd.png" class="current-mall" style="width:120px;height:30px" />
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#PCMG">
-                                    <img src="images/pcmg.png" class="current-mall" />
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#ECOST">
-                                    <img src="images/ecost.png" class="current-mall" style="width:120px;height:30px" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                            afs-pl-schpd07
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+<body style="background-color:white">
+    <div class="wrapper" id="wrapper">
+        <!--navigation-->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <!--navbar-->
+            <ul class="nav navbar-top-links navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
+                        <img src="images/pcm.png" class="current-mall" />
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-default logo-menu">
+                        <li>
+                        <li>
+                            <a href="#MACMALL">
+                                <img src="images/macmall.png" class="current-mall" />
+                            </a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCM">
+                                <img src="images/pcm.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#MACMALLBD">
+                                <img src="images/macmallbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMBD">
+                                <img src="images/pcmbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMG">
+                                <img src="images/pcmg.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#ECOST">
+                                <img src="images/ecost.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        afs-pl-schpd07
+                        <span class="caret"></span>
                     </button>
-                    <a class="navbar-brand " href="#">Search Manager</a>
-                </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button"
-                                id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
-                            <span style="float:left">
-                                Simulator
-                            </span>
-                            <span style="float:right"><span class="caret"></span></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li class="active"><a href="#">Simulator</a>
-                            <li><a href="searchrules.html">Search Rules</a>
-                            <li><a href="workflow.html">Workflow</a>
-                            <li><a href="linguistics.html">Linguistics</a>
-                        </ul>
-                    </li>
-                    <li>
-                        <button type="button"
-                                class="btn btn-default "
-                                onclick="window.location.href='settings.html'">
-                            Settings
-                        </button>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
-                            <img src="images/no-pic.png" class="img-circle nav-user-photo" />
-                            <span class="nav-user-info">
-                                <span>Carlson Cruz</span>
-                                <small><strong>carlson.cruz@pcm.com</strong></small>
-                            </span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-default">
-                            <li>
-                                <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <!--page content/wrapper-->
-            <div class="container">
-                <br />
-                <div id="home" style="display:block" class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <div class="well well-sm row">
-                            <div class="form-inline pull-left">
-                                <div class="form-group"><h5 style="font-weight:bold">Search Product</h5></div>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand " href="#">Search Manager</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
+                        <span style="float:left">
+                            Simulator
+                        </span>
+                        <span style="float:right"><span class="caret"></span></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class="active"><a href="#">Simulator</a>
+                        <li><a href="searchrules.html">Search Rules</a>
+                        <li><a href="workflow.html">Workflow</a>
+                        <li><a href="linguistics.html">Linguistics</a>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button"
+                            class="btn btn-default "
+                            onclick="window.location.href='settings.html'">
+                        Settings
+                    </button>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/no-pic.png" class="img-circle nav-user-photo" />
+                        <span class="nav-user-info">
+                            <span>Carlson Cruz</span>
+                            <small><strong>carlson.cruz@pcm.com</strong></small>
+                        </span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default">
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--page content/wrapper-->
+        <div class="container">
+            <br />
+            <div id="home" style="display:block" class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="well well-sm row">
+                        <div class="form-inline pull-left">
+                            <div class="form-group"><h5 style="font-weight:bold">Search Product</h5></div>
+                        </div>
+                        <div class="form-inline pull-right">
+                            <div class="form-group"><h5>Set Current Date: </h5></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                    </span>
+                                </div>
                             </div>
-                            <div class="form-inline pull-right">
-                                <div class="form-group"><h5>Set Current Date: </h5></div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                        </span>
+                        </div>
+                    </div>
+                    <div class="well well-sm row">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                Relevancy Rule:
+                                <select id="" class="form-control input-sm">
+                                    <option>[Auto-match]</option>
+                                    <option>Relevancy Rule 1</option>
+                                    <option>Relevancy Rule 2</option>
+                                    <option>Relevancy Rule 3</option>
+                                </select>&emsp;
+                                <input id="" type="checkbox" name="Enable Page Redirection" /> Redirect Rule: Enable Page Redirection
+                            </div>
+                            <div class="form-group pull-right">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" placeholder="Enter Keyword">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-info btn-sm" title="Search">
+                                            <i class="fa fa-search fa-lg" style="color:white"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="well well-sm row">
-                            <div class="form-inline">
-                                <div class="form-group">
-                                    Relevancy Rule:
-                                    <select id="" class="form-control input-sm">
-                                        <option>[Auto-match]</option>
-                                        <option>Relevancy Rule 1</option>
-                                        <option>Relevancy Rule 2</option>
-                                        <option>Relevancy Rule 3</option>
-                                    </select>&emsp;
-                                    <input id="" type="checkbox" name="Enable Page Redirection" /> Redirect Rule: Enable Page Redirection
-                                </div>
-                                <div class="form-group pull-right">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-sm" placeholder="Enter Keyword">
-                                        <div class="input-group-btn">
-                                            <button type="button" class="btn btn-info btn-sm" title="Search">
-                                                <i class="fa fa-search fa-lg" style="color:white"></i>
-                                            </button>
+                    </div>
+                    <div id="activeRule" class="row" style="display:block">
+                        <table class="table table-hover table-bordered" style="font-size:13px">
+                            <thead>
+                                <tr class="active">
+                                    <th style="vertical-align:middle;text-align:center;padding:0px 4px">On/Off</th>
+                                    <th style="vertical-align:middle;text-align:center;padding:0px 4px">Rule Type</th>
+                                    <th style="vertical-align:middle;text-align:center;padding:0px 4px">Rule Info</th>
+                                    <th style="vertical-align:middle;text-align:center;padding:0px 4px">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="" type="radio">Off
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="" type="radio">Off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="" type="radio">Off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="" type="radio">Off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="well well-sm row">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <!--<label>Filters:</label> &nbsp;-->
+                                <select id="" class="form-control input-sm">
+                                    <option>Include All</option>
+                                    <option>Include Some</option>
+                                    <option>Include Exact</option>
+                                    <option>Exclude All</option>
+                                </select>
+                                <input id="" type="text" class="form-control input-sm" placeholder="Search Within" size="15" />
+                                <select id="" class="form-control input-sm">
+                                    <option disabled>Show</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                </select>
+                                <select id="" class="form-control input-sm">
+                                    <option>Best Match</option>
+                                    <option>Lowest Price First</option>
+                                    <option>Highest Price First</option>
+                                </select>
+                                <button type="button" class="btn btn-default btn-sm" title="Filter ">
+                                    <i class="fa fa-filter fa-lg"></i>
+                                </button>
                             </div>
-                        </div>
-                        <div id="activeRule" class="row" style="display:block">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr class="active">
-                                        <th>On/Off</th>
-                                        <th>Rule Name</th>
-                                        <th>Rule Info</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                        </div>
-                        <div class="well well-sm row">
-                            <div class="form-inline">
-                                <div class="form-group">
-                                    <!--<label>Filters:</label> &nbsp;-->
-                                    <select id="" class="form-control input-sm">
-                                        <option>Include All</option>
-                                        <option>Include Some</option>
-                                        <option>Include Exact</option>
-                                        <option>Exclude All</option>
-                                    </select>
-                                    <input id="" type="text" class="form-control input-sm" placeholder="Search Within" size="15" />
-                                    <select id="" class="form-control input-sm">
-                                        <option disabled>Show</option>
-                                        <option>5</option>
-                                        <option>10</option>
-                                        <option>15</option>
-                                        <option>20</option>
-                                        <option>25</option>
-                                    </select>
-                                    <select id="" class="form-control input-sm">
-                                        <option>Best Match</option>
-                                        <option>Lowest Price First</option>
-                                        <option>Highest Price First</option>
-                                    </select>
-                                    <button type="button" class="btn btn-default btn-sm" title="Filter ">
-                                        <i class="fa fa-filter fa-lg"></i>
-                                    </button>
-                                </div>
-                                <div class="form-group pull-right">
-                                    <button type="button" class="btn btn-primary btn-sm" title="Reset Filter">
-                                        <i class="fa  fa-reorder fa-lg"></i> Show Active Rules
-                                    </button>
-                                </div>
+                            <div class="form-group pull-right">
+                                <button type="button" class="btn btn-primary btn-sm" title="Reset Filter">
+                                    <i class="fa  fa-reorder fa-lg"></i> Show Active Rules
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2"></div>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
         </div>
+    </div>
 
-        <!--logout modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
-                    </div>
-                    <div class="modal-body">
-                        Are you sure you want to logout?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">
-                            <i class="fa  fa-ban"></i>
-                            NO
-                        </button>
-                        <a href="login.html" class="btn btn-primary">
-                            <i class="fa fa-check"></i>
-                            YES
-                        </a>
-                    </div>
+    <!--logout modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
                 </div>
-                <!-- /.modal-content -->
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">
+                        <i class="fa  fa-ban"></i>
+                        NO
+                    </button>
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fa fa-check"></i>
+                        YES
+                    </a>
+                </div>
             </div>
+            <!-- /.modal-content -->
         </div>
-    </body>
+    </div>
 </body>
 </html>
