@@ -227,8 +227,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
-                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Ranking Rule</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">Default - 110216 - 15 Disc boost</a></td>
                                     <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
                                 </tr>
                                 <tr>
@@ -244,8 +244,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
-                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Exclude</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">apple</a></td>
                                     <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
                                 </tr>
                                 <tr>
@@ -261,12 +261,30 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
-                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Demote</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">apple</a></td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">
+                                        <div id="radio-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs">
+                                                    <input name="" value="option2" type="radio" checked="checked">On
+                                                </label>
+                                                <label class="btn btn-default  btn-xs">
+                                                    <input name="" type="radio">Off
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px">Elevate</td>
+                                    <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">apple</a></td>
                                     <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
                                 </tr>
                             </tbody>
                         </table>
+                        <br />
                     </div>
                     <div class="well well-sm row">
                         <div class="form-inline">
@@ -297,7 +315,7 @@
                                 </button>
                             </div>
                             <div class="form-group pull-right">
-                                <button type="button" class="btn btn-primary btn-sm" title="Reset Filter">
+                                <button type="button" class="btn btn-primary btn-sm" title="Reset Filter" onclick="showHide('activeRule')">
                                     <i class="fa  fa-reorder fa-lg"></i> Show Active Rules
                                 </button>
                             </div>
@@ -334,5 +352,14 @@
             <!-- /.modal-content -->
         </div>
     </div>
+    <script type="text/javascript">
+        function showHide(id) {
+            var e = document.getElementById(id);
+            if (e.style.display === 'none')
+                e.style.display = 'block';
+            else
+                e.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
