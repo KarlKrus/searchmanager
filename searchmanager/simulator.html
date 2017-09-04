@@ -144,7 +144,7 @@
         <!--page content/wrapper-->
         <div class="container">
             <br />
-            
+
             <!--simulator content-->
             <div class="row">
 
@@ -665,21 +665,21 @@
                                 <label class="modal-title">Force Add <label class="text-primary">SKU #: 40658093</label></label>
                             </div>
                             <div class="modal-body">
-                               <div class="form-inline">
-                                   <div class="form-group">
-                                       <label>Keyword:</label>&emsp;<input id="" type="text" class="form-control input-sm" />&emsp;
-                                       <label>Valid Until: </label>&emsp;
-                                       <div class="input-group">
-                                           <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                           <span class="input-group-btn">
-                                               <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                           </span>
-                                       </div>
-                                   </div>
-                               </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>Keyword:</label>&emsp;<input id="" type="text" class="form-control input-sm" />&emsp;
+                                        <label>Valid Until: </label>&emsp;
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <br />
                                 <label>Comments: </label>
-                                <textarea style="resize:vertical" class="form-control" cols="100"></textarea> 
+                                <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-success btn-sm">Force Add</button>
@@ -697,21 +697,93 @@
                                 <label class="modal-title">Elevate Item</label>
                             </div>
                             <div class="modal-body">
-                                <div class="form-inline">
-                                    <div class="form-group">
-                                        <label>Keyword:</label>&emsp;<input id="" type="text" class="form-control input-sm" />&emsp;
-                                        <label>Valid Until: </label>&emsp;
-                                        <div class="input-group">
-                                            <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                            </span>
+                                <div class="row">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-6">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" style="padding:4px 10px 1px 10px">
+                                                <label> List of Elevate Items</label>
+                                            </div>
+                                            
+                                                <script>
+                                                    $(function () {
+                                                        $("#elevatePanels").sortable();
+                                                        $("#elevatePanels").disableSelection();
+                                                    });
+                                                </script>
+                                                <ul id="elevatePanels" class="row" style="list-style:none">
+                                                    <li class="col-sm-12" style="width:100%">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="pull-left">
+                                                                            <div class="form-inline">
+                                                                                <div class="form-group">
+                                                                                    <!--<label class="control-label">Position:</label>-->  <button class="btn btn-default btn-xs" disabled><span class="badge">1</span></button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="pull-right">
+                                                                            <div class="form-inline">
+                                                                                <div class="form-group">
+                                                                                    <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                                                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                                                    </button>-->
+                                                                                    <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                                                        <i class="fa fa-times fa-lg" style="color:red"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                                                        <label style="font-size:13px" class="control-label">Valid Until: </label>
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                                            <span class="input-group-btn">
+                                                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6" style="font-size:10.5px">
+                                                                        <p class="pull-right">
+                                                                            <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                                                <i class="fa fa-comment-o fa-lg" style="color:dodgerblue"></i>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                                                <i class="fa fa-file-text-o fa-lg" style="color:brown"></i>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                                                <i class="fa fa-smile-o fa-lg" style="color:darkolivegreen"></i>
+                                                                            </button>
+                                                                        </p><br /> <br />
+                                                                        <p>
+                                                                            <b> Liebert </b>
+                                                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                                        </p>
+                                                                        <p>
+                                                                            <span class="text-success">SKU#: </span>13374814
+                                                                        </p>
+                                                                        <p>
+                                                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <br />
-                                <label>Comments: </label>
-                                <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-success btn-sm">Force Add</button>
@@ -732,7 +804,7 @@
                         &copy;
                         <script type="text/javascript">
                             document.write(new Date().getFullYear());
-                        </script> PCM 
+                        </script> PCM
                     </div>
                 </div>
             </div>
