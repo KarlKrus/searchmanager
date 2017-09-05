@@ -698,34 +698,79 @@
                             </div>
                             <div class="modal-body">
                                 <div class="row">
-                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="80">
+                                            <label class="center-block">Apple</label>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <label>SKU #: 40658092</label>
+                                        </div>
+                                        <!--<table class="table table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:left; vertical-align:middle; padding:0px">SKU #:</td>
+                                                    <td style="text-align:left; vertical-align:middle; padding:0px">40658092</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:left; vertical-align:middle; padding:0px">Position:</td>
+                                                    <td style="text-align:left; vertical-align:middle; padding:0px"><input id="" type="text" class="form-control input-sm" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:left; vertical-align:middle; padding:0px">Valid Until:</td>
+                                                    <td style="text-align:left; vertical-align:middle; padding:0px"><input id="" type="text" class="form-control input-sm" /></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>-->
+                                    </div>
                                     <div class="col-sm-6">
                                         <div class="panel panel-default">
                                             <div class="panel-heading" style="padding:4px 10px 1px 10px">
                                                 <label> List of Elevate Items</label>
                                             </div>
-                                            <div class="panel-body" style="padding:2px">
+                                            <div class="panel-body" style="padding:2px;overflow-y:auto;overflow-x:hidden;height:300px">
                                                 <script>
                                                     $(function () {
                                                         $("#elevateItems").sortable();
                                                         $("#elevateItems").disableSelection();
                                                     });
                                                 </script>
-                                                <ul id="elevateItems" style="list-style-type:none;margin:0px;padding:0px;width:100%; ">
+                                                <ul id="elevateItems" style="list-style-type:none;margin:0px;padding:0px;width:100%;font-size:13px ">
                                                     <li>
-                                                        <div class="panel panel-default" style="margin-bottom:2px;width:100%;height:100%">
-                                                            <div class="panel-body" style="padding:5px;">
+                                                        <div class="panel panel-danger" style="margin-bottom:2px;width:100%;height:100%">
+                                                            <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
                                                                         <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <div id="radio-switch" class="form-group">
+                                                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                                                <label class="btn btn-default btn-xs">
+                                                                                    <input name="options" value="option2" type="radio"> Normal
+                                                                                </label>
+                                                                                <label class="btn btn-default btn-primary btn-xs">
+                                                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="form-group pull-right">
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                            <div class="panel-body" style="padding:5px;">
                                                                 <div class="row">
                                                                     <div class="col-sm-4"><img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="80"></div>
                                                                     <div class="col-sm-8">
+                                                                        <table class="table table-hover">
+                                                                            <tbody>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Position:</td><td style="padding:1px;text-align:left">1</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Validity:</td><td style="padding:1px;text-align:left">Indefinite</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">SKU #:</td><td style="padding:1px;text-align:left">40658092</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Mfr Part #:</td><td style="padding:1px;text-align:left">MPTT2LL/A</td></tr>
+                                                                            </tbody>
+                                                                        </table>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -733,7 +778,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="panel panel-default" style="margin-bottom:2px;width:100%;height:100%">
-                                                            <div class="panel-body" style="padding:5px;">
+                                                            <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
                                                                         <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
@@ -742,9 +787,49 @@
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                            <div class="panel-body" style="padding:5px;">
                                                                 <div class="row">
                                                                     <div class="col-sm-4"><img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="80"></div>
-                                                                    <div class="col-sm-8"></div>
+                                                                    <div class="col-sm-8">
+                                                                        <table class="table table-hover">
+                                                                            <tbody>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Position:</td><td style="padding:1px;text-align:left">2</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Validity:</td><td style="padding:1px;text-align:left">Indefinite</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">SKU #:</td><td style="padding:1px;text-align:left">40658092</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Mfr Part #:</td><td style="padding:1px;text-align:left">MPTT2LL/A</td></tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="panel panel-default" style="margin-bottom:2px;width:100%;height:100%">
+                                                            <div class="panel-heading" style="padding:2px 7px 2px 7px">
+                                                                <div class="form-inline">
+                                                                    <div class="form-group">
+                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                    </div>
+                                                                    <div class="form-group pull-right">
+                                                                        <a href="#"><i class="fa fa-times" style="color:red"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-body" style="padding:5px;">
+                                                                <div class="row">
+                                                                    <div class="col-sm-4"><img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="100" height="80"></div>
+                                                                    <div class="col-sm-8">
+                                                                        <table class="table table-hover">
+                                                                            <tbody>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Position:</td><td style="padding:1px;text-align:left">3</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Validity:</td><td style="padding:1px;text-align:left">Indefinite</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">SKU #:</td><td style="padding:1px;text-align:left">40658092</td></tr>
+                                                                                <tr><td class="text-muted" style="padding:1px;text-align:left">Mfr Part #:</td><td style="padding:1px;text-align:left">MPTT2LL/A</td></tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -756,7 +841,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success btn-sm">Force Add</button>
+                                <button type="button" class="btn btn-primary btn-sm">Update</button>
                                 <button type="button" class="btn btn-danger btn-sm">Delete</button>
                                 <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Cancel</button>
                             </div>
@@ -765,19 +850,33 @@
                 </div>
             </div>
 
-            <div class="row row-height">
-                <div class="col-md-12 admin-footer">
-                    <div class="pull-left text-info">
+
+            <footer  style="border-top:1px solid #ddd;bottom:0;position:fixed;width:80%">
+               <div class="form-inline" style="background-color:#f8f8f8">
+                        <div class="form-group text-info">
+                       1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000 
+                   </div>
+                   <div class="form-group pull-right text-info">
+                       &copy;
+                       <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                       </script> PCM
+                   </div>
+               </div>
+            </footer>
+            <!--<div class="row" style="position:fixed;bottom:0;background-color:white">
+                <div class="col-md-12" >
+                    <div class="text-info">
                         1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
                     </div>
-                    <div class="pull-right text-info">
+                    <div class=" pull-rigth text-info">
                         &copy;
                         <script type="text/javascript">
                             document.write(new Date().getFullYear());
                         </script> PCM
                     </div>
                 </div>
-            </div>
+            </div>-->
 
         </div>
     </div>
