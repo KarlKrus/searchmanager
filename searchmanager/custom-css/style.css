@@ -760,4 +760,75 @@ label.error {
     background-image: none !important;
 }
 
+/*footer added 09-05-17*/
+/*Published History*/
+/*Changes and overrides 2/11/2015*/
+.admin-footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #f8f8f8;
+}
 
+.admin-footer p {
+    line-height: 35px;
+    margin-bottom: 0;
+}
+
+.admin-footer .navbar-top-links .dropdown-menu {
+    width: 360px;
+    overflow: hidden;
+    border-radius: 4px;
+    /*top: -380px !important;*/
+    visibility: hidden;
+    display: block;
+}
+
+.admin-footer .navbar-top-links .dropdown-menu .list-body {
+    /*height: 250px;*/
+    font-size: 11px;
+}
+
+.admin-footer .navbar-top-links .dropdown-max {
+    max-height: 250px;
+    height: auto;
+}
+
+.admin-footer .navbar-top-links .dropdown-max .list-group .list-group-item{
+    line-height: 15px;
+}
+
+.list-group {
+    margin-bottom: 0;
+}
+
+.admin-footer .navbar-top-links #divider {
+    padding-left: 4px;
+    background-image: url(../images/devider.png);
+    background-repeat: no-repeat;
+    background-position-y: -3px;
+}
+
+.admin-footer .navbar-top-links.navbar-right:last-child {
+    position: fixed;
+    right: 30px;
+}
+
+.navbar-top-links .dropdown-menu .list-head {
+    padding: 10px 0px 10px;
+    min-height: 0;
+    border: none;
+    background-color: #f5f5f5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-top-links .dropdown-menu .list-footer {
+    padding: 10px 0px;
+    min-height: 0;
+    border: none;
+    background-color: #f5f5f5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top: 1px solid #ddd;
+}
