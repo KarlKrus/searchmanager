@@ -360,10 +360,10 @@
                         <div class="panel panel-primary">
                             <div class="panel-body">
                                 <div class="well" style="padding:7px 10px 1px 10px">
-                                    <p><i class="fa fa-info-circle" style="color:blue"></i> Below are rules applied to your current search. You can toggle ON/OFF of each active rules to examine its effect on search results. </p>
+                                    <p><i class="fa fa-info-circle" style="color:dodgerblue"></i> Below are rules applied to your current search. You can toggle ON/OFF of each active rules to examine its effect on search results. </p>
                                 </div>
                                 <div class="well" style="padding:7px 10px 1px 10px">
-                                    <p><i class="fa fa-info" style="color:orange"></i> Query Cleaning will redirect to a page but page redirection option is disabled.</p>
+                                    <p><i class="fa fa-info-circle" style="color:orange"></i> Query Cleaning will redirect to a page but page redirection option is disabled.</p>
                                 </div>
                                 <table class="table table-hover table-bordered" style="font-size:13px">
                                     <thead>
@@ -388,8 +388,9 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td style="vertical-align:middle;text-align:center;padding:2px 4px">Query Cleaning</td>
-                                            <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a></td>
+                                            <td style="vertical-align:middle;text-align:center;padding:1px 4px">Query Cleaning</td>
+                                            <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a>
+                                                <span><i class="fa fa-info-circle" style="color:orange"></i> Rule Ignored</span></td>
                                             <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
                                         </tr>
                                         <tr>
@@ -530,6 +531,7 @@
                         </div>
                     </div>
                     <br />
+                    <!--normal result-->
                     <div class="row">
                         <div class="panel panel-default">
                             <div class="panel-body" style="font-size:13px">
@@ -541,10 +543,10 @@
                                         <div class="form-inline">
                                             <div class="form-group"><a href="#" class="badge" style="background-color:darkorange">Score: 14.556812</a></div>
                                             <div class="form-group pull-right">
-                                                <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Force Add"><i class="fa fa-plus-circle fa-fw"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#elevateModal" title="Elevate"><i class="fa fa-chevron-up fa-fw"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#demoteModal" title="Demote"><i class="fa fa-chevron-down fa-fw"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#excludeModal" title="Exclude"><i class="fa fa-ban fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Force Add" style="color:grey"><i class="fa fa-plus-circle fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#elevateModal" title="Elevate" style="color:grey"><i class="fa fa-chevron-up fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#demoteModal" title="Demote" style="color:grey"><i class="fa fa-chevron-down fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#excludeModal" title="Exclude" style="color:grey"><i class="fa fa-ban fa-fw"></i></a>
                                             </div>
                                         </div>
                                         <br />
@@ -570,7 +572,50 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
+                    <!--forcely added to another keyword and has elevate rule-->
+                    <div class="row">
+                        <div class="panel panel-warning">
+                            <div class="panel-body" style="font-size:13px;background:linear-gradient(#faebcc, white)">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="form-inline">
+                                            <div class="form-group"><label>Force add at postion 1</label></div>
+                                            <div class="form-group pull-right">
+                                                <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Force Add" style="color:dodgerblue"><i class="fa fa-plus-circle fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#elevateModal" title="Elevate" style="color:limegreen"><i class="fa fa-chevron-up fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#demoteModal" title="Demote" style="color:grey"><i class="fa fa-chevron-down fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#excludeModal" title="Exclude" style="color:grey"><i class="fa fa-ban fa-fw"></i></a>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <p>
+                                                    <strong>HP Inc.</strong> <a href="#">Chromebook 11 G5 - Celeron N3060 / 1.6 GHz - Chrome OS - 4 GB RAM - 16 GB eMMC - 11.6" TN 1366 x 768 (HD) - HD Graphics 400 - Wi-Fi, Bluetooth</a>
+                                                    <br />
+                                                    HP Chromebook 11 G5 - Celeron N3060 / 1.6 GHz - Chrome OS - 4 GB RAM - 16 GB eMMC - 11.6" TN 1366 x 768 (HD) - HD Graphics 400 - Wi-Fi, Bluetooth<br />
+
+                                                    <span class="text-success">SKU #:</span> 40119325
+                                                    <span class="text-success">Mfr. Part #:</span> :X9U02UT#ABA
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="pull-right">
+                                                    <strong class="text-danger">$2,389.</strong> <br />
+                                                    In Stock
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                     <!--elevated result-->
                     <div class="row">
                         <div class="panel panel-default">
                             <div class="panel-body" style="font-size:13px">
@@ -580,12 +625,12 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="form-inline">
-                                            <div class="form-group"><a href="#" class="badge" style="background-color:darkorange">Score: 14.556812</a></div>
+                                            <div class="form-group"><label>Elevated at position 4</label></div>
                                             <div class="form-group pull-right">
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Force Add"><i class="fa fa-plus-circle fa-fw"></i></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Elevate"><i class="fa fa-chevron-up fa-fw"></i></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Demote"><i class="fa fa-chevron-down fa-fw"></i></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Exclude"><i class="fa fa-ban fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Force Add" style="color:grey"><i class="fa fa-plus-circle fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#elevateModal" title="Elevate" style="color:limegreen"><i class="fa fa-chevron-up fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#demoteModal" title="Demote" style="color:grey"><i class="fa fa-chevron-down fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#excludeModal" title="Exclude" style="color:grey"><i class="fa fa-ban fa-fw"></i></a>
                                             </div>
                                         </div>
                                         <br />
@@ -611,7 +656,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                   
+                     <!--demoted result-->
                     <div class="row">
                         <div class="panel panel-default">
                             <div class="panel-body" style="font-size:13px">
@@ -621,12 +667,12 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="form-inline">
-                                            <div class="form-group"><a href="#" class="badge" style="background-color:darkorange">Score: 14.556812</a></div>
+                                            <div class="form-group"><a href="#" class="badge" style="background-color:darkorange">Score: 14.556812</a>&emsp;<label>Demoted at position 1</label></div>
                                             <div class="form-group pull-right">
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Force Add"><i class="fa fa-plus-circle fa-fw"></i></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Elevate"><i class="fa fa-chevron-up fa-fw"></i></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Demote"><i class="fa fa-chevron-down fa-fw"></i></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="right" title="Exclude"><i class="fa fa-ban fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Force Add" style="color:grey"><i class="fa fa-plus-circle fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#elevateModal" title="Elevate" style="color:grey"><i class="fa fa-chevron-up fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#demoteModal" title="Demote" style="color:red"><i class="fa fa-chevron-down fa-fw"></i></a>
+                                                <a href="#" data-toggle="modal" data-target="#excludeModal" title="Exclude" style="color:grey"><i class="fa fa-ban fa-fw"></i></a>
                                             </div>
                                         </div>
                                         <br />
@@ -652,7 +698,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
+
                 </div>
 
                 <!--simulator modals-->
