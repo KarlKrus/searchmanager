@@ -733,7 +733,7 @@
                                             <div class="panel-body" style="padding:2px;overflow-y:auto;overflow-x:hidden;height:300px">
                                                 <script>
                                                     $(function () {
-                                                        $("#elevateItems").sortable();
+                                                        $("#elevateItems").sortable({handle:'#sortHandle'});
                                                         $("#elevateItems").disableSelection();
                                                     });
                                                 </script>
@@ -743,7 +743,7 @@
                                                             <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
-                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <a href="#" id="sortHandle" style="cursor:grab"><i class="fa fa-reorder" style="color:grey"></i></a>
                                                                         <div id="radio-switch" class="form-group">
                                                                             <div class="btn-group btn-toggle" data-toggle="buttons">
                                                                                 <label class="btn btn-default btn-xs">
@@ -782,7 +782,7 @@
                                                             <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
-                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <a href="#" id="sortHandle" style="cursor:grab"><i class="fa fa-reorder" style="color:grey"></i></a>
                                                                     </div>
                                                                     <div class="form-group pull-right">
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -811,7 +811,7 @@
                                                             <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
-                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <a href="#" id="sortHandle" style="cursor:grab"><i class="fa fa-reorder" style="color:grey"></i></a>
                                                                     </div>
                                                                     <div class="form-group pull-right">
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -894,7 +894,7 @@
                                             <div class="panel-body" style="padding:2px;overflow-y:auto;overflow-x:hidden;height:300px">
                                                 <script>
                                                     $(function () {
-                                                        $("#demoteItems").sortable();
+                                                        $("#demoteItems").sortable({handle:'#sortHandle'});
                                                         $("#demoteItems").disableSelection();
                                                     });
                                                 </script>
@@ -904,7 +904,7 @@
                                                             <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
-                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <a href="#" id="sortHandle" style="cursor:grab"><i class="fa fa-reorder" style="color:grey"></i></a>
                                                                     </div>
                                                                     <div class="form-group pull-right">
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -933,7 +933,7 @@
                                                             <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
-                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <a href="#" id="sortHandle" style="cursor:grab"><i class="fa fa-reorder" style="color:grey"></i></a>
                                                                     </div>
                                                                     <div class="form-group pull-right">
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -962,7 +962,7 @@
                                                             <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                 <div class="form-inline">
                                                                     <div class="form-group">
-                                                                        <a href="#"><i class="fa fa-reorder" style="color:grey"></i></a>
+                                                                        <a href="#" id="sortHandle" style="cursor:grab"><i class="fa fa-reorder" style="color:grey"></i></a>
                                                                     </div>
                                                                     <div class="form-group pull-right">
                                                                         <a href="#"><i class="fa fa-times" style="color:red"></i></a>
