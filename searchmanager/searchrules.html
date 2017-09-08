@@ -5112,6 +5112,7 @@
             <!-- /.modal-content -->
         </div>
     </div>
+    <!--user profile modal-->
     <div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true" style="font-size:13px">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -5160,7 +5161,13 @@
                             <br />
                             <div class="form-inline" style="text-align:center">
                                 <div class="form-group">
-                                    <img class="img-thumbnail center-block " alt="Profile Picture" src="images/no-pic.png" width="50" height="50" />
+                                    <div>
+                                        <label for="file-input" style="cursor:pointer">
+                                            <img class="img-thumbnail center-block " alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
+                                        </label>
+                                        <input id="file-input" type="file" style="display:none" />
+                                    </div>
+                                   
                                 </div>
                                 <div class="form-group">
                                     <h4>Username: carlson.cruz</h4>
@@ -5210,20 +5217,27 @@
                             <br />
                         </div>
                         <div id="changePassword" class="tab-pane dade in">
-                        <br />
-                            <label>Change/Update Password:</label>
-                            <div class="row">
-                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Old Password" /></div>
-                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="New Password" /></div>
-                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Re-type New Password" /></div>
-                            </div></div>
-                        <div id="resetPassword" class="tab-pane dade in">
                             <br />
                             <label>Change/Update Password:</label>
                             <div class="row">
                                 <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Old Password" /></div>
                                 <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="New Password" /></div>
                                 <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Re-type New Password" /></div>
+                            </div>
+                        </div>
+                        <div id="resetPassword" class="tab-pane dade in">
+                            <br />
+                            <label>Reset Password:</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control input-sm" placeholder="Reset Password">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset Password</button>
+                                        </div>
+                                    </div>
+                                    <strong><i class="fa fa-info-circle" style="color:orange"></i> Leave blank to auto-generate password.</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
