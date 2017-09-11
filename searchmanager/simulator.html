@@ -22,6 +22,7 @@
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
+    
 </head>
 <body style="background-color:white">
     <div class="wrapper" id="wrapper">
@@ -223,6 +224,10 @@
                                     <td style="padding:1px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
                                     <td style="padding:1px 10px">Accell (5)</td>
                                 </tr>
+                                <tr>
+                                    <td style="padding:1px;text-align:center;vertical-align:middle">[+]</td>
+                                    <td style="padding:1px 10px"><a href="#" data-toggle="modal" data-target="#manufacturerModal">More Options</a></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -264,16 +269,16 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="padding:1px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
-                                    <td style="padding:1px 10px">AC/DC External Power Adapters (10)</td>
+                                    <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                    <td style="padding:1px ">AC/DC External Power Adapters (10)</td>
                                 </tr>
                                 <tr>
-                                    <td style="padding:1px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
-                                    <td style="padding:1px 10px">All-In-One Computers (629)</td>
+                                    <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                    <td style="padding:1px ">All-In-One Computers (629)</td>
                                 </tr>
                                 <tr>
-                                    <td style="padding:1px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
-                                    <td style="padding:1px 10px">Analog Telephones & Accessories (4)</td>
+                                    <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                    <td style="padding:1px ">Analog Telephones & Accessories (4)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -282,10 +287,10 @@
                         <div class="panel-heading" style="padding:1px 10px">
                             Condition
                         </div>
-                        <div class="panel-body" style="padding:2px 7px">
-                            <input id="" type="checkbox" /> Refurbished <br />
-                            <input id="" type="checkbox" /> Open Box <br />
-                            <input id="" type="checkbox" /> Clearance <br />
+                        <div class="panel-body" style="padding:2px 10px">
+                            <input id="" type="checkbox" />  Refurbished <br />
+                            <input id="" type="checkbox" />  Open Box <br />
+                            <input id="" type="checkbox" />  Clearance <br />
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -389,8 +394,10 @@
                                                 </div>
                                             </td>
                                             <td style="vertical-align:middle;text-align:center;padding:1px 4px">Query Cleaning</td>
-                                            <td style="vertical-align:middle;text-align:center;padding:2px 4px"><a href="#">KW Brand | Apple</a>
-                                                <span><i class="fa fa-info-circle" style="color:orange"></i> Rule Ignored</span></td>
+                                            <td style="vertical-align:middle;text-align:center;padding:2px 4px">
+                                                <a href="#">KW Brand | Apple</a>
+                                                <span><i class="fa fa-info-circle" style="color:orange"></i> Rule Ignored</span>
+                                            </td>
                                             <td style="vertical-align:middle;text-align:center;padding:2px 4px">Setup a Rule | Last Published: 08/16/2016 07:00 PM</td>
                                         </tr>
                                         <tr>
@@ -572,7 +579,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                     <!--forcely added to another keyword and has elevate rule-->
                     <div class="row">
                         <div class="panel panel-warning">
@@ -614,8 +621,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
-                     <!--elevated result-->
+                    </div>
+                    <!--elevated result-->
                     <div class="row">
                         <div class="panel panel-default">
                             <div class="panel-body" style="font-size:13px">
@@ -656,8 +663,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                   
-                     <!--demoted result-->
+                    </div>
+                    <!--demoted result-->
                     <div class="row">
                         <div class="panel panel-default">
                             <div class="panel-body" style="font-size:13px">
@@ -698,7 +705,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
 
                 </div>
 
@@ -1223,9 +1230,9 @@
             </div>
             <!-- /.modal-content -->
         </div>
-    </div>       
-    
-     <!--user profile modal-->
+    </div>
+
+    <!--user profile modal-->
     <div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true" style="font-size:13px">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1358,6 +1365,97 @@
                     <div class="pull-right">
                         <button class="btn btn-success btn-sm"><i class="fa fa-check fa-lg"></i> Submit</button>
                         <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <!--manufacturer modal-->
+    <div class="modal fade" id="manufacturerModal" tabindex="-1" role="dialog" aria-labelledby="manufacturerModalLabel" aria-hidden="true" style="font-size:13px">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <strong class="modal-title" id="manufacturerModalLabel">Select Manufacturer</strong>
+                </div>
+                <div class="modal-body">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" placeholder="Search Manufacturer">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-info btn-sm" title="Search">
+                                        <i class="fa fa-search fa-lg" style="color:white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group pull-right"><label>356 Records</label></div>
+                    </div>
+                    <br />
+                    <table class="table table-hover table-striped" style="font-size:13px;">
+                        <tbody style="overflow-y:auto;height:150px;display:block">
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle;"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px;width:100%">3M</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">3M Corp</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">4XEM</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Activate IT Solutions</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">AddOn Networks</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">AJA Video Systems</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1px 10px;text-align:center;vertical-align:middle"><input id="Checkbox1" type="checkbox" /></td>
+                                <td style="padding:1px 10px">Accell</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <button class="btn btn-success btn-sm"><i class="fa fa-check fa-lg"></i> Continue</button>
+                        <button class="btn btn-warning btn-sm" data-dismiss="modal"><i class="fa fa-times fa-lg"></i> Cancel</button>
                     </div>
                 </div>
             </div>
