@@ -625,12 +625,12 @@
                     <script>
                         $(function () {
                             $("#elevatePanels").sortable({
-                                handle: '#sortHandle'
+                                handle: '#positionNumber'
                             });
                             $("#elevatePanels").disableSelection();
                         });
                     </script>
-                    <ol id="elevatePanels" class="row" style="margin:0px;padding:0px;width:100%;">
+                    <ul id="elevatePanels" class="row" style="list-style-type:none;margin:0px;padding:0px;width:100%;">
                         <li class="col-sm-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -639,7 +639,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span id="positionNumber" class="badge">1</span></a>
+                                                        <label id="positionNumber" class="badge" style="cursor:grab">1</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -707,7 +707,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>--> <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><label class="badge">2</label></a>
+                                                        <span id="positionNumber" class="badge" style="cursor:grab">2</span>
                                                     </div>
                                                     <div id="radio-switch" class="form-group">
                                                         <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -785,7 +785,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">3</span></a>
+                                                        <span id="positionNumber" class="badge" style="cursor:grab">3</span>
                                                     </div>
                                                     <div id="radio-switch" class="form-group">
                                                         <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -863,7 +863,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>--> <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">4</span></a>
+                                                        <span id="positionNumber" class="badge" style="cursor:grab">4</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -923,7 +923,7 @@
                                 </div>
                             </div>
                         </li>
-                    </ol>
+                    </ul>
 
                     <!--elevate modals-->
                     <div id="backupRuleModal" class="modal fade" role="dialog" style="font-size:13px">
@@ -1566,7 +1566,7 @@
 
                     <script>
                         $(function () {
-                            $("#demotePanels").sortable({ handle: '#sortHandle' });
+                            $("#demotePanels").sortable({ handle: '#positionNumber' });
                             $("#demotePanels").disableSelection();
                         });
                     </script>
@@ -1579,7 +1579,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">1</span></a>
+                                                        <label id="positionNumber" class="badge" style="cursor:grab">1</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1647,7 +1647,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">2</span></a>
+                                                        <label id="positionNumber" class="badge" style="cursor:grab">2</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1715,7 +1715,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">3</span></a>
+                                                        <label id="positionNumber" class="badge" style="cursor:grab">3</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1783,7 +1783,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">4</span></a>
+                                                        <label id="positionNumber" class="badge" style="cursor:grab">4</label>
                                                     </div>
                                                 </div>
                                             </div>
