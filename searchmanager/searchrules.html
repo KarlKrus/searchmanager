@@ -624,11 +624,13 @@
                     <!--elevate content panels-->
                     <script>
                         $(function () {
-                            $("#elevatePanels").sortable({handle:'#sortHandle'});
+                            $("#elevatePanels").sortable({
+                                handle: '#sortHandle'
+                            });
                             $("#elevatePanels").disableSelection();
                         });
                     </script>
-                    <ol id="elevatePanels" class="row" style="list-style-type:none;margin:0px;padding:0px;width:100%;">
+                    <ol id="elevatePanels" class="row" style="margin:0px;padding:0px;width:100%;">
                         <li class="col-sm-3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -637,7 +639,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">1</span></a>
+                                                        <!--<label class="control-label">Position:</label>-->  <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span id="positionNumber" class="badge">1</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -705,7 +707,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<label class="control-label">Position:</label>--> <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><span class="badge">2</span></a>
+                                                        <!--<label class="control-label">Position:</label>--> <a href="#" id="sortHandle" class="btn btn-default btn-xs" style="cursor:grab"><label class="badge">2</label></a>
                                                     </div>
                                                     <div id="radio-switch" class="form-group">
                                                         <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -5167,7 +5169,7 @@
                                         </label>
                                         <input id="file-input" type="file" style="display:none" />
                                     </div>
-                                   
+
                                 </div>
                                 <div class="form-group">
                                     <h4>Username: carlson.cruz</h4>
