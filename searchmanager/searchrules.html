@@ -22,6 +22,11 @@
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
+    <style>
+        .sortHandle{
+            cursor:move
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper" id="wrapper">
@@ -625,7 +630,7 @@
                     <script>
                         $(function () {
                             $("#elevatePanels").sortable({
-                                handle: '#positionNumber'
+                                handle: '.sortHandle'
                             });
                             $("#elevatePanels").disableSelection();
                         });
@@ -639,7 +644,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <label id="positionNumber" class="badge" style="cursor:grab">1</label>
+                                                        <label class="badge sortHandle" >1</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -707,7 +712,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <span id="positionNumber" class="badge" style="cursor:grab">2</span>
+                                                        <span  class="badge sortHandle" >2</span>
                                                     </div>
                                                     <div id="radio-switch" class="form-group">
                                                         <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -785,7 +790,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <span id="positionNumber" class="badge" style="cursor:grab">3</span>
+                                                        <span class="badge sortHandle">3</span>
                                                     </div>
                                                     <div id="radio-switch" class="form-group">
                                                         <div class="btn-group btn-toggle" data-toggle="buttons">
@@ -863,7 +868,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <span id="positionNumber" class="badge" style="cursor:grab">4</span>
+                                                        <span class="badge sortHandle">4</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1566,7 +1571,7 @@
 
                     <script>
                         $(function () {
-                            $("#demotePanels").sortable({ handle: '#positionNumber' });
+                            $("#demotePanels").sortable({ handle: '.sortHandle' });
                             $("#demotePanels").disableSelection();
                         });
                     </script>
@@ -1579,7 +1584,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <label id="positionNumber" class="badge" style="cursor:grab">1</label>
+                                                        <label class="badge sortHandle">1</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1647,7 +1652,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <label id="positionNumber" class="badge" style="cursor:grab">2</label>
+                                                        <label class="badge sortHandle">2</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1715,7 +1720,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <label id="positionNumber" class="badge" style="cursor:grab">3</label>
+                                                        <label class="badge sortHandle">3</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1783,7 +1788,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <label id="positionNumber" class="badge" style="cursor:grab">4</label>
+                                                        <label class="badge sortHandle" >4</label>
                                                     </div>
                                                 </div>
                                             </div>
