@@ -3704,46 +3704,238 @@
                                                             </div>
                                                         </div>
                                                         <div class="panel-body">
+                                                            <!--new filter group IMS-->
                                                             <div class="panel panel-primary">
                                                                 <div class="panel-body">
                                                                     <div class="form-inline">
-                                                                        <div class="form-group"><a href="#"><strong>New Filter Group Condition (Product Site Taxonomy/Manafacturers)</strong></a></div>
+                                                                        <div class="form-group"><strong class="btn-link" onclick="showHide('filterGroupIMS'), showHide('filterGroupIMSFooter')">New Filter Group Condition (IMS Categories/Manufacturers)</strong></div>
                                                                         <div class="form-group pull-right">
                                                                             <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Clone" style="color:dodgerblue"><i class="fa fa-copy fa-fw"></i></a>
                                                                             <a href="#" data-toggle="modal" data-target="#elevateModal" title="Delete" style="color:red"><i class="fa fa-times fa-fw"></i></a>
                                                                         </div>
                                                                     </div>
-                                                                    <br />
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12"><label>Product Site Taxonomy/Manufacturers</label></div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-3">
-                                                                            Level 1 Category:
-                                                                            <select id="" class="form-control input-sm">
-                                                                                <option></option>
-
-                                                                            </select>
+                                                                    <div id="filterGroupIMS" style="display:none">
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12"><label>IMS Categories/Manufacturers</label></div>
                                                                         </div>
-                                                                        <div class="col-sm-3">
-                                                                            Level 2 Category:
-                                                                            <select id="" class="form-control input-sm">
-                                                                                <option></option>
+                                                                        <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                Category :
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Level 1 -</option>
 
-                                                                            </select>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                SubCategory:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Level 2 -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Class:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Class -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Manufacturer:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Manufacturer -</option>
+
+                                                                                </select>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-sm-3">
-                                                                            Level 3 Category:
-                                                                            <select id="" class="form-control input-sm">
-                                                                                <option></option>
-
-                                                                            </select>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12"><label>Dynamic Attribute</label></div>
                                                                         </div>
-                                                                        <div class="col-sm-3">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                Template Name:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Template -</option>
 
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                            </div>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12"><label>Facets</label></div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4">
+                                                                                Name (Contains):
+                                                                                <input id="" type="text" class="form-control input-sm" />
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                Description (Contains):
+                                                                                <input id="" type="text" class="form-control input-sm" />
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                Platform:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Platform -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                Condition:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Condition -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Availability:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Availability  -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                License:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select License  -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Product Image:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Image Option -</option>
+
+                                                                                </select>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <div id="filterGroupIMSFooter" class="panel-footer" style="display:none"></div>
+                                                            </div>
+
+                                                            <!--new filter group PST-->
+                                                            <div class="panel panel-primary">
+                                                                <div class="panel-body">
+                                                                    <div class="form-inline">
+                                                                        <div class="form-group"><strong class="btn-link" onclick="showHide('filterGroupPST'), showHide('filterGroupPSTFooter')">New Filter Group Condition (Product Site Taxonomy/Manufacturers)</strong></div>
+                                                                        <div class="form-group pull-right">
+                                                                            <a href="#" data-toggle="modal" data-target="#forceAddModal" title="Clone" style="color:dodgerblue"><i class="fa fa-copy fa-fw"></i></a>
+                                                                            <a href="#" data-toggle="modal" data-target="#elevateModal" title="Delete" style="color:red"><i class="fa fa-times fa-fw"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="filterGroupPST" style="display:none">
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12"><label>Product Site Taxonomy/Manufacturers</label></div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                Level 1 Category:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Level 1 -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Level 2 Category:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Level 2 -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Level 3 Category:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Level 3 -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Manufacturer:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Manufacturer -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12"><label>Dynamic Attribute</label></div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                Template Name:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Template -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                            </div>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12"><label>Facets</label></div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4">
+                                                                                Name (Contains):
+                                                                                <input id="" type="text" class="form-control input-sm" />
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                Description (Contains):
+                                                                                <input id="" type="text" class="form-control input-sm" />
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                Platform:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Platform -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                Condition:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Condition -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Availability:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select Availability  -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                License:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Select License  -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                Product Image:
+                                                                                <select id="" class="form-control input-sm">
+                                                                                    <option>- Image Option -</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="filterGroupPSTFooter" class="panel-footer" style="display:none"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -5424,5 +5616,15 @@
             <!-- /.modal-content -->
         </div>
     </div>
+    <script type="text/javascript">
+        function showHide(id) {
+            var e = document.getElementById(id);
+            if (e.style.display === 'none') {
+                e.style.display = 'block';
+            }
+            else
+                e.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
