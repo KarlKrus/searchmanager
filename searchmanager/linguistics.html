@@ -766,17 +766,32 @@
                     function typeaheadKWList() {
                         var typKWL = document.getElementById('typeaheadKWList');
                         var typCRUD = document.getElementById('typeaheadCRUD');
+                        var typExc = document.getElementById('typeaheadExcelUpload');
                         if (typKWL.style.display === 'none') {
                             typKWL.style.display = 'block';
                             typCRUD.style.display = 'none';
+                            typExc.style.display = 'none';
                         }
                     }
                     function typeaheadCRUD() {
                         var typKWL = document.getElementById('typeaheadKWList');
                         var typCRUD = document.getElementById('typeaheadCRUD');
+                        var typExc = document.getElementById('typeaheadExcelUpload');
                         if (typCRUD.style.display === 'none') {
                             typCRUD.style.display = 'block';
                             typKWL.style.display = 'none';
+                            typExc.style.display = 'none';
+                        }
+                    }
+
+                    function typeaheadExcelUp() {
+                        var typKWL = document.getElementById('typeaheadKWList');
+                        var typCRUD = document.getElementById('typeaheadCRUD');
+                        var typExc = document.getElementById('typeaheadExcelUpload');
+                        if (typExc.style.display === 'none') {
+                            typCRUD.style.display = 'none';
+                            typKWL.style.display = 'none';
+                            typExc.style.display = 'block';
                         }
                     }
                 </script>
@@ -803,6 +818,7 @@
                                     </button> &nbsp;
                                 </div>
                                 <div class="form-group pull-right">
+                                    <a href="#" class="btn btn-default btn-sm" onclick="typeaheadExcelUp()"><i class="fa  fa-file-excel-o fa-fw" style="color:forestgreen"></i></a>
                                     <div class="input-group">
                                         <input type="text" class="form-control input-sm" placeholder="Search Keyword">
                                         <div class="input-group-btn">
@@ -1392,6 +1408,16 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!--typeahead file upload-->
+                <div id="typeaheadExcelUpload" style="display:none">
+                    <ol class="breadcrumb" style="margin-bottom: 5px;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#" onclick="lingLandingPage()">Linguistics</a></li>
+                        <li><a href="#" onclick="typeaheadKWList()">Rule List</a></li>
+                        <li class="active">Typeahead from an Excel File</li>
+                    </ol>
+                    <h4>Upload Excel for Typeahead</h4>
                 </div>
             </div>
 
