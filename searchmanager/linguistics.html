@@ -1245,7 +1245,7 @@
                                                     <img src="images/gtx4.jpg" class="img-responsive center-block" alt="Product Image" width="80" height="80">
                                                     <label>40119325</label>
                                                 </div>
-                                            </div> 
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="col-sm-2" style="border:medium;display:inline-block">
@@ -1418,27 +1418,56 @@
                         <li class="active">Typeahead from an Excel File</li>
                     </ol>
                     <h4>Upload Excel for Typeahead</h4>
-                </div>
-            </div>
-
-            <!--footer-->
-                    <div class="row row-height">
-                        <div class="col-md-12 admin-footer">
-                            <div class="pull-left text-info">
-                                1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
+                    <div class="col-sm-6">
+                        On uploading an excel, follow these instructions:
+                        <ol>
+                            <li>Download the Excel template,by clicking the <strong>Download Template</strong> button.</li>
+                            <li>Fill up the necessary fields according to the format of the template.</li>
+                            <li>Upload the excel file. </li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style="font-size:13px">
+                            <div class="panel-heading"><strong>Upload Excel File</strong></div>
+                            <div class="panel-body">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="btn btn-default btn-sm" for="my-file-selector">
+                                            <input id="my-file-selector" type="file" style="display:none"
+                                                   onchange="$('#upload-file-info').html(this.files[0].name)">
+                                         <i class="fa  fa-folder-open-o fa-fw" style="color:brown"></i>  Browse...
+                                        </label>
+                                        <span class='well well-sm' id="upload-file-info">No file selected.</span>
+                                        <button class="btn btn-default btn-sm"><i class="fa  fa-upload fa-fw" style="color:green"></i>Upload Excel</button>
+                                    </div>
+                                    <div class="form-group pull-right">
+                                        <button class="btn btn-default btn-sm"><i class="fa  fa-download fa-fw" style="color:forestgreen"></i>Download Template</button>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="nav navbar-top-links navbar-right">
-                                <li class="pull-right text-info">
-                                    &copy;
-                                    <script type="text/javascript">
-                                        document.write(new Date().getFullYear());
-                                    </script> PCM
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!--footer-->
+            <div class="row row-height">
+                <div class="col-md-12 admin-footer">
+                    <div class="pull-left text-info">
+                        1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="pull-right text-info">
+                            &copy;
+                            <script type="text/javascript">
+                                document.write(new Date().getFullYear());
+                            </script> PCM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--logout modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
@@ -1464,8 +1493,8 @@
             </div>
             <!-- /.modal-content -->
         </div>
-    </div>        
-    
+    </div>
+
     <!--user profile modal-->
     <div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true" style="font-size:13px">
         <div class="modal-dialog">
