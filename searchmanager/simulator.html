@@ -149,29 +149,48 @@
 
         <!--page content/wrapper-->
         <div class="container">
-            <br />
-            <!--simulator content-->
+            <script type="text/javascript">
+                function simLandingPage(){
+                    var simLand = document.getElementById('simLandingPage');
+                    var simMod = document.getElementById('simModule');
+                    if (simLand.style.display === 'none') {
+                        simLand.style.display = 'block';
+                        simMod.style.display = 'none';
+                    }
+                }
+
+                function simModule() {
+                    var simLand = document.getElementById('simLandingPage');
+                    var simMod = document.getElementById('simModule');
+                    if (simMod.style.display === 'none') {
+                        simLand.style.display = 'none';
+                        simMod.style.display = 'block';
+                    }
+                }
+            </script>
+            <!--simulator landing page-->
             <div id="simLandingPage">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
-                    <li class="active">Simulator Details</li>
+                    <li class="active">Simulator Introduction</li>
                 </ol>
                 <div class="well">
                     <div class="container">
                         <h1>
                             <i class="fa  fa-play-circle fa-lg" aria-hidden="true" style="color:limegreen"></i> Simulator
                         </h1>
-                        <p>This module shows how a certain rule works so that, the user will be able to determine what adjustments should be made to get the expected output.<br />User can also directly add/edit the rule from the Simulator module.The Simulator module allows the user to test the created rules.</p>
-                        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+                        <p>The Simulator module allows the user to test the created rules.<br /> This module shows how a certain rule works so that, the user will be able to determine what adjustments should be made to get the expected output.<br />User can also directly add/edit the rule from the Simulator module.</p>
+                        <p><a class="btn btn-primary btn-sm" href="#" role="button" onclick="simModule()">Simulate &raquo;</a></p>
                     </div>
                 </div>
             </div>
-            <div id="simModule">
-                <div class="row">
 
+            <!--simulator module-->
+            <div id="simModule" style="display:none">
+                <div class="row">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
-                        <li>Simulator Details</li>
+                        <li><a href="#" onclick="simLandingPage()">Simulator Details</a></li>
                         <li class="active">Simulation</li>
                     </ol>
                     <!--filter panels-->
