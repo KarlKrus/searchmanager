@@ -88,6 +88,7 @@
     <Content Include="js\sb-admin-2.js" />
     <Content Include="linguistics.html" />
     <Content Include="login.html" />
+    <Content Include="navs.html" />
     <Content Include="searchrules.html" />
     <Content Include="settings.html" />
     <Content Include="simulator.html" />

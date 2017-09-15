@@ -23,7 +23,7 @@
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
 </head>
-<body style="background-color:white">
+<body>
     <div class="wrapper" id="wrapper">
         <!--navigation-->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -138,11 +138,46 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>         
+               <!--sidebar-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Top Keywords" onclick="topKeywords()">
+                                <i class="fa fa-trophy fa-fw"></i>
+                                <span class="collapse-menu">Top Keywords</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-muted collapse-activator"><i class="fa fa-dedent fa-fw text"></i> <span class="collapse-menu">Collapse</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <!--page content/wrapper-->
-        <div class="container">
-            <div id="searchManagerHome">
+        <div id="page-wrapper">
+            <script type="text/javascript">
+                function searchManagerHome() {
+                    var smHome = document.getElementById('searchManagerHome');
+                    var topKey = document.getElementById('topKeywords');
+                    if (smHome.style.display === 'none') {
+                        smHome.style.display = 'block';
+                        topKey.style.display = 'none';
+                    }
+                }
+
+                function topKeywords() {
+                    var smHome = document.getElementById('searchManagerHome');
+                    var topKey = document.getElementById('topKeywords');
+                    if (topKey.style.display === 'none') {
+                        smHome.style.display = 'none';
+                        topKey.style.display = 'block';
+                    }
+                }
+            </script>
+            <div id="searchManagerHome" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li class="active">Home</li>
                 </ol>
@@ -176,27 +211,11 @@
                     </div>
                 </div>
             </div>
-            <div id="topKeywords" style="display:block" class="row">
-                <!--<ol class="breadcrumb" style="margin-bottom: 5px;">
-                    <li class="active">Home</li>
+            <div id="topKeywords" style="display:none" class="row">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="active">Top Keywords</li>
                 </ol>
-                <div class="well well-sm">
-                    <blockquote>
-                        <h4>
-                            Search Manager
-                        </h4>
-                        <hr />
-                        <p style="font-size:12px;font-weight:400">
-                            Search manager is an internal tool used by the PCM marketing department in manipulating the search result by different mall site. Product search result can be manipulated through the following features:
-                            <br />
-                            - Elevate <br />
-                            - Exclude <br />
-                            - Demote <br />
-                            - Relevancy/Ranking Rule <br />
-                            - Redirect/ Query Cleaning Rule  <br />
-                        </p>
-                    </blockquote>
-                </div>-->
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
                     <div class="panel panel-default" style="font-size:13px">
@@ -327,25 +346,24 @@
                 </div>
                 <div class="col-sm-2"></div>
             </div>
-
-        </div>
-
-        <!--footer-->
-        <div class="row row-height">
-            <div class="col-md-12 admin-footer" style="left:0">
-                <div class="pull-left text-info">
-                    1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
-                </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li class="pull-right text-info">
-                        &copy;
-                        <script type="text/javascript">
+            <!--footer-->
+            <div class="row row-height">
+                <div class="col-md-12 admin-footer">
+                    <div class="pull-left text-info">
+                        1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="pull-right text-info">
+                            &copy;
+                            <script type="text/javascript">
                             document.write(new Date().getFullYear());
-                        </script> PCM
-                    </li>
-                </ul>
+                            </script> PCM
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </div>
 
     <!--logout modal-->

@@ -28,7 +28,7 @@
         }
     </style>
 </head>
-<body style="background-color:white">
+<body>
     <div class="wrapper" id="wrapper">
         <!--navigation-->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -144,13 +144,29 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>            
+            <!--sidebar-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Simulator" onclick="simModule()">
+                                <i class="fa fa-play-circle fa-fw"></i>
+                                <span class="collapse-menu">Simulator</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-muted collapse-activator"><i class="fa fa-dedent fa-fw text"></i> <span class="collapse-menu">Collapse</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <!--page content/wrapper-->
-        <div class="container">
+        <div id="page-wrapper">
             <script type="text/javascript">
-                function simLandingPage(){
+                function simLandingPage() {
                     var simLand = document.getElementById('simLandingPage');
                     var simMod = document.getElementById('simModule');
                     if (simLand.style.display === 'none') {
@@ -169,7 +185,7 @@
                 }
             </script>
             <!--simulator landing page-->
-            <div id="simLandingPage">
+            <div id="simLandingPage" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
                     <li class="active">Simulator Introduction</li>
@@ -190,7 +206,7 @@
                 <div class="row">
                     <ol class="breadcrumb" style="margin-bottom: 5px;">
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#" onclick="simLandingPage()">Simulator Details</a></li>
+                        <li><a href="#" onclick="simLandingPage()">Simulator Introduction</a></li>
                         <li class="active">Simulation</li>
                     </ol>
                     <!--filter panels-->
@@ -1155,11 +1171,11 @@
                                                 </div>
                                                 <div class="panel-body" style="padding:2px;overflow-y:auto;overflow-x:hidden;height:300px">
                                                     <!--<script>
-                                                        $(function () {
-                                                            $("#demoteItems").sortable();
-                                                            $("#demoteItems").disableSelection();
-                                                        });
-                                                    </script>-->
+                                                    $(function () {
+                                                        $("#demoteItems").sortable();
+                                                        $("#demoteItems").disableSelection();
+                                                    });
+                                                </script>-->
                                                     <ul id="demoteItems" style="list-style-type:none;margin:0px;padding:0px;width:100%;font-size:13px ">
                                                         <li>
                                                             <div class="panel panel-default" style="margin-bottom:2px;width:100%;height:100%">
@@ -1420,25 +1436,24 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-
-        <!--footer-->
-        <div class="row row-height">
-            <div class="col-md-12 admin-footer" style="left:0">
-                <div class="pull-left text-info">
-                    1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
-                </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li class="pull-right text-info">
-                        &copy;
-                        <script type="text/javascript">
+            <!--footer-->
+            <div class="row row-height">
+                <div class="col-md-12 admin-footer">
+                    <div class="pull-left text-info">
+                        1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="pull-right text-info">
+                            &copy;
+                            <script type="text/javascript">
                             document.write(new Date().getFullYear());
-                        </script> PCM
-                    </li>
-                </ul>
+                            </script> PCM
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </div>
 
     <!--logout modal-->
