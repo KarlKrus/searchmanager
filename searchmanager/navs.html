@@ -1,10 +1,362 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <link href="images/smiconlogo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Search Manager -  Search Rules</title>
+    <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
+    <link href="custom-css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/new/custom.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/style.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/media-reset.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="js/custom-js/cookie.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+    <style>
+        .sortHandle {
+            cursor: grab;
+        }
+    </style>
 </head>
 <body>
+    <div class="wrapper" id="wrapper">
+        <!--navigation-->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <!--navbar-->
+            <ul class="nav navbar-top-links navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
+                        <img src="images/pcm.png" class="current-mall" />
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-default logo-menu">
+                        <li>
+                        <li>
+                            <a href="#MACMALL">
+                                <img src="images/macmall.png" class="current-mall" />
+                            </a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCM">
+                                <img src="images/pcm.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#MACMALLBD">
+                                <img src="images/macmallbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMBD">
+                                <img src="images/pcmbd.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMG">
+                                <img src="images/pcmg.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#ECOST">
+                                <img src="images/ecost.png" class="current-mall" style="width:120px;height:30px" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        afs-pl-schpd07
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">Search Manager</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown" style="width: 165px;text-align: left;">
+                        <span style="float:left">
+                            <!--Search Rules-->
+                        </span>
+                        <span style="float:right"><span class="caret"></span></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="simulator.html">Simulator</a>
+                        <li><a href="searchrules.html">Search Rules</a>
+                        <li><a href="workflow.html">Workflow</a>
+                        <li><a href="linguistics.html">Linguistics</a>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button"
+                            class="btn btn-default "
+                            onclick="window.location.href='settings.html'">
+                        Settings
+                    </button>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/no-pic.png" class="img-circle nav-user-photo" />
+                        <span class="nav-user-info">
+                            <span>Carlson Cruz</span>
+                            <small><strong>carlson.cruz@pcm.com</strong></small>
+                        </span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#userProfileModal"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--sidebar-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Home">
+                                <i class="fa fa-home fa-fw"></i>
+                                <span class="collapse-menu">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-muted collapse-activator"><i class="fa fa-dedent fa-fw text"></i> <span class="collapse-menu">Collapse</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--page content/wrapper-->
+        <div id="page-wrapper">
 
+
+            <!--footer-->
+            <div class="row row-height">
+                <div class="col-md-12 admin-footer">
+                    <div class="pull-left text-info">
+                        1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="pull-right text-info">
+                            &copy;
+                            <script type="text/javascript">
+                                document.write(new Date().getFullYear());
+                            </script> PCM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--logout modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">
+                        <i class="fa  fa-ban"></i>
+                        NO
+                    </button>
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fa fa-check"></i>
+                        YES
+                    </a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <!--user profile modal-->
+    <div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true" style="font-size:13px">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title" id="userProfileModalLabel">Update Profile Details</strong>
+                    <div div class="form-inline pull-right">
+                        <div class="form-group">
+                            <div id="radio-switch">
+                                <div class="btn-group btn-toggle" data-toggle="buttons">
+                                    <label class="btn btn-default btn-xs">
+                                        <input type="radio" name="oss" checked="checked"> Enabled
+                                    </label>
+                                    <label class="btn btn-default btn-xs">
+                                        <input type="radio" name="oss" value="option2"> Disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        &emsp;
+                        <div class="form-group">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:red">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#userDetailsTab">
+                                <label style="font-size:13px">Edit Profile</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#changePassword">
+                                <label style="font-size:13px">Change Password</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#resetPassword">
+                                <label style="font-size:13px">Reset Password</label>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" style="font-size:13px">
+                        <div id="userDetailsTab" class="tab-pane fade in active">
+                            <br />
+                            <div class="form-inline" style="text-align:center">
+                                <div class="form-group">
+                                    <div>
+                                        <label for="file-input" style="cursor:pointer">
+                                            <img class="img-thumbnail center-block " alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
+                                        </label>
+                                        <input id="file-input" type="file" style="display:none" />
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <h4>Username: carlson.cruz</h4>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-4"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
+                                <div class="col-sm-4"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
+                                <div class="col-sm-4"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label> Default Store:</label>
+                                    <select id="" class="form-control input-sm">
+                                        <option>MacMall</option>
+                                        <option>PCM</option>
+                                        <option>eCost</option>
+                                        <option>MacMall BD</option>
+                                        <option>PcMall BD</option>
+                                        <option>PCMG BD</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Role:</label>
+                                    <select id="" class="form-control input-sm">
+                                        <option>ADMIN</option>
+                                        <option>APPROVER</option>
+                                        <option>ENCODER</option>
+                                        <option>GUEST</option>
+                                        <option>MANAGER</option>
+                                        <option>PUBLISHER</option>
+                                        <option>USER ADMIN</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label> Validity: </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        <div id="changePassword" class="tab-pane fade in">
+                            <br />
+                            <label>Change/Update Password:</label>
+                            <div class="row">
+                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Old Password" /></div>
+                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="New Password" /></div>
+                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Re-type New Password" /></div>
+                            </div>
+                        </div>
+                        <div id="resetPassword" class="tab-pane fade in">
+                            <br />
+                            <label>Reset Password:</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control input-sm" placeholder="Reset Password">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset Password</button>
+                                        </div>
+                                    </div>
+                                    <strong><i class="fa fa-info-circle" style="color:orange"></i> Leave blank to auto-generate password.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <button class="btn btn-success btn-sm"><i class="fa fa-check fa-lg"></i> Submit</button>
+                        <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showHide(id) {
+            var e = document.getElementById(id);
+            if (e.style.display === 'none') {
+                e.style.display = 'block';
+            }
+            else
+                e.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
