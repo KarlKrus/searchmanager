@@ -562,7 +562,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <button id="addContentBtn" type="button" class="btn btn-success btn-sm" title="Add Content" onclick="addElevateItem()">
+                                        <button type="button" class="btn btn-success btn-sm" title="Add Content" onclick="addElevateItem()">
                                             <i class="fa fa-plus fa-lg"></i> Add
                                         </button>
                                     </div>
@@ -1364,391 +1364,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--add item modals-->
-                    <div id="addProductItemModal" class="modal fade" role="dialog" style="font-size:13px">
-                        <div class="modal-dialog modal-sm">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Product Item</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            SKU: <span class="text-muted">(separated by whitespaces or commas)</span>
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            Valid Until:
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            Position:
-                                            <input type="number" class="form-control input-sm" />
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            Comment:
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check"></i>
-                                        Add
-                                    </a>
-                                    <button type="button" class="btn btn-warning btn-sm">
-                                        <i class="fa  fa-undo"></i>
-                                        Clear
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="addIMSModal" class="modal fade" role="dialog" style="font-size:13px">
-                        <div class="modal-dialog modal-sm">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">IMS Categories</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <ul class="nav nav-tabs" style="font-size:13px">
-                                                <li class="active">
-                                                    <a data-toggle="tab" href="#imscat">
-                                                        <label style="font-size:13px">IMS Categories/Manufacturer</label>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a data-toggle="tab" href="#imsfacets">
-                                                        <label style="font-size:13px">Facets</label>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div id="imscat" class="tab-pane fade in active">
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Names)</label></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            Category : <a href="#">Use Category Code Instead >> </a>
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Category -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            Manufacturer:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Manufacturer -</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            subCatNameegory:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select subCatNameegory -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            Class:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Class -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            SubClass:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select SubClass -</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Codes)</label></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            Category : <a href="#">Use Category Name Instead >> </a>
-                                                            <input id="" type="text" class="form-control input-sm" />
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            Manufacturer:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Manufacturer -</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="imsfacets" class="tab-pane fade in">
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-12"><label>Facets</label></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            Name (Contains):
-                                                            <input id="" type="text" class="form-control input-sm" />
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            Description (Contains):
-                                                            <input id="" type="text" class="form-control input-sm" />
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            Platform:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Platform -</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            Condition:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Condition -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            Availability:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Availability  -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            License:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select License  -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            Product Image:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Image Option -</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            Valid Until:
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            Position:
-                                            <input type="number" class="form-control input-sm" />
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            Comment:
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check"></i>
-                                        Add
-                                    </a>
-                                    <button type="button" class="btn btn-warning btn-sm">
-                                        <i class="fa  fa-undo"></i>
-                                        Clear
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="addPSTModal" class="modal fade" role="dialog" style="font-size:13px">
-                        <div class="modal-dialog modal-sm">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Product Site Taxonomy</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <ul class="nav nav-tabs" style="font-size:13px">
-                                                <li class="active">
-                                                    <a data-toggle="tab" href="#pstmanufact">
-                                                        <label style="font-size:13px">Product Site Taxonomy/Manufacturer</label>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a data-toggle="tab" href="#pstdynamic">
-                                                        <label style="font-size:13px">Dynamic Attributes</label>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a data-toggle="tab" href="#pstfacets">
-                                                        <label style="font-size:13px">Facets</label>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div id="pstmanufact" class="tab-pane fade in active">
-                                                    <br />
-                                                </div>
-                                                <div id="pstfacets" class="tab-pane fade in">
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-12"><label>Facets</label></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            Name (Contains):
-                                                            <input id="" type="text" class="form-control input-sm" />
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            Description (Contains):
-                                                            <input id="" type="text" class="form-control input-sm" />
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            Platform:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Platform -</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            Condition:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Condition -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            Availability:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select Availability  -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            License:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Select License  -</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            Product Image:
-                                                            <select id="" class="form-control input-sm">
-                                                                <option>- Image Option -</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            Valid Until:
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            Position:
-                                            <input type="number" class="form-control input-sm" />
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            Comment:
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check"></i>
-                                        Add
-                                    </a>
-                                    <button type="button" class="btn btn-warning btn-sm">
-                                        <i class="fa  fa-undo"></i>
-                                        Clear
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="addFacetModal" class="modal fade" role="dialog" style="font-size:13px">
-                        <div class="modal-dialog modal-sm">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Facets</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            SKU:
-                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-check"></i>
-                                        Add
-                                    </a>
-                                    <button type="button" class="btn btn-warning btn-sm">
-                                        <i class="fa  fa-undo"></i>
-                                        Clear
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -1932,15 +1547,33 @@
                             <div class="col-sm-6">
                                 <div class="form-inline">
                                     <div class="form-group">
+
+                                        <script type="text/javascript">
+                                            function addDemoteItem() {
+                                                addProductItemModal = $('#addProductItemModal');
+                                                addIMSModal = $('#addIMSModal');
+                                                addFacetModal = $('#addFacetModal');
+                                                addPSTModal = $('#addPSTModal');
+                                                if ($("#drpdownDemote").val() === 'productitem') {
+                                                    addProductItemModal.modal('show');
+                                                } else if ($("#drpdownDemote").val() === 'ims') {
+                                                    addIMSModal.modal('show');
+                                                } else if ($("#drpdownDemote").val() === 'pst') {
+                                                    addPSTModal.modal('show');
+                                                } else if ($("#drpdownDemote").val() === 'facets') {
+                                                    addFacetModal.modal('show');
+                                                }
+                                            }
+                                        </script>
                                         <select id="drpdownDemote" class="form-control input-sm" title="Demote Options">
-                                            <option>Product Items</option>
-                                            <option>IMS Categories </option>
-                                            <option>Product Site Taxonomy</option>
-                                            <option>Facets </option>
+                                            <option value="productitem">Product Items</option>
+                                            <option value="ims">IMS Categories </option>
+                                            <option value="pst">Product Site Taxonomy</option>
+                                            <option value="facets">Facets </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <button type="button" class="btn btn-success btn-sm" title="Add Content">
+                                        <button type="button" class="btn btn-success btn-sm" title="Add Content" onclick="addDemoteItem()">
                                             <i class="fa fa-plus fa-lg"></i> Add
                                         </button>
                                     </div>
@@ -2921,15 +2554,41 @@
                             <div class="col-sm-6">
                                 <div class="form-inline">
                                     <div class="form-group">
+                                        <script type="text/javascript">
+                                            function addExcludeItem() {
+                                                var itemPositionFacet = document.getElementById("itemPositionFacet");
+                                                var itemPositionPST = document.getElementById("itemPositionPST");
+                                                var itemPositionIMS = document.getElementById("itemPositionIMS");
+                                                var itemPositionProdItem = document.getElementById("itemPositionProdItem");
+
+                                                addProductItemModal = $('#addProductItemModal');
+                                                addIMSModal = $('#addIMSModal');
+                                                addFacetModal = $('#addFacetModal');
+                                                addPSTModal = $('#addPSTModal');
+                                                if ($("#drpdownExclude").val() === 'productitem') {
+                                                    addProductItemModal.modal('show');
+                                                    itemPositionProdItem.style.display = 'none';
+                                                } else if ($("#drpdownExclude").val() === 'ims') {
+                                                    addIMSModal.modal('show');
+                                                    itemPositionIMS.style.display = 'none';
+                                                } else if ($("#drpdownExclude").val() === 'pst') {
+                                                    addPSTModal.modal('show');
+                                                    itemPositionPST.style.display = 'none';
+                                                } else if ($("#drpdownExclude").val() === 'facets') {
+                                                    addFacetModal.modal('show');
+                                                    itemPositionFacet.style.display = 'none';
+                                                }
+                                            }
+                                        </script>
                                         <select id="drpdownExclude" class="form-control input-sm" title="Exclude Options">
-                                            <option>Product Items</option>
-                                            <option>IMS Categories </option>
-                                            <option>Product Site Taxonomy</option>
-                                            <option>Facets </option>
+                                            <option value="productitem">Product Items</option>
+                                            <option value="ims">IMS Categories </option>
+                                            <option value="pst">Product Site Taxonomy</option>
+                                            <option value="facets">Facets </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <button type="button" class="btn btn-success btn-sm" title="Add Content">
+                                        <button type="button" class="btn btn-success btn-sm" title="Add Content" onclick="addExcludeItem()">
                                             <i class="fa fa-plus fa-lg"></i> Add
                                         </button>
                                     </div>
@@ -6172,6 +5831,508 @@
                 </div>
             </div>
             <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <!--add item modals-->
+    <div id="addProductItemModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Product Item</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            SKU: <span class="text-muted">(separated by whitespaces or commas)</span>
+                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionProdItem">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addIMSModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">IMS Categories</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs" style="font-size:13px">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#imscat">
+                                        <label style="font-size:13px">IMS Categories/Manufacturer</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#imsfacets">
+                                        <label style="font-size:13px">Facets</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="imscat" class="tab-pane fade in active">
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Names)</label></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            Category : <a href="#">Use Category Code Instead >> </a>
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Category -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            Manufacturer:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Manufacturer -</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            subCatNameegory:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select subCatNameegory -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            Class:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Class -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            SubClass:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select SubClass -</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Codes)</label></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            Category : <a href="#">Use Category Name Instead >> </a>
+                                            <input id="" type="text" class="form-control input-sm" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            Manufacturer:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Manufacturer -</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="imsfacets" class="tab-pane fade in">
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12"><label>Facets</label></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            Name (Contains):
+                                            <input id="" type="text" class="form-control input-sm" />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            Description (Contains):
+                                            <input id="" type="text" class="form-control input-sm" />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            Platform:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Platform -</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            Condition:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Condition -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Availability:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Availability  -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            License:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select License  -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Product Image:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Image Option -</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionIMS">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addPSTModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Product Site Taxonomy</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs" style="font-size:13px">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#pstmanufact">
+                                        <label style="font-size:13px">Product Site Taxonomy/Manufacturer</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#pstdynamic">
+                                        <label style="font-size:13px">Dynamic Attributes</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#pstfacets">
+                                        <label style="font-size:13px">Facets</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="pstmanufact" class="tab-pane fade in active">
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            Level 1 Category:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Level 1 -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Level 2 Category:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Level 2 -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Level 3 Category:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Level 3 -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Manufacturer:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Manufacturer -</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pstdynamic" class="tab-pane fade in">
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Dynamic Attribute:
+                                            <select class="form-control input-sm">
+                                                <option>- Select Template -</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pstfacets" class="tab-pane fade in">
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12"><label>Facets</label></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            Name (Contains):
+                                            <input id="" type="text" class="form-control input-sm" />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            Description (Contains):
+                                            <input id="" type="text" class="form-control input-sm" />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            Platform:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Platform -</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            Condition:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Condition -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Availability:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select Availability  -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            License:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Select License  -</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Product Image:
+                                            <select id="" class="form-control input-sm">
+                                                <option>- Image Option -</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionPST">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addFacetModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Facets</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12"><label>Facets</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            Name (Contains):
+                            <input id="" type="text" class="form-control input-sm" />
+                        </div>
+                        <div class="col-sm-4">
+                            Description (Contains):
+                            <input id="" type="text" class="form-control input-sm" />
+                        </div>
+                        <div class="col-sm-4">
+                            Platform:
+                            <select id="" class="form-control input-sm">
+                                <option>- Select Platform -</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-3">
+                            Condition:
+                            <select id="" class="form-control input-sm">
+                                <option>- Select Condition -</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            Availability:
+                            <select id="" class="form-control input-sm">
+                                <option>- Select Availability  -</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            License:
+                            <select id="" class="form-control input-sm">
+                                <option>- Select License  -</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            Product Image:
+                            <select id="" class="form-control input-sm">
+                                <option>- Image Option -</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionFacet">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript">
