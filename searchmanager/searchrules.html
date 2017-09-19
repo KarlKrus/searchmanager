@@ -1381,7 +1381,28 @@
                                             <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
                                         </div>
                                     </div>
-                                    <div class="row"></div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            Valid Until:
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            Position:
+                                            <input type="number" class="form-control input-sm" />
+                                        </div>
+                                    </div><br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Comment:
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a href="searchrules.html" class="btn btn-primary btn-sm">
@@ -1407,7 +1428,156 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            SKU:
+                                            <ul class="nav nav-tabs" style="font-size:13px">
+                                                <li class="active">
+                                                    <a data-toggle="tab" href="#imscat">
+                                                        <label style="font-size:13px">IMS Categories/Manufacturer</label>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" href="#imsfacets">
+                                                        <label style="font-size:13px">Facets</label>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div id="imscat" class="tab-pane fade in active">
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Names)</label></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            Category : <a href="#">Use Category Code Instead >> </a>
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Category -</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            Manufacturer:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Manufacturer -</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            SubCategory:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select SubCategory -</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            Class:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Class -</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            SubClass:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select SubClass -</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Codes)</label></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            Category : <a href="#">Use Category Name Instead >> </a>
+                                                            <input id="" type="text" class="form-control input-sm" />
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            Manufacturer:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Manufacturer -</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="imsfacets" class="tab-pane fade in">
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-sm-12"><label>Facets</label></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            Name (Contains):
+                                                            <input id="" type="text" class="form-control input-sm" />
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            Description (Contains):
+                                                            <input id="" type="text" class="form-control input-sm" />
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            Platform:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Platform -</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            Condition:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Condition -</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            Availability:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select Availability  -</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            License:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Select License  -</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            Product Image:
+                                                            <select id="" class="form-control input-sm">
+                                                                <option>- Image Option -</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            Valid Until:
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            Position:
+                                            <input type="number" class="form-control input-sm" />
+                                        </div>
+                                    </div><br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Comment:
                                             <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
                                         </div>
                                     </div>
@@ -3852,16 +4022,26 @@
                                                                     </div>
                                                                     <div id="filterGroupIMS" style="display:none">
                                                                         <br />
+                                                                        <script>
+                                                                            function catCode() {
+
+                                                                            }
+                                                                        </script>
                                                                         <div class="row">
-                                                                            <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Names)</label></div>
+                                                                            <div class="col-sm-12"><label>IMS Categories/Manufacturers</label></div>
                                                                         </div>
                                                                         <div class="row">
                                                                             <div class="col-sm-6">
-                                                                                Category : <a href="#">Use Category Code Instead >> </a>
-                                                                                <select id="" class="form-control input-sm">
-                                                                                    <option>- Select Category -</option>
-
-                                                                                </select>
+                                                                                <div id="catName" style="display:none">
+                                                                                    Category : <a href="#">Use Category Code Instead >> </a>
+                                                                                    <select id="" class="form-control input-sm">
+                                                                                        <option>- Select Category -</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div id="catCode">
+                                                                                    Category : <a href="#">Use Category Name Instead >> </a>
+                                                                                    <input id="" type="text" class="form-control input-sm" />
+                                                                                </div>
                                                                             </div>
                                                                             <div class="col-sm-6">
                                                                                 Manufacturer:
@@ -3871,7 +4051,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <br />
-                                                                        <div class="row">
+                                                                        <div id="subCat" class="row">
                                                                             <div class="col-sm-4">
                                                                                 SubCategory:
                                                                                 <select id="" class="form-control input-sm">
@@ -3891,22 +4071,6 @@
                                                                                 <select id="" class="form-control input-sm">
                                                                                     <option>- Select SubClass -</option>
 
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                        <br />
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Codes)</label></div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-6">
-                                                                                Category : <a href="#">Use Category Name Instead >> </a>
-                                                                                <input id="" type="text" class="form-control input-sm" />
-                                                                            </div>
-                                                                            <div class="col-sm-6">
-                                                                                Manufacturer:
-                                                                                <select id="" class="form-control input-sm">
-                                                                                    <option>- Select Manufacturer -</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
