@@ -537,15 +537,32 @@
                             <div class="col-sm-6">
                                 <div class="form-inline">
                                     <div class="form-group">
+                                        <script type="text/javascript">
+                                            function addElevateItem() {
+                                                addProductItemModal = $('#addProductItemModal');
+                                                addIMSModal = $('#addIMSModal');
+                                                addFacetModal = $('#addFacetModal');
+                                                addPSTModal = $('#addPSTModal');
+                                                if ($("#drpdownElevate").val() === 'productitem') {
+                                                    addProductItemModal.modal('show');
+                                                } else if ($("#drpdownElevate").val() === 'ims') {
+                                                    addIMSModal.modal('show');
+                                                } else if ($("#drpdownElevate").val() === 'pst') {
+                                                    addPSTModal.modal('show');
+                                                } else if ($("#drpdownElevate").val() === 'facets') {
+                                                    addFacetModal.modal('show');
+                                                }
+                                            }
+                                        </script>
                                         <select id="drpdownElevate" class="form-control input-sm" title="Elevate Options">
-                                            <option>Product Items</option>
-                                            <option>IMS Categories </option>
-                                            <option>Product Site Taxonomy</option>
-                                            <option>Facets </option>
+                                            <option value="productitem">Product Items</option>
+                                            <option value="ims">IMS Categories </option>
+                                            <option value="pst">Product Site Taxonomy</option>
+                                            <option value="facets">Facets </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <button type="button" class="btn btn-success btn-sm" title="Add Content">
+                                        <button id="addContentBtn" type="button" class="btn btn-success btn-sm" title="Add Content" onclick="addElevateItem()">
                                             <i class="fa fa-plus fa-lg"></i> Add
                                         </button>
                                     </div>
@@ -1347,6 +1364,125 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--add item modals-->
+                    <div id="addProductItemModal" class="modal fade" role="dialog" style="font-size:13px">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Product Item</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            SKU: <span class="text-muted">(separated by whitespaces or commas)</span>
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-check"></i>
+                                        Add
+                                    </a>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        <i class="fa  fa-undo"></i>
+                                        Clear
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addIMSModal" class="modal fade" role="dialog" style="font-size:13px">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">IMS Categories</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            SKU:
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-check"></i>
+                                        Add
+                                    </a>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        <i class="fa  fa-undo"></i>
+                                        Clear
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addPSTModal" class="modal fade" role="dialog" style="font-size:13px">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Product Site Taxonomy</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            SKU:
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-check"></i>
+                                        Add
+                                    </a>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        <i class="fa  fa-undo"></i>
+                                        Clear
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addFacetModal" class="modal fade" role="dialog" style="font-size:13px">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Facets</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            SKU:
+                                            <textarea style="resize:vertical" class="form-control" cols="100"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-check"></i>
+                                        Add
+                                    </a>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        <i class="fa  fa-undo"></i>
+                                        Clear
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1478,7 +1614,7 @@
                         <li><a href="#" onclick="demoteKWLSHOW()">Keyword List</a></li>
                         <li class="active">Demote</li>
                     </ol>
-                    <!-- demote titl-->
+                    <!-- demote title-->
                     <div class="row">
                         <div class="col-sm-6">
                             <h4>
