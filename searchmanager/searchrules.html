@@ -1464,9 +1464,9 @@
                                                     <br />
                                                     <div class="row">
                                                         <div class="col-sm-4">
-                                                            SubCategory:
+                                                            subCatNameegory:
                                                             <select id="" class="form-control input-sm">
-                                                                <option>- Select SubCategory -</option>
+                                                                <option>- Select subCatNameegory -</option>
 
                                                             </select>
                                                         </div>
@@ -4023,8 +4023,25 @@
                                                                     <div id="filterGroupIMS" style="display:none">
                                                                         <br />
                                                                         <script>
-                                                                            function catCode() {
-
+                                                                            function catCodeShow() {
+                                                                                var categoryCode = document.getElementById("catCode");
+                                                                                var categoryName = document.getElementById("catName");
+                                                                                var subCategoryName = document.getElementById("subCatName");
+                                                                                if (categoryCode.style.display === 'none') {
+                                                                                    categoryCode.style.display = 'block';
+                                                                                    subCategoryName.style.display = 'none';
+                                                                                    catName.style.display = 'none';
+                                                                                }
+                                                                            }
+                                                                            function catNameShow() {
+                                                                                var categoryCode = document.getElementById("catCode");
+                                                                                var categoryName = document.getElementById("catName");
+                                                                                var subCategoryName = document.getElementById("subCatName");
+                                                                                if (categoryName.style.display === 'none') {
+                                                                                    categoryCode.style.display = 'none';
+                                                                                    subCategoryName.style.display = 'block';
+                                                                                    categoryName.style.display = 'block';
+                                                                                }
                                                                             }
                                                                         </script>
                                                                         <div class="row">
@@ -4033,13 +4050,13 @@
                                                                         <div class="row">
                                                                             <div class="col-sm-6">
                                                                                 <div id="catName" style="display:none">
-                                                                                    Category : <a href="#">Use Category Code Instead >> </a>
+                                                                                    Category : <a href="#IMS" onclick="catCodeShow()">Use Category Code Instead >> </a>
                                                                                     <select id="" class="form-control input-sm">
                                                                                         <option>- Select Category -</option>
                                                                                     </select>
                                                                                 </div>
                                                                                 <div id="catCode">
-                                                                                    Category : <a href="#">Use Category Name Instead >> </a>
+                                                                                    Category : <a href="#IMS" onclick="catNameShow()">Use Category Name Instead >> </a>
                                                                                     <input id="" type="text" class="form-control input-sm" />
                                                                                 </div>
                                                                             </div>
@@ -4050,8 +4067,8 @@
                                                                                 </select>
                                                                             </div>
                                                                         </div>
-                                                                        <br />
-                                                                        <div id="subCat" class="row">
+                                                                        <div id="subCatName" class="row" style="display:none">
+                                                                            <br />
                                                                             <div class="col-sm-4">
                                                                                 SubCategory:
                                                                                 <select id="" class="form-control input-sm">
