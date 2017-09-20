@@ -978,10 +978,10 @@
                                 </div>
                             </div>
                             <div class="form-group pull-right">
-                                <button type="button" class="btn btn-success btn-sm" title="Save Rule" data-toggle="modal" data-target="#">
+                                <button type="button" class="btn btn-success btn-sm" title="Save Rule" data-toggle="modal" data-target="#saveRuleModal">
                                     <i class="fa fa-save fa-lg"></i> Save
                                 </button>
-                                <button type="button" class="btn btn-danger btn-sm" title="Delete Rule" data-toggle="modal" data-target="#">
+                                <button type="button" class="btn btn-danger btn-sm" title="Delete Rule" data-toggle="modal" data-target="#deleteRuleModal">
                                     <i class="fa fa-trash-o fa-lg"></i> Delete
                                 </button>
                                 <div class="btn-group">
@@ -991,15 +991,15 @@
                                     </button>
                                     <ul class="dropdown-menu" style="right: 0; left: auto; font-size:13px">
                                         <li>
-                                            <a href="#" data-toggle="modal" data-target="#redirectBackupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
+                                            <a href="#" data-toggle="modal" data-target="#backupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
                                         </li>
                                         <li role="separator" class="divider"></li>
                                         <li>
-                                            <a href="#" data-toggle="modal" data-target="#redirectRuleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                            <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
                                         </li>
                                         <li role="separator" class="divider"></li>
                                         <li>
-                                            <a href="#" data-toggle="modal" data-target="#redirectRuleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                            <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
                                         </li>
                                         <!--<li role="separator" class="divider"></li>
                                         <li>
@@ -1708,6 +1708,311 @@
                 </div>
             </div>
             <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <div id="submitApprovalModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Submit for Approval</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This rule will be locked for approval. Continue?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">
+                        <i class="fa  fa-ban"></i>
+                        NO
+                    </button>
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        YES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="backupRuleModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog  modal-s6">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <label class="modal-title">Back Up Rule</label>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table class="table table-condensed table-hover table-bordered">
+                                <thead>
+                                    <tr class="active">
+                                        <th colspan="2" style="text-align:center"><button class="btn btn-success btn-xs">Compare</button></th>
+                                        <th style="text-align:center">Name</th>
+                                        <th style="text-align:center">Date</th>
+                                        <th style="text-align:center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                        <td width="5%" style="text-align:center;vertical-align:middle">1</td>
+                                        <td width="40%" style="text-align:center">
+                                            <strong>_macbook pro 13 1st back up</strong><br />
+                                            3 contents
+                                        </td>
+                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                        <td width="10%" style="text-align:center;vertical-align:middle">
+                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                <i class="fa fa-undo fa-lg"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                        <td width="5%" style="text-align:center;vertical-align:middle">2</td>
+                                        <td width="40%" style="text-align:center">
+                                            <strong>_macbook pro 13 2nd back up</strong><br />
+                                            3 contents
+                                        </td>
+                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                        <td width="10%" style="text-align:center;vertical-align:middle">
+                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                <i class="fa fa-undo fa-lg"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="5%" style="text-align:center;vertical-align:middle"><input name="versionSelect" type="radio" /></td>
+                                        <td width="5%" style="text-align:center;vertical-align:middle">3</td>
+                                        <td width="40%" style="text-align:center">
+                                            <strong>_macbook pro 13 3rd back up</strong><br />
+                                            6 contents
+                                        </td>
+                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                        <td width="10%" style="text-align:center;vertical-align:middle">
+                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                <i class="fa fa-undo fa-lg"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                <i class="fa fa-times fa-lg" style="color:red"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Create New Rule Back Up Version</div>
+                                <div class="panel-body">
+                                    <i class="text-danger">*</i> Name:<input id="" type="text" class="form-control" />
+                                    <i class="text-danger">*</i> Notes:<textarea id="" rows="2" cols="20" class="form-control"></textarea>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Create Version</button>
+                                                <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr class="active">
+                                        <th style="text-align:center"></th>
+                                        <th style="text-align:center">Current Rule Details</th>
+                                        <th style="text-align:center">Version (no.) Details</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center"></th>
+                                        <th style="text-align:center"></th>
+                                        <th style="text-align:center">
+                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                <i class="fa fa-undo fa-lg"></i> Restore this version
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="active">Created By</td>
+                                        <td style="padding-bottom:2px">Not Available</td>
+                                        <td style="padding-bottom:2px">pcmall_admin</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">Date</td>
+                                        <td style="padding-bottom:2px">Not Available</td>
+                                        <td style="padding-bottom:2px">08/03/2017 00:19 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">Name</td>
+                                        <td style="padding-bottom:2px">Not Available</td>
+                                        <td style="padding-bottom:2px">_macbook pro 13 1st back up</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">Notes</td>
+                                        <td style="padding-bottom:2px">Not Available</td>
+                                        <td style="padding-bottom:2px">3 contents</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">Rule ID</td>
+                                        <td style="padding-bottom:2px">_macbook pro 13</td>
+                                        <td style="padding-bottom:2px">_macbook pro 13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="active">Rule Name</td>
+                                        <td style="padding-bottom:2px">_macbook pro 13</td>
+                                        <td style="padding-bottom:2px">_macbook pro 13</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ruleCommentModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Rule Comment</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Username</th>
+                                <th>Status</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding-bottom:2px">05/03/2016 05:56 PM</td>
+                                <td style="padding-bottom:2px">pcmall_admin</td>
+                                <td style="padding-bottom:2px">EXPORTED</td>
+                                <td style="padding-bottom:2px">exported ni carl</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom:2px">05/03/2016 05:56 PM</td>
+                                <td style="padding-bottom:2px">pcmall_admin</td>
+                                <td style="padding-bottom:2px"> PUBLISHED	</td>
+                                <td style="padding-bottom:2px">published ni carl</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom:2px">05/03/2016 05:56 PM</td>
+                                <td style="padding-bottom:2px"> JBauca	</td>
+                                <td style="padding-bottom:2px"> PUBLISHED	</td>
+                                <td style="padding-bottom:2px">published ni carl</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row row-height">
+                        <div class="col-sm-12">
+                            <div class="page-cover">
+                                <div class="pager-number">1 to 2 of 2</div>
+                                <div class="pull-right reset-margin row-height">
+                                    <ul class="pagination reset-margin">
+                                        <li><a href="#">&laquo;</a></li>
+                                        <li>
+                                            <span class="page-number">
+                                                <input placeholder="Page" class="form-control input-small page-number">
+                                            </span>
+                                        </li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ruleVersionDownloadModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Download Rule Version</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Filename:<input id="" type="text" class="form-control input-sm" /><br />
+                            Type:<select id="" class="form-control input-sm">
+                                <option>Excel</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-sm">
+                        <i class="fa  fa-download"></i>
+                        Download
+                    </button>
+                    <a href="#" class="btn btn-warning btn-sm">
+                        <i class="fa fa-times-circle"></i>
+                        Clear
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="deleteRuleModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Delete Rule</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Delete this rule. Continue?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Ok
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">
+                        <i class="fa  fa-ban"></i>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="saveRuleModal" class="modal fade" role="dialog" style="font-size:13px">
+        <div class="modal-dialog modal-sm">
+            <div class="alert alert-success alert-dismissable">
+                <a href="#" class="close" data-dismiss="modal" aria-label="close">&times;</a>
+                <strong>Success!</strong> Rule Saved!
+            </div>
         </div>
     </div>
 </body>
