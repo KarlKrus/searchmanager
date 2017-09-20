@@ -624,7 +624,13 @@
                                                     </td>
                                                     <td style="text-align:center">new</td>
                                                 </tr>
-                                            </tbody>
+                                            </tbody><tfoot>
+                                            <tr>
+                                                <td colspan="3" style="text-align:center">
+                                                    <a href="#">Click here to download full list.</a>
+                                                </td>
+                                            </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                     <div id="typ" class="tab-pane fade in">
@@ -825,43 +831,43 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                             <div class="col-sm-12">
                                 <ul class="nav nav-tabs" style="font-size:13px">
                                     <li class="active">
-                                        <a data-toggle="tab" href="#ele">
+                                        <a data-toggle="tab" href="#eleProd">
                                             <label style="font-size:13px">Elevate</label>
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#dem">
+                                        <a data-toggle="tab" href="#demProd">
                                             <label style="font-size:13px">Demote</label>
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#exc">
+                                        <a data-toggle="tab" href="#excProd">
                                             <label style="font-size:13px">Exlude</label>
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#red">
+                                        <a data-toggle="tab" href="#redProd">
                                             <label style="font-size:13px">Redirect</label>
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#rel">
+                                        <a data-toggle="tab" href="#relProd">
                                             <label style="font-size:13px">Relevancy</label>
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#did">
+                                        <a data-toggle="tab" href="#didProd">
                                             <label style="font-size:13px">Did You Mean</label>
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#typ">
+                                        <a data-toggle="tab" href="#typProd">
                                             <label style="font-size:13px">Typeahead</label>
                                         </a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div id="ele" class="tab-pane fade in active">
+                                    <div id="eleProd" class="tab-pane fade in active">
                                         <br />
                                         <div class="row">
                                             <div class="col-sm-6">
@@ -928,17 +934,263 @@ OFF: all rules that you publish needs to be manually imported in the target stor
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div id="dem" class="tab-pane">
+                                    <div id="demProd" class="tab-pane fade in">
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label style="font-size:13px">Show: </label>
+                                                        <select id="" class="form-control input-sm">
+                                                            <option>All Rules</option>
+                                                            <option>Approved Rules for Deletion</option>
+                                                            <option>Approved Rules for Publishing</option>
+                                                            <option>Published Rules</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="pull-right">
+                                                    <label style="font-size:13px">3 Rule/s</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <table class="table table-condensed table-hover" style="font-size:13px">
+                                            <thead>
+                                                <tr style="text-align:center" class="active">
+                                                    <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
+                                                    <th width="50%" style="text-align:center">Rule Info</th>
+                                                    <th>Approval Status</th>
+                                                    <th>Request Type</th>
+                                                    <th>Production Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>Apple Iphone</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>cell phone cases</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>hp compaq</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div id="exc" class="tab-pane">
+                                    <div id="excProd" class="tab-pane fade in">
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label style="font-size:13px">Show: </label>
+                                                        <select id="" class="form-control input-sm">
+                                                            <option>All Rules</option>
+                                                            <option>Approved Rules for Deletion</option>
+                                                            <option>Approved Rules for Publishing</option>
+                                                            <option>Published Rules</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="pull-right">
+                                                    <label style="font-size:13px">3 Rule/s</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <table class="table table-condensed table-hover" style="font-size:13px">
+                                            <thead>
+                                                <tr style="text-align:center" class="active">
+                                                    <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
+                                                    <th width="50%" style="text-align:center">Rule Info</th>
+                                                    <th>Approval Status</th>
+                                                    <th>Request Type</th>
+                                                    <th>Production Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>Apple Iphone</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>cell phone cases</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>hp compaq</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div id="red" class="tab-pane">
+                                    <div id="redProd" class="tab-pane fade in">
                                     </div>
-                                    <div id="rel" class="tab-pane">
+                                    <div id="relProd" class="tab-pane fade in">
                                     </div>
-                                    <div id="did" class="tab-pane">
+                                    <div id="didProd" class="tab-pane fade in">
+                                        <br />
+                                        <p style="font-size:13px">
+                                            Max suggestion count:<strong> 4</strong> <br />
+                                            Requested by:<strong> pcmall_admin</strong><br />
+                                            Requested date:<strong> 09/13/2017 07:34 PM</strong><br />
+                                        </p>
+                                        <table class="table table-bordered table-hover" style="font-size:13px">
+                                            <thead>
+                                                <tr style="text-align:center" class="active">
+                                                    <th width="40%" style="text-align:center">Keyword Terms</th>
+                                                    <th width="40%" style="text-align:center">Suggestions</th>
+                                                    <th width="20%" style="text-align:center">Request Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label class="badge">macbook air</label>
+                                                        <label class="badge">macbook water</label>
+                                                        <label class="badge">macbook fire</label>
+                                                        <label class="badge">macbook earth</label>
+                                                    </td>
+                                                    <td>
+                                                        <label class="badge">macbook air</label>
+                                                        <label class="badge">apple macbook air</label>
+                                                        <label class="badge">apple mac</label>
+                                                        <label class="badge">apple macbook pro</label>
+                                                        <label class="badge">apple mac</label>
+                                                    </td>
+                                                    <td style="text-align:center">modified</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="badge">crt</label>
+                                                        <label class="badge">cathode</label>
+                                                    </td>
+                                                    <td>
+                                                        <label class="badge">cathode ray tube monitor </label>
+                                                        <label class="badge">crt monitor</label>
+                                                    </td>
+                                                    <td style="text-align:center">new</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="3" style="text-align:center">
+                                                        <a href="#">Click here to download full list.</a>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
                                     </div>
-                                    <div id="typ" class="tab-pane">
+                                    <div id="typProd" class="tab-pane fade in">
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label style="font-size:13px">Show: </label>
+                                                        <select id="" class="form-control input-sm">
+                                                            <option>All Rules</option>
+                                                            <option>Approved Rules for Deletion</option>
+                                                            <option>Approved Rules for Publishing</option>
+                                                            <option>Published Rules</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="pull-right">
+                                                    <label style="font-size:13px">3 Rule/s</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <table class="table table-condensed table-hover" style="font-size:13px">
+                                            <thead>
+                                                <tr style="text-align:center" class="active">
+                                                    <th style="text-align:center;vertical-align:middle"><input type="checkbox" /></th>
+                                                    <th width="50%" style="text-align:center">Rule Info</th>
+                                                    <th>Approval Status</th>
+                                                    <th>Request Type</th>
+                                                    <th>Production Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>Apple Iphone</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>cell phone cases</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center;vertical-align:middle"><input type="checkbox" /></td>
+                                                    <td>hp compaq</td>
+                                                    <td>Approved</td>
+                                                    <td>Update</td>
+                                                    <td>
+                                                        PUBLISHED
+                                                        07/13/2017 02:14 PM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
