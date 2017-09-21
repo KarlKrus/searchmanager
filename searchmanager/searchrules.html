@@ -289,7 +289,7 @@
             </script>
 
             <!--search rule landing page-->
-            <div id="searchruleLanding" style="display:block" class="row">
+            <div id="searchruleLanding" class="row">
                 <ol class="breadcrumb" style="margin-bottom: 5px;">
                     <li><a href="home.html">Home</a></li>
                     <li class="active">Search Rules</li>
@@ -5930,65 +5930,79 @@
                             </ul>
                             <div class="tab-content">
                                 <div id="imscat" class="tab-pane fade in active">
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Names)</label></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            Category : <a href="#">Use Category Code Instead >> </a>
-                                            <select id="" class="form-control input-sm">
-                                                <option>- Select Category -</option>
+                                    <script>
+                                        function catNameCodeSwitch() {
+                                            var catNameROw = document.getElementById('catNameROw');
+                                            var subCatNameRow = document.getElementById('subCatNameRow');
+                                            var catCodeRow = document.getElementById('catCodeRow');
+                                            var catSwitchBtn = document.getElementById('catSwitchBtn');
 
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            Manufacturer:
-                                            <select id="" class="form-control input-sm">
-                                                <option>- Select Manufacturer -</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            subCatNameegory:
-                                            <select id="" class="form-control input-sm">
-                                                <option>- Select subCatNameegory -</option>
+                                            if (catCodeRow.style.display == 'none') {
+                                                catCodeRow.style.display = 'table-row';
+                                                subCatNameRow.style.display = 'none';
+                                                catNameROw.style.display = 'none';
+                                                catSwitchBtn.innerHTML = 'Use category name instead >>';
+                                            } else {
+                                                catCodeRow.style.display = 'none';
+                                                subCatNameRow.style.display = 'table-row';
+                                                catNameROw.style.display = 'table-row';
+                                                catSwitchBtn.innerHTML = 'Use category code instead >>';
+                                            }
+                                        }
+                                    </script>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr id="catNameROw" style="display:none">
+                                                <td style="text-align:right;width:10%">Category :</td>
+                                                <td style="padding:2px 4px;width:40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Category  -</option>
 
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            Class:
-                                            <select id="" class="form-control input-sm">
-                                                <option>- Select Class -</option>
+                                                    </select>
+                                                </td>
+                                                <td style="text-align:right;width:10%">SubCategory:</td>
+                                                <td style="padding:2px 4px;width:40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Sub Category -</option>
 
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            SubClass:
-                                            <select id="" class="form-control input-sm">
-                                                <option>- Select SubClass -</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr id="subCatNameRow" style="display:none">
+                                                <td style="text-align:right;width:10%">Class:</td>
+                                                <td style="padding:2px 4px;width:40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Class -</option>
 
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-sm-12"><label>IMS Categories/Manufacturers (Using Category Codes)</label></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            Category : <a href="#">Use Category Name Instead >> </a>
-                                            <input id="" type="text" class="form-control input-sm" />
-                                        </div>
-                                        <div class="col-sm-6">
-                                            Manufacturer:
-                                            <select id="" class="form-control input-sm">
-                                                <option>- Select Manufacturer -</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                                    </select>
+                                                </td>
+                                                <td style="text-align:right;width:10%">SubClass:</td>
+                                                <td style="padding:2px 4px;width:40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select SubClass -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr id="catCodeRow">
+                                                <td style="text-align:right;width:10%">Category :</td>
+                                                <td style="padding:2px 4px;" colspan="3">
+                                                    <input id="" class="form-control input-sm">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:right;width:10%">Manufacturer:</td>
+                                                <td style="padding:2px 4px;width:40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Manufacturer -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td colspan="2" style="text-align:center;padding:2px 4px;vertical-align:middle"><button id="catSwitchBtn" class="btn btn-link" onclick="catNameCodeSwitch()">Use category name instead >></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
                                 </div>
                                 <div id="imsfacets" class="tab-pane fade in">
 
