@@ -1083,15 +1083,19 @@ label.error {
 
 /*9-25-2017 added by carl*/
 
+table > thead > tr > th {
+    text-align: left;
+}
+
 .table-condensed > tbody > tr > td {
     padding-top: 1px;
     padding-bottom: 1px;
 }
 
-.hidden{
-    display:none;
+.hidden {
+    display: none;
 }
 
-.font13{
-    font-size:13px
+.font13 {
+    font-size: 13px;
 }
