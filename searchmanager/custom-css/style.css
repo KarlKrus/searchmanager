@@ -78,7 +78,7 @@ body.loaded {
 /*right*/
 .wrapper .navbar-right .current-mall{
     height: 30px;
-    width: auto;
+    width: 120px;
 }
 .wrapper .navbar-right > li > a{
     line-height: 45px;
@@ -109,7 +109,7 @@ body.loaded {
 }
 .wrapper .navbar-left .current-mall{
     height: 30px;
-    width: auto;
+    width: 120px;
 }
 .wrapper .navbar-left > li > a{
     line-height: 45px;
@@ -373,7 +373,7 @@ body.loaded {
 .navbar-top-links .dropdown-wid3{width: 410px;}
 .navbar-top-links .current-mall {
     height: 15px;
-    width: auto;
+    width: 120px;
 }
 .page-header{
     padding-bottom: 9px;
