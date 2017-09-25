@@ -1087,6 +1087,11 @@ table > thead > tr > th {
     text-align: left;
 }
 
+.midCenter{
+    text-align: center;
+    vertical-align: middle;
+}
+
 .table-condensed > tbody > tr > td {
     padding-top: 1px;
     padding-bottom: 1px;
