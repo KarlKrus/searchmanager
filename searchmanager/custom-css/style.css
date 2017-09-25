@@ -107,7 +107,7 @@
     /*right*/
     .wrapper .navbar-right .current-mall {
         height: 30px;
-        width: 120px;
+        width: 120px; /*edited 09-25-2017*/
     }
 
     .wrapper .navbar-right > li > a {
@@ -1092,10 +1092,24 @@ table > thead > tr > th {
     padding-bottom: 1px;
 }
 
-.hidden {
-    display: none;
-}
-
 .font13 {
     font-size: 13px;
+}
+
+.drpdwnOpenLeft {
+    right: 0;
+    left: auto;
+}
+
+.roundTxt {
+    height: 26px;
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+.roundBtnAdd {
+    height: 26px;
+    font-size: 13px;
+    border-radius: 15px;
+    padding: 3px 7px 3px 7px;
 }
