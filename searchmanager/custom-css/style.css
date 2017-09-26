@@ -1087,7 +1087,7 @@ table > thead > tr > th {
     text-align: left;
 }
 
-.midCenter{
+.midCenter {
     text-align: center;
     vertical-align: middle;
 }
@@ -1106,6 +1106,7 @@ table > thead > tr > th {
     left: auto;
 }
 
+/*did you mean fields/controls design*/
 .roundTxt {
     height: 26px;
     border-radius: 15px;
@@ -1117,4 +1118,25 @@ table > thead > tr > th {
     font-size: 13px;
     border-radius: 15px;
     padding: 3px 7px 3px 7px;
+}
+
+.fgRed, .bgRed {
+    color: red;
+}
+
+.fgWhite, .bgWhite {
+    color: white;
+}
+
+.badgeNoColor {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10px;
 }
