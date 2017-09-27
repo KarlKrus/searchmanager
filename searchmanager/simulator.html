@@ -23,7 +23,7 @@
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
     <style>
-        .sortHandle {
+        .sort-handle {
             cursor: grab;
         }
     </style>
@@ -859,7 +859,7 @@
                                                 <div class="panel-body" style="padding:2px;overflow-y:auto;overflow-x:hidden;height:300px">
                                                     <script>
                                                         $(function () {
-                                                            $("#elevateItems").sortable({ handle: '.sortHandle' });
+                                                            $("#elevateItems").sortable({ handle: '.sort-handle' });
                                                             $("#elevateItems").disableSelection();
                                                         });
                                                     </script>
@@ -869,7 +869,7 @@
                                                                 <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                     <div class="form-inline">
                                                                         <div class="form-group">
-                                                                            <i class="fa fa-reorder sortHandle" style="color:grey"></i>
+                                                                            <i class="fa fa-reorder sort-handle" style="color:grey"></i>
                                                                             <div id="radio-switch" class="form-group">
                                                                                 <div class="btn-group btn-toggle" data-toggle="buttons">
                                                                                     <label class="btn btn-default btn-xs">
@@ -908,7 +908,7 @@
                                                                 <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                     <div class="form-inline">
                                                                         <div class="form-group">
-                                                                            <i class="fa fa-reorder sortHandle" style="color:grey"></i>
+                                                                            <i class="fa fa-reorder sort-handle" style="color:grey"></i>
                                                                         </div>
                                                                         <div class="form-group pull-right">
                                                                             <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -937,7 +937,7 @@
                                                                 <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                     <div class="form-inline">
                                                                         <div class="form-group">
-                                                                            <i class="fa fa-reorder sortHandle" style="color:grey"></i>
+                                                                            <i class="fa fa-reorder sort-handle" style="color:grey"></i>
                                                                         </div>
                                                                         <div class="form-group pull-right">
                                                                             <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -1020,7 +1020,7 @@
                                                 <div class="panel-body" style="padding:2px;overflow-y:auto;overflow-x:hidden;height:300px">
                                                     <script>
                                                         $(function () {
-                                                            $("#demoteItems").sortable({ handle: '.sortHandle' });
+                                                            $("#demoteItems").sortable({ handle: '.sort-handle' });
                                                             $("#demoteItems").disableSelection();
                                                         });
                                                     </script>
@@ -1030,7 +1030,7 @@
                                                                 <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                     <div class="form-inline">
                                                                         <div class="form-group">
-                                                                            <i class="fa fa-reorder sortHandle" style="color:grey"></i>
+                                                                            <i class="fa fa-reorder sort-handle" style="color:grey"></i>
                                                                         </div>
                                                                         <div class="form-group pull-right">
                                                                             <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -1059,7 +1059,7 @@
                                                                 <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                     <div class="form-inline">
                                                                         <div class="form-group">
-                                                                            <i class="fa fa-reorder sortHandle" style="color:grey"></i>
+                                                                            <i class="fa fa-reorder sort-handle" style="color:grey"></i>
                                                                         </div>
                                                                         <div class="form-group pull-right">
                                                                             <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -1088,7 +1088,7 @@
                                                                 <div class="panel-heading" style="padding:2px 7px 2px 7px">
                                                                     <div class="form-inline">
                                                                         <div class="form-group">
-                                                                            <i class="fa fa-reorder sortHandle" style="color:grey"></i>
+                                                                            <i class="fa fa-reorder sort-handle" style="color:grey"></i>
                                                                         </div>
                                                                         <div class="form-group pull-right">
                                                                             <a href="#"><i class="fa fa-times" style="color:red"></i></a>
@@ -1483,7 +1483,7 @@
     </div>
 
     <!--user profile modal-->
-    <div class="modal fade font13" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+    <div class="modal fade font-13" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1503,13 +1503,13 @@
                         </div>
                         &emsp;
                         <div class="form-group">
-                            <button type="button" class="close fgRed" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <button type="button" class="close fg-red" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                     </div>
                 </div>
                 <div class="modal-body">
                     <ul class="nav nav-tabs">
-                        <li class="active font13">
+                        <li class="active font-13">
                             <a data-toggle="tab" href="#userDetailsTab">
                                 <label>Edit Profile</label>
                             </a>
@@ -1526,9 +1526,9 @@
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div id="userDetailsTab" class="tab-pane fade in active font13">
+                        <div id="userDetailsTab" class="tab-pane fade in active font-13">
                             <br />
-                            <div class="form-inline midCenter">
+                            <div class="form-inline mid-center">
                                 <div class="form-group">
                                     <div>
                                         <label for="file-input" style="cursor:pointer">

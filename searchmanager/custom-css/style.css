@@ -1087,7 +1087,7 @@ table > thead > tr > th {
     text-align: left;
 }
 
-.midCenter {
+.mid-center {
     text-align: center;
     vertical-align: middle;
 }
@@ -1097,38 +1097,38 @@ table > thead > tr > th {
     padding-bottom: 1px;
 }
 
-.font13 {
+.font-13 {
     font-size: 13px;
 }
 
-.drpdwnOpenLeft {
+.dropdown-open-left {
     right: 0;
     left: auto;
 }
 
 /*did you mean fields/controls design*/
-.roundTxt {
+.round-text {
     height: 26px;
     border-radius: 15px;
     font-size: 11px;
 }
 
-.roundBtnAdd {
+.round-add-button {
     height: 26px;
     font-size: 13px;
     border-radius: 15px;
     padding: 3px 7px 3px 7px;
 }
 
-.fgRed, .bgRed {
+.fg-red, .bg-red {
     color: red;
 }
 
-.fgWhite, .bgWhite {
+.fg-white, .bg-white {
     color: white;
 }
 
-.badgeNoColor {
+.badge-no-color {
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -1142,7 +1142,7 @@ table > thead > tr > th {
 }
 
 /*sort handle*/
-.sortHandle {
+.sort-handle {
     cursor: grab;
     color: grey;
 }
