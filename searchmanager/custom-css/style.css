@@ -1120,6 +1120,14 @@ table > thead > tr > th {
     padding: 3px 7px 3px 7px;
 }
 
+.fg-blue{
+    color:dodgerblue;
+}
+
+.fg-green{
+    color:forestgreen;
+}
+
 .fg-red {
     color: red;
 }
@@ -1153,4 +1161,8 @@ table > thead > tr > th {
 
 .condensed-content{
     padding:2px 10px;
+}
+
+.force-add-color{
+    background:#faebcc;
 }
