@@ -1120,12 +1120,12 @@ table > thead > tr > th {
     padding: 3px 7px 3px 7px;
 }
 
-.fg-blue{
-    color:dodgerblue;
+.fg-blue {
+    color: dodgerblue;
 }
 
-.fg-green{
-    color:forestgreen;
+.fg-green {
+    color: forestgreen;
 }
 
 .fg-red {
@@ -1137,7 +1137,7 @@ table > thead > tr > th {
 }
 
 .fg-grey {
-    color:grey;
+    color: grey;
 }
 
 .badge-no-color {
@@ -1159,10 +1159,16 @@ table > thead > tr > th {
     color: grey;
 }
 
-.condensed-content{
-    padding:2px 10px;
+.condensed-content {
+    padding: 2px 10px;
 }
 
-.force-add-color{
-    background:#faebcc;
+.force-add-color {
+    background: #faebcc;
+}
+
+textarea {
+    resize:vertical!important;
+    min-height: 30px;
+    max-height: 150px;
 }
