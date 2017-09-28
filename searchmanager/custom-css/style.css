@@ -1093,6 +1093,16 @@ table > thead > tr > th {
     vertical-align: middle;
 }
 
+.mid-right {
+    text-align: right;
+    vertical-align: middle;
+}
+
+.mid-left {
+    text-align: left;
+    vertical-align: middle;
+}
+
 .table-condensed > tbody > tr > td {
     padding-top: 1px;
     padding-bottom: 1px;
@@ -1188,7 +1198,7 @@ textarea {
 }
 
 .rule-item-ul-style {
-    list-style-type: none!important;
+    list-style-type: none !important;
     margin: 0px;
     padding: 0px;
     width: 100%;
