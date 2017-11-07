@@ -70,7 +70,9 @@
     <Content Include="font-awesome\new\custom.css" />
     <Content Include="home.html" />
     <Content Include="images\ecost.png" />
+    <Content Include="images\facet_img.jpg" />
     <Content Include="images\gtx4.jpg" />
+    <Content Include="images\ims_img.jpg" />
     <Content Include="images\macmall.png" />
     <Content Include="images\macmallbd.png" />
     <Content Include="images\no-pic.png" />
@@ -78,6 +80,7 @@
     <Content Include="images\pcmalllogo.png" />
     <Content Include="images\pcmbd.png" />
     <Content Include="images\pcmg.png" />
+    <Content Include="images\productSiteTaxonomy_img.jpg" />
     <Content Include="images\smiconlogo.png" />
     <Content Include="images\smlogo.png" />
     <Content Include="js\bootstrap.min.js" />

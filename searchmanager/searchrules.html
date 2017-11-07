@@ -557,6 +557,15 @@
                                                     itemPositionFacet.style.display = 'block';
                                                 }
                                             }
+                                            function addIMSModalShow() {
+                                                $('#addIMSModal').modal('show');
+                                            }
+                                            function addFacetModalShow() {
+                                                $('#addFacetModal').modal('show');
+                                            }
+                                            function addPSTModalShow() {
+                                                $('#addPSTModal').modal('show');
+                                            }
                                         </script>
                                         <select id="drpdownElevate" class="form-control input-sm" title="Elevate Options">
                                             <option value="productitem">Product Items</option>
@@ -711,7 +720,7 @@
                     </script>
                     <ul id="elevatePanels" class="row rule-item-ul-style">
                         <li class="col-sm-3">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -742,7 +751,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -779,7 +788,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-warning">
+                            <div class="panel panel-warning rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -820,7 +829,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -857,7 +866,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-danger">
+                            <div class="panel panel-danger rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -898,7 +907,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -935,7 +944,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -966,7 +975,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -996,6 +1005,189 @@
                                             </p>
                                             <p>
                                                 <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="panel panel-default rule-panel">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <span class="badge sort-handle">5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                    </button>-->
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <label class="control-label font-13">Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="font-size:10.5px">
+                                            <p class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                            </p><br /> <br /><br />
+                                            <p>
+                                                <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="panel panel-default rule-panel">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <span class="badge sort-handle">6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                    </button>-->
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <label class="control-label font-13">Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="font-size:10.5px">
+                                            <p class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                            </p><br /> <br /><br />
+                                            <p>
+                                                <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="panel panel-default rule-panel">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <span class="badge sort-handle">7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                    </button>-->
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <label class="control-label font-13">Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="font-size:10.5px">
+                                            <p class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                            </p><br /> <br /><br />
+                                            <p>
+                                                <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
                                             </p>
                                         </div>
                                     </div>
@@ -1732,7 +1924,7 @@
                     </script>
                     <ul id="demotePanels" class="row rule-item-ul-style">
                         <li class="col-sm-3">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -1763,7 +1955,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -1800,7 +1992,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -1831,7 +2023,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -1868,7 +2060,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -1899,7 +2091,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -1936,7 +2128,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default">
+                            <div class="panel panel-default rule-panel">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -1967,7 +2159,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -1997,6 +2189,189 @@
                                             </p>
                                             <p>
                                                 <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="panel panel-default rule-panel">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <span class="badge sort-handle">5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                    </button>-->
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <label class="control-label font-13">Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="font-size:10.5px">
+                                            <p class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                            </p><br /> <br /><br />
+                                            <p>
+                                                <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="panel panel-default rule-panel">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <span class="badge sort-handle">6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                    </button>-->
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <label class="control-label font-13">Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="font-size:10.5px">
+                                            <p class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                            </p><br /> <br /><br />
+                                            <p>
+                                                <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="panel panel-default rule-panel">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <span class="badge sort-handle">7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
+                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                    </button>-->
+                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <label class="control-label font-13">Valid Until: </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="font-size:10.5px">
+                                            <p class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-smile-o fa-lg"></i>
+                                                </button>
+                                            </p><br /> <br /><br />
+                                            <p>
+                                                <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
                                             </p>
                                         </div>
                                     </div>
@@ -2717,7 +3092,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -2785,7 +3160,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -2853,7 +3228,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">
@@ -2921,7 +3296,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-responsive center-block img-thumbnail" alt="Responsive image" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <label class="control-label font-13">Valid Until: </label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control input-sm" placeholder="Select Date">

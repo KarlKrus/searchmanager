@@ -1204,3 +1204,7 @@ textarea {
     width: 100%;
     font-size: 13px;
 }
+
+.rule-panel{
+    height:242px;
+}
