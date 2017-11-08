@@ -22,7 +22,8 @@
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
-    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -755,14 +756,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -784,6 +782,11 @@
                                             <p>
                                                 <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
                                             </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
                                         </div>
                                     </div>
                                 </div>
@@ -833,14 +836,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -911,14 +911,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -979,14 +976,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -1031,8 +1025,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -1047,14 +1041,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -1092,8 +1083,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -1108,14 +1099,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -1153,8 +1141,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -1169,14 +1157,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -1828,7 +1813,7 @@
                                                         Rule Options
                                                         <span class="caret"></span>
                                                     </button>
-                                                    <ul class="dropdown-menu dropdown-open-left font-13" >
+                                                    <ul class="dropdown-menu dropdown-open-left font-13">
                                                         <li>
                                                             <a href="#" data-toggle="modal" data-target="#demoteBackupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
                                                         </li>
@@ -1959,14 +1944,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -2027,14 +2009,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -2094,14 +2073,10 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                           <br /><b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <br /><b class="font-10">Valid Until: </b>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
-                                        </div>
                                         <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
@@ -2163,14 +2138,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -2215,8 +2187,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -2231,14 +2203,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -2276,8 +2245,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -2292,14 +2261,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -2337,8 +2303,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -2353,14 +2319,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -2944,7 +2907,7 @@
                                 <div class="form-inline">
                                     <div class="form-group">
                                         <script type="text/javascript">
-                                           
+
                                             function addExcludeItem() {
                                                 var itemPositionFacet = document.getElementById("itemPositionFacet");
                                                 var itemPositionPST = document.getElementById("itemPositionPST");
@@ -3040,7 +3003,7 @@
                                                         Rule Options
                                                         <span class="caret"></span>
                                                     </button>
-                                                    <ul class="dropdown-menu dropdown-open-left font-13" >
+                                                    <ul class="dropdown-menu dropdown-open-left font-13">
                                                         <li>
                                                             <a href="#" data-toggle="modal" data-target="#excludeBackupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
                                                         </li>
@@ -3110,14 +3073,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -3178,14 +3138,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -3246,14 +3203,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -3314,14 +3268,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -3367,8 +3318,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -3383,14 +3334,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -3428,8 +3376,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -3444,14 +3392,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -3489,8 +3434,8 @@
                                                 <div class="form-inline">
                                                     <div class="form-group">
                                                         <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                        <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                    </button>-->
+                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
+                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -3505,14 +3450,11 @@
                                         <div class="col-sm-6">
                                             <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                                </span>
+                                            <div class="input-append date">
+                                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
                                         </div>
-                                       <div class="col-sm-6 font-10">
+                                        <div class="col-sm-6 font-10">
                                             <p class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
@@ -4170,7 +4112,7 @@
                                                                 Rule Options
                                                                 <span class="caret"></span>
                                                             </button>
-                                                            <ul class="dropdown-menu dropdown-open-left font-13" >
+                                                            <ul class="dropdown-menu dropdown-open-left font-13">
                                                                 <li>
                                                                     <a href="#" data-toggle="modal" data-target="#redirectBackupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
                                                                 </li>
@@ -5487,7 +5429,7 @@
                                                                 Rule Options
                                                                 <span class="caret"></span>
                                                             </button>
-                                                            <ul class="dropdown-menu dropdown-open-left font-13" >
+                                                            <ul class="dropdown-menu dropdown-open-left font-13">
                                                                 <li>
                                                                     <a href="#" data-toggle="modal" data-target="#relevancyCloneModal"><i class="fa fa-file fa-lg"></i> Clone</a>
                                                                 </li>
@@ -6327,62 +6269,68 @@
                     <div class="tab-content">
                         <div id="userDetailsTab" class="tab-pane fade in active font-13">
                             <br />
-                            <div class="form-inline mid-center">
-                                <div class="form-group">
-                                    <div>
-                                        <label for="file-input" style="cursor:pointer">
-                                            <img class="img-thumbnail center-block " alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
-                                        </label>
-                                        <input id="file-input" type="file" style="display:none" />
-                                    </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <h4>Username: carlson.cruz</h4>
-                                </div>
-                            </div>
-                            <br />
                             <div class="row">
-                                <div class="col-sm-4"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
-                                <div class="col-sm-4"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
-                                <div class="col-sm-4"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <label> Default Store:</label>
-                                    <select id="" class="form-control input-sm">
-                                        <option>MacMall</option>
-                                        <option>PCM</option>
-                                        <option>eCost</option>
-                                        <option>MacMall BD</option>
-                                        <option>PcMall BD</option>
-                                        <option>PCMG BD</option>
-                                    </select>
+                                <div class="col-sm-2">
+                                    <label for="file-input" style="cursor:pointer">
+                                        <img id="profilePic" class="img-thumbnail" alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
+                                    </label>
+                                    <input id="file-input" type="file" style="display:none" />
                                 </div>
-                                <div class="col-sm-4">
-                                    <label>Role:</label>
-                                    <select id="" class="form-control input-sm">
-                                        <option>ADMIN</option>
-                                        <option>APPROVER</option>
-                                        <option>ENCODER</option>
-                                        <option>GUEST</option>
-                                        <option>MANAGER</option>
-                                        <option>PUBLISHER</option>
-                                        <option>USER ADMIN</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-4">
-                                    <label> Validity: </label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                        </span>
+                                <div class="col-sm-10">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading condensed-content">
+                                            <h5><b>Username: carlson.cruz</b></h5>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-4"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
+                                                <div class="col-sm-4"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
+                                                <div class="col-sm-4"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label> Default Store:</label>
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>MacMall</option>
+                                                        <option>PCM</option>
+                                                        <option>eCost</option>
+                                                        <option>MacMall BD</option>
+                                                        <option>PcMall BD</option>
+                                                        <option>PCMG BD</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label>Role:</label>
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>ADMIN</option>
+                                                        <option>APPROVER</option>
+                                                        <option>ENCODER</option>
+                                                        <option>GUEST</option>
+                                                        <option>MANAGER</option>
+                                                        <option>PUBLISHER</option>
+                                                        <option>USER ADMIN</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label> Validity: </label>
+                                                    <script type="text/javascript">
+                                                        $(function () {
+                                                            $('.date').datetimepicker();
+                                                        });
+                                                    </script>
+                                                    <div class="input-group input-append date">
+                                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                        <span class="input-group-addon add-on">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <br />
                         </div>
                         <div id="changePassword" class="tab-pane fade in">
                             <br />
@@ -6441,11 +6389,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             Valid Until:
-                            <div class="input-group">
-                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                </span>
+                            <div class="input-append date">
+                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -6647,11 +6592,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             Valid Until:
-                            <div class="input-group">
-                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                </span>
+                            <div class="input-append date">
+                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -6832,11 +6774,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             Valid Until:
-                            <div class="input-group">
-                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                </span>
+                            <div class="input-append date">
+                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -6945,11 +6884,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             Valid Until:
-                            <div class="input-group">
-                                <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                </span>
+                            <div class="input-append date">
+                                <input type="date" class="form-control input-sm add-on" placeholder="Select Date">
                             </div>
                         </div>
                         <div class="col-sm-6">

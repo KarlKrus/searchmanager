@@ -22,6 +22,9 @@
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <style>
         .sort-handle {
             cursor: grab;
@@ -1524,62 +1527,68 @@
                     <div class="tab-content">
                         <div id="userDetailsTab" class="tab-pane fade in active font-13">
                             <br />
-                            <div class="form-inline mid-center">
-                                <div class="form-group">
-                                    <div>
-                                        <label for="file-input" style="cursor:pointer">
-                                            <img class="img-thumbnail center-block " alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
-                                        </label>
-                                        <input id="file-input" type="file" style="display:none" />
-                                    </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <h4>Username: carlson.cruz</h4>
-                                </div>
-                            </div>
-                            <br />
                             <div class="row">
-                                <div class="col-sm-4"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
-                                <div class="col-sm-4"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
-                                <div class="col-sm-4"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <label> Default Store:</label>
-                                    <select id="" class="form-control input-sm">
-                                        <option>MacMall</option>
-                                        <option>PCM</option>
-                                        <option>eCost</option>
-                                        <option>MacMall BD</option>
-                                        <option>PcMall BD</option>
-                                        <option>PCMG BD</option>
-                                    </select>
+                                <div class="col-sm-2">
+                                    <label for="file-input" style="cursor:pointer">
+                                        <img id="profilePic" class="img-thumbnail" alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
+                                    </label>
+                                    <input id="file-input" type="file" style="display:none" />
                                 </div>
-                                <div class="col-sm-4">
-                                    <label>Role:</label>
-                                    <select id="" class="form-control input-sm">
-                                        <option>ADMIN</option>
-                                        <option>APPROVER</option>
-                                        <option>ENCODER</option>
-                                        <option>GUEST</option>
-                                        <option>MANAGER</option>
-                                        <option>PUBLISHER</option>
-                                        <option>USER ADMIN</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-4">
-                                    <label> Validity: </label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                        </span>
+                                <div class="col-sm-10">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading condensed-content">
+                                            <h5><b>Username: carlson.cruz</b></h5>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-4"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
+                                                <div class="col-sm-4"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
+                                                <div class="col-sm-4"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label> Default Store:</label>
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>MacMall</option>
+                                                        <option>PCM</option>
+                                                        <option>eCost</option>
+                                                        <option>MacMall BD</option>
+                                                        <option>PcMall BD</option>
+                                                        <option>PCMG BD</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label>Role:</label>
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>ADMIN</option>
+                                                        <option>APPROVER</option>
+                                                        <option>ENCODER</option>
+                                                        <option>GUEST</option>
+                                                        <option>MANAGER</option>
+                                                        <option>PUBLISHER</option>
+                                                        <option>USER ADMIN</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label> Validity: </label>
+                                                    <script type="text/javascript">
+                                                        $(function () {
+                                                            $('.date').datetimepicker();
+                                                        });
+                                                    </script>
+                                                    <div class="input-group input-append date">
+                                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                        <span class="input-group-addon add-on">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <br />
                         </div>
                         <div id="changePassword" class="tab-pane fade in">
                             <br />

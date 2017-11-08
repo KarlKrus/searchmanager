@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-datetimepicker.css" />
     <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\plugins\metisMenu\metisMenu.min.css" />
@@ -89,6 +90,7 @@
     <Content Include="js\custom-js\cookie.js" />
     <Content Include="js\jquery-1.11.0.js" />
     <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\moment.js" />
     <Content Include="js\plugins\metisMenu\metisMenu.min.js" />
     <Content Include="js\sb-admin-2.js" />
     <Content Include="linguistics.html" />
@@ -110,6 +112,7 @@
     <Content Include="font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="font-awesome\fonts\FontAwesome.otf" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="js\bootstrap-datetimepicker.min.js" />
     <None Include="Properties\PublishProfiles\searchmanager.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
