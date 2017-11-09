@@ -402,13 +402,11 @@
                             </div>
                             <div class="form-inline pull-right">
                                 <div class="form-group"><h5>Set Current Date: </h5></div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                        </span>
-                                    </div>
+                                <div class="input-group input-append date">
+                                    <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                    <span class="input-group-addon add-on">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -1574,7 +1572,9 @@
                                                     <label> Validity: </label>
                                                     <script type="text/javascript">
                                                         $(function () {
-                                                            $('.date').datetimepicker();
+                                                            $('.date').datetimepicker({
+                                                                format: 'MM-dd-yyyy'
+                                                            });
                                                         });
                                                     </script>
                                                     <div class="input-group input-append date">
