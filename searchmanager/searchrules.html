@@ -676,7 +676,7 @@
                                     }
                                 }
                             });
-                            $("#elevatePanels").disableSelection();
+                            
                         });
 
 
@@ -696,7 +696,8 @@
                                     }
                                 }
                             });
-                            $("#elevatePanels").disableSelection();
+                            $("#eleItem1Options").prependTo('#eleItem1OptionsContainer');
+                            $("#eleItem1Date").prependTo('#eleItem1DateContainer');
                             $("#elevatePanels > li").css({ 'margin': '0', 'padding': '0' });
                             $("#elevatePanels > li > div ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
                             $('#elevatePanels .panel-body>.row>div.col-sm-6>p.pull-right').closest('div').removeClass('col-sm-6').addClass('col-sm-9');
@@ -719,7 +720,7 @@
                                     }
                                 }
                             });
-                            $("#elevatePanels").disableSelection();
+                            
                             $("#elevatePanels > li").css({ 'margin': '0', 'padding': '15 0' });
                             $("#elevatePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
                             $('#elevatePanels .panel-body>.row>div.col-sm-9>p.pull-right').closest('div').removeClass('col-sm-9').addClass('col-sm-6');
@@ -744,8 +745,10 @@
                                         <div class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="eleItem1DateContainer" class="form-group"></div>
+                                                    <div id="eleItem1OptionsContainer" class="form-group"></div>
                                                     <div class="form-group">
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                        <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
                                                     </div>
