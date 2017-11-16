@@ -72,6 +72,7 @@
     <Content Include="font-awesome\new\custom.css" />
     <Content Include="home.html" />
     <Content Include="images\ecost.png" />
+    <Content Include="images\expired_stamp50x16.png" />
     <Content Include="images\facet_img.jpg" />
     <Content Include="images\gtx4.jpg" />
     <Content Include="images\ims_img.jpg" />

@@ -689,7 +689,7 @@
                                 },
                                 placeholder: {
                                     element: function (clone, ui) {
-                                        return $('<li class="col-sm-12">' + clone[0].innerHTML + '</li>');
+                                        return $('<li class="col-sm-12" style="padding:0;margin:0">' + clone[0].innerHTML + '</li>');
                                     },
                                     update: function () {
                                         return;
@@ -697,7 +697,10 @@
                                 }
                             });
                             $("#elevatePanels").disableSelection();
-                            ;
+                            $("#elevatePanels > li").css({ 'margin': '0', 'padding': '0' });
+                            $("#elevatePanels > li > div ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
+                            $('#elevatePanels .panel-body>.row>div.col-sm-6>p.pull-right').closest('div').removeClass('col-sm-6').addClass('col-sm-9');
+                            $('#elevatePanels .panel-body>.row>div.col-sm-6').removeClass('col-sm-6').addClass('col-sm-3');
                         }
 
                         function elevateGridView() {
@@ -717,13 +720,16 @@
                                 }
                             });
                             $("#elevatePanels").disableSelection();
-                            ;
+                            $("#elevatePanels > li").css({ 'margin': '0', 'padding': '15 0' });
+                            $("#elevatePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
+                            $('#elevatePanels .panel-body>.row>div.col-sm-9>p.pull-right').closest('div').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#elevatePanels .panel-body>.row>div.col-sm-3').removeClass('col-sm-3').addClass('col-sm-6');
                         }
 
                     </script>
                     <ul id="elevatePanels" class="row rule-item-ul-style">
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -739,9 +745,6 @@
                                             <div class="pull-right">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -754,14 +757,17 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
+                                            <br />
+                                            <div id="eleItem1Date">
+                                                <b class="font-10">Valid Until: </b>
+                                                <div class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                            <div id="eleItem1Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -771,7 +777,7 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br />
+                                            </div><br /> <br />
                                             <p>
                                                 <b> Liebert </b>
                                                 <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
@@ -784,16 +790,11 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-warning rule-panel">
+                            <div class="panel panel-warning rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -834,7 +835,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -868,7 +869,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-danger rule-panel">
+                            <div class="panel panel-danger rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -909,7 +910,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -943,7 +944,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -974,7 +975,8 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <img src="images/expired_stamp50x16.png" class="center-block">
+                                            <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -1008,7 +1010,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -1039,7 +1041,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -1066,7 +1068,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -1097,7 +1099,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /> <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -1124,7 +1126,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -1155,7 +1157,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -1911,7 +1913,7 @@
                     </script>
                     <ul id="demotePanels" class="row rule-item-ul-style">
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -1942,7 +1944,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -1976,7 +1978,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -2007,7 +2009,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -2041,7 +2043,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-10">
@@ -2072,40 +2074,40 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /><b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
                                             </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
-                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                    <i class="fa fa-comment-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                    <i class="fa fa-file-text-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                    <i class="fa fa-user fa-lg"></i>
-                                                </button>
-                                            </p><br /> <br />
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
+                                            <div class="col-sm-6 font-10">
+                                                <p class="pull-right">
+                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                        <i class="fa fa-comment-o fa-lg"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                        <i class="fa fa-file-text-o fa-lg"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                        <i class="fa fa-user fa-lg"></i>
+                                                    </button>
+                                                </p><br /> <br />
+                                                <p>
+                                                    <b> Liebert </b>
+                                                    <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">SKU#: </span>13374814
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -2136,7 +2138,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -2170,7 +2172,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -2228,7 +2230,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -2286,7 +2288,7 @@
                             </div>
                         </li>
                         <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -3071,7 +3073,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -3136,7 +3138,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -3201,7 +3203,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -3266,7 +3268,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="images/gtx4.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
+                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br /> <b class="font-10">Valid Until: </b>
                                             <div class="input-append date">
                                                 <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
@@ -3301,7 +3303,7 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -3359,7 +3361,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -3417,7 +3419,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="panel panel-default rule-panel">
+                            <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-sm-6">
