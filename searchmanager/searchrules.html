@@ -713,6 +713,19 @@
                             $("#ele2SortContainer").removeClass('col-sm-10').addClass('col-sm-6');
                             $("#ele2DeleteBtnContainer").removeClass('col-sm-2').addClass('col-sm-6');
 
+                            //Elevate Item No. 3
+                            $('#ele3OptionsContainer').show();
+                            $('#ele3DateLblContainer').show();
+                            $('#ele3DateContainer').show();
+                            $("#ele3Options").prependTo('#ele3OptionsContainer');
+                            $("#ele3DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele3DateLblContainer');
+                            $("#ele3Date").prependTo('#ele3DateContainer');
+                            $("#ele3Details").removeClass('font-10').addClass('font-12');
+                            $('#ele3OrigImageContainer').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#ele3OrigOptionsContainer').closest('div').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();;
+                            $("#ele3SortContainer").removeClass('col-sm-10').addClass('col-sm-6');
+                            $("#ele3DeleteBtnContainer").removeClass('col-sm-2').addClass('col-sm-6');
+
                         }
 
                         function elevateListView() {
@@ -889,7 +902,7 @@
                             <div class="panel panel-danger rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-10">
+                                        <div id="ele3SortContainer" class="col-sm-10">
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
@@ -897,24 +910,24 @@
                                                     </div>
                                                     <div id="radio-switch" class="form-group">
                                                         <div class="btn-group btn-toggle" data-toggle="buttons">
-                                                            <label class="btn btn-default  btn-primary btn-xs">
-                                                                <input name="options" checked="checked" type="radio"> Normal
-                                                            </label>
                                                             <label class="btn btn-default btn-xs">
-                                                                <input name="options" value="option2" type="radio"> Force Add
+                                                                <input name="options" value="option2" type="radio"> Normal
+                                                            </label>
+                                                            <label class="btn btn-default btn-primary btn-xs">
+                                                                <input name="options" checked="checked" type="radio"> Force Add
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-2">
+                                        <div id="ele3DeleteBtnContainer" class="col-sm-2">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="ele3DateLblContainer" class="form-group" style="display: none;"></div>
+                                                    <div id="ele3DateContainer" class="form-group" style="display: none;"></div>
+                                                    <div id="ele3OptionsContainer" class="form-group" style="display: none;"></div>
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -926,15 +939,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                        <div id="ele3OrigImageContainer" class="col-sm-6">
+                                            <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
+                                            <br />
+                                            <div id="ele3OrigDateContainer">
+                                                <b id="ele3DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="ele3Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                        <div id="ele3OrigOptionsContainer" class="col-sm-6 font-10">
+                                            <div id="ele3Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -944,17 +960,19 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br />
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
+                                            </div><br /><br />
+                                            <div id="ele3Details">
+                                                <p>
+                                                    <b> Liebert </b>
+                                                    <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">SKU#: </span>13374814
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
