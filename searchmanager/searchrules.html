@@ -695,18 +695,21 @@
                             //Elevate Item No. 1
                             $("#ele1Options").prependTo('#ele1OptionsContainer');
                             $("#ele1Date").prependTo('#ele1DateContainer');
+                            $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1DateLblContainer');
                             $("#ele1Details").removeClass('font-10').addClass('font-12');
                             $('#ele1OrigImageContainer').removeClass('col-sm-6').addClass('col-sm-3');
                             $('#ele1OrigOptionsContainer').closest('div').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();;
-                            $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1DateLblContainer');
 
                             //Elevate Item No. 2
+                            $('#ele2OptionsContainer').show();
+                            $('#ele2DateLblContainer').show();
+                            $('#ele2DateContainer').show();
                             $("#ele2Options").prependTo('#ele2OptionsContainer');
+                            $("#ele2DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele2DateLblContainer');
                             $("#ele2Date").prependTo('#ele2DateContainer');
                             $("#ele2Details").removeClass('font-10').addClass('font-12');
                             $('#ele2OrigImageContainer').removeClass('col-sm-6').addClass('col-sm-3');
                             $('#ele2OrigOptionsContainer').closest('div').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();;
-                            $("#ele2DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele2DateLblContainer');
                             $("#ele2SortContainer").removeClass('col-sm-10').addClass('col-sm-6');
                             $("#ele2DeleteBtnContainer").removeClass('col-sm-2').addClass('col-sm-6');
 
@@ -827,9 +830,9 @@
                                         <div id="ele2DeleteBtnContainer" class="col-sm-2">
                                             <div class="pull-right">
                                                 <div class="form-inline">
-                                                    <div id="ele2DateLblContainer" class="form-group"></div>
-                                                    <div id="ele2DateContainer" class="form-group"></div>
-                                                    <div id="ele2OptionsContainer" class="form-group"></div>
+                                                    <div id="ele2DateLblContainer" class="form-group" style="display: none;"></div>
+                                                    <div id="ele2DateContainer" class="form-group" style="display: none;"></div>
+                                                    <div id="ele2OptionsContainer" class="form-group" style="display: none;"></div>
                                                     <div class="form-group">
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
@@ -880,8 +883,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="col-sm-3">
+                        </li>                       
+                         <!--Elevate Item No. 3-->
+                        <li id="ele3" class="col-sm-3">
                             <div class="panel panel-danger rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
