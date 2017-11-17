@@ -593,10 +593,10 @@
                                                 <option>Active</option>
                                                 <option>Expired</option>
                                             </select>
-                                            <button type="button" class="btn btn-link btn-xs" title="List View" onclick="elevateListView()">
+                                            <button id="eleListViewBtn" type="button" class="btn btn-link btn-xs" title="List View" onclick="elevateListView()">
                                                 <i class="fa fa-list fa-lg"></i>
                                             </button>
-                                            <button type="button" class="btn btn-link btn-xs" title="Grid View" onclick="elevateGridView()">
+                                            <button id="eleGridViewBtn" type="button" class="btn btn-link btn-xs" title="Grid View" onclick="elevateGridView()">
                                                 <i class="fa fa-th-large fa-lg"></i>
                                             </button>
                                         </div>
@@ -662,9 +662,9 @@
                     </div>
                     <!--elevate content panels-->
                     <script>
-
                         $(document).ready(function () {
-                            sortElevate()
+                            sortElevate();
+                            $('#eleGridViewBtn').prop('disabled', true);
                         });
 
                         function sortElevate() {
@@ -693,6 +693,7 @@
                             $("#elevatePanels > li > .panel ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
 
                             //Elevate Item No. 1
+                            $('#ele1OptionsDiv,#ele1DateLblDiv,#ele1DateDiv,#ele1ExpiredDiv').show();
                             $("#ele1Options").prependTo('#ele1OptionsDiv');
                             $("#ele1Date").prependTo('#ele1DateDiv');
                             $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1DateLblDiv');
@@ -701,10 +702,7 @@
                             $('#ele1OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
 
                             //Elevate Item No. 2
-                            $('#ele2OptionsDiv').show();
-                            $('#ele2DateLblDiv').show();
-                            $('#ele2DateDiv').show();
-                            $('#ele2ExpiredDiv').show();
+                            $('#ele2OptionsDiv,#ele2DateLblDiv,#ele2DateDiv,#ele2ExpiredDiv').show();
                             $("#ele2ExpiredImg").prependTo('#ele2ExpiredDiv');
                             $("#ele2Options").prependTo('#ele2OptionsDiv');
                             $("#ele2DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele2DateLblDiv');
@@ -716,9 +714,7 @@
                             $("#ele2DeleteBtnDiv").removeClass('col-sm-2').addClass('col-sm-6');
 
                             //Elevate Item No. 3
-                            $('#ele3OptionsDiv').show();
-                            $('#ele3DateLblDiv').show();
-                            $('#ele3DateDiv').show();
+                            $('#ele3OptionsDiv,#ele3DateLblDiv,#ele3DateDiv,#ele3ExpiredDiv').show();
                             $("#ele3Options").prependTo('#ele3OptionsDiv');
                             $("#ele3DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele3DateLblDiv');
                             $("#ele3Date").prependTo('#ele3DateDiv');
@@ -729,7 +725,7 @@
                             $("#ele3DeleteBtnDiv").removeClass('col-sm-2').addClass('col-sm-6');
 
                             //Elevate Item No. 4
-                            $('#ele4ExpiredDiv').show();
+                            $('#ele4OptionsDiv,#ele4DateLblDiv,#ele4DateDiv,#ele4ExpiredDiv').show();
                             $("#ele4Options").prependTo('#ele4OptionsDiv');
                             $("#ele4Date").prependTo('#ele4DateDiv');
                             $("#ele4ExpiredImg").prependTo('#ele4ExpiredDiv');
@@ -739,6 +735,7 @@
                             $('#ele4OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
 
                             //Elevate Item No. 5
+                            $('#ele5OptionsDiv,#ele5DateLblDiv,#ele5DateDiv,#ele5ExpiredDiv').show();
                             $("#ele5Options").prependTo('#ele5OptionsDiv');
                             $("#ele5Date").prependTo('#ele5DateDiv');
                             $("#ele5DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele5DateLblDiv');
@@ -747,6 +744,7 @@
                             $('#ele5OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
 
                             //Elevate Item No. 6
+                            $('#ele6OptionsDiv,#ele6DateLblDiv,#ele6DateDiv,#ele6ExpiredDiv').show();
                             $("#ele6Options").prependTo('#ele6OptionsDiv');
                             $("#ele6Date").prependTo('#ele6DateDiv');
                             $("#ele6DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele6DateLblDiv');
@@ -755,6 +753,7 @@
                             $('#ele6OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
 
                             //Elevate Item No. 7
+                            $('#ele7OptionsDiv,#ele7DateLblDiv,#ele7DateDiv,#ele7ExpiredDiv').show();
                             $("#ele7Options").prependTo('#ele7OptionsDiv');
                             $("#ele7Date").prependTo('#ele7DateDiv');
                             $("#ele7DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele7DateLblDiv');
@@ -769,24 +768,100 @@
                             $("#elevatePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
 
                             //Elevate Item No. 1
-                            $("#ele1Options").html('<br/>').prependTo('#ele1OrigOptionsDiv');
+                            $("#ele1Details").before('<br/><br/>');
+                            $("#ele1Options").prependTo('#ele1OrigOptionsDiv');
                             $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1OrigDateDiv');
                             $("#ele1Date").appendTo('#ele1OrigDateDiv');
                             $("#ele1Details").removeClass('font-12').addClass('font-10');
                             $('#ele1OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
                             $('#ele1OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#ele1OptionsDiv,#ele1DateLblDiv,#ele1DateDiv,#ele1ExpiredDiv').hide()
+
+                            //Elevate Item No. 2
+                            $("#ele2Details").before('<br/><br/>');
+                            $("#ele2ExpiredImg").prependTo('#ele2OrigImageDiv');
+                            $("#ele2Options").prependTo('#ele2OrigOptionsDiv');
+                            $("#ele2DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele2OrigDateDiv');
+                            $("#ele2Date").appendTo('#ele2OrigDateDiv');
+                            $("#ele2Details").removeClass('font-12').addClass('font-10');
+                            $('#ele2OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#ele2OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $("#ele2SortDiv").removeClass('col-sm-6').addClass('col-sm-10');
+                            $("#ele2DeleteBtnDiv").removeClass('col-sm-6').addClass('col-sm-2');
+                            $('#ele2OptionsDiv,#ele2DateLblDiv,#ele2DateDiv,#ele2ExpiredDiv').hide()
+
+                            //Elevate Item No. 3
+                            $("#ele3Details").before('<br/><br/>');
+                            $("#ele3ExpiredImg").prependTo('#ele3OrigImageDiv');
+                            $("#ele3Options").prependTo('#ele3OrigOptionsDiv');
+                            $("#ele3DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele3OrigDateDiv');
+                            $("#ele3Date").appendTo('#ele3OrigDateDiv');
+                            $("#ele3Details").removeClass('font-12').addClass('font-10');
+                            $('#ele3OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#ele3OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $("#ele3SortDiv").removeClass('col-sm-6').addClass('col-sm-10');
+                            $("#ele3DeleteBtnDiv").removeClass('col-sm-6').addClass('col-sm-2');
+                            $('#ele3OptionsDiv,#ele3DateLblDiv,#ele3DateDiv,#ele3ExpiredDiv').hide()
+
+                            //Elevate Item No. 4
+                            $("#ele4Details").before('<br/><br/>');
+                            $("#ele4ExpiredImg").prependTo('#ele4OrigImageDiv');
+                            $("#ele4Options").prependTo('#ele4OrigOptionsDiv');
+                            $("#ele4DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele4OrigDateDiv');
+                            $("#ele4Date").appendTo('#ele4OrigDateDiv');
+                            $("#ele4Details").removeClass('font-12').addClass('font-10');
+                            $('#ele4OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#ele4OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#ele4OptionsDiv,#ele4DateLblDiv,#ele4DateDiv,#ele4ExpiredDiv').hide()
+
+                            //Elevate Item No. 5
+                            $("#ele5Details").before('<br/><br/>');
+                            $("#ele5ExpiredImg").prependTo('#ele5OrigImageDiv');
+                            $("#ele5Options").prependTo('#ele5OrigOptionsDiv');
+                            $("#ele5DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele5OrigDateDiv');
+                            $("#ele5Date").appendTo('#ele5OrigDateDiv');
+                            $("#ele5Details").removeClass('font-12').addClass('font-10');
+                            $('#ele5OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#ele5OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#ele5OptionsDiv,#ele5DateLblDiv,#ele5DateDiv,#ele5ExpiredDiv').hide()
+
+                            //Elevate Item No. 6
+                            $("#ele6Details").before('<br/><br/>');
+                            $("#ele6ExpiredImg").prependTo('#ele6OrigImageDiv');
+                            $("#ele6Options").prependTo('#ele6OrigOptionsDiv');
+                            $("#ele6DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele6OrigDateDiv');
+                            $("#ele6Date").appendTo('#ele6OrigDateDiv');
+                            $("#ele6Details").removeClass('font-12').addClass('font-10');
+                            $('#ele6OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#ele6OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#ele6OptionsDiv,#ele6DateLblDiv,#ele6DateDiv,#ele6ExpiredDiv').hide();
+
+                            //Elevate Item No. 7
+                            $("#ele7Details").before('<br/><br/>');
+                            $("#ele7ExpiredImg").prependTo('#ele7OrigImageDiv');
+                            $("#ele7Options").prependTo('#ele7OrigOptionsDiv');
+                            $("#ele7DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele7OrigDateDiv');
+                            $("#ele7Date").appendTo('#ele7OrigDateDiv');
+                            $("#ele7Details").removeClass('font-12').addClass('font-10');
+                            $('#ele7OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#ele7OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#ele7OptionsDiv,#ele7DateLblDiv,#ele7DateDiv,#ele7ExpiredDiv').hide();
                         }
 
                         function elevateListView() {
                             $('#elevatePanels > li ').removeClass("col-sm-3").addClass('col-sm-12');
                             sortElevate();
                             elevateListViewTemplate();
+                            $('#eleGridViewBtn').prop('disabled', false);
+                            $('#eleListViewBtn').prop('disabled', true);
                         }
 
                         function elevateGridView() {
                             $('#elevatePanels > li ').removeClass("col-sm-12").addClass('col-sm-3');
                             sortElevate();
                             elevateGridViewTemplate();
+                            $('#eleListViewBtn').prop('disabled', false);
+                            $('#eleGridViewBtn').prop('disabled', true);
                         }
 
                     </script>
@@ -2218,6 +2293,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
