@@ -662,65 +662,55 @@
                     </div>
                     <!--elevate content panels-->
                     <script>
-                        $(function () {
+
+                        $(document).ready(function () {
+                            sortElevate()
+                        });
+
+                        function sortElevate() {
                             $("#elevatePanels").sortable({
                                 handle: '.sort-handle', start: function (event, ui) {
                                     clone = $(ui.item[0].outerHTML).clone();
                                 },
                                 placeholder: {
                                     element: function (clone, ui) {
-                                        return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
+                                        if ($('#elevatePanels > li ').hasClass('col-sm-3')) {
+                                            return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
+                                        } else if ($('#elevatePanels > li ').hasClass('col-sm-12')) {
+                                            return $('<li class="col-sm-12" style="padding:0;margin:0">' + clone[0].innerHTML + '</li>');
+                                        }
                                     },
                                     update: function () {
                                         return;
                                     }
                                 }
                             });
-                            
-                        });
 
+                        };
+
+                        function elevateListViewTemplate() {
+                            //Elevate Item No. 1
+                            $("#ele1Options").prependTo('#ele1OptionsContainer');
+                            $("#ele1Date").prependTo('#ele1DateContainer');
+                            $("#ele1DateLbl").removeClass('font-10').addClass('font-12');
+                            $("#ele1Details").removeClass('font-10').addClass('font-12');
+                            $('#ele1OrigOptionsContainer').closest('div').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();;
+                            $('#elevatePanels .panel-body>.row>div.col-sm-6').removeClass('col-sm-6').addClass('col-sm-3');
+                            $("#ele1DateLbl").prependTo('#ele1DateLblContainer');
+                            $("#elevatePanels > li").css({ 'margin': '0', 'padding': '0' });
+                            $("#elevatePanels > li > div ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
+
+                        }
 
                         function elevateListView() {
                             $('#elevatePanels > li ').removeClass("col-sm-3").addClass('col-sm-12');
-                            $("#elevatePanels").sortable({
-                                handle: '.sort-handle',
-                                start: function (event, ui) {
-                                    clone = $(ui.item[0].outerHTML).clone();
-                                },
-                                placeholder: {
-                                    element: function (clone, ui) {
-                                        return $('<li class="col-sm-12" style="padding:0;margin:0">' + clone[0].innerHTML + '</li>');
-                                    },
-                                    update: function () {
-                                        return;
-                                    }
-                                }
-                            });
-                            $("#eleItem1Options").prependTo('#eleItem1OptionsContainer');
-                            $("#eleItem1Date").prependTo('#eleItem1DateContainer');
-                            $("#elevatePanels > li").css({ 'margin': '0', 'padding': '0' });
-                            $("#elevatePanels > li > div ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
-                            $('#elevatePanels .panel-body>.row>div.col-sm-6>p.pull-right').closest('div').removeClass('col-sm-6').addClass('col-sm-9');
-                            $('#elevatePanels .panel-body>.row>div.col-sm-6').removeClass('col-sm-6').addClass('col-sm-3');
+                            sortElevate();
+                            elevateListViewTemplate();
                         }
 
                         function elevateGridView() {
                             $('#elevatePanels > li ').removeClass("col-sm-12").addClass('col-sm-3');
-                            $("#elevatePanels").sortable({
-                                handle: '.sort-handle',
-                                start: function (event, ui) {
-                                    clone = $(ui.item[0].outerHTML).clone();
-                                },
-                                placeholder: {
-                                    element: function (clone, ui) {
-                                        return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
-                                    },
-                                    update: function () {
-                                        return;
-                                    }
-                                }
-                            });
-                            
+                            sortElevate();
                             $("#elevatePanels > li").css({ 'margin': '0', 'padding': '15 0' });
                             $("#elevatePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
                             $('#elevatePanels .panel-body>.row>div.col-sm-9>p.pull-right').closest('div').removeClass('col-sm-9').addClass('col-sm-6');
@@ -729,6 +719,7 @@
 
                     </script>
                     <ul id="elevatePanels" class="row rule-item-ul-style">
+                        <!--Elevate Item No. 1-->
                         <li class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -745,8 +736,9 @@
                                         <div class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
-                                                    <div id="eleItem1DateContainer" class="form-group"></div>
-                                                    <div id="eleItem1OptionsContainer" class="form-group"></div>
+                                                    <div id="ele1DateLblContainer" class="form-group"></div>
+                                                    <div id="ele1DateContainer" class="form-group"></div>
+                                                    <div id="ele1OptionsContainer" class="form-group"></div>
                                                     <div class="form-group">
                                                         <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
@@ -760,17 +752,17 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
+                                            <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br />
-                                            <div id="eleItem1Date">
-                                                <b class="font-10">Valid Until: </b>
-                                                <div class="input-append date">
+                                            <div id="ele1OrigDateContainer">
+                                                <b id="ele1DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="ele1Date" class="input-append date">
                                                     <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <div id="eleItem1Options" class="pull-right">
+                                        <div id="ele1OrigOptionsContainer" class="col-sm-6 font-10">
+                                            <div id="ele1Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -780,17 +772,19 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </div><br /> <br />
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
+                                            </div><br /><br />
+                                            <div id="ele1Details">
+                                                <p>
+                                                    <b> Liebert </b>
+                                                    <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">SKU#: </span>13374814
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
