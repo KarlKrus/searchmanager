@@ -685,7 +685,6 @@
                                     }
                                 }
                             });
-
                         };
 
                         function elevateListViewTemplate() {
@@ -2040,71 +2039,118 @@
 
 
                     <script>
-                        $(function () {
+                        $(document).ready(function () {
+                            sortDemote();
+                            $('#eleGridViewBtn').prop('disabled', true);
+                        });
+
+                        function sortDemote() {
                             $("#demotePanels").sortable({
                                 handle: '.sort-handle', start: function (event, ui) {
                                     clone = $(ui.item[0].outerHTML).clone();
                                 },
                                 placeholder: {
                                     element: function (clone, ui) {
-                                        return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
+                                        if ($('#demotePanels > li ').hasClass('col-sm-3')) {
+                                            return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
+                                        } else if ($('#demotePanels > li ').hasClass('col-sm-12')) {
+                                            return $('<li class="col-sm-12" style="padding:0;margin:0">' + clone[0].innerHTML + '</li>');
+                                        }
                                     },
                                     update: function () {
                                         return;
                                     }
                                 }
                             });
-                            $("#demotePanels").disableSelection();
-                        });
+                        };
 
+                        function demoteListViewTemplate() {
+                            $("#demotePanels > li").css({ 'margin': '0', 'padding': '0' });
+                            $("#demotePanels > li > .panel ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
+
+                            //demote Item No. 1
+                            $('#dem1OptionsDiv,#dem1DateLblDiv,#dem1DateDiv,#dem1ExpiredDiv').show();
+                            $("#dem1Options").prependTo('#dem1OptionsDiv');
+                            $("#dem1Date").prependTo('#dem1DateDiv');
+                            $("#dem1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem1DateLblDiv');
+                            $("#dem1Details").removeClass('font-10').addClass('font-12');
+                            $('#dem1OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#dem1OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                            //demote Item No. 2
+                            $('#dem2OptionsDiv,#dem2DateLblDiv,#dem2DateDiv,#dem2ExpiredDiv').show();
+                            $("#dem2Options").prependTo('#dem2OptionsDiv');
+                            $("#dem2Date").prependTo('#dem2DateDiv');
+                            $("#dem2DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem2DateLblDiv');
+                            $("#dem2Details").removeClass('font-10').addClass('font-12');
+                            $('#dem2OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#dem2OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                            //demote Item No. 3
+                            $('#dem3OptionsDiv,#dem3DateLblDiv,#dem3DateDiv,#dem3ExpiredDiv').show();
+                            $("#dem3Options").prependTo('#dem3OptionsDiv');
+                            $("#dem3Date").prependTo('#dem3DateDiv');
+                            $("#dem3DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem3DateLblDiv');
+                            $("#dem3Details").removeClass('font-10').addClass('font-12');
+                            $('#dem3OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#dem3OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                            //demote Item No. 4
+                            $('#dem4OptionsDiv,#dem4DateLblDiv,#dem4DateDiv,#dem4ExpiredDiv').show();
+                            $("#dem4Options").prependTo('#dem4OptionsDiv');
+                            $("#dem4Date").prependTo('#dem4DateDiv');
+                            $("#dem4DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem4DateLblDiv');
+                            $("#dem4Details").removeClass('font-10').addClass('font-12');
+                            $('#dem4OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#dem4OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                            //demote Item No. 5
+                            $('#dem5OptionsDiv,#dem5DateLblDiv,#dem5DateDiv,#dem5ExpiredDiv').show();
+                            $("#dem5Options").prependTo('#dem5OptionsDiv');
+                            $("#dem5Date").prependTo('#dem5DateDiv');
+                            $("#dem5DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem5DateLblDiv');
+                            $("#dem5Details").removeClass('font-10').addClass('font-12');
+                            $('#dem5OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#dem5OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                            //demote Item No. 6
+                            $('#dem6OptionsDiv,#dem6DateLblDiv,#dem6DateDiv,#dem6ExpiredDiv').show();
+                            $("#dem6Options").prependTo('#dem6OptionsDiv');
+                            $("#dem6Date").prependTo('#dem6DateDiv');
+                            $("#dem6DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem6DateLblDiv');
+                            $("#dem6Details").removeClass('font-10').addClass('font-12');
+                            $('#dem6OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#dem6OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                            //demote Item No. 7
+                            $('#ele7OptionsDiv,#ele7DateLblDiv,#ele7DateDiv,#ele7ExpiredDiv').show();
+                            $("#ele7Options").prependTo('#ele7OptionsDiv');
+                            $("#ele7Date").prependTo('#ele7DateDiv');
+                            $("#ele7DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele7DateLblDiv');
+                            $("#ele7Details").removeClass('font-10').addClass('font-12');
+                            $('#ele7OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
+                            $('#ele7OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+
+                        }
 
                         function demoteListView() {
                             $('#demotePanels > li ').removeClass("col-sm-3").addClass('col-sm-12');
-                            $("#demotePanels").sortable({
-                                handle: '.sort-handle',
-                                start: function (event, ui) {
-                                    clone = $(ui.item[0].outerHTML).clone();
-                                },
-                                placeholder: {
-                                    element: function (clone, ui) {
-                                        return $('<li class="col-sm-12">' + clone[0].innerHTML + '</li>');
-                                    },
-                                    update: function () {
-                                        return;
-                                    }
-                                }
-                            });
-                            $("#demotePanels").disableSelection();
-                            ;
+                            sortDemote();
+                            demoteListViewTemplate()
                         }
 
                         function demoteGridView() {
                             $('#demotePanels > li ').removeClass("col-sm-12").addClass('col-sm-3');
-                            $("#demotePanels").sortable({
-                                handle: '.sort-handle',
-                                start: function (event, ui) {
-                                    clone = $(ui.item[0].outerHTML).clone();
-                                },
-                                placeholder: {
-                                    element: function (clone, ui) {
-                                        return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
-                                    },
-                                    update: function () {
-                                        return;
-                                    }
-                                }
-                            });
-                            $("#demotePanels").disableSelection();
-                            ;
+                            sortDemote();
                         }
 
                     </script>
                     <ul id="demotePanels" class="row rule-item-ul-style">
-                        <li class="col-sm-3">
+                        <li id="dem1" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem1SortDiv" class="col-sm-6">
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
@@ -2113,14 +2159,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div id="dem1DeleteBtnDiv" class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="dem1ExpiredDiv" class="form-group" style="display: none;"></div>
+                                                    <div id="dem1DateLblDiv" class="form-group"></div>
+                                                    <div id="dem1DateDiv" class="form-group"></div>
+                                                    <div id="dem1OptionsDiv" class="form-group"></div>
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                        <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
                                                     </div>
@@ -2131,15 +2178,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                        <div id="dem1OrigImageDiv" class="col-sm-6">
+                                            <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
+                                            <br />
+                                            <div id="dem1OrigDateDiv">
+                                                <b id="dem1DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="dem1Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                        <div id="dem1OrigOptionsDiv" class="col-sm-6 font-10">
+                                            <div id="dem1Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -2149,136 +2199,8 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br />
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel-grid-view">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-sm-10">
-                                            <div class="pull-left">
-                                                <div class="form-inline">
-                                                    <div class="form-group">
-                                                        <label class="badge sort-handle">2</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="pull-right">
-                                                <div class="form-inline">
-                                                    <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                            <i class="fa fa-times fa-lg fg-red"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
-                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                    <i class="fa fa-comment-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                    <i class="fa fa-file-text-o fa-lg"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                    <i class="fa fa-user fa-lg"></i>
-                                                </button>
-                                            </p><br /> <br />
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="panel panel-default rule-panel-grid-view">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-sm-10">
-                                            <div class="pull-left">
-                                                <div class="form-inline">
-                                                    <div class="form-group">
-                                                        <label class="badge sort-handle">3</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="pull-right">
-                                                <div class="form-inline">
-                                                    <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                            <i class="fa fa-times fa-lg fg-red"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                            <br /><b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                            </div>
-                                            <div class="col-sm-6 font-10">
-                                                <p class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </p><br /> <br />
+                                            </div><br /> <br />
+                                            <div id="dem1Details">
                                                 <p>
                                                     <b> Liebert </b>
                                                     <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
@@ -2295,27 +2217,28 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-sm-3">
+                        <li id="dem2" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem2SortDiv" class="col-sm-6">
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <label class="badge sort-handle">4</label>
+                                                        <label class="badge sort-handle">2</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div id="dem2DeleteBtnDiv" class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="dem2ExpiredDiv" class="form-group" style="display: none;"></div>
+                                                    <div id="dem2DateLblDiv" class="form-group"></div>
+                                                    <div id="dem2DateDiv" class="form-group"></div>
+                                                    <div id="dem2OptionsDiv" class="form-group"></div>
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
-                                                        <button type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                        <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
                                                     </div>
@@ -2326,15 +2249,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <br /><img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                        <div id="dem2OrigImageDiv" class="col-sm-6">
+                                            <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
+                                            <br />
+                                            <div id="dem2OrigDateDiv">
+                                                <b id="dem2DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="dem2Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                        <div id="dem2OrigOptionsDiv" class="col-sm-6 font-10">
+                                            <div id="dem2Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -2344,27 +2270,100 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br />
-                                            <p>
-                                                <b> Liebert </b>
-                                                <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                            </p>
-                                            <p>
-                                                <span class="text-success">SKU#: </span>13374814
-                                            </p>
-                                            <p>
-                                                <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                            </p>
+                                            </div><br /> <br />
+                                            <div id="dem2Details">
+                                                <p>
+                                                    <b> Liebert </b>
+                                                    <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">SKU#: </span>13374814
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-sm-3">
+                        <li id="dem3" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem3SortDiv" class="col-sm-6">
+                                            <div class="pull-left">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <label class="badge sort-handle">3</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dem3DeleteBtnDiv" class="col-sm-6">
+                                            <div class="pull-right">
+                                                <div class="form-inline">
+                                                    <div id="dem3ExpiredDiv" class="form-group" style="display: none;"></div>
+                                                    <div id="dem3DateLblDiv" class="form-group"></div>
+                                                    <div id="dem3DateDiv" class="form-group"></div>
+                                                    <div id="dem3OptionsDiv" class="form-group"></div>
+                                                    <div class="form-group">
+                                                        <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
+                                                            <i class="fa fa-times fa-lg fg-red"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div id="dem3OrigImageDiv" class="col-sm-6">
+                                            <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
+                                            <br />
+                                            <div id="dem3OrigDateDiv">
+                                                <b id="dem3DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="dem3Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dem3OrigOptionsDiv" class="col-sm-6 font-10">
+                                            <div id="dem3Options" class="pull-right">
+                                                <button type="button" class="btn btn-link btn-xs" title="Comment">
+                                                    <i class="fa fa-comment-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Audit">
+                                                    <i class="fa fa-file-text-o fa-lg"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-xs" title="Modified by">
+                                                    <i class="fa fa-user fa-lg"></i>
+                                                </button>
+                                            </div><br /> <br />
+                                            <div id="dem3Details">
+                                                <p>
+                                                    <b> Liebert </b>
+                                                    <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">SKU#: </span>13374814
+                                                </p>
+                                                <p>
+                                                    <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="dem4" class="col-sm-3">
+                            <div class="panel panel-default rule-panel-grid-view">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div id="dem4SortDiv" class="col-sm-6">
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
@@ -2373,13 +2372,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div id="dem4DeleteBtnDiv" class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="dem4ExpiredDiv" class="form-group" style="display: none;"></div>
+                                                    <div id="dem4DateLblDiv" class="form-group"></div>
+                                                    <div id="dem4DateDiv" class="form-group"></div>
+                                                    <div id="dem4OptionsDiv" class="form-group"></div>
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -2391,15 +2391,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem4OrigImageDiv" class="col-sm-6">
                                             <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                            <br />
+                                            <div id="dem4OrigDateDiv">
+                                                <b id="dem4DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="dem4Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                        <div id="dem4OrigOptionsDiv" class="col-sm-6 font-10">
+                                            <div id="dem4Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -2409,20 +2412,22 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br /><br />
-                                            <p>
-                                                <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
-                                            </p>
+                                            </div><br /><br />
+                                            <div id="dem4Details">
+                                                <p>
+                                                    <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-sm-3">
+                        <li id="dem5" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem5SortDiv" class="col-sm-6">
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
@@ -2431,13 +2436,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div id="dem5DeleteBtnDiv" class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="dem5ExpiredDiv" class="form-group" style="display: none;"></div>
+                                                    <div id="dem5DateLblDiv" class="form-group"></div>
+                                                    <div id="dem5DateDiv" class="form-group"></div>
+                                                    <div id="dem5OptionsDiv" class="form-group"></div>
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -2449,15 +2455,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem5OrigImageDiv" class="col-sm-6">
                                             <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                            <br />
+                                            <div id="dem5OrigDateDiv">
+                                                <b id="dem5DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="dem5Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                        <div id="dem5OrigOptionsDiv" class="col-sm-6 font-10">
+                                            <div id="dem5Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -2467,20 +2476,22 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br /><br />
-                                            <p>
-                                                <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
-                                            </p>
+                                            </div> <br /><br />
+                                            <div id="dem5Details">
+                                                <p>
+                                                    <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-sm-3">
+                        <li id="dem6" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem6SortDiv" class="col-sm-6">
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
@@ -2489,13 +2500,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div id="dem6DeleteBtnDiv" class="col-sm-6">
                                             <div class="pull-right">
                                                 <div class="form-inline">
+                                                    <div id="dem6ExpiredDiv" class="form-group" style="display: none;"></div>
+                                                    <div id="dem6DateLblDiv" class="form-group"></div>
+                                                    <div id="dem6DateDiv" class="form-group"></div>
+                                                    <div id="dem6OptionsDiv" class="form-group"></div>
                                                     <div class="form-group">
-                                                        <!--<button type="button" class="btn btn-link btn-xs" title="Sort">
-                                                            <i class="fa  fa-sort-numeric-asc fa-lg"></i>
-                                                        </button>-->
                                                         <button type="button" class="btn btn-link btn-xs" title="Delete Item">
                                                             <i class="fa fa-times fa-lg fg-red"></i>
                                                         </button>
@@ -2507,15 +2519,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div id="dem6OrigImageDiv" class="col-sm-6">
                                             <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                            <br /> <b class="font-10">Valid Until: </b>
-                                            <div class="input-append date">
-                                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                            <br />
+                                            <div id="dem6OrigDateDiv">
+                                                <b id="dem6DateLbl" class="font-10">Valid Until: </b>
+                                                <div id="dem6Date" class="input-append date">
+                                                    <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 font-10">
-                                            <p class="pull-right">
+                                        <div id="dem6OrigOptionsDiv" class="col-sm-6 font-10">
+                                            <div id="dem6Options" class="pull-right">
                                                 <button type="button" class="btn btn-link btn-xs" title="Comment">
                                                     <i class="fa fa-comment-o fa-lg"></i>
                                                 </button>
@@ -2525,10 +2540,12 @@
                                                 <button type="button" class="btn btn-link btn-xs" title="Modified by">
                                                     <i class="fa fa-user fa-lg"></i>
                                                 </button>
-                                            </p><br /> <br /><br />
-                                            <p>
-                                                <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
-                                            </p>
+                                            </div><br /><br />
+                                            <div id="dem6Details">
+                                                <p>
+                                                    <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
