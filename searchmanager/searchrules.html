@@ -688,6 +688,8 @@
                         };
 
                         function elevateListViewTemplate() {
+                            $('#eleGridViewBtn').prop('disabled', false);
+                            $('#eleListViewBtn').prop('disabled', true);
                             $("#elevatePanels > li").css({ 'margin': '0', 'padding': '0' });
                             $("#elevatePanels > li > .panel ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
 
@@ -763,6 +765,8 @@
                         }
 
                         function elevateGridViewTemplate() {
+                            $('#eleListViewBtn').prop('disabled', false);
+                            $('#eleGridViewBtn').prop('disabled', true);
                             $("#elevatePanels > li").css({ 'margin': '0', 'padding': '15 0' });
                             $("#elevatePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
 
@@ -851,16 +855,12 @@
                             $('#elevatePanels > li ').removeClass("col-sm-3").addClass('col-sm-12');
                             sortElevate();
                             elevateListViewTemplate();
-                            $('#eleGridViewBtn').prop('disabled', false);
-                            $('#eleListViewBtn').prop('disabled', true);
                         }
 
                         function elevateGridView() {
                             $('#elevatePanels > li ').removeClass("col-sm-12").addClass('col-sm-3');
                             sortElevate();
                             elevateGridViewTemplate();
-                            $('#eleListViewBtn').prop('disabled', false);
-                            $('#eleGridViewBtn').prop('disabled', true);
                         }
 
                     </script>
@@ -1968,10 +1968,10 @@
                                                 <option>Active</option>
                                                 <option>Expired</option>
                                             </select>
-                                            <button type="button" class="btn btn-link btn-xs" title="List View" onclick="demoteListView()">
+                                            <button id="demListViewBtn" type="button" class="btn btn-link btn-xs" title="List View" onclick="demoteListView()">
                                                 <i class="fa fa-list fa-lg"></i>
                                             </button>
-                                            <button type="button" class="btn btn-link btn-xs" title="Grid View" onclick="demoteGridView()">
+                                            <button id="demGridViewBtn" type="button" class="btn btn-link btn-xs" title="Grid View" onclick="demoteGridView()">
                                                 <i class="fa fa-th-large fa-lg"></i>
                                             </button>
                                         </div>
@@ -2065,6 +2065,8 @@
                         };
 
                         function demoteListViewTemplate() {
+                            $('#demGridViewBtn').prop('disabled', false);
+                            $('#demListViewBtn').prop('disabled', true);
                             $("#demotePanels > li").css({ 'margin': '0', 'padding': '0' });
                             $("#demotePanels > li > .panel ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
 
@@ -2121,16 +2123,73 @@
                             $("#dem6Details").removeClass('font-10').addClass('font-12');
                             $('#dem6OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
                             $('#dem6OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+                        }
 
-                            //demote Item No. 7
-                            $('#ele7OptionsDiv,#ele7DateLblDiv,#ele7DateDiv,#ele7ExpiredDiv').show();
-                            $("#ele7Options").prependTo('#ele7OptionsDiv');
-                            $("#ele7Date").prependTo('#ele7DateDiv');
-                            $("#ele7DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele7DateLblDiv');
-                            $("#ele7Details").removeClass('font-10').addClass('font-12');
-                            $('#ele7OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele7OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
+                        function demoteGridViewTemplate() {
+                            $('#demListViewBtn').prop('disabled', false);
+                            $('#demGridViewBtn').prop('disabled', true);
+                            $("#demotePanels > li").css({ 'margin': '0', 'padding': '15 0' });
+                            $("#demotePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
 
+                            //demote Item No. 1
+                            $("#dem1Details").before('<br/><br/>');
+                            $("#dem1Options").prependTo('#dem1OrigOptionsDiv');
+                            $("#dem1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem1OrigDateDiv');
+                            $("#dem1Date").appendTo('#dem1OrigDateDiv');
+                            $("#dem1Details").removeClass('font-12').addClass('font-10');
+                            $('#dem1OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#dem1OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#dem1OptionsDiv,#dem1DateLblDiv,#dem1DateDiv,#dem1ExpiredDiv').hide()
+
+                            //demote Item No. 2
+                            $("#dem2Details").before('<br/><br/>');
+                            $("#dem2Options").prependTo('#dem2OrigOptionsDiv');
+                            $("#dem2DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem2OrigDateDiv');
+                            $("#dem2Date").appendTo('#dem2OrigDateDiv');
+                            $("#dem2Details").removeClass('font-12').addClass('font-10');
+                            $('#dem2OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#dem2OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#dem2OptionsDiv,#dem2DateLblDiv,#dem2DateDiv,#dem2ExpiredDiv').hide()
+
+                            //demote Item No. 3
+                            $("#dem3Details").before('<br/><br/>');
+                            $("#dem3Options").prependTo('#dem3OrigOptionsDiv');
+                            $("#dem3DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem3OrigDateDiv');
+                            $("#dem3Date").appendTo('#dem3OrigDateDiv');
+                            $("#dem3Details").removeClass('font-12').addClass('font-10');
+                            $('#dem3OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#dem3OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#dem3OptionsDiv,#dem3DateLblDiv,#dem3DateDiv,#dem3ExpiredDiv').hide()
+
+                            //demote Item No. 4
+                            $("#dem4Details").before('<br/><br/>');
+                            $("#dem4Options").prependTo('#dem4OrigOptionsDiv');
+                            $("#dem4DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem4OrigDateDiv');
+                            $("#dem4Date").appendTo('#dem4OrigDateDiv');
+                            $("#dem4Details").removeClass('font-12').addClass('font-10');
+                            $('#dem4OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#dem4OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#dem4OptionsDiv,#dem4DateLblDiv,#dem4DateDiv,#dem4ExpiredDiv').hide()
+
+                            //demote Item No. 5
+                            $("#dem5Details").before('<br/><br/>');
+                            $("#dem5Options").prependTo('#dem5OrigOptionsDiv');
+                            $("#dem5DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem5OrigDateDiv');
+                            $("#dem5Date").appendTo('#dem5OrigDateDiv');
+                            $("#dem5Details").removeClass('font-12').addClass('font-10');
+                            $('#dem5OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#dem5OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#dem5OptionsDiv,#dem5DateLblDiv,#dem5DateDiv,#dem5ExpiredDiv').hide()
+
+                            //demote Item No. 6
+                            $("#dem6Details").before('<br/><br/>');
+                            $("#dem6Options").prependTo('#dem6OrigOptionsDiv');
+                            $("#dem6DateLbl").removeClass('font-10').addClass('font-12').prependTo('#dem6OrigDateDiv');
+                            $("#dem6Date").appendTo('#dem6OrigDateDiv');
+                            $("#dem6Details").removeClass('font-12').addClass('font-10');
+                            $('#dem6OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
+                            $('#dem6OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
+                            $('#dem6OptionsDiv,#dem6DateLblDiv,#dem6DateDiv,#dem6ExpiredDiv').hide()
                         }
 
                         function demoteListView() {
@@ -2142,10 +2201,12 @@
                         function demoteGridView() {
                             $('#demotePanels > li ').removeClass("col-sm-12").addClass('col-sm-3');
                             sortDemote();
+                            demoteGridViewTemplate();
                         }
 
                     </script>
                     <ul id="demotePanels" class="row rule-item-ul-style">
+                        <!--Demote Item No.1-->
                         <li id="dem1" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -2217,6 +2278,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!--Demote Item No.2-->
                         <li id="dem2" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -2288,6 +2350,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!--Demote Item No.3-->
                         <li id="dem3" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -2359,6 +2422,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!--Demote Item No.4-->
                         <li id="dem4" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -2367,7 +2431,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <span class="badge sort-handle">5</span>
+                                                        <span class="badge sort-handle">4</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2423,6 +2487,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!--Demote Item No.5-->
                         <li id="dem5" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -2431,7 +2496,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <span class="badge sort-handle">6</span>
+                                                        <span class="badge sort-handle">5</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2487,6 +2552,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!--Demote Item No.6-->
                         <li id="dem6" class="col-sm-3">
                             <div class="panel panel-default rule-panel-grid-view">
                                 <div class="panel-heading">
@@ -2495,7 +2561,7 @@
                                             <div class="pull-left">
                                                 <div class="form-inline">
                                                     <div class="form-group">
-                                                        <span class="badge sort-handle">7</span>
+                                                        <span class="badge sort-handle">6</span>
                                                     </div>
                                                 </div>
                                             </div>
