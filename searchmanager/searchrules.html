@@ -695,6 +695,7 @@
 
                             //Elevate Item No. 1
                             $('#ele1OptionsDiv,#ele1DateLblDiv,#ele1DateDiv,#ele1ExpiredDiv').show();
+                            $("#ele1DaysValid").prependTo('#ele1ExpiredDiv');
                             $("#ele1Options").prependTo('#ele1OptionsDiv');
                             $("#ele1Date").prependTo('#ele1DateDiv');
                             $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1DateLblDiv');
@@ -772,6 +773,7 @@
 
                             //Elevate Item No. 1
                             $("#ele1Details").before('<br/><br/>');
+                            $("#ele1DaysValid").prependTo('#ele1OrigImageDiv');
                             $("#ele1Options").prependTo('#ele1OrigOptionsDiv');
                             $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1OrigDateDiv');
                             $("#ele1Date").appendTo('#ele1OrigDateDiv');
@@ -899,6 +901,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div id="ele1OrigImageDiv" class="col-sm-6">
+                                            <b id="ele1DaysValid" class="text-info">8 days left</b>
                                             <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br />
                                             <div id="ele1OrigDateDiv">
@@ -981,7 +984,7 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div id="ele2OrigImageDiv" class="col-sm-6">
-                                            <img id="ele2ExpiredImg" src="images/expired_stamp50x16.png" class="center-block">
+                                            <img id="ele2ExpiredImg" src="images/expired_stamp50x16.png" height="16" class="center-block">
                                             <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
                                             <br />
                                             <div id="ele2OrigDateDiv">
@@ -3106,7 +3109,8 @@
                 <!--exclude crud form-->
                 <div id="excludeCRUD" style="display:none">
                     <ol class="breadcrumb">
-                        <li><a href="#" onclick="searchRulelandingPage()">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#" onclick="searchRulelandingPage()">Search Rules</a></li>
                         <li><a href="#" onclick="excludeKWLSHOW()">Keyword List</a></li>
                         <li class="active">Exclude</li>
                     </ol>
@@ -4363,7 +4367,8 @@
                 <!--redirect crud form-->
                 <div id="redirectCRUD" style="display:none">
                     <ol class="breadcrumb">
-                        <li><a href="#" onclick="searchRulelandingPage()">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#" onclick="searchRulelandingPage()">Search Rules</a></li>
                         <li><a href="#" onclick="redirectKWLSHOW()">Keyword List</a></li>
                         <li class="active">Redirect</li>
                     </ol>
