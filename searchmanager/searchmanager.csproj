@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap-datepicker.css" />
-    <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\plugins\metisMenu\metisMenu.min.css" />
     <Content Include="css\sb-admin-2.css" />
@@ -113,7 +112,6 @@
     <Content Include="font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="font-awesome\fonts\FontAwesome.otf" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="js\bootstrap-datetimepicker.min.js" />
     <None Include="Properties\PublishProfiles\searchmanager.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
