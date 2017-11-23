@@ -23,8 +23,8 @@
     <script src="js/custom-js/cookie.js"></script>
     <script src="js/sb-admin-2.js"></script>
     <script src="js/moment.js"></script>
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
-    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="js/bootstrap-datepicker.js"></script>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
 </head>
 <body>
     <div class="wrapper" id="wrapper">
@@ -1477,8 +1477,10 @@
                                                     <label> Validity: </label>
                                                     <script type="text/javascript">
                                                         $(function () {
-                                                            $('.date').datetimepicker({
-                                                                format: 'MM-dd-yyyy'
+                                                            $('.date').datepicker({
+                                                                todayHighlight: true,
+                                                                todayBtn: true,
+                                                                clearBtn: true
                                                             });
                                                         });
                                                     </script>
