@@ -234,7 +234,6 @@
                 </div>
 
             </div>
-
             <!--audit trail module-->
             <div id="auditTrailModule" class="row" style="display:none">
                 <ol class="breadcrumb">
@@ -249,120 +248,149 @@
                                 <div class="form-inline">
                                     <div class="form-group">
                                         <label>Filters:</label> &nbsp;
-                                        <input id="" type="text" class="form-control input-sm" placeholder="Keyword" size="13" />
-                                        <select id="" class="form-control input-sm" style="width:100px">
-                                            <option>demote</option>
-                                            <option>elevate</option>
-                                            <option>exclude</option>
-                                            <option>keyword</option>
-                                            <option>queryCleaning</option>
-                                            <option>relevancy</option>
-                                            <option>ruleStatus</option>
-                                            <option>security</option>
-                                            <option>spell</option>
-                                            <option>storeKeyword</option>
-                                        </select>
-                                        <input id="" type="text" class="form-control input-sm" placeholder="User Name" size="13" />
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="input-group date">
-                                            <input type="text" class="form-control input-sm" placeholder="From Date" size="7">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                            </span>
-                                        </div>
-                                        <div class="input-group date">
-                                            <input type="text" class="form-control input-sm" placeholder="To Date" size="7">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default btn-sm" type="button"><i class="fa fa-calendar fa-lg"></i></button>
-                                            </span>
-                                        </div>
+                                        <input id="" type="text" class="form-control input-sm" placeholder="Keyword" size="43" />
                                     </div>
                                     <div class="form-group">
                                         <button type="button" class="btn btn-default btn-sm" title="Filter ">
-                                            <i class="fa fa-filter fa-lg"></i>
+                                            <i class="fa fa-filter fa-lg"></i> Filter
                                         </button>
                                         <button type="button" class="btn btn-default btn-sm" title="Reset Filter">
-                                            <i class="fa  fa-undo fa-lg"></i>
+                                            <i class="fa  fa-undo fa-lg"></i> Reset
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm" title="Download Audit Trail">
+                                            <i class="fa  fa-download fa-lg"></i>
                                         </button>
                                     </div>
-                                    <div class="form-inline pull-right">
-                                        <div class="form-group">
-                                            <div class="row row-height">
-                                                <div class="col-sm-12">
-                                                    <div class="page-cover">
-                                                        <div class="pager-number">1 to 2 of 2</div>
-                                                        <div class="pull-right reset-margin row-height">
-                                                            <ul class="pagination reset-margin">
-                                                                <li><a href="#">&laquo;</a></li>
-                                                                <li>
-                                                                    <span class="page-number">
-                                                                        <input placeholder="Page" class="form-control input-small page-number" type="text">
-                                                                    </span>
-                                                                </li>
-                                                                <li><a href="#">&raquo;</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="button" class="btn btn-primary btn-sm" title="Download Audit Trail">
-                                                <i class="fa  fa-download fa-lg"></i>
-                                            </button>
-                                        </div>
+                                    <div class="form-group pull-right">
+                                        <h5 class="font-13">1-10 of 169566 Items</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <table class="table table-condensed table-bordered font-13">
-                                    <thead>
-                                        <tr class="active">
-                                            <th class="mid-center" width="12%">Date</th>
-                                            <th class="mid-center" width="12%">Ref ID</th>
-                                            <th class="mid-center" width="12%">Username</th>
-                                            <th class="mid-center" width="12%">Type</th>
-                                            <th class="mid-center" width="12%">Action</th>
-                                            <th class="mid-center" width="12%">Keyword</th>
-                                            <th class="mid-center" width="28%">Description</th>
-                                        </tr>
-                                    </thead>
-                                    <thead>
-                                        <tr>
-                                            <td>08/13/2017 07:50 PM</td>
-                                            <td>spell_rule</td>
-                                            <td>pcmall_admin</td>
-                                            <td>ruleStatus</td>
-                                            <td>exportRule</td>
-                                            <td></td>
-                                            <td>Exported reference id = [spell_rule], rule type = [Did You Mean], export type = [1].</td>
-                                        </tr>
-                                        <tr>
-                                            <td>08/13/2017 07:50 PM</td>
-                                            <td>0o2eedt020QR6zAgemdj</td>
-                                            <td>pcmall_admin</td>
-                                            <td>elevate</td>
-                                            <td>update</td>
-                                            <td>_macbook pro</td>
-                                            <td>Elevating ID[0o2eedt020QR6zAgemdj] to position[2]; set to force add Condition[Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"]</td>
-                                        </tr>
-                                        <tr>
-                                            <td>08/07/2017 07:47 PM</td>
-                                            <td>0064dYW0V0Nlfw7zuSug</td>
-                                            <td>pcmall_admin</td>
-                                            <td>queryCleaning</td>
-                                            <td>update</td>
-                                            <td></td>
-                                            <td>Updated Rule ID[0064dYW0V0Nlfw7zuSug] : replace keyword message type = [Custom Text];replace keyword custom message = [Your search query did not yield any results. You might be interested in the following items instead.];</td>
-                                        </tr>
-                                    </thead>
-                                </table>
+                            <table class="table table-condensed table-bordered font-13">
+                                <thead>
+                                    <tr class="active">
+                                        <th id="filterFields" class="form-inline" colspan="7">
+                                            <div class="form-group">
+                                                <label>Type:</label>
+                                                <select id="" class="form-control input-sm">
+                                                    <option>
+                                                        -Select Type-
+                                                    </option>
+                                                </select>
+                                                <label>Action:</label>
+                                                <select id="actionList" class="form-control input-sm" disabled="disabled">
+                                                    <option value="">-Select Action-</option>
+                                                </select>
+                                                <label>Ref ID:</label>
+                                                <select id="refList" class="form-control input-sm" disabled="disabled">
+                                                    <option value="">-Select Ref ID-</option>
+                                                </select>
+                                                <label>User Name:</label>
+                                                <select id="userList" class="form-control input-sm">
+                                                    <option value="">-Select Name-</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Date Range:</label>
+                                                <input id="startDate" type="text" class="form-control input-sm" placeholder="Start Date" size="10">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="endDate" type="text" class="form-control input-sm" placeholder="End Date" size="10">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="active">
+                                        <th class="mid-center" width="12%">Date</th>
+                                        <th class="mid-center" width="12%">Ref ID</th>
+                                        <th class="mid-center" width="12%">Username</th>
+                                        <th class="mid-center" width="12%">Type</th>
+                                        <th class="mid-center" width="12%">Action</th>
+                                        <th class="mid-center" width="12%">Keyword</th>
+                                        <th class="mid-center" width="28%">Description</th>
+                                    </tr>
+                                </thead>
+                                <thead>
+                                    <tr>
+                                        <td>08/13/2017 07:50 PM</td>
+                                        <td>spell_rule</td>
+                                        <td>pcmall_admin</td>
+                                        <td>ruleStatus</td>
+                                        <td>exportRule</td>
+                                        <td></td>
+                                        <td>Exported reference id = [spell_rule], rule type = [Did You Mean], export type = [1].</td>
+                                    </tr>
+                                    <tr>
+                                        <td>08/13/2017 07:50 PM</td>
+                                        <td>0o2eedt020QR6zAgemdj</td>
+                                        <td>pcmall_admin</td>
+                                        <td>elevate</td>
+                                        <td>update</td>
+                                        <td>_macbook pro</td>
+                                        <td>Elevating ID[0o2eedt020QR6zAgemdj] to position[2]; set to force add Condition[Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>08/07/2017 07:47 PM</td>
+                                        <td>0064dYW0V0Nlfw7zuSug</td>
+                                        <td>pcmall_admin</td>
+                                        <td>queryCleaning</td>
+                                        <td>update</td>
+                                        <td></td>
+                                        <td>Updated Rule ID[0064dYW0V0Nlfw7zuSug] : replace keyword message type = [Custom Text];replace keyword custom message = [Your search query did not yield any results. You might be interested in the following items instead.];</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="panel-footer">
+                                <div class="row-height">
+                                    <div class="pull-left">
+                                        <h5 class="font-13">1-10 of 169566 Items</h5>
+                                    </div>
+                                    <divc class="pull-right">
+                                        <ul class="pagination reset-margin pagination-margin">
+                                            <li class="first"><a id="firstPage" href="javascript:void(0);"><i class="fa fa-angle-double-left"></i></a></li>
+                                            <li class="prev"><a id="prevPage" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                                            <li class="pagebox">
+                                                <span class="pre-page-text-label">Page</span>
+                                                <span class="page-number">
+                                                    <input id="currentPage" class="form-control input-small page-number" value="1" type="text">
+                                                </span>
+                                                <span class="post-page-text-label"> of 1131</span>
+                                            </li>
+                                            <li class="next"><a id="nextPage" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                                            <li class="last"><a id="lastPage" href="javascript:void(0);"><i class="fa fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </divc>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <script type="text/javascript">
+                $("#startDate").datepicker({
+                    todayBtn: true,
+                    endDate: 'today',
+                    autoclose: true,
+                    clearBtn: true,
+                    todayHighlight: true,
+                }).on('changeDate', function (selected) {
+                    var selectedStartDate = new Date(selected.date.valueOf());
+                    $('#endDate').datepicker('setStartDate', selectedStartDate);
+                }).keypress(function (e) {
+                    e.preventDefault();
+                }).datepicker('setEndDate', 'today');;
+
+                $("#endDate").datepicker({
+                    todayBtn: true,
+                    autoclose: true,
+                    clearBtn: true,
+                    todayHighlight: true,
+                }).on('changeDate', function (selected) {
+                    var selectedEndDate = new Date(selected.date.valueOf());
+                    $('#startDate').datepicker('setEndDate', selectedEndDate);
+                }).keypress(function (e) {
+                    e.preventDefault();
+                }).datepicker('setEndDate', 'today');
+            </script>
 
             <!--user accounts module-->
             <div id="userAccModule" class="row" style="display:none">
@@ -407,59 +435,60 @@
                                         </div>
                                         <button class="btn btn-success btn-sm" onclick="addEditUser()" title="Create New Account"><i class="fa fa-plus"></i></button>
                                     </div>
-                                    <div class="form-group pull-right">
-                                        <div class="row row-height">
-                                            <div class="col-sm-12">
-                                                <div class="page-cover">
-                                                    <div class="pager-number">1 to 2 of 2</div>
-                                                    <div class="pull-right reset-margin row-height">
-                                                        <ul class="pagination reset-margin">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li>
-                                                                <span class="page-number">
-                                                                    <input placeholder="Page" class="form-control input-small page-number" type="text">
-                                                                </span>
-                                                            </li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <table class="table table-hover table-bordered">
-                                    <thead>
-                                        <tr class="active">
-                                            <th>User Name</th>
-                                            <th>Full Name</th>
-                                            <th>Store</th>
-                                            <th>Last Access</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>carl.cruz</td>
-                                            <td><a href="#">Carlson Cruz</a></td>
-                                            <td>PCM </td>
-                                            <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>naruto</td>
-                                            <td><a href="#">Uzumaki Naruto</a></td>
-                                            <td>MacMall </td>
-                                            <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>sharingan</td>
-                                            <td><a href="#">Uchiha Sarada</a></td>
-                                            <td>PCMG </td>
-                                            <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr class="active">
+                                        <th>User Name</th>
+                                        <th>Full Name</th>
+                                        <th>Store</th>
+                                        <th>Last Access</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>carl.cruz</td>
+                                        <td><a href="#">Carlson Cruz</a></td>
+                                        <td>PCM </td>
+                                        <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>naruto</td>
+                                        <td><a href="#">Uzumaki Naruto</a></td>
+                                        <td>MacMall </td>
+                                        <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sharingan</td>
+                                        <td><a href="#">Uchiha Sarada</a></td>
+                                        <td>PCMG </td>
+                                        <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="panel-footer">
+                                <div class="row-height">
+                                    <div class="pull-left">
+                                        <h5 class="font-13">1-10 of 169566 Items</h5>
+                                    </div>
+                                    <div class="pull-right">
+                                        <ul class="pagination reset-margin pagination-margin">
+                                            <li class="first"><a id="firstPage" href="javascript:void(0);"><i class="fa fa-angle-double-left"></i></a></li>
+                                            <li class="prev"><a id="prevPage" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                                            <li class="pagebox">
+                                                <span class="pre-page-text-label">Page</span>
+                                                <span class="page-number">
+                                                    <input id="currentPage" class="form-control input-small page-number" value="1" type="text">
+                                                </span>
+                                                <span class="post-page-text-label"> of 1131</span>
+                                            </li>
+                                            <li class="next"><a id="nextPage" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                                            <li class="last"><a id="lastPage" href="javascript:void(0);"><i class="fa fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
