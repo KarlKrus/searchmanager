@@ -1,0 +1,1638 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="images/smiconlogo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Search Manager -  Search Rules</title>
+    <link href="custom-css/jquery-ui.min.css" rel="stylesheet">
+    <link href="custom-css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/new/custom.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/style.css" rel="stylesheet" type="text/css">
+    <link href="custom-css/media-reset.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="js/custom-js/cookie.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <!--navigation-->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <!--navbar-->
+            <ul class="nav navbar-top-links navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/smiconlogo.png" class="header-logo" style="max-width: 40px; margin-top: -9px;" />
+                        <img src="images/pcm.png" class="current-mall" />
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-default logo-menu">
+                        <li>
+                        <li>
+                            <a href="#MACMALL">
+                                <img src="images/macmall.png" class="current-mall" />
+                            </a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCM">
+                                <img src="images/pcm.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#MACMALLBD">
+                                <img src="images/macmallbd.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMBD">
+                                <img src="images/pcmbd.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#PCMG">
+                                <img src="images/pcmg.png" class="current-mall" />
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#ECOST">
+                                <img src="images/ecost.png" class="current-mall" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        afs-pl-schpd07
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd07</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">afs-pl-schpd08</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod02</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">btorschprod03</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">search.pcmall.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">Search Manager</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown" style="width: 165px">
+                        <span class="pull-left">
+                            Search Rules
+                        </span>
+                        <span class="pull-right"><span class="caret"></span></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="simulator.html">Simulator</a>
+                        <li class="active" onclick="searchRulelandingPage()"><a href="#">Search Rules</a>
+                        <li><a href="workflow.html">Workflow</a>
+                        <li><a href="linguistics.html">Linguistics</a>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button"
+                            class="btn btn-default "
+                            onclick="window.location.href='settings.html'">
+                        Settings
+                    </button>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle macmall-logo" data-toggle="dropdown">
+                        <img src="images/no-pic.png" class="img-circle nav-user-photo" />
+                        <span class="nav-user-info">
+                            <span>Carlson Cruz</span>
+                            <small><strong>carlson.cruz@pcm.com</strong></small>
+                        </span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-default">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#userProfileModal"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--sidebar-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Elevate" onclick="elevate()">
+                                <i class="fa fa-chevron-up fa-fw"></i>
+                                <span class="collapse-menu">Elevate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Demote" onclick="demote()">
+                                <i class="fa fa-chevron-down fa-fw"></i>
+                                <span class="collapse-menu">Demote</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Exclude" onclick="exclude()">
+                                <i class="fa fa-ban fa-fw"></i>
+                                <span class="collapse-menu">Exclude</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Redirect" onclick="redirect()">
+                                <i class="fa fa-exchange fa-fw"></i>
+                                <span class="collapse-menu">Redirect</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Relevancy" onclick="relevancy()">
+                                <i class="fa fa-angle-double-up fa-fw"></i>
+                                <span class="collapse-menu">Relevancy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-muted collapse-activator"><i class="fa fa-dedent fa-fw text"></i> <span class="collapse-menu">Collapse</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--page content/wrapper-->
+        <div id="page-wrapper">
+
+            <script type="text/javascript">
+
+                function searchRulelandingPage() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (srl.style.display === 'none') {
+                        srl.style.display = 'block';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+                function elevate() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (ele.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'block';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+                function demote() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (dem.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'block';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+                function exclude() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (exc.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'block';
+                        red.style.display = 'none';
+                        rel.style.display = 'none';
+                    }
+                }
+                function redirect() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (red.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'block';
+                        rel.style.display = 'none';
+                    }
+                }
+                function relevancy() {
+                    var srl = document.getElementById('searchruleLanding');
+                    var ele = document.getElementById('elevateModule');
+                    var dem = document.getElementById('demoteModule');
+                    var exc = document.getElementById('excludeModule');
+                    var red = document.getElementById('redirectModule');
+                    var rel = document.getElementById('relevancyModule');
+                    if (rel.style.display === 'none') {
+                        srl.style.display = 'none';
+                        ele.style.display = 'none';
+                        dem.style.display = 'none';
+                        exc.style.display = 'none';
+                        red.style.display = 'none';
+                        rel.style.display = 'block';
+                    }
+                }
+            </script>
+
+
+            <!--elevate module-->
+            <div class="row" id="elevateModule">
+                <script>
+                    function elevateCRUDSHOW() {
+                        var eleCRUD = document.getElementById('elevateCRUD');
+                        var eleKWL = document.getElementById('elevateKWList');
+                        if (eleCRUD.style.display === 'none') {
+                            eleCRUD.style.display = 'block';
+                            eleKWL.style.display = 'none';
+                        } else {
+                            eleCRUD.style.display = 'none';
+                        }
+                    }
+                    function elevateKWLSHOW() {
+                        var eleCRUD = document.getElementById('elevateCRUD');
+                        var eleKWL = document.getElementById('elevateKWList');
+                        if (eleKWL.style.display === 'none') {
+                            eleCRUD.style.display = 'none';
+                            eleKWL.style.display = 'block';
+                        } else {
+                            eleCRUD.style.display = 'none';
+                        }
+                    }
+                </script>
+                <!--elevate keywordlist-->
+                <!--elevate crud form-->
+                <div id="elevateCRUD">
+                    <ol class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#" onclick="searchRulelandingPage()">Search Rules</a></li>
+                        <li><a href="#" onclick="elevateKWLSHOW()">Keyword List</a></li>
+                        <li class="active">Elevate</li>
+                    </ol>
+                    <!-- elevate title-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>
+                                Elevate for
+                                <span class="text-primary">GXT4</span>
+                            </h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pull-right">
+                                <div class="form-inline">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--elevate publish options-->
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="font-13" style="vertical-align:sub">
+                                            Status:
+                                            <span class="text-danger"> Setup a Rule </span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="font-13" style="vertical-align:sub">
+                                            Last Published:
+                                            <span class="text-warning">
+                                                10/15/2014 07:11 PM
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-success btn-sm" title="Submit for Approval" data-toggle="modal" data-target="#submitApprovalModal">
+                                        <i class="fa fa-thumbs-up fa-lg"></i> Submit for Approval
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- elevate navigation and options-->
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <script type="text/javascript">
+                                            function addElevateItem() {
+                                                var itemPositionFacet = document.getElementById("itemPositionFacet");
+                                                var itemPositionPST = document.getElementById("itemPositionPST");
+                                                var itemPositionIMS = document.getElementById("itemPositionIMS");
+                                                var itemPositionProdItem = document.getElementById("itemPositionProdItem");
+                                                addProductItemModal = $('#addProductItemModal');
+                                                addProductItemModal = $('#addProductItemModal');
+                                                addIMSModal = $('#addIMSModal');
+                                                addFacetModal = $('#addFacetModal');
+                                                addPSTModal = $('#addPSTModal');
+                                                if ($("#drpdownElevate").val() === 'productitem') {
+                                                    addProductItemModal.modal('show');
+                                                    itemPositionProdItem.style.display = 'block';
+                                                } else if ($("#drpdownElevate").val() === 'ims') {
+                                                    addIMSModal.modal('show');
+                                                    itemPositionIMS.style.display = 'block';
+                                                } else if ($("#drpdownElevate").val() === 'pst') {
+                                                    addPSTModal.modal('show');
+                                                    itemPositionPST.style.display = 'block';
+                                                } else if ($("#drpdownElevate").val() === 'facets') {
+                                                    addFacetModal.modal('show');
+                                                    itemPositionFacet.style.display = 'block';
+                                                }
+                                            }
+                                            function addIMSModalShow() {
+                                                $('#addIMSModal').modal('show');
+                                            }
+                                            function addFacetModalShow() {
+                                                $('#addFacetModal').modal('show');
+                                            }
+                                            function addPSTModalShow() {
+                                                $('#addPSTModal').modal('show');
+                                            }
+                                        </script>
+                                        <select id="drpdownElevate" class="form-control input-sm" title="Elevate Options">
+                                            <option value="productitem">Product Items</option>
+                                            <option value="ims">IMS Categories </option>
+                                            <option value="pst">Product Site Taxonomy</option>
+                                            <option value="facets">Facets </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-success btn-sm" title="Add Content" onclick="addElevateItem()">
+                                            <i class="fa fa-plus fa-lg"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pull-right">
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <select id="" class="form-control input-sm">
+                                                <option>All</option>
+                                                <option>Active</option>
+                                                <option>Expired</option>
+                                            </select>
+                                            <button id="eleListViewBtn" type="button" class="btn btn-link btn-xs" title="List View" onclick="elevateListView()">
+                                                <i class="fa fa-list fa-lg"></i>
+                                            </button>
+                                            <button id="eleGridViewBtn" type="button" class="btn btn-link btn-xs" title="Grid View" onclick="elevateGridView()">
+                                                <i class="fa fa-th-large fa-lg"></i>
+                                            </button>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row row-height">
+                                                <div class="col-sm-12">
+                                                    <div class="page-cover">
+                                                        <div class="pager-number">1 to 2 of 2</div>
+                                                        <div class="pull-right reset-margin row-height">
+                                                            <ul class="pagination reset-margin">
+                                                                <li><a href="#">&laquo;</a></li>
+                                                                <li>
+                                                                    <span class="page-number">
+                                                                        <input placeholder="Page" class="form-control input-small page-number" type="text">
+                                                                    </span>
+                                                                </li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Rule Options">
+                                                        Rule Options
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-open-left font-13">
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#backupRuleModal"><i class="fa fa-arrow-circle-o-down fa-lg"></i> Back Up Now</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#ruleCommentModal"><i class="fa fa-comment fa-lg"></i> Rule Commment</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#ruleVersionDownloadModal"><i class="fa fa-download fa-lg"></i> Download Version</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#copyToSiteModal"><i class="fa fa-copy fa-lg"></i> Copy to Other Site</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#downloadContentModal"><i class="fa fa-download fa-lg"></i> Download Content</a>
+                                                        </li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal" data-target="#removeContentModal"><i class="fa fa-trash-o fa-lg"></i> Remove Content</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--elevate content panels-->
+                    <script>
+                        function elevateListView() {
+                            $('#elevatePanels').removeClass("grid-view").addClass('list-view');
+                        }
+
+                        function elevateGridView() {
+                            $('#elevatePanels').removeClass("list-view").addClass('grid-view');
+                        }
+                    </script>
+                    <div class="row">
+                        <ul id="elevatePanels" class="grid-view">
+                            <li class="list-item">HI</li>
+                            <li class="list-item">HEllo</li>
+                            <li class="list-item">GoodBye</li>
+                            <li class="list-item">GoodMorning
+                            
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--elevate modals-->
+                    <div id="backupRuleModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog  modal-s6">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <label class="modal-title">Back Up Rule</label>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <table class="table table-condensed table-hover table-bordered">
+                                                <thead>
+                                                    <tr class="active">
+                                                        <th colspan="2" class="mid-center"><button class="btn btn-success btn-xs">Compare</button></th>
+                                                        <th class="mid-center">Name</th>
+                                                        <th class="mid-center">Date</th>
+                                                        <th class="mid-center">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="5%" class="mid-center"><input name="versionSelect" type="radio" /></td>
+                                                        <td width="5%" class="mid-center">1</td>
+                                                        <td width="40%" class="mid-center">
+                                                            <strong>_macbook pro 13 1st back up</strong><br />
+                                                            3 contents
+                                                        </td>
+                                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                        <td width="10%" class="mid-center">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                <i class="fa fa-times fa-lg fg-red"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="5%" class="mid-center"><input name="versionSelect" type="radio" /></td>
+                                                        <td width="5%" class="mid-center">2</td>
+                                                        <td width="40%" class="mid-center">
+                                                            <strong>_macbook pro 13 2nd back up</strong><br />
+                                                            3 contents
+                                                        </td>
+                                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                        <td width="10%" class="mid-center">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                <i class="fa fa-times fa-lg fg-red"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="5%" class="mid-center"><input name="versionSelect" type="radio" /></td>
+                                                        <td width="5%" class="mid-center">3</td>
+                                                        <td width="40%" class="mid-center">
+                                                            <strong>_macbook pro 13 3rd back up</strong><br />
+                                                            6 contents
+                                                        </td>
+                                                        <td width="30%">Thu, 03 Aug 2017<br /> 07:19:23 GMT</td>
+                                                        <td width="10%" class="mid-center">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-link btn-xs" title="Delete ">
+                                                                <i class="fa fa-times fa-lg fg-red"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">Create New Rule Back Up Version</div>
+                                                <div class="panel-body">
+                                                    <i class="text-danger">*</i> Name:<input id="" type="text" class="form-control" />
+                                                    <i class="text-danger">*</i> Notes:<textarea id="" rows="2" cols="20" class="form-control"></textarea>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="pull-right">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Create Version</button>
+                                                                <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <table class="table table-condensed">
+                                                <thead>
+                                                    <tr class="active">
+                                                        <th class="mid-center"></th>
+                                                        <th class="mid-center">Current Rule Details</th>
+                                                        <th class="mid-center">Version (no.) Details</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="mid-center"></th>
+                                                        <th class="mid-center"></th>
+                                                        <th class="mid-center">
+                                                            <button type="button" class="btn btn-link btn-xs" title="Restore ">
+                                                                <i class="fa fa-undo fa-lg"></i> Restore this version
+                                                            </button>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active">Created By</td>
+                                                        <td>Not Available</td>
+                                                        <td>pcmall_admin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Date</td>
+                                                        <td>Not Available</td>
+                                                        <td>08/03/2017 00:19 AM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Name</td>
+                                                        <td>Not Available</td>
+                                                        <td>_macbook pro 13 1st back up</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Notes</td>
+                                                        <td>Not Available</td>
+                                                        <td>3 contents</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Rule ID</td>
+                                                        <td>_macbook pro 13</td>
+                                                        <td>_macbook pro 13</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active">Rule Name</td>
+                                                        <td>_macbook pro 13</td>
+                                                        <td>_macbook pro 13</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="submitApprovalModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Submit for Approval</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This rule will be locked for approval. Continue?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">
+                                        <i class="fa  fa-ban"></i>
+                                        NO
+                                    </button>
+                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-check"></i>
+                                        YES
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ruleCommentModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Rule Comment</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Username</th>
+                                                <th>Status</th>
+                                                <th>Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>05/03/2016 05:56 PM</td>
+                                                <td>pcmall_admin</td>
+                                                <td>EXPORTED</td>
+                                                <td>exported ni carl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>05/03/2016 05:56 PM</td>
+                                                <td>pcmall_admin</td>
+                                                <td> PUBLISHED	</td>
+                                                <td>published ni carl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>05/03/2016 05:56 PM</td>
+                                                <td> JBauca	</td>
+                                                <td> PUBLISHED	</td>
+                                                <td>published ni carl</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="row row-height">
+                                        <div class="col-sm-12">
+                                            <div class="page-cover">
+                                                <div class="pager-number">1 to 2 of 2</div>
+                                                <div class="pull-right reset-margin row-height">
+                                                    <ul class="pagination reset-margin">
+                                                        <li><a href="#">&laquo;</a></li>
+                                                        <li>
+                                                            <span class="page-number">
+                                                                <input placeholder="Page" class="form-control input-small page-number">
+                                                            </span>
+                                                        </li>
+                                                        <li><a href="#">&raquo;</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ruleVersionDownloadModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Download Rule Version</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Filename:<input id="" type="text" class="form-control input-sm" /><br />
+                                            Type:<select id="" class="form-control input-sm">
+                                                <option>Excel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success btn-sm">
+                                        <i class="fa  fa-download"></i>
+                                        Download
+                                    </button>
+                                    <a href="#" class="btn btn-warning btn-sm">
+                                        <i class="fa fa-times-circle"></i>
+                                        Clear
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="copyToSiteModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Copy</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Store:
+                                            <select id="" size="5" class="form-control" multiple>
+                                                <option>MacMall BD</option>
+                                                <option>PCM</option>
+                                                <option>eCOST</option>
+                                                <option>MacMall</option>
+                                                <option>PCMall BD</option>
+                                                <option>PCMGBD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary btn-sm">
+                                        <i class="fa  fa-copy"></i>
+                                        Copy
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="downloadContentModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Download Elevate</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Filename:<input id="" type="text" class="form-control input-sm" /><br />
+                                            Pages:<select id="" class="form-control input-sm">
+                                                <option>Current Page</option>
+                                                <option>All Pages</option>
+                                            </select><br />
+                                            Type:<select id="" class="form-control input-sm">
+                                                <option>Excel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success btn-sm">
+                                        <i class="fa  fa-download"></i>
+                                        Download
+                                    </button>
+                                    <a href="#" class="btn btn-warning btn-sm">
+                                        <i class="fa fa-times-circle"></i>
+                                        Clear
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="removeContentModal" class="modal fade font-13" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Delete Item</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>All items associated to this rule will be removed. Continue?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-check"></i>
+                                        Ok
+                                    </a>
+                                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">
+                                        <i class="fa  fa-ban"></i>
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer-->
+            <div class="row row-height">
+                <div class="col-md-12 admin-footer">
+                    <div class="pull-left text-info">
+                        1940 E. Mariposa Ave, El Segundo, CA 90245 - 800-700-1000
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="pull-right text-info">
+                            &copy;
+                            <script type="text/javascript">
+                                document.write(new Date().getFullYear());
+                            </script> PCM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--logout modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="logoutModalLabel">Search Manager</h4>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">
+                        <i class="fa  fa-ban"></i>
+                        NO
+                    </button>
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fa fa-check"></i>
+                        YES
+                    </a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <!--user profile modal-->
+    <div class="modal fade font-13" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title" id="userProfileModalLabel">Update Profile Details</strong>
+                    <div div class="form-inline pull-right">
+                        <div class="form-group">
+                            <div id="radio-switch">
+                                <div class="btn-group btn-toggle" data-toggle="buttons">
+                                    <label class="btn btn-default btn-xs">
+                                        <input type="radio" name="oss" checked="checked"> Enabled
+                                    </label>
+                                    <label class="btn btn-default btn-xs">
+                                        <input type="radio" name="oss" value="option2"> Disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        &emsp;
+                        <div class="form-group">
+                            <button type="button" class="close fg-red" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active font-13">
+                            <a data-toggle="tab" href="#userDetailsTab">
+                                <label>Edit Profile</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#changePassword">
+                                <label>Change Password</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#resetPassword">
+                                <label>Reset Password</label>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="userDetailsTab" class="tab-pane fade in active font-13">
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <label for="file-input" style="cursor:pointer">
+                                        <img id="profilePic" class="img-thumbnail" alt="Profile Picture" src="images/no-pic.png" width="100" height="100" />
+                                    </label>
+                                    <input id="file-input" type="file" style="display:none" />
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading condensed-content">
+                                            <h5><b>Username: carlson.cruz</b></h5>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-4"><label>Email:</label> <input id="" type="text" class="form-control input-sm" placeholder="Email" /></div>
+                                                <div class="col-sm-4"><label>First Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="First Name" /></div>
+                                                <div class="col-sm-4"><label>Last Name:</label> <input id="" type="text" class="form-control input-sm" placeholder="Last Name" /></div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label> Default Store:</label>
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>MacMall</option>
+                                                        <option>PCM</option>
+                                                        <option>eCost</option>
+                                                        <option>MacMall BD</option>
+                                                        <option>PcMall BD</option>
+                                                        <option>PCMG BD</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label>Role:</label>
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>ADMIN</option>
+                                                        <option>APPROVER</option>
+                                                        <option>ENCODER</option>
+                                                        <option>GUEST</option>
+                                                        <option>MANAGER</option>
+                                                        <option>PUBLISHER</option>
+                                                        <option>USER ADMIN</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label> Validity: </label>
+                                                    <script type="text/javascript">
+                                                        $(function () {
+                                                            $('.date').datepicker({
+                                                                todayHighlight: true,
+                                                                todayBtn: true,
+                                                                clearBtn: true
+                                                            });
+                                                        });
+                                                    </script>
+                                                    <div class="input-group input-append date">
+                                                        <input type="text" class="form-control input-sm" placeholder="Select Date">
+                                                        <span class="input-group-addon add-on">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="changePassword" class="tab-pane fade in">
+                            <br />
+                            <label>Change/Update Password:</label>
+                            <div class="row">
+                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Old Password" /></div>
+                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="New Password" /></div>
+                                <div class="col-sm-4"><input id="" type="password" class="form-control input-sm" placeholder="Re-type New Password" /></div>
+                            </div>
+                        </div>
+                        <div id="resetPassword" class="tab-pane fade in">
+                            <br />
+                            <label>Reset Password:</label>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control input-sm" placeholder="Reset Password">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset Password</button>
+                                        </div>
+                                    </div>
+                                    <strong><i class="fa fa-info-circle" style="color:orange"></i> Leave blank to auto-generate password.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <button class="btn btn-success btn-sm"><i class="fa fa-check fa-lg"></i> Submit</button>
+                        <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+
+    <!--add item modals-->
+    <div id="addProductItemModal" class="modal fade font-13" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Product Item</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            SKU: <span class="text-muted">(separated by whitespaces or commas)</span>
+                            <textarea class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-append date">
+                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionProdItem">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addIMSModal" class="modal fade font-13" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">IMS Categories</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs font-13">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#imscat">
+                                        <label class="font-13">IMS Categories/Manufacturer</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#imsfacets">
+                                        <label class="font-13">Facets</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="imscat" class="tab-pane fade in active">
+                                    <script>
+                                        function catNameCodeSwitch() {
+                                            var catNameROw = document.getElementById('catNameROw');
+                                            var subCatNameRow = document.getElementById('subCatNameRow');
+                                            var catCodeRow = document.getElementById('catCodeRow');
+                                            var catSwitchBtn = document.getElementById('catSwitchBtn');
+
+                                            if (catCodeRow.style.display == 'none') {
+                                                catCodeRow.style.display = 'table-row';
+                                                subCatNameRow.style.display = 'none';
+                                                catNameROw.style.display = 'none';
+                                                catSwitchBtn.innerHTML = 'Use category name instead >>';
+                                            } else {
+                                                catCodeRow.style.display = 'none';
+                                                subCatNameRow.style.display = 'table-row';
+                                                catNameROw.style.display = 'table-row';
+                                                catSwitchBtn.innerHTML = 'Use category code instead >>';
+                                            }
+                                        }
+                                    </script>
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr id="catNameROw" style="display:none">
+                                                <td width="10%" class="mid-right">Category :</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Category  -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right">SubCategory:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Sub Category -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr id="subCatNameRow" style="display:none">
+                                                <td width="10%" class="mid-right">Class:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Class -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right">SubClass:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select SubClass -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr id="catCodeRow">
+                                                <td width="10%" class="mid-right">Category :</td>
+                                                <td colspan="3">
+                                                    <input id="" class="form-control input-sm">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Manufacturer:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Manufacturer -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td colspan="2" class="mid-center"><button id="catSwitchBtn" class="btn btn-link" onclick="catNameCodeSwitch()">Use category name instead >></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div id="imsfacets" class="tab-pane fade in">
+
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td width="30%" class="mid-right">Name (Contains):</td>
+                                                <td>
+                                                    <input id="" type="text" class="form-control input-sm" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%" class="mid-right">Description (Contains):</td>
+                                                <td>
+                                                    <input id="" type="text" class="form-control input-sm" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Platform:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Platform -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right">Condition:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Condition -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Availability:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Availability -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right">License:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select License -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Product Image:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Image Option -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right"></td>
+                                                <td width="40%"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-append date">
+                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionIMS">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addPSTModal" class="modal fade font-13" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Product Site Taxonomy</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs font-13">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#pstmanufact">
+                                        <label class="font-13">Product Site Taxonomy/Manufacturer</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#pstdynamic">
+                                        <label class="font-13">Dynamic Attributes</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#pstfacets">
+                                        <label class="font-13">Facets</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="pstmanufact" class="tab-pane fade in active">
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td class="mid-right" width="18%">Level 1 Category:</td>
+                                                <td width="32%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Level 1 -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td class="mid-right" width="18%">Level 2 Category:</td>
+                                                <td width="32%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Level 2 -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mid-right" width="18%"> Level 3 Category:</td>
+                                                <td width="32%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Level 3 -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td class="mid-right" width="18%">Manufacturer:</td>
+                                                <td width="32%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Manufacturer -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="pstdynamic" class="tab-pane fade in">
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            Dynamic Attribute:
+                                            <select class="form-control input-sm">
+                                                <option>- Select Template -</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pstfacets" class="tab-pane fade in">
+
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td width="30%" class="mid-right">Name (Contains):</td>
+                                                <td>
+                                                    <input id="" type="text" class="form-control input-sm" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%" class="mid-right">Description (Contains):</td>
+                                                <td>
+                                                    <input id="" type="text" class="form-control input-sm" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Platform:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Platform -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right">Condition:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Condition -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Availability:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select Availability -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right">License:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Select License -</option>
+
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10%" class="mid-right">Product Image:</td>
+                                                <td width="40%">
+                                                    <select id="" class="form-control input-sm">
+                                                        <option>- Image Option -</option>
+
+                                                    </select>
+                                                </td>
+                                                <td width="10%" class="mid-right"></td>
+                                                <td width="40%"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-append date">
+                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionPST">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addFacetModal" class="modal fade font-13" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Facets</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12"><label>Facets</label></div>
+                    </div>
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td width="30%" class="mid-right">Name (Contains):</td>
+                                <td>
+                                    <input id="" type="text" class="form-control input-sm" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="30%" class="mid-right">Description (Contains):</td>
+                                <td>
+                                    <input id="" type="text" class="form-control input-sm" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td width="10%" class="mid-right">Platform:</td>
+                                <td width="40%">
+                                    <select id="" class="form-control input-sm">
+                                        <option>- Select Platform -</option>
+
+                                    </select>
+                                </td>
+                                <td width="10%" class="mid-right">Condition:</td>
+                                <td width="40%">
+                                    <select id="" class="form-control input-sm">
+                                        <option>- Select Condition -</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="mid-right">Availability:</td>
+                                <td width="40%">
+                                    <select id="" class="form-control input-sm">
+                                        <option>- Select Availability -</option>
+
+                                    </select>
+                                </td>
+                                <td width="10%" class="mid-right">License:</td>
+                                <td width="40%">
+                                    <select id="" class="form-control input-sm">
+                                        <option>- Select License -</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="mid-right">Product Image:</td>
+                                <td width="40%">
+                                    <select id="" class="form-control input-sm">
+                                        <option>- Image Option -</option>
+
+                                    </select>
+                                </td>
+                                <td width="10%" class="mid-right"></td>
+                                <td width="40%"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Valid Until:
+                            <div class="input-append date">
+                                <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="itemPositionFacet">
+                                Position:
+                                <input type="number" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Comment:
+                            <textarea class="form-control" cols="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="searchrules.html" class="btn btn-primary btn-sm">
+                        <i class="fa fa-check"></i>
+                        Add
+                    </a>
+                    <button type="button" class="btn btn-warning btn-sm">
+                        <i class="fa  fa-undo"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showHide(id) {
+            var e = document.getElementById(id);
+            if (e.style.display === 'none') {
+                e.style.display = 'block';
+            }
+            else
+                e.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
