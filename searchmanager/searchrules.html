@@ -1794,7 +1794,7 @@
                     <script>
                         $(document).ready(function () {
                             hideForceAdd();
-                            sortDemote();
+                            hideForceAddDemote();
                         });
                         function sortDemote() {
                             $("#demotePanels").sortable({
@@ -1810,7 +1810,7 @@
                             sortDemote();
                         }
 
-                        function hideForceAdd() {
+                        function hideForceAddDemote() {
                             $('#demotePanels>li.grey-list-item').find('.btn-toggle').closest('span').hide();
                         }
                     </script>
@@ -2936,7 +2936,7 @@
                     <!--exclude content panels-->
                     <script>
                         $(document).ready(function () {
-                            hideForceAdd();
+                            hideForceAddExclude();
                             sortExclude();
                         });
                         function sortExclude() {
@@ -2953,7 +2953,7 @@
                             sortExclude();
                         }
 
-                        function hideForceAdd() {
+                        function hideForceAddExclude() {
                             $('#excludePanels>li.grey-list-item').find('.btn-toggle').closest('span').hide();
                         }
                     </script>
