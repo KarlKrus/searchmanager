@@ -1147,6 +1147,10 @@ table > thead > tr > th {
     color: grey;
 }
 
+.fg-black {
+    color: black;
+}
+
 .badge-no-color {
     display: inline-block;
     min-width: 10px;
@@ -1231,46 +1235,156 @@ textarea {
     padding: 6px 4px !important;
 }
 
-
+/*rule panel grid view*/
 .grid-view {
-    margin-right: -15px;
-    margin-left: -15px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     list-style-type: none !important;
-    margin: 0px;
-    padding: 0px;
     width: 100%;
     font-size: 13px;
 }
 
     .grid-view .list-item {
+        margin: 7px 15px 5px 0px;
         float: left;
-        background-color: bisque;
-        width: 25%;
+        width: 23.5%;
         position: relative;
         min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin: 3px 3px 3px 0;
+        height: 200px;
+        padding: 15px 11px 15px 11px;
+        border-radius: 1px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
 
+        .grid-view .list-item .rule-num {
+            margin-left: 8px;
+            position: absolute;
+            top: 10px;
+            left: 0px;
+        }
 
+        .grid-view .list-item .rule-date {
+            margin-right: 10px;
+            position: absolute;
+            top: 35px;
+            left: 10px;
+        }
+
+        .grid-view .list-item .rule-btns {
+            margin-right: 8px;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+        }
+
+        .grid-view .list-item .rule-pic {
+            margin-right: 8px;
+            position: absolute;
+            top: 95px;
+            left: 13px;
+        }
+
+        .grid-view .list-item .rule-info {
+            margin-right: 8px;
+            position: absolute;
+            top: 80px;
+            left: 120px;
+            right: 0px;
+        }
+
+/*rule panel list view*/
 .list-view {
-    margin-right: -15px;
-    margin-left: -15px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     list-style-type: none !important;
-    margin: 0px;
-    padding: 0px;
     width: 100%;
     font-size: 13px;
 }
 
     .list-view .list-item {
+        margin: 0px -30px 15px 0px;
         float: left;
-        background-color: cadetblue;
         width: 100%;
         position: relative;
         min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin: 3px;
+        height: 150px;
+        padding: 15px 11px 15px 11px;
+        border-radius: 1px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
+
+        .list-view .list-item .rule-num {
+            margin-left: 10px;
+            position: absolute;
+            top: 10px;
+            left: 0px;
+        }
+
+        .list-view .list-item .rule-date {
+            margin-right: 10px;
+            position: absolute;
+            top: 10px;
+            right: 11%;
+        }
+
+        .list-view .list-item .rule-btns {
+            margin-right: 10px;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+        }
+
+        .list-view .list-item .rule-pic {
+            margin-right: 8px;
+            position: absolute;
+            top: 45px;
+            left: 45px;
+        }
+
+        .list-view .list-item .rule-info {
+            margin-right: 8px;
+            position: absolute;
+            top: 45px;
+            left: 200px;
+            right: 0px;
+        }
+
+.red-list-item {
+    border: 1px solid #ebccd1;
+    background-color: #f2dede;
+}
+
+    .red-list-item .badge {
+        color: white;
+        background-color: #a94442;
+    }
+
+.yellow-list-item {
+    border: 1px solid #faebcc;
+    background-color: #fcf8e3;
+}
+
+    .yellow-list-item .badge {
+        color: white;
+        background-color: #c7b651;
+    }
+
+.grey-list-item {
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+
+    .grey-list-item .badge {
+        color: white;
+        background-color: #727272;
+    }
+
+.input-xs {
+    height: 25px;
+    padding: 0px 9px;
+    font-size: 12px;
+    line-height: 5;
+    border-radius: 3px;
+}

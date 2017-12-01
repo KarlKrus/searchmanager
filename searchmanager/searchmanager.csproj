@@ -96,6 +96,7 @@
     <Content Include="linguistics.html" />
     <Content Include="login.html" />
     <Content Include="navs.html" />
+    <Content Include="rulepanelsredesign.html" />
     <Content Include="searchrules.html" />
     <Content Include="settings.html" />
     <Content Include="simulator.html" />

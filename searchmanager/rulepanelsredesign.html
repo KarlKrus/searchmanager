@@ -187,7 +187,6 @@
         <div id="page-wrapper">
 
             <script type="text/javascript">
-
                 function searchRulelandingPage() {
                     var srl = document.getElementById('searchruleLanding');
                     var ele = document.getElementById('elevateModule');
@@ -498,21 +497,336 @@
                     </div>
                     <!--elevate content panels-->
                     <script>
+                        $(document).ready(function () {
+                            hideForceAdd();
+                            sortElevate();
+                        });
+                        function sortElevate() {
+                            $("#elevatePanels").sortable({
+                                handle: '.sort-handle'
+                            });
+                        };
                         function elevateListView() {
                             $('#elevatePanels').removeClass("grid-view").addClass('list-view');
+                            sortElevate();
                         }
-
                         function elevateGridView() {
                             $('#elevatePanels').removeClass("list-view").addClass('grid-view');
+                            sortElevate();
+                        }
+
+                        function hideForceAdd() {
+                            $('#elevatePanels>li.grey-list-item').find('.btn-toggle').closest('span').hide();
                         }
                     </script>
-                    <div class="row">
+                    <div>
                         <ul id="elevatePanels" class="grid-view">
-                            <li class="list-item">HI</li>
-                            <li class="list-item">HEllo</li>
-                            <li class="list-item">GoodBye</li>
-                            <li class="list-item">GoodMorning
-                            
+                            <li class="list-item red-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">1</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <label class="font-10 text-warning">8 days left</label>
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item yellow-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">2</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <!--<label class="font-10 text-warning">8 days left</label>-->
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item grey-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">3</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <!--<label class="font-10 text-warning">8 days left</label>-->
+                                        <img src="images/expired_stamp50x16.png" height="16">
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item grey-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">4</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <label class="font-10 text-warning">8 days left</label>
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item grey-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">5</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <label class="font-10 text-warning">8 days left</label>
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item red-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">6</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <!--<label class="font-10 text-warning">8 days left</label>-->
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -1160,7 +1474,6 @@
                                             var subCatNameRow = document.getElementById('subCatNameRow');
                                             var catCodeRow = document.getElementById('catCodeRow');
                                             var catSwitchBtn = document.getElementById('catSwitchBtn');
-
                                             if (catCodeRow.style.display == 'none') {
                                                 catCodeRow.style.display = 'table-row';
                                                 subCatNameRow.style.display = 'none';

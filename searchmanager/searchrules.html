@@ -664,719 +664,338 @@
                     <!--elevate content panels-->
                     <script>
                         $(document).ready(function () {
+                            hideForceAdd();
                             sortElevate();
-                            $('#eleGridViewBtn').prop('disabled', true);
                         });
-
                         function sortElevate() {
                             $("#elevatePanels").sortable({
-                                handle: '.sort-handle', start: function (event, ui) {
-                                    clone = $(ui.item[0].outerHTML).clone();
-                                },
-                                placeholder: {
-                                    element: function (clone, ui) {
-                                        if ($('#elevatePanels > li ').hasClass('col-sm-3')) {
-                                            return $('<li class="col-sm-3">' + clone[0].innerHTML + '</li>');
-                                        } else if ($('#elevatePanels > li ').hasClass('col-sm-12')) {
-                                            return $('<li class="col-sm-12">' + clone[0].innerHTML + '</li>');
-                                        }
-                                    },
-                                    update: function () {
-                                        return;
-                                    }
-                                }
+                                handle: '.sort-handle'
                             });
                         };
-
-                        function elevateListViewTemplate() {
-                            $('#eleGridViewBtn').prop('disabled', false);
-                            $('#eleListViewBtn').prop('disabled', true);
-                            $("#elevatePanels > li > .panel ").removeClass('rule-panel-grid-view').addClass('rule-panel-list-view');
-
-                            //Elevate Item No. 1
-                            $('#ele1OptionsDiv,#ele1DateLblDiv,#ele1DateDiv,#ele1ExpiredDiv').show();
-                            $("#ele1DaysValid").prependTo('#ele1ExpiredDiv');
-                            $("#ele1Options").prependTo('#ele1OptionsDiv');
-                            $("#ele1Date").prependTo('#ele1DateDiv');
-                            $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1DateLblDiv');
-                            $("#ele1Details").removeClass('font-10').addClass('font-12');
-                            $('#ele1OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele1OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-
-                            //Elevate Item No. 2
-                            $('#ele2OptionsDiv,#ele2DateLblDiv,#ele2DateDiv,#ele2ExpiredDiv').show();
-                            $("#ele2ExpiredImg").prependTo('#ele2ExpiredDiv');
-                            $("#ele2Options").prependTo('#ele2OptionsDiv');
-                            $("#ele2DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele2DateLblDiv');
-                            $("#ele2Date").prependTo('#ele2DateDiv');
-                            $("#ele2Details").removeClass('font-10').addClass('font-12');
-                            $('#ele2OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele2OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-                            $("#ele2SortDiv").removeClass('col-sm-10').addClass('col-sm-6');
-                            $("#ele2DeleteBtnDiv").removeClass('col-sm-2').addClass('col-sm-6');
-
-                            //Elevate Item No. 3
-                            $('#ele3OptionsDiv,#ele3DateLblDiv,#ele3DateDiv,#ele3ExpiredDiv').show();
-                            $("#ele3Options").prependTo('#ele3OptionsDiv');
-                            $("#ele3DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele3DateLblDiv');
-                            $("#ele3Date").prependTo('#ele3DateDiv');
-                            $("#ele3Details").removeClass('font-10').addClass('font-12');
-                            $('#ele3OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele3OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-                            $("#ele3SortDiv").removeClass('col-sm-10').addClass('col-sm-6');
-                            $("#ele3DeleteBtnDiv").removeClass('col-sm-2').addClass('col-sm-6');
-
-                            //Elevate Item No. 4
-                            $('#ele4OptionsDiv,#ele4DateLblDiv,#ele4DateDiv,#ele4ExpiredDiv').show();
-                            $("#ele4Options").prependTo('#ele4OptionsDiv');
-                            $("#ele4Date").prependTo('#ele4DateDiv');
-                            $("#ele4ExpiredImg").prependTo('#ele4ExpiredDiv');
-                            $("#ele4DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele4DateLblDiv');
-                            $("#ele4Details").removeClass('font-10').addClass('font-12');
-                            $('#ele4OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele4OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-
-                            //Elevate Item No. 5
-                            $('#ele5OptionsDiv,#ele5DateLblDiv,#ele5DateDiv,#ele5ExpiredDiv').show();
-                            $("#ele5Options").prependTo('#ele5OptionsDiv');
-                            $("#ele5Date").prependTo('#ele5DateDiv');
-                            $("#ele5DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele5DateLblDiv');
-                            $("#ele5Details").removeClass('font-10').addClass('font-12');
-                            $('#ele5OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele5OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-
-                            //Elevate Item No. 6
-                            $('#ele6OptionsDiv,#ele6DateLblDiv,#ele6DateDiv,#ele6ExpiredDiv').show();
-                            $("#ele6Options").prependTo('#ele6OptionsDiv');
-                            $("#ele6Date").prependTo('#ele6DateDiv');
-                            $("#ele6DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele6DateLblDiv');
-                            $("#ele6Details").removeClass('font-10').addClass('font-12');
-                            $('#ele6OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele6OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-
-                            //Elevate Item No. 7
-                            $('#ele7OptionsDiv,#ele7DateLblDiv,#ele7DateDiv,#ele7ExpiredDiv').show();
-                            $("#ele7Options").prependTo('#ele7OptionsDiv');
-                            $("#ele7Date").prependTo('#ele7DateDiv');
-                            $("#ele7DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele7DateLblDiv');
-                            $("#ele7Details").removeClass('font-10').addClass('font-12');
-                            $('#ele7OrigImageDiv').removeClass('col-sm-6').addClass('col-sm-3');
-                            $('#ele7OrigOptionsDiv').removeClass('col-sm-6').addClass('col-sm-9').find('br').remove();
-
-                        }
-
-                        function elevateGridViewTemplate() {
-                            $('#eleListViewBtn').prop('disabled', false);
-                            $('#eleGridViewBtn').prop('disabled', true);
-                            $("#elevatePanels > li").css({ 'margin': '0', 'padding': '15 0' });
-                            $("#elevatePanels > li > div ").removeClass('rule-panel-list-view').addClass('rule-panel-grid-view');
-
-                            //Elevate Item No. 1
-                            $("#ele1Details").before('<br/><br/>');
-                            $("#ele1DaysValid").prependTo('#ele1OrigImageDiv');
-                            $("#ele1Options").prependTo('#ele1OrigOptionsDiv');
-                            $("#ele1DateLbl").removeClass('font-10').addClass('font-12').prependTo('#ele1OrigDateDiv');
-                            $("#ele1Date").appendTo('#ele1OrigDateDiv');
-                            $("#ele1Details").removeClass('font-12').addClass('font-10');
-                            $('#ele1OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele1OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $('#ele1OptionsDiv,#ele1DateLblDiv,#ele1DateDiv,#ele1ExpiredDiv').hide()
-
-                            //Elevate Item No. 2
-                            $("#ele2Details").before('<br/><br/>');
-                            $("#ele2ExpiredImg").prependTo('#ele2OrigImageDiv');
-                            $("#ele2Options").prependTo('#ele2OrigOptionsDiv');
-                            $("#ele2DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele2OrigDateDiv');
-                            $("#ele2Date").appendTo('#ele2OrigDateDiv');
-                            $("#ele2Details").removeClass('font-12').addClass('font-10');
-                            $('#ele2OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele2OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $("#ele2SortDiv").removeClass('col-sm-6').addClass('col-sm-10');
-                            $("#ele2DeleteBtnDiv").removeClass('col-sm-6').addClass('col-sm-2');
-                            $('#ele2OptionsDiv,#ele2DateLblDiv,#ele2DateDiv,#ele2ExpiredDiv').hide()
-
-                            //Elevate Item No. 3
-                            $("#ele3Details").before('<br/><br/>');
-                            $("#ele3ExpiredImg").prependTo('#ele3OrigImageDiv');
-                            $("#ele3Options").prependTo('#ele3OrigOptionsDiv');
-                            $("#ele3DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele3OrigDateDiv');
-                            $("#ele3Date").appendTo('#ele3OrigDateDiv');
-                            $("#ele3Details").removeClass('font-12').addClass('font-10');
-                            $('#ele3OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele3OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $("#ele3SortDiv").removeClass('col-sm-6').addClass('col-sm-10');
-                            $("#ele3DeleteBtnDiv").removeClass('col-sm-6').addClass('col-sm-2');
-                            $('#ele3OptionsDiv,#ele3DateLblDiv,#ele3DateDiv,#ele3ExpiredDiv').hide()
-
-                            //Elevate Item No. 4
-                            $("#ele4Details").before('<br/><br/>');
-                            $("#ele4ExpiredImg").prependTo('#ele4OrigImageDiv');
-                            $("#ele4Options").prependTo('#ele4OrigOptionsDiv');
-                            $("#ele4DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele4OrigDateDiv');
-                            $("#ele4Date").appendTo('#ele4OrigDateDiv');
-                            $("#ele4Details").removeClass('font-12').addClass('font-10');
-                            $('#ele4OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele4OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $('#ele4OptionsDiv,#ele4DateLblDiv,#ele4DateDiv,#ele4ExpiredDiv').hide()
-
-                            //Elevate Item No. 5
-                            $("#ele5Details").before('<br/><br/>');
-                            $("#ele5ExpiredImg").prependTo('#ele5OrigImageDiv');
-                            $("#ele5Options").prependTo('#ele5OrigOptionsDiv');
-                            $("#ele5DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele5OrigDateDiv');
-                            $("#ele5Date").appendTo('#ele5OrigDateDiv');
-                            $("#ele5Details").removeClass('font-12').addClass('font-10');
-                            $('#ele5OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele5OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $('#ele5OptionsDiv,#ele5DateLblDiv,#ele5DateDiv,#ele5ExpiredDiv').hide()
-
-                            //Elevate Item No. 6
-                            $("#ele6Details").before('<br/><br/>');
-                            $("#ele6ExpiredImg").prependTo('#ele6OrigImageDiv');
-                            $("#ele6Options").prependTo('#ele6OrigOptionsDiv');
-                            $("#ele6DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele6OrigDateDiv');
-                            $("#ele6Date").appendTo('#ele6OrigDateDiv');
-                            $("#ele6Details").removeClass('font-12').addClass('font-10');
-                            $('#ele6OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele6OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $('#ele6OptionsDiv,#ele6DateLblDiv,#ele6DateDiv,#ele6ExpiredDiv').hide();
-
-                            //Elevate Item No. 7
-                            $("#ele7Details").before('<br/><br/>');
-                            $("#ele7ExpiredImg").prependTo('#ele7OrigImageDiv');
-                            $("#ele7Options").prependTo('#ele7OrigOptionsDiv');
-                            $("#ele7DateLbl").removeClass('font-12').addClass('font-10').prependTo('#ele7OrigDateDiv');
-                            $("#ele7Date").appendTo('#ele7OrigDateDiv');
-                            $("#ele7Details").removeClass('font-12').addClass('font-10');
-                            $('#ele7OrigImageDiv').removeClass('col-sm-3').addClass('col-sm-6');
-                            $('#ele7OrigOptionsDiv').removeClass('col-sm-9').addClass('col-sm-6');
-                            $('#ele7OptionsDiv,#ele7DateLblDiv,#ele7DateDiv,#ele7ExpiredDiv').hide();
-                        }
-
                         function elevateListView() {
-                            $('#elevatePanels > li ').removeClass("col-sm-3").addClass('col-sm-12');
+                            $('#elevatePanels').removeClass("grid-view").addClass('list-view');
                             sortElevate();
-                            elevateListViewTemplate();
                         }
-
                         function elevateGridView() {
-                            $('#elevatePanels > li ').removeClass("col-sm-12").addClass('col-sm-3');
+                            $('#elevatePanels').removeClass("list-view").addClass('grid-view');
                             sortElevate();
-                            elevateGridViewTemplate();
                         }
 
+                        function hideForceAdd() {
+                            $('#elevatePanels>li.grey-list-item').find('.btn-toggle').closest('span').hide();
+                        }
                     </script>
-                    <div class="row">
-                        <ul id="elevatePanels" class="rule-item-ul-style">
-                            <!--Elevate Item No. 1-->
-                            <li id="ele1" class="col-sm-3">
-                                <div class="panel panel-default rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele1SortDiv" class="col-sm-6">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <label class="badge sort-handle">1</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele1DeleteBtnDiv" class="col-sm-6">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele1ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele1DateLblDiv" class="form-group"></div>
-                                                        <div id="ele1DateDiv" class="form-group"></div>
-                                                        <div id="ele1OptionsDiv" class="form-group"></div>
-                                                        <div class="form-group">
-                                                            <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele1OrigImageDiv" class="col-sm-6">
-                                                <b id="ele1DaysValid" class="text-info">8 days left</b>
-                                                <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                                <br />
-                                                <div id="ele1OrigDateDiv">
-                                                    <b id="ele1DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele1Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele1OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele1Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div><br /><br />
-                                                <div id="ele1Details">
-                                                    <p>
-                                                        <b> Liebert </b>
-                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">SKU#: </span>13374814
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div>
+                        <ul id="elevatePanels" class="grid-view">
+                            <li class="list-item red-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">1</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <label class="font-10 text-warning">8 days left</label>
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
                                     </div>
                                 </div>
                             </li>
-                            <!--Elevate Item No. 2-->
-                            <li id="ele2" class="col-sm-3">
-                                <div class="panel panel-warning rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele2SortDiv" class="col-sm-10">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <span class="badge sort-handle">2</span>
-                                                        </div>
-                                                        <div id="radio-switch" class="form-group">
-                                                            <div class="btn-group btn-toggle" data-toggle="buttons">
-                                                                <label class="btn btn-default btn-xs">
-                                                                    <input name="options" value="option2" type="radio"> Normal
-                                                                </label>
-                                                                <label class="btn btn-default btn-primary btn-xs">
-                                                                    <input name="options" checked="checked" type="radio"> Force Add
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele2DeleteBtnDiv" class="col-sm-2">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele2ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele2DateLblDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele2DateDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele2OptionsDiv" class="form-group" style="display: none;"></div>
-                                                        <div class="form-group">
-                                                            <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele2OrigImageDiv" class="col-sm-6">
-                                                <img id="ele2ExpiredImg" src="images/expired_stamp50x16.png" height="16" class="center-block">
-                                                <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                                <br />
-                                                <div id="ele2OrigDateDiv">
-                                                    <b id="ele2DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele2Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele2OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele2Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div><br /><br />
-                                                <div id="ele2Details">
-                                                    <p>
-                                                        <b> Liebert </b>
-                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">SKU#: </span>13374814
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <li class="list-item yellow-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">2</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <!--<label class="font-10 text-warning">8 days left</label>-->
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
                                     </div>
                                 </div>
                             </li>
-                            <!--Elevate Item No. 3-->
-                            <li id="ele3" class="col-sm-3">
-                                <div class="panel panel-danger rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele3SortDiv" class="col-sm-10">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <span class="badge sort-handle">3</span>
-                                                        </div>
-                                                        <div id="radio-switch" class="form-group">
-                                                            <div class="btn-group btn-toggle" data-toggle="buttons">
-                                                                <label class="btn btn-default btn-xs">
-                                                                    <input name="options" value="option2" type="radio"> Normal
-                                                                </label>
-                                                                <label class="btn btn-default btn-primary btn-xs">
-                                                                    <input name="options" checked="checked" type="radio"> Force Add
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele3DeleteBtnDiv" class="col-sm-2">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele3ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele3DateLblDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele3DateDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele3OptionsDiv" class="form-group" style="display: none;"></div>
-                                                        <div class="form-group">
-                                                            <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele3OrigImageDiv" class="col-sm-6">
-                                                <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                                <br />
-                                                <div id="ele3OrigDateDiv">
-                                                    <b id="ele3DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele3Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele3OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele3Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div><br /><br />
-                                                <div id="ele3Details">
-                                                    <p>
-                                                        <b> Liebert </b>
-                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">SKU#: </span>13374814
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <li class="list-item grey-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">3</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <!--<label class="font-10 text-warning">8 days left</label>-->
+                                        <img src="images/expired_stamp50x16.png" height="16">
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
                                     </div>
                                 </div>
                             </li>
-                            <!--Elevate Item No. 4-->
-                            <li id="ele4" class="col-sm-3">
-                                <div class="panel panel-default rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele4SortDiv" class="col-sm-6">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <span class="badge sort-handle">4</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele4DeleteBtnDiv" class="col-sm-6">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele4ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele4DateLblDiv" class="form-group"></div>
-                                                        <div id="ele4DateDiv" class="form-group"></div>
-                                                        <div id="ele4OptionsDiv" class="form-group"></div>
-                                                        <div class="form-group">
-                                                            <button id="" type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele4OrigImageDiv" class="col-sm-6">
-                                                <img id="ele4ExpiredImg" src="images/expired_stamp50x16.png" class="center-block">
-                                                <img src="images/gtx4.jpg" class="center-block" alt="no picture available" width="80" height="80">
-                                                <br />
-                                                <div id="ele4OrigDateDiv">
-                                                    <b id="ele4DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele4Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele4OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele4Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div><br /><br />
-                                                <div id="ele4Details">
-                                                    <p>
-                                                        <b> Liebert </b>
-                                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">SKU#: </span>13374814
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <li class="list-item grey-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">4</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <label class="font-10 text-warning">8 days left</label>
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
                                     </div>
                                 </div>
                             </li>
-                            <!--Elevate Item No. 5-->
-                            <li id="ele5" class="col-sm-3">
-                                <div class="panel panel-default rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele5SortDiv" class="col-sm-6">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <span class="badge sort-handle">5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele5DeleteBtnDiv" class="col-sm-6">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele5ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele5DateLblDiv" class="form-group"></div>
-                                                        <div id="ele5DateDiv" class="form-group"></div>
-                                                        <div id="ele5OptionsDiv" class="form-group"></div>
-                                                        <div class="form-group">
-                                                            <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele5OrigImageDiv" class="col-sm-6">
-                                                <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                                <br />
-                                                <div id="ele5OrigDateDiv">
-                                                    <b id="ele5DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele5Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele5OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele5Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div><br /><br />
-                                                <div id="ele5Details">
-                                                    <p>
-                                                        <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <li class="list-item grey-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">5</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <label class="font-10 text-warning">8 days left</label>
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
                                     </div>
                                 </div>
                             </li>
-                            <!--Elevate Item No. 6-->
-                            <li id="ele6" class="col-sm-3">
-                                <div class="panel panel-default rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele6SortDiv" class="col-sm-6">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <span class="badge sort-handle">6</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele6DeleteBtnDiv" class="col-sm-6">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele6ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele6DateLblDiv" class="form-group"></div>
-                                                        <div id="ele6DateDiv" class="form-group"></div>
-                                                        <div id="ele6OptionsDiv" class="form-group"></div>
-                                                        <div class="form-group">
-                                                            <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele6OrigImageDiv" class="col-sm-6">
-                                                <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                                <br />
-                                                <div id="ele6OrigDateDiv">
-                                                    <b id="ele6DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele6Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele6OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele6Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div> <br /><br />
-                                                <div id="ele6Details">
-                                                    <p>
-                                                        <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <li class="list-item red-list-item">
+                                <div>
+                                    <span class="rule-num">
+                                        <label class="badge sort-handle">6</label>
+                                        <span id="radio-switch" class="form-group">
+                                            <span class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-default btn-xs font-10">
+                                                    <input name="options" value="option2" type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-primary btn-xs font-10">
+                                                    <input name="options" checked="checked" type="radio"> Force Add
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="form-inline rule-date">
+                                        <span class="form-group">
+                                            <b class="font-10">Valid Until: </b>
+                                        </span>
+                                        <span class="form-group">
+                                            <span class="input-append date">
+                                                <input type="text" class="form-control input-xs add-on" placeholder="Select Date" size="9">
+                                            </span>
+                                        </span>&emsp;
+                                        <!--<label class="font-10 text-warning">8 days left</label>-->
+                                    </span>
+                                    <span class="btn-group rule-btns">
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item"><i class="fa fa-times fa-lg"></i></a>
+                                    </span>
                                 </div>
-                            </li>
-                            <!--Elevate Item No. 7-->
-                            <li id="ele7" class="col-sm-3">
-                                <div class="panel panel-default rule-panel-grid-view">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div id="ele7SortDiv" class="col-sm-6">
-                                                <div class="pull-left">
-                                                    <div class="form-inline">
-                                                        <div class="form-group">
-                                                            <span class="badge sort-handle">7</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele7DeleteBtnDiv" class="col-sm-6">
-                                                <div class="pull-right">
-                                                    <div class="form-inline">
-                                                        <div id="ele7ExpiredDiv" class="form-group" style="display: none;"></div>
-                                                        <div id="ele7DateLblDiv" class="form-group"></div>
-                                                        <div id="ele7DateDiv" class="form-group"></div>
-                                                        <div id="ele7OptionsDiv" class="form-group"></div>
-                                                        <div class="form-group">
-                                                            <button type="button" class="btn btn-link btn-xs" title="Delete Item">
-                                                                <i class="fa fa-times fa-lg fg-red"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div id="ele7OrigImageDiv" class="col-sm-6">
-                                                <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
-                                                <br />
-                                                <div id="ele7OrigDateDiv">
-                                                    <b id="ele7DateLbl" class="font-10">Valid Until: </b>
-                                                    <div id="ele7Date" class="input-append date">
-                                                        <input type="text" class="form-control input-sm add-on" placeholder="Select Date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="ele7OrigOptionsDiv" class="col-sm-6 font-10">
-                                                <div id="ele7Options" class="pull-right">
-                                                    <button type="button" class="btn btn-link btn-xs" title="Comment">
-                                                        <i class="fa fa-comment-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Audit">
-                                                        <i class="fa fa-file-text-o fa-lg"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-link btn-xs" title="Modified by">
-                                                        <i class="fa fa-user fa-lg"></i>
-                                                    </button>
-                                                </div><br /><br />
-                                                <div id="ele7Details">
-                                                    <p>
-                                                        <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div>
+                                    <span class="rule-pic">
+                                        <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
+                                    </span>
+                                    <div class="rule-info font-10">
+                                        <p>
+                                            <b> Liebert </b>
+                                            <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                        </p>
+                                        <p>
+                                            <span class="text-success">SKU#: </span>13374814
+                                        </p>
+                                        <p>
+                                            <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
+                                        </p>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
                     <!--elevate modals-->
                     <div id="backupRuleModal" class="modal fade font-13" role="dialog">
                         <div class="modal-dialog  modal-s6">
@@ -3450,7 +3069,7 @@
                     <div id="excludePanels" class="row">
                         <!--exclude Item No.1-->
                         <div id="exc1" class="col-sm-3">
-                            <div class="panel panel-default rule-panel-grid-view">
+                            <div class="panel rule-panel-grid-view">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div id="exc1DeleteBtnDiv" class="col-sm-12">
