@@ -1278,6 +1278,13 @@ textarea {
             right: 0px;
         }
 
+        .grid-view .list-item .rule-expiry {
+            margin-right: 8px;
+            position: absolute;
+            top: 75px;
+            left: 25px;
+        }
+
         .grid-view .list-item .rule-pic {
             margin-right: 8px;
             position: absolute;
@@ -1336,17 +1343,24 @@ textarea {
             right: 0px;
         }
 
+        .list-view .list-item .rule-expiry {
+            margin-right: 8px;
+            position: absolute;
+            top: 30px;
+            left: 55px;
+        }
+
         .list-view .list-item .rule-pic {
             margin-right: 8px;
             position: absolute;
-            top: 45px;
+            top: 50px;
             left: 45px;
         }
 
         .list-view .list-item .rule-info {
             margin-right: 8px;
             position: absolute;
-            top: 45px;
+            top: 50px;
             left: 200px;
             right: 0px;
         }
