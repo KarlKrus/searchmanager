@@ -1166,7 +1166,7 @@ table > thead > tr > th {
 
 /*sort handle*/
 .sort-handle {
-    cursor: grab;
+    cursor: move !important;
     color: grey;
 }
 
@@ -1229,7 +1229,7 @@ textarea {
 }
 
 .pre-page-text-label, .post-page-text-label {
-    background-color: #f5f5f5 !important;
+    background-color: transparent !important;
     border: 0 !important;
     color: #333 !important;
     padding: 6px 4px !important;
@@ -1401,4 +1401,8 @@ textarea {
     font-size: 12px;
     line-height: 5;
     border-radius: 3px;
+}
+.popover {
+    max-width: 500px;
+    width: auto;
 }
