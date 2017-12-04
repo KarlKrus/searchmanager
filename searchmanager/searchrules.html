@@ -712,7 +712,7 @@
                                     </span>
                                 </span>
                                 <span class="btn-group rule-btns">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="popover"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Modified by" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item" data-toggle="modal" data-target="#ruleItemDeleteModal"><i class="fa fa-times fa-lg"></i></a>
@@ -6941,80 +6941,15 @@
             else
                 e.style.display = 'none';
         }
-        $('[data-toggle=popover]').popover({
-            html: true,
-            container: 'body',
-            toggle:'onfocus',
-            content: function () {
-                return $("#ruleItemCommentPopover").html();
-            }
-        }).click(function () {
-            $('.rule-btns>a>i.fa-comment-o').popover('show');
-        });
     </script>
 
-    <!--rule panels buttons options popover-->
-    <div id="ruleItemCommentPopover">
-        <table class="table table-condensed font-10">
-            <thead>
-                <tr class="active">
-                    <td>Date</td>
-                    <td>Comment</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>12/03/2017 06:59 PM</td>
-                    <td>pcmall_admin - already expired, update valid date</td>
-                </tr>
-                <tr>
-                    <td>12/03/2017 06:59 PM</td>
-                    <td>pcmall_admin - already expired, update valid date</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr class="active">
-                    <td class="row-height" colspan="2">
-                        <div class="pull-left">
-                            <h5 class="font-10">1-10 of 169566 Items</h5>
-                        </div>
-                        <div class="pull-right">
-                            <ul class="pagination reset-margin pagination-margin">
-                                <li class="first"><a id="firstPage" href="javascript:void(0);"><i class="fa fa-angle-double-left"></i></a></li>
-                                <li class="prev"><a id="prevPage" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
-                                <li class="pagebox">
-                                    <span class="pre-page-text-label">Page</span>
-                                    <span class="page-number">
-                                        <input id="currentPage" class="form-control input-small page-number" value="1" type="text">
-                                    </span>
-                                    <span class="post-page-text-label"> of 1131</span>
-                                </li>
-                                <li class="next"><a id="nextPage" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
-                                <li class="last"><a id="lastPage" href="javascript:void(0);"><i class="fa fa-angle-double-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-        <label>Add Comment</label>
-        <textarea id="" rows="2" cols="20" class="form-control"></textarea>
-        <hr />
-        <a href="javascript:void(0);" class="btn btn-primary btn-sm">
-            Add Comment
-        </a>
-       <button type="button" class="btn btn-default btn-sm" data-dismiss="popover">
-        Close
-        </button>
-    </div>
-
     <!--rule panels buttons options modal-->
-    <div id="ruleItemCommentModal" class="modal fade font-13 in" role="dialog" style="display: none;" aria-hidden="false">
+    <div id="ruleItemCommentModal" class="modal fade in" role="dialog" style="display: none;" aria-hidden="false">
         <div class="modal-dialog modal-sm">
-            <div class="modal-content">
+            <div class="modal-content font-10">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">Rule Item Comment</h4>
+                    <b class="modal-title font-12">Rule Item Comment</b>
                 </div>
                 <div class="modal-body">
                     <table class="table table-condensed">
@@ -7059,30 +6994,30 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <label>Add Comment</label>
+                    <label>Add Comment: </label>
                     <textarea id="" rows="2" cols="20" class="form-control"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <a href="javascript:void(0);" class="btn btn-primary btn-sm">
-                        Add Comment
-                    </a>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="btn btn-primary btn-xs">
+                    Add Comment
+                </a>
             </div>
         </div>
     </div>
-    <div id="ruleItemAuditModal" class="modal fade font-13 in" role="dialog" style="display: none;" aria-hidden="false">
+    </div>  
+    <div id="ruleItemAuditModal" class="modal fade in" role="dialog" style="display: none;" aria-hidden="false">
         <div class="modal-dialog modal-sm">
-            <div class="modal-content">
+            <div class="modal-content font-10">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">Rule Item Comment</h4>
+                    <b class="modal-title font-12">Rule Item Audit</b>
                 </div>
                 <div class="modal-body">
                     <table class="table table-condensed table-hover">
                         <thead>
                             <tr class="active">
-                                <td>Date</td>
-                                <td>Comment</td>
+                                <th>Date</th>
+                                <th>Comment</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -7130,17 +7065,17 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-
+                   
                 </div>
             </div>
         </div>
     </div>
     <div id="ruleItemDeleteModal" class="modal fade in" role="dialog" style="display: none;" aria-hidden="false">
-        <div class="modal-dialog modal-sm" role="document" style="width:50px">
-            <div class="modal-content">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content font-10">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">Delete Item</h4>
+                    <b class="modal-title font-12">Delete Item</b>
                 </div>
                 <div class="modal-body">
                     <p>Item will be removed from this rule. Continue?</p>

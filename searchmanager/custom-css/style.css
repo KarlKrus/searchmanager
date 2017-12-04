@@ -879,7 +879,7 @@ label.error {
 }
 
 .modal-dialog {
-    min-width: 700px !important;
+    /*width: 700px;*/
 }
 
 .modal-header .close {
