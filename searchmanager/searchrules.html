@@ -1331,7 +1331,7 @@
                         </div>
                     </div>
                     <div id="ruleCommentModal" class="modal fade font-13" role="dialog">
-                        <div class="modal-dialog modal-sm">
+                        <div class="modal-dialog modal-s1">
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -2486,7 +2486,7 @@
                         </div>
                     </div>
                     <div id="demoteRuleCommentModal" class="modal fade font-13" role="dialog">
-                        <div class="modal-dialog modal-sm">
+                        <div class="modal-dialog modal-s1">
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -3656,7 +3656,7 @@
                         </div>
                     </div>
                     <div id="excludeRuleCommentModal" class="modal fade font-13" role="dialog">
-                        <div class="modal-dialog modal-sm">
+                        <div class="modal-dialog modal-s1">
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -4970,7 +4970,7 @@
                         </div>
                     </div>
                     <div id="redirectRuleCommentModal" class="modal fade font-13" role="dialog">
-                        <div class="modal-dialog modal-sm">
+                        <div class="modal-dialog modal-s1">
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -5600,7 +5600,9 @@
                                     <div class="row">
                                         <script>
                                             $(document).ready(function () {
-                                                $('[data-toggle="popover"]').popover();
+                                                $('[data-toggle="popover"]').popover({
+                                                    placement:'top'
+                                                });
                                             });
                                         </script>
                                         <div class="col-sm-2"></div>
@@ -5938,7 +5940,7 @@
                         </div>
                     </div>
                     <div id="relevancyRuleCommentModal" class="modal fade font-13" role="dialog">
-                        <div class="modal-dialog modal-sm">
+                        <div class="modal-dialog modal-s1">
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -6955,8 +6957,8 @@
                     <table class="table table-condensed">
                         <thead>
                             <tr class="active">
-                                <td>Date</td>
-                                <td>Comment</td>
+                                <th>Date</th>
+                                <th>Comment</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -6973,16 +6975,16 @@
                             <tr class="active">
                                 <td class="row-height" colspan="2">
                                     <div class="pull-left">
-                                        <h5 class="font-10">1-10 of 169566 Items</h5>
+                                        <span class="font-10">1-10 of 120 Items</span>
                                     </div>
                                     <div class="pull-right">
-                                        <ul class="pagination reset-margin pagination-margin">
+                                        <ul class="pagination reset-margin pagination-margin pagination-xs">
                                             <li class="first"><a id="firstPage" href="javascript:void(0);"><i class="fa fa-angle-double-left"></i></a></li>
                                             <li class="prev"><a id="prevPage" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
                                             <li class="pagebox">
                                                 <span class="pre-page-text-label">Page</span>
-                                                <span class="page-number">
-                                                    <input id="currentPage" class="form-control input-small page-number" value="1" type="text">
+                                                <span class="page-number pre-page-text-label">
+                                                    <input id="currentPage" class="form-control page-number page-input-xs" value="1" type="text">
                                                 </span>
                                                 <span class="post-page-text-label"> of 1131</span>
                                             </li>
@@ -7042,16 +7044,16 @@
                             <tr class="active">
                                 <td class="row-height" colspan="2">
                                     <div class="pull-left">
-                                        <h5 class="font-10">1-10 of 169566 Items</h5>
+                                        <span class="font-10">1-10 of 120 Items</span>
                                     </div>
                                     <div class="pull-right">
-                                        <ul class="pagination reset-margin pagination-margin">
+                                        <ul class="pagination reset-margin pagination-margin pagination-xs">
                                             <li class="first"><a id="firstPage" href="javascript:void(0);"><i class="fa fa-angle-double-left"></i></a></li>
                                             <li class="prev"><a id="prevPage" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
                                             <li class="pagebox">
                                                 <span class="pre-page-text-label">Page</span>
-                                                <span class="page-number">
-                                                    <input id="currentPage" class="form-control input-small page-number" value="1" type="text">
+                                                <span class="page-number pre-page-text-label">
+                                                    <input id="currentPage" class="form-control page-number page-input-xs" value="1" type="text">
                                                 </span>
                                                 <span class="post-page-text-label"> of 1131</span>
                                             </li>

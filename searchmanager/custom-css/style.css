@@ -1402,7 +1402,37 @@ textarea {
     line-height: 5;
     border-radius: 3px;
 }
+
 .popover {
     max-width: 500px;
     width: auto;
 }
+
+/*custom pagination  size -xs*/
+
+.pagination-xs {
+vertical-align:top;
+}
+
+    .pagination-xs > li > a, .pagination-xs > li > span {
+        padding: 1px 4px !important;
+        font-size: 10px;
+    }
+
+    .pagination-xs > li:first-child > a, .pagination-xs > li:first-child > span {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .pagination-xs > li:last-child > a, .pagination-xs > li:last-child > span {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .pagination-xs > li > span > .page-input-xs {
+        height: 18px !important;
+        padding: 0px 1px !important;
+        font-size: 10px;
+        border-radius: 1px;
+        width: 25px;
+    }
