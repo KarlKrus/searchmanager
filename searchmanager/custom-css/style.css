@@ -1403,11 +1403,6 @@ textarea {
     border-radius: 3px;
 }
 
-.popover {
-    max-width: 500px;
-    width: auto;
-}
-
 /*custom pagination  size -xs*/
 
 .pagination-xs {
@@ -1437,6 +1432,6 @@ textarea {
         width: 25px;
     }
 
-[data-style=font-10p5-popover] + .popover {
+.popover {
     font-size: 10.5px;
 }
