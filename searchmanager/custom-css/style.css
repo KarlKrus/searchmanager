@@ -1411,7 +1411,7 @@ textarea {
 /*custom pagination  size -xs*/
 
 .pagination-xs {
-vertical-align:top;
+    vertical-align: top;
 }
 
     .pagination-xs > li > a, .pagination-xs > li > span {
@@ -1436,3 +1436,7 @@ vertical-align:top;
         border-radius: 1px;
         width: 25px;
     }
+
+[data-style=font-10p5-popover] + .popover {
+    font-size: 10.5px;
+}
