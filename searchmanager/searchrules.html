@@ -666,12 +666,24 @@
                         $(document).ready(function () {
                             hideForceAdd();
                             sortElevate();
+                            showRuleItemSKU();
+                            showRuleItemMfrpn();
                         });
                         function sortElevate() {
                             $("#elevatePanels").sortable({
                                 handle: '.sort-handle'
                             });
                         };
+                        function showRuleItemSKU() {
+                            if ($('span.rule-item-name').has('a').length) {
+                                $('span.rule-item-name>a').closest('.rule-item-info').find('.rule-item-sku').hide();
+                            }
+                        }
+                        function showRuleItemMfrpn() {
+                            if ($('span.rule-item-name').has('a').length) {
+                                $('span.rule-item-name>a').closest('.rule-item-info').find('.rule-item-mfrpn').hide();
+                            }
+                        }
                         function elevateListView() {
                             $('#elevatePanels').removeClass("grid-view").addClass('list-view');
                             sortElevate();
@@ -688,7 +700,7 @@
                     <ul id="elevatePanels" class="grid-view">
                         <li class="list-item red-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">1</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -701,7 +713,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -711,38 +723,45 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
-                                    <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin" ><i class="fa fa-user fa-lg text-muted"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"><i class="fa fa-user fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item" data-toggle="modal" data-target="#ruleItemDeleteModal"><i class="fa fa-times fa-lg"></i></a>
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item yellow-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">2</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -755,7 +774,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -765,38 +784,45 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
-                                    <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover"  data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item" data-toggle="modal" data-target="#ruleItemDeleteModal"><i class="fa fa-times fa-lg"></i></a>
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">3</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -809,7 +835,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -819,7 +845,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -827,30 +853,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>
                                     <img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">4</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -863,7 +896,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -873,7 +906,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -881,30 +914,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">5</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -917,7 +957,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -927,7 +967,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -935,30 +975,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>
                                     <img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item red-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">6</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -971,7 +1018,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -981,7 +1028,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -989,30 +1036,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item red-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">7</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -1025,7 +1079,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -1035,7 +1089,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -1043,23 +1097,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item yellow-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">8</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -1072,7 +1140,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -1082,7 +1150,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -1090,23 +1158,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">9</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -1119,7 +1201,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -1129,7 +1211,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -1137,17 +1219,31 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -1843,7 +1939,7 @@
                     <ul id="demotePanels" class="grid-view">
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">1</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -1856,7 +1952,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -1866,7 +1962,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -1874,30 +1970,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">2</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -1910,7 +2013,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -1920,7 +2023,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -1928,30 +2031,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">3</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -1964,7 +2074,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -1974,7 +2084,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -1982,30 +2092,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>
                                     <img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">4</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -2018,7 +2135,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -2028,7 +2145,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -2036,30 +2153,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">5</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -2072,7 +2196,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -2082,7 +2206,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -2090,30 +2214,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>
                                     <img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">6</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -2126,7 +2257,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -2136,7 +2267,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -2144,30 +2275,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">7</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -2180,7 +2318,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -2190,7 +2328,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -2198,23 +2336,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">8</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -2227,7 +2379,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -2237,7 +2389,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -2245,23 +2397,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">9</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -2274,7 +2440,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -2284,7 +2450,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -2292,17 +2458,31 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -2990,7 +3170,7 @@
                         $(document).ready(function () {
                             hideForceAddExclude();
                             sortExclude();
-                            $('#excludePanels>li>div').find('span.rule-num').hide();
+                            $('#excludePanels>li>div').find('span.rule-item-num').hide();
                         });
                         function sortExclude() {
                             $("#excludePanels").sortable({
@@ -3013,7 +3193,7 @@
                     <ul id="excludePanels" class="grid-view">
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">1</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3026,7 +3206,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3036,7 +3216,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3044,30 +3224,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">2</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3080,7 +3267,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3090,7 +3277,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3098,30 +3285,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">3</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3134,7 +3328,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3144,38 +3338,45 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-danger btn-xs font-10" title="Delete Item" data-toggle="modal" data-target="#ruleItemDeleteModal"><i class="fa fa-times fa-lg"></i></a>
-                                </span>>
+                                </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>
-                                    <img src="images/expired_stamp50x16.png" height="16">-->
+                <img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">4</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3188,7 +3389,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3198,7 +3399,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3206,30 +3407,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">5</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3242,7 +3450,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3252,7 +3460,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3260,30 +3468,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>
-                                    <img src="images/expired_stamp50x16.png" height="16">-->
+                <img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">6</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3296,7 +3511,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3306,7 +3521,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3314,30 +3529,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/gtx4.jpg" class="center-block img-responsive" alt="no picture available" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <b> Liebert </b>
-                                        <span class="text-info"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
-                                    </p>
-                                    <p>
-                                        <span class="text-success">SKU#: </span>13374814
-                                    </p>
-                                    <p>
-                                        <span class="text-success">Mfr. Part#: </span>GXT4-1500RT120
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr">Liebert</span>
+                                        <span class="rule-item-name"> GXT4 1500VAUPS OL 120V RACK TWR RMKIT</span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku">13374814</span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn">GXT4-1500RT120</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">7</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3350,7 +3572,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3360,7 +3582,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3368,23 +3590,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/facet_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addFacetModalShow()" class="text-info"><b>Condition is "Clearance" and Availability is "In Stock"</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">8</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3397,7 +3633,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3407,7 +3643,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3415,23 +3651,37 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <!--<label class="font-10 text-warning">8 days left</label>-->
                                     <img src="images/expired_stamp50x16.png" height="16">
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/productSiteTaxonomy_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addPSTModalShow()" class="text-info"><b>Category is "Computer Accessories > Notebook Accessories > Notebook Batteries"...</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-item grey-list-item">
                             <div>
-                                <span class="rule-num">
+                                <span class="rule-item-num">
                                     <label class="badge sort-handle">9</label>
                                     <span id="radio-switch" class="form-group">
                                         <span class="btn-group btn-toggle" data-toggle="buttons">
@@ -3444,7 +3694,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="form-inline rule-date">
+                                <span class="form-inline rule-item-date">
                                     <span class="form-group">
                                         <b class="font-10">Valid Until: </b>
                                     </span>
@@ -3454,7 +3704,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <span class="btn-group rule-btns">
+                                <span class="btn-group rule-item-btns">
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Comment" data-toggle="modal" data-target="#ruleItemCommentModal"><i class="fa fa-comment-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" title="Audit" data-toggle="modal" data-target="#ruleItemAuditModal"><i class="fa fa-file-text-o fa-lg text-muted"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-default btn-xs font-10" data-trigger="focus" data-toggle="popover" data-content="Modified by pcmall_admin"> <i class="fa fa-user fa-lg text-muted"></i></a>
@@ -3462,17 +3712,31 @@
                                 </span>
                             </div>
                             <div>
-                                <span class="rule-expiry">
+                                <span class="rule-item-expiry">
                                     <label class="font-10 text-warning">8 days left</label>
                                     <!--<img src="images/expired_stamp50x16.png" height="16">-->
                                 </span>
-                                <span class="rule-pic">
+                                <span class="rule-item-pic">
                                     <img src="images/ims_img.jpg" class="img-thumbnail center-block" alt="Responsive image" width="80" height="80">
                                 </span>
-                                <div class="rule-info font-10">
-                                    <p>
-                                        <a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a>
-                                    </p>
+                                <div class="rule-item-info font-10">
+                                    <div class="title-area-cont">
+                                        <span class="rule-item-mfr"></span>
+                                        <span class="rule-item-name"><a href="javascript:void(0);" onclick="addIMSModalShow()" class="text-info"><b>Manufacturer is "Apple"</b></a></span>
+                                    </div>
+                                    <br />
+                                    <div class="rule-item-sku-cont">
+                                        <p class="rule-item-sku">
+                                            <span class="fg-green">SKU #:</span>
+                                            <span class="sku"></span>
+                                        </p>
+                                    </div>
+                                    <div class="rule-item-mfrpn-cont">
+                                        <p class="rule-item-mfrpn">
+                                            <span class="fg-green">Mfr. Part #:</span>
+                                            <span class="mfrpn"></span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -5601,8 +5865,9 @@
                                         <script>
                                             $(document).ready(function () {
                                                 $('[data-toggle="popover"]').popover({
-                                                    placement: 'top',
+                                                    placement: 'left',
                                                     trigger: 'hover',
+                                                    container: 'body',
                                                 });
                                             });
                                         </script>
@@ -6999,15 +7264,15 @@
                     </table>
                     <label>Add Comment: </label>
                     <textarea id="" rows="2" cols="20" class="form-control"></textarea>
-            </div>
-            <div class="modal-footer">
-                <a href="javascript:void(0);" class="btn btn-primary btn-xs">
-                    Add Comment
-                </a>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="btn btn-primary btn-xs">
+                        Add Comment
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    </div>  
     <div id="ruleItemAuditModal" class="modal fade in" role="dialog" style="display: none;" aria-hidden="false">
         <div class="modal-dialog modal-sm">
             <div class="modal-content font-10">
@@ -7068,7 +7333,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                   
+
                 </div>
             </div>
         </div>

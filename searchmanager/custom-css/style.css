@@ -1257,45 +1257,45 @@ textarea {
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
 
-        .grid-view .list-item .rule-num {
+        .grid-view .list-item .rule-item-num {
             margin-left: 8px;
             position: absolute;
             top: 10px;
             left: 0px;
         }
 
-        .grid-view .list-item .rule-date {
+        .grid-view .list-item .rule-item-date {
             margin-right: 10px;
             position: absolute;
             top: 35px;
             left: 10px;
         }
 
-        .grid-view .list-item .rule-btns {
+        .grid-view .list-item .rule-item-btns {
             margin-right: 8px;
             position: absolute;
             top: 10px;
             right: 0px;
         }
 
-        .grid-view .list-item .rule-expiry {
+        .grid-view .list-item .rule-item-expiry {
             margin-right: 8px;
             position: absolute;
             top: 75px;
             left: 25px;
         }
 
-        .grid-view .list-item .rule-pic {
+        .grid-view .list-item .rule-item-pic {
             margin-right: 8px;
             position: absolute;
             top: 95px;
             left: 13px;
         }
 
-        .grid-view .list-item .rule-info {
+        .grid-view .list-item .rule-item-info {
             margin-right: 8px;
             position: absolute;
-            top: 80px;
+            top: 75px;
             left: 120px;
             right: 0px;
         }
@@ -1322,48 +1322,65 @@ textarea {
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
 
-        .list-view .list-item .rule-num {
+        .list-view .list-item .rule-item-num {
             margin-left: 10px;
             position: absolute;
             top: 10px;
             left: 0px;
         }
 
-        .list-view .list-item .rule-date {
+        .list-view .list-item .rule-item-date {
             margin-right: 10px;
             position: absolute;
             top: 10px;
             right: 11%;
         }
 
-        .list-view .list-item .rule-btns {
+        .list-view .list-item .rule-item-btns {
             margin-right: 10px;
             position: absolute;
             top: 10px;
             right: 0px;
         }
 
-        .list-view .list-item .rule-expiry {
+        .list-view .list-item .rule-item-expiry {
             margin-right: 8px;
             position: absolute;
             top: 30px;
             left: 55px;
         }
 
-        .list-view .list-item .rule-pic {
+        .list-view .list-item .rule-item-pic {
             margin-right: 8px;
             position: absolute;
             top: 50px;
             left: 45px;
         }
 
-        .list-view .list-item .rule-info {
+        .list-view .list-item .rule-item-info {
             margin-right: 8px;
             position: absolute;
             top: 50px;
             left: 200px;
             right: 0px;
         }
+
+.rule-item-mfr {
+    font-weight: bold;
+}
+
+.rule-item-name {
+    color: #31708f;
+}
+
+.rule-item-sku, .rule-item-mfrpn {
+    /*display:none;*/
+    vertical-align: middle;
+}
+
+.sku, .mfrpn {
+    font-style:italic;
+}
 
 .red-list-item {
     border: 1px solid #ebccd1;
