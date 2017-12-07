@@ -394,75 +394,114 @@
 
             <!--user accounts module-->
             <div id="userAccModule" class="row" style="display:none">
-                <ol class="breadcrumb">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#" onclick="settingsLanding()">Settings</a></li>
-                    <li class="active">User Accounts</li>
-                </ol>
                 <script type="text/javascript">
-                    function userDetails() {
-                        var usrDtls = document.getElementById('userDetails');
-                        var addEdtUsr = document.getElementById('addEditUser');
-                        if (usrDtls.style.display === 'none') {
-                            usrDtls.style.display = 'block';
-                            addEdtUsr.style.display = 'none';
-                        }
+                    function userAccountList() {
+                        $('#userDetails').hide(); $('#userAccountList').show();
                     }
-
-                    function addEditUser() {
-                        var usrDtls = document.getElementById('userDetails');
-                        var addEdtUsr = document.getElementById('addEditUser');
-                        if (addEdtUsr.style.display === 'none') {
-                            usrDtls.style.display = 'none';
-                            addEdtUsr.style.display = 'block';
-                        }
-                    }
+                    $(document).ready(function () {
+                        $('.user-prof').click(function () {
+                            $('#userDetails').show(); $('#userAccountList').hide();
+                        });
+                        $('#editUser').click(function () {
+                            $('#userInfo').hide(); $('#addEditUser').show();
+                        });
+                        $('#addUserBtn').click(function () {
+                            $('#userInfo').hide(); $('#addEditUser').show(); $('#userDetails').show(); $('#userAccountList').hide();
+                        });
+                        $('#backToUserInfoBtn').click(function () {
+                            $('#userInfo').show(); $('#addEditUser').hide();
+                        });
+                    });
                 </script>
-                <div class="row">
-                    <div class="col-sm-6">
+                <div id="userAccountList" class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="#" onclick="settingsLanding()">Settings</a></li>
+                            <li class="active">User Accounts</li>
+                        </ol>
                         <div class="panel panel-default font-13">
                             <div class="panel-heading">
                                 <div class="form-inline">
                                     <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control input-sm" placeholder="Search User">
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default btn-sm" title="Search">
-                                                    <i class="fa fa-search fa-lg"></i>
-                                                </button>
-                                            </div>
-
-                                        </div>
-                                        <button class="btn btn-success btn-sm" onclick="addEditUser()" title="Create New Account"><i class="fa fa-plus"></i></button>
+                                        <label>Filters:</label> &nbsp;
+                                        <input id="" type="text" class="form-control input-sm" placeholder="Name/Username" size="43" />
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-default btn-sm" title="Filter ">
+                                            <i class="fa fa-filter fa-lg"></i> Filter
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm" title="Reset Filter">
+                                            <i class="fa  fa-undo fa-lg"></i> Reset
+                                        </button>
+                                        <button id="addUserBtn" class="btn btn-success btn-sm" title="Create New Account"><i class="fa fa-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr class="active">
+                                        <th id="filterFields" class="form-inline" colspan="7">
+                                            <div class="form-group">
+                                                <label>Account Role:</label>
+                                                <select id="" class="form-control input-sm">
+                                                    <option>All Roles</option>
+                                                </select>
+                                                <label>Store:</label>
+                                                <select id="" class="form-control input-sm">
+                                                    <option value="">All Stores</option>
+                                                </select>
+                                                <label>Account Status:</label>
+                                                <select id="" class="form-control input-sm" style="width:130px">
+                                                    <option value="">Both Locked and Active Account</option>
+                                                </select>
+                                                <label>Account Validity:</label>
+                                                <select id="" class="form-control input-sm" style="width:130px">
+                                                    <option value="">Both Expired and Valid Account</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Member Since:</label>
+                                                <input id="" type="text" class="form-control input-sm" placeholder="Select a Date" size="10">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="active">
                                         <th>User Name</th>
                                         <th>Full Name</th>
-                                        <th>Store</th>
+                                        <th>Role</th>
+                                        <th>Member Since</th>
+                                        <th>Validity</th>
+                                        <th>Status</th>
                                         <th>Last Access</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>carl.cruz</td>
-                                        <td><a href="#">Carlson Cruz</a></td>
-                                        <td>PCM </td>
+                                        <td><a class="user-prof" href="#">Carlson Cruz</a></td>
+                                        <td>Guest </td>
+                                        <td>09/03/2015 05:45 PM </td>
+                                        <td>09/03/2016 </td>
+                                        <td>Active Expired</td>
                                         <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
                                     </tr>
                                     <tr>
                                         <td>naruto</td>
-                                        <td><a href="#">Uzumaki Naruto</a></td>
-                                        <td>MacMall </td>
+                                        <td><a class="user-prof" href="#">Uzumaki Naruto</a></td>
+                                        <td>Manager </td>
+                                        <td>09/03/2015 05:45 PM </td>
+                                        <td>09/03/2016 </td>
+                                        <td>Active Expired</td>
                                         <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
                                     </tr>
                                     <tr>
                                         <td>sharingan</td>
-                                        <td><a href="#">Uchiha Sarada</a></td>
-                                        <td>PCMG </td>
+                                        <td><a class="user-prof" href="#">Uchiha Sarada</a></td>
+                                        <td>Manager </td>
+                                        <td>09/03/2015 05:45 PM </td>
+                                        <td>09/03/2016 </td>
+                                        <td>Active Expired</td>
                                         <td>09/28/2016 02:38 PM <span class="text-warning">10.120.14.92</span> </td>
                                     </tr>
                                 </tbody>
@@ -492,9 +531,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-
-                        <div id="userDetails" class="panel panel-default font-13">
+                </div>
+                <div id="userDetails" class="row" style="display:none">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="#" onclick="settingsLanding()">Settings</a></li>
+                            <li><a href="#" onclick="userAccountList()">User Accounts</a></li>
+                            <li class="active">User Details</li>
+                        </ol>
+                        <div id="userInfo" class="panel panel-default font-13">
                             <div class="panel-heading">
                                 <label> User Details</label>
                             </div>
@@ -543,7 +589,7 @@
 
                             </div>
                             <div class="panel-footer">
-                                <button class="btn btn-primary btn-sm" onclick="addEditUser()"><i class="fa fa-pencil fa-lg"></i> Edit</button>
+                                <button id="editUser" class="btn btn-primary btn-sm"><i class="fa fa-pencil fa-lg"></i> Edit</button>
                                 <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
                             </div>
                         </div>
@@ -628,7 +674,7 @@
                                     <button class="btn btn-success btn-sm"><i class="fa fa-check fa-lg"></i> Submit</button>
                                     <button class="btn btn-warning btn-sm"><i class="fa fa-undo fa-lg"></i> Reset</button>
                                 </div>
-                                <button class="btn btn-primary btn-sm" onclick="userDetails()"><i class="fa fa-arrow-left fa-lg"></i> Back</button>
+                                <button id="backToUserInfoBtn" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left fa-lg"></i> Back</button>
                             </div>
                         </div>
                     </div>
