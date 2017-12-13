@@ -1090,17 +1090,17 @@ table > thead > tr > th {
 
 .mid-center {
     text-align: center;
-    vertical-align: middle;
+    vertical-align: middle!important;
 }
 
 .mid-right {
     text-align: right;
-    vertical-align: middle;
+    vertical-align: middle!important;
 }
 
 .mid-left {
     text-align: left;
-    vertical-align: middle;
+    vertical-align: middle!important;
 }
 
 .table-condensed > tbody > tr > td {
