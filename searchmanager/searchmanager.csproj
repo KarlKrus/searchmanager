@@ -58,6 +58,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-select-1.6.3\bootstrap-select.min.css" />
+    <Content Include="bootstrap-select-1.6.3\bootstrap-select.min.js" />
     <Content Include="css\bootstrap-datepicker.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\plugins\metisMenu\metisMenu.min.css" />
