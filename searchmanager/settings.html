@@ -25,9 +25,12 @@
     <script src="js/moment.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="js/bootstrap-toggle.js"></script>
+    <link href="css/bootstrap-toggle.css" rel="stylesheet" />
 
     <script src="bootstrap-select-1.6.3/bootstrap-select.min.js"></script>
     <link href="bootstrap-select-1.6.3/bootstrap-select.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="wrapper" id="wrapper">
@@ -407,6 +410,13 @@
                         $('#userDetails').hide(); $('#userAccountList').show();
                     }
                     $(document).ready(function () {
+                        $('.toggle').bootstrapToggle({
+                            on: 'Active',
+                            off: 'Locked',
+                            size: 'mini',
+                            width: '100',
+                            offstyle: 'danger'
+                        });
                         $('.selectpicker').selectpicker();
                         $('.user-prof').click(function () {
                             $('#userDetails').show(); $('#userAccountList').hide(); $('#userInfoTemplate').show(); $('#addUserTemplate').hide();
@@ -554,16 +564,7 @@
                         <div id="userInfoTemplate" class="panel panel-default font-13">
                             <div class="panel-heading">
                                 <label>Edit</label>
-                                <div id="shlck" class="pull-right">
-                                    <div class="btn-group btn-toggle" data-toggle="buttons">
-                                        <label class="btn btn-default btn-xs">
-                                            <input name="oss" checked="checked" type="radio"> Active
-                                        </label>
-                                        <label class="btn btn-default btn-xs">
-                                            <input name="oss" value="option2" type="radio"> Locked
-                                        </label>
-                                    </div>
-                                </div>
+                              <div class="pull-right"><input id="Checkbox2" type="checkbox" class="toggle"></div>  
                             </div>
                             <div class="panel-body">
                                 <div class="row">
@@ -1783,16 +1784,7 @@
                         <div id="addUserTemplate" class="panel panel-default font-13">
                             <div class="panel-heading">
                                 <label id="addEditPanelTitle"> Add</label>
-                                <div id="radio-switch" class="pull-right">
-                                    <div class="btn-group btn-toggle" data-toggle="buttons">
-                                        <label class="btn btn-default btn-xs">
-                                            <input name="oss" checked="checked" type="radio"> Active
-                                        </label>
-                                        <label class="btn btn-default btn-xs">
-                                            <input name="oss" value="option2" type="radio"> Locked
-                                        </label>
-                                    </div>
-                                </div>
+                                <div class="pull-right"><input id="Checkbox1" type="checkbox" class="toggle"></div>  
                             </div>
                             <div class="panel-body">
                                 <div class="row">

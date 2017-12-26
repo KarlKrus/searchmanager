@@ -61,6 +61,7 @@
     <Content Include="bootstrap-select-1.6.3\bootstrap-select.min.css" />
     <Content Include="bootstrap-select-1.6.3\bootstrap-select.min.js" />
     <Content Include="css\bootstrap-datepicker.css" />
+    <Content Include="css\bootstrap-toggle.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\plugins\metisMenu\metisMenu.min.css" />
     <Content Include="css\sb-admin-2.css" />
@@ -88,6 +89,7 @@
     <Content Include="images\smiconlogo.png" />
     <Content Include="images\smlogo.png" />
     <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap-toggle.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom-js\cookie.js" />
     <Content Include="js\jquery-1.11.0.js" />
